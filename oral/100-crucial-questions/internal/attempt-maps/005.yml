@@ -1,10 +1,12 @@
-schema_version: 1
+schema_version: 2
 attempt: "005"
 source_file: oral/100-crucial-questions/attempts/005.md
 canonical_coverage: ../core-coverage.yml
 purpose: >-
-  Maps visible attempt 005 to the canonical question-independent psychiatry coverage bank.
-  This file records sampling, not authority: missing a dedicated visible question does not remove a topic from core coverage.
+  Maps visible Attempt 005 to the canonical question-independent psychiatry coverage bank.
+  This file records sampling, not authority: missing a dedicated visible question does not remove
+  a topic from core coverage, and broad canonical units are marked as partial where the visible
+  question samples only part of their essentials.
 
 questions:
   Q1: [assessment.comprehensive]
@@ -28,7 +30,7 @@ questions:
   Q18: [schizophrenia.trs]
   Q19: [psychopharm.clozapine, schizophrenia.trs]
 
-  Q20: [depression.mdd, depression.patterns_specifiers]
+  Q20: [depression.mdd]
   Q21: [depression.acute_treatment]
   Q22: [depression.trd]
   Q23: [bipolar.diagnosis]
@@ -45,7 +47,7 @@ questions:
   Q33: [trauma.acute_adjustment]
   Q34: [dissociation.disorders]
   Q35: [somatic.ssd_illness_anxiety]
-  Q36: [functional.fnd, deception.factitious_malingering]
+  Q36: [functional.fnd]
 
   Q37: [addiction.assessment]
   Q38: [alcohol.withdrawal, alcohol.wernicke_korsakoff]
@@ -57,9 +59,9 @@ questions:
   Q44: [gambling.disorder]
 
   Q45: [delirium.core]
-  Q46: [neurocognitive.assessment, old_age.principles]
+  Q46: [neurocognitive.assessment]
   Q47: [dementia.alzheimer]
-  Q48: [dementia.dlb_pdd, neuropsychiatry.parkinson, sleep.parasomnias_rbd]
+  Q48: [dementia.dlb_pdd, sleep.parasomnias_rbd]
   Q49: [dementia.ftd]
   Q50: [dementia.vascular]
   Q51: [dementia.bpsd]
@@ -79,9 +81,9 @@ questions:
   Q64: [child.mood_self_harm]
   Q65: [eating.anorexia]
   Q66: [eating.anorexia_medical_risk]
-  Q67: [eating.bulimia, eating.bed_arfid]
+  Q67: [eating.bulimia]
   Q68: [sleep.insomnia]
-  Q69: [sleep.hypersomnolence_narcolepsy, sleep.osa_rls]
+  Q69: [sleep.hypersomnolence_narcolepsy]
   Q70: [personality.general]
   Q71: [personality.bpd, psychotherapy.bpd_structured]
   Q72: [personality.aspd_psychopathy]
@@ -117,6 +119,27 @@ questions:
   Q99: [forensic.criminal_responsibility]
   Q100: [systems.community_rehabilitation]
 
+partial_coverage:
+  eating.bed_arfid:
+    via: [Q67a]
+    visible_scope: binge-eating disorder as a differential from bulimia nervosa
+    not_implied_by_visible_prompt: [ARFID]
+
+  psychotherapy.psychodynamic:
+    via: [Q92, Q92a]
+    visible_scope: transference and countertransference
+    not_implied_by_visible_prompt: [defence_mechanisms, full_psychodynamic_formulation, supportive_vs_exploratory_work]
+
+  neuroscience.neuroanatomy:
+    via: [Q94]
+    visible_scope: prefrontal circuits
+    not_implied_by_visible_prompt: [broader_cortical_localisation, basal_ganglia_thalamic_limbic_coverage]
+
+  neuroscience.neurotransmitters:
+    via: [Q95]
+    visible_scope: dopamine pathways
+    not_implied_by_visible_prompt: [serotonin, noradrenaline, glutamate, GABA, acetylcholine]
+
 canonical_units_without_dedicated_005_main_question:
   IMPORTANT:
     - schizophrenia.negative_cognitive
@@ -140,8 +163,9 @@ canonical_units_without_dedicated_005_main_question:
     - evidence.clinical_metrics
     - ethics.boundaries
   note: >-
-    Several of these are already sampled as follow-up or answer coverage through mapped questions.
-    The remainder should be reviewed before 005 is treated as near-final; absence of a dedicated main question is not itself a defect.
+    Several are sampled only partially through another main question or follow-up. Absence of a
+    dedicated main question is not itself a defect; this list exists to prevent accidental
+    overclaiming when later attempts are compared.
 
 follow_up_count: 22
 main_question_count: 100
