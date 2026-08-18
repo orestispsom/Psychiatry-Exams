@@ -1,17 +1,20 @@
 # Internal architecture — 100 Crucial Questions
 
-This directory contains the control system behind the visible 100-question attempts.
+This directory contains the control system behind the visible 100-question attempts and their eventual model answers.
 
 ## Authority order
 
 1. `core-coverage.yml` — canonical, question-independent psychiatry coverage map. This defines the important knowledge that must be preserved across revisions.
 2. `adult-board-scope.yml` — exam-scope overlay for Greek Adult Psychiatry specialist certification. It determines which canonical topics deserve scarce visible main-question space without deleting broader psychiatry knowledge.
-3. `question-design.md` — rules for constructing main questions, genuine examiner follow-ups and hidden answer-coverage checklists.
+3. `question-design.md` — rules for constructing main questions, genuine examiner follow-ups, hidden answer coverage and board-fact use.
 4. `attempt-maps/<attempt>.yml` — disposable maps showing how a specific visible attempt samples the canonical coverage and where coverage is partial or distributed.
 5. `answer-coverage/<attempt>.yml` — hidden authoring specifications defining the minimum clinical/conceptual territory an excellent answer to each visible question must cover.
 6. `board-fact-anchors.yml` — high-yield exact-recall, criterion/timing, classic-distinction and drug-specific board facts that must be retrievable within the 100 answer packages. These anchors do not create new main questions and require source verification before final answers are written.
-7. `source-register.md` — record of sources actually reviewed and the scope in which they were used.
-8. `core-coverage-candidates.yml` — staging area for possible additions to the canonical bank that require deliberate review before promotion.
+7. `answer-production/` — production governance: evidence workflow, dossier schema, answer archetypes and bounded agent prompts. This controls how research becomes a final model answer.
+8. `source-register.md` — record of sources actually reviewed and the scope in which they were used.
+9. `core-coverage-candidates.yml` — staging area for possible additions to the canonical bank that require deliberate review before promotion.
+
+The corresponding working files for final answers live under `../answers/`.
 
 ## Core principle
 
@@ -23,14 +26,23 @@ Question numbers may change freely. Stable coverage IDs should change only when 
 
 ## Board-sufficiency architecture
 
-The intended final learning package for each of the 100 questions has four layers:
+The intended final learning package for each of the 100 questions has four learner-facing knowledge layers, with a fifth source-control layer behind them:
 
 1. **Oral core** — a coherent approximately 2–5 minute senior-resident answer.
 2. **Must-not-miss answer coverage** — differentials, red flags, treatment sequencing, monitoring, special situations and other clinically important content.
 3. **Board-fact anchors** — exact criteria/durations, classic distinctions, key calculations/numerical anchors and specific high-yield drug facts that can be tested in MCQs or short oral probes.
 4. **Examiner pivots** — only genuine follow-up questions that meaningfully change or deepen the task.
+5. **Canonical question dossier** — hidden claim-level provenance and adjudication controlling what the writer is allowed to say.
 
-The board-sufficiency target is not literal memorisation of 100 scripts. It is that a candidate who genuinely understands, can reproduce and can apply all four layers across the 100 questions should possess a preparation set plausibly sufficient for a general Greek Adult Psychiatry specialist-certification examination. No finite bank guarantees an exam outcome.
+The board-sufficiency target is not literal memorisation of 100 scripts. It is that a candidate who genuinely understands, can reproduce and can apply the first four layers across the 100 questions should possess a preparation set plausibly sufficient for a general Greek Adult Psychiatry specialist-certification examination. The dossier exists to make those layers accurate and source-controlled. No finite bank guarantees an exam outcome.
+
+## Model-answer production rule
+
+Research, source extraction, adjudication and writing are separate stages.
+
+The final writer receives an **approved dossier**, not raw textbooks and not an open research brief. It may compose and optimise oral delivery, but it may not introduce unsupported facts, new treatment recommendations, numerical claims or unadjudicated source reconciliation.
+
+The full workflow is defined in `answer-production/README.md`.
 
 ## Visible versus hidden coverage
 
