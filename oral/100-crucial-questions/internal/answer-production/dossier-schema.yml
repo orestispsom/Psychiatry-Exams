@@ -1,4 +1,4 @@
-schema_version: 1
+schema_version: 2
 status: template
 
 # Canonical authoring schema for one question. Replace placeholders when instantiating.
@@ -71,6 +71,14 @@ claims:
     adjudication: UNRESOLVED_BLOCK
     destination: UNASSIGNED  # SPOKEN_CORE | MUST_COVER_EXTENSION | BOARD_FACT | FOLLOWUP | EXAM_CURRENT_NOTE | EXCLUDE
     writer_note: ""
+    commercial_provenance:
+      expression_origin: ORIGINAL_SYNTHESIS
+      # ORIGINAL_SYNTHESIS | GENERAL_FACT_PATTERN | SOURCE_STRUCTURE_INFLUENCE |
+      # CLOSE_PARAPHRASE_RISK | DIRECT_QUOTATION | PROPRIETARY_OR_LICENSED_TEXT
+      commercial_clearance: NOT_REVIEWED
+      # NOT_REVIEWED | LOW_RISK | REWRITE_REQUIRED | PERMISSION_OR_LICENSE_CHECK |
+      # EXCLUDE_FROM_COMMERCIAL | CLEARED_FOR_COMMERCIAL_DRAFT
+      source_expression_note: ""
 
 conflicts:
   # Never silently reconcile incompatible sources.
@@ -114,6 +122,10 @@ board_facts:
     verified_answer: ""
     source_refs: []
     exam_current_split: null
+    commercial_provenance:
+      expression_origin: GENERAL_FACT_PATTERN
+      commercial_clearance: NOT_REVIEWED
+      source_expression_note: ""
 
 followups:
   - id: ""
@@ -121,6 +133,16 @@ followups:
     function: ""
     required_claim_ids: []
     target_seconds: null
+
+commercialization_overlay:
+  governing_policy: commercialization-policy.md
+  study_master_priority: true
+  blocks_study_master: false
+  commercial_manuscript_is_separate_derivative: true
+  source_specific_expression_flags: []
+  proprietary_or_licensed_material_flags: []
+  commercial_clearance_status: NOT_REVIEWED
+  notes: ""
 
 writer_handoff:
   ready: false
@@ -131,7 +153,8 @@ writer_handoff:
     - new treatment recommendations
     - new numerical claims
     - new legal claims
-  special_instructions: []
+  special_instructions:
+    - use original wording and synthesis rather than reproducing source prose
 
 qa:
   source_fidelity:
@@ -153,6 +176,10 @@ qa:
     status: NOT_RUN
     missing_claim_ids: []
     missing_board_fact_ids: []
+  commercial_provenance:
+    status: NOT_RUN
+    # This QA is optional/non-blocking for the personal study master and becomes mandatory only for commercial publication.
+    findings: []
 
 final_status:
   state: NOT_STARTED   # NOT_STARTED | DOSSIER_APPROVED | DRAFTED | QA_FAILED | ANSWER_VERIFIED | FROZEN
