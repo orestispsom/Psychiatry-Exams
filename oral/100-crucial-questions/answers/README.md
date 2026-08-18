@@ -38,6 +38,18 @@ A draft must not be promoted to `final/` until:
 - exam/current conflicts are handled explicitly;
 - Greek-jurisdiction requirements are satisfied.
 
+## Commercialization overlay
+
+The files under `final/` are the **personal study master**, not automatically the commercial manuscript.
+
+Commercial intent is governed by:
+
+`../internal/answer-production/commercialization-policy.md`
+
+During study-master production, retain claim/source provenance and flag unusually source-dependent expression where noticed. Commercial clearance does **not** block study-master completion.
+
+When the study master is sufficiently mature, create a separate commercial derivative through a dedicated provenance/copyright/licensing pass and original commercial rewrite. Do not simply export or lightly polish the private study file for sale.
+
 ## Pilot status
 
 The first production pilot should use:
