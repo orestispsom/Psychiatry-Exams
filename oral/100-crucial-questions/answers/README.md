@@ -1,63 +1,48 @@
 # Answers Workspace
 
-This directory is the production workspace for final model answers. Do not place untracked prose here.
+This directory is the production workspace for the model answers.
 
-## Directory structure
+## Routine structure
 
 ```text
 answers/
 ├── source-packets/
-│   ├── Q012-contemporary.md
-│   └── Q012-local.md
-├── dossiers/
-│   └── Q012.yml
+│   ├── Q012-local.md          # compact Oxford/base extract
+│   └── Q012-contemporary.md   # pilot legacy/current verification; future routine files may be much smaller
+├── briefs/
+│   └── Q012.yml               # compact approved answer brief
 ├── drafts/
 │   └── Q012.md
-├── qa/
-│   ├── Q012-source-qa.md
-│   └── Q012-oral-qa.md
 └── final/
     └── Q012.md
 ```
 
-Directories/files may be created incrementally during the pilot.
+Use `dossiers/` and `qa/` only when a question is escalated beyond the routine lean workflow.
 
-## Authority flow
+## Routine authority flow
 
-`source packets → adjudicated dossier → writer draft → source QA + oral QA → final verified answer`
+`compact exam-base extract → targeted current verification → approved answer brief → writer draft → coordinator QA → final`
 
-The **dossier** is the writer's sole factual authority.
+The **answer brief** is the writer's sole factual authority.
 
-A draft must not be promoted to `final/` until:
+## Final-output constraint
 
-- dossier has no unresolved blocks;
-- required claims are traceable;
-- board facts are verified;
-- source QA passes;
-- oral QA passes;
-- exam/current conflicts are handled explicitly;
-- Greek-jurisdiction requirements are satisfied.
+The learner-facing model oral answer should normally be about **1–2 pages / 350–700 words**, with a compact recall spine, board-fact block and genuine follow-ups around it.
+
+Research files do not need to preserve everything learned. They exist only to make that short answer accurate and exam-safe.
 
 ## Commercialization overlay
 
-The files under `final/` are the **personal study master**, not automatically the commercial manuscript.
+Files under `final/` are the **personal study master**, not automatically the commercial manuscript.
 
 Commercial intent is governed by:
 
 `../internal/answer-production/commercialization-policy.md`
 
-During study-master production, retain claim/source provenance and flag unusually source-dependent expression where noticed. Commercial clearance does **not** block study-master completion.
+Retain light provenance during study production. The later commercial edition is a separate original derivative and receives its own source-expression/licensing pass.
 
-When the study master is sufficiently mature, create a separate commercial derivative through a dedicated provenance/copyright/licensing pass and original commercial rewrite. Do not simply export or lightly polish the private study file for sale.
+DSM-5-TR may be used selectively for private diagnostic verification but should not become the dominant manuscript structure. Prefer original syndrome-based explanation and source diversity, including WHO ICD-11/current guidelines/regulatory/public literature where appropriate.
 
-## Pilot status
+## Escalation
 
-The first production pilot should use:
-
-- Q12 schizophrenia diagnosis;
-- Q21 major depressive episode treatment;
-- Q45 delirium;
-- Q81 lithium;
-- Q90 CBT or Q91 transference/countertransference.
-
-Do not batch-produce the remaining questions until the five-question pilot has been reviewed and the dossier/writer specification is frozen.
+A full dossier, separate Source QA or Oral Red Team is required only when the coordinator identifies a material reason: unresolved conflict, high-risk prescribing/legal content, or failure of routine QA.
