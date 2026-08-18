@@ -1,0 +1,147 @@
+schema_version: 1
+attempt: "005"
+source_file: oral/100-crucial-questions/attempts/005.md
+canonical_coverage: ../core-coverage.yml
+purpose: >-
+  Maps visible attempt 005 to the canonical question-independent psychiatry coverage bank.
+  This file records sampling, not authority: missing a dedicated visible question does not remove a topic from core coverage.
+
+questions:
+  Q1: [assessment.comprehensive]
+  Q2: [psychopathology.thought_content]
+  Q3: [assessment.secondary_causes]
+  Q4: [risk.suicide_assessment]
+  Q5: [suicide.clinical_topic]
+  Q6: [risk.violence]
+  Q7: [emergency.agitation]
+  Q8: [legal.capacity_consent]
+  Q9: [legal.involuntary_greece]
+  Q10: [emergency.catatonia, emergency.nms_serotonin]
+
+  Q11: [psychosis.first_episode, cannabis.psychiatry]
+  Q12: [schizophrenia.syndrome_diagnosis, psychopathology.thought_form, psychopathology.perception]
+  Q13: [schizophrenia.differential]
+  Q14: [schizophrenia.aetiology_pathophysiology]
+  Q15: [schizophrenia.course_prognosis]
+  Q16: [schizophrenia.acute_treatment]
+  Q17: [schizophrenia.maintenance_rehabilitation]
+  Q18: [schizophrenia.trs]
+  Q19: [psychopharm.clozapine, schizophrenia.trs]
+
+  Q20: [depression.mdd, depression.patterns_specifiers]
+  Q21: [depression.acute_treatment]
+  Q22: [depression.trd]
+  Q23: [bipolar.diagnosis]
+  Q24: [bipolar.mania]
+  Q25: [bipolar.depression]
+  Q26: [bipolar.maintenance]
+  Q27: [reproductive.perinatal]
+
+  Q28: [anxiety.panic_agoraphobia]
+  Q29: [anxiety.gad]
+  Q30: [anxiety.social]
+  Q31: [ocd.core]
+  Q32: [trauma.ptsd]
+  Q33: [trauma.acute_adjustment]
+  Q34: [dissociation.disorders]
+  Q35: [somatic.ssd_illness_anxiety]
+  Q36: [functional.fnd, deception.factitious_malingering]
+
+  Q37: [addiction.assessment]
+  Q38: [alcohol.withdrawal, alcohol.wernicke_korsakoff]
+  Q39: [alcohol.long_term]
+  Q40: [opioids.oud]
+  Q41: [cannabis.psychiatry]
+  Q42: [stimulants.disorders]
+  Q43: [sedatives.dependence]
+  Q44: [gambling.disorder]
+
+  Q45: [delirium.core]
+  Q46: [neurocognitive.assessment, old_age.principles]
+  Q47: [dementia.alzheimer]
+  Q48: [dementia.dlb_pdd, neuropsychiatry.parkinson, sleep.parasomnias_rbd]
+  Q49: [dementia.ftd]
+  Q50: [dementia.vascular]
+  Q51: [dementia.bpsd]
+  Q52: [old_age.self_neglect]
+  Q53: [neuropsychiatry.autoimmune_encephalitis]
+  Q54: [neuropsychiatry.epilepsy]
+  Q55: [neuropsychiatry.tbi]
+  Q56: [liaison.core, psychopharm.medical_comorbidity]
+
+  Q57: [child.assessment]
+  Q58: [child.safeguarding]
+  Q59: [developmental.adhd]
+  Q60: [developmental.autism]
+  Q61: [developmental.intellectual_disability]
+  Q62: [developmental.tics_tourette]
+  Q63: [child.disruptive_disorders]
+  Q64: [child.mood_self_harm]
+  Q65: [eating.anorexia]
+  Q66: [eating.anorexia_medical_risk]
+  Q67: [eating.bulimia, eating.bed_arfid]
+  Q68: [sleep.insomnia]
+  Q69: [sleep.hypersomnolence_narcolepsy, sleep.osa_rls]
+  Q70: [personality.general]
+  Q71: [personality.bpd, psychotherapy.bpd_structured]
+  Q72: [personality.aspd_psychopathy]
+  Q73: [sexual.dysfunction]
+  Q74: [sexual.paraphilic]
+
+  Q75: [psychopharm.principles, psychopharm.medical_comorbidity]
+  Q76: [psychopharm.antipsychotic_selection]
+  Q77: [psychopharm.antipsychotic_eps]
+  Q78: [psychopharm.antipsychotic_metabolic_endocrine_cv]
+  Q79: [psychopharm.antidepressant_selection]
+  Q80: [psychopharm.antidepressant_safety]
+  Q81: [psychopharm.lithium, toxicology.other_psychotropics]
+  Q82: [psychopharm.valproate, psychopharm.pregnancy_lactation]
+  Q83: [psychopharm.lamotrigine]
+  Q84: [psychopharm.carbamazepine]
+  Q85: [psychopharm.benzodiazepines_hypnotics]
+  Q86: [psychopharm.adhd]
+  Q87: [psychopharm.pregnancy_lactation]
+  Q88: [emergency.nms_serotonin]
+  Q89: [toxicology.tca]
+  Q90: [biological.ect, legal.capacity_consent]
+
+  Q91: [psychotherapy.cbt]
+  Q92: [psychotherapy.psychodynamic]
+  Q93: [psychotherapy.ipt]
+
+  Q94: [neuroscience.neuroanatomy]
+  Q95: [neuroscience.neurotransmitters]
+  Q96: [neuroscience.genetics]
+  Q97: [evidence.critical_appraisal, evidence.clinical_metrics]
+  Q98: [ethics.confidentiality_duties]
+  Q99: [forensic.criminal_responsibility]
+  Q100: [systems.community_rehabilitation]
+
+canonical_units_without_dedicated_005_main_question:
+  IMPORTANT:
+    - schizophrenia.negative_cognitive
+    - reproductive.pmdd
+    - ocd.related
+    - alcohol.wernicke_korsakoff
+    - nicotine.tobacco
+    - old_age.principles
+    - neuropsychiatry.parkinson
+    - developmental.attachment
+    - eating.bed_arfid
+    - sleep.parasomnias_rbd
+    - personality.other
+    - gender.dysphoria_care
+    - psychopharm.medical_comorbidity
+    - toxicology.other_psychotropics
+    - biological.rtms_other
+    - psychotherapy.bpd_structured
+    - psychotherapy.supportive_family_mi
+    - neuroscience.sleep_circadian_endocrine
+    - evidence.clinical_metrics
+    - ethics.boundaries
+  note: >-
+    Several of these are already sampled as follow-up or answer coverage through mapped questions.
+    The remainder should be reviewed before 005 is treated as near-final; absence of a dedicated main question is not itself a defect.
+
+follow_up_count: 22
+main_question_count: 100
