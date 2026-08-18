@@ -1,0 +1,92 @@
+schema_version: 2
+status: template
+purpose: >-
+  Default compact specification for one model answer. The brief exists to support a roughly
+  1–2 page oral answer, not to preserve all research performed. Use the full dossier only when
+  a real high-risk or source-conflict problem requires it.
+
+question:
+  id: Q000
+  text: ""
+  attempt: "011"
+  archetype: ""
+  oral_target: "2-4 minutes"
+  model_answer_target_words: "350-700"
+
+question_brief:
+  examiner_is_asking: ""
+  must_cover:
+    - ""
+  update_sensitive_points:
+    - ""
+
+exam_base:
+  primary_source: "Shorter Oxford Textbook of Psychiatry, 7th ed. / 2017 exam edition"
+  sections_pages: []
+  answer_skeleton: []
+  core_exam_points: []
+  classic_exam_points: []
+
+current_verification:
+  # Keep this short. Include only claims that were actually worth checking.
+  - id: V01
+    point: ""
+    authority: ""
+    decision: KEEP   # KEEP | UPDATE | ADD | EXAM_CURRENT_SPLIT | UNRESOLVED
+    concise_result: ""
+
+classification_note:
+  # DSM is not mandatory. Prefer current openly usable international authority where adequate.
+  icd11_used: false
+  dsm5tr_used: false
+  dsm_reason_if_used: null
+
+board_facts:
+  - anchor_id: ""
+    fact_or_recall_target: ""
+    source: ""
+    status: VERIFIED   # VERIFIED | EXAM_CURRENT_SPLIT | UNRESOLVED
+
+answer_design:
+  recall_spine: []
+  opening_job: ""
+  paragraph_jobs: []
+  followups: []
+  common_traps: []
+  deliberate_exclusions: []
+
+exam_current_differences:
+  # Usually empty. Do not create a section just because two sources phrase things differently.
+  - topic: ""
+    exam_position: ""
+    current_position: ""
+    learner_handling: ""
+
+source_provenance:
+  # Minimal non-blocking provenance for later commercial transformation.
+  sources_actually_used: []
+  expression_risk_flags: []
+  proprietary_text_present: false
+
+writer_handoff:
+  ready: false
+  instructions:
+    - Use only this approved brief.
+    - Write an original spoken synthesis, not a textbook summary.
+    - Model oral answer should normally remain within the stated oral/word target.
+    - Do not reproduce DSM criterion wording.
+    - Do not add unverified exact facts, treatment recommendations, legal rules or numbers.
+    - Keep board facts out of spoken prose when they would overload the oral answer.
+
+qa:
+  coordinator_status: NOT_RUN   # NOT_RUN | PASS | NEEDS_REVISION | ESCALATE
+  checks:
+    oral_length_ok: null
+    all_must_cover_present: null
+    verified_claims_correct: null
+    unsupported_writer_additions: null
+    exam_current_handling_ok: null
+    commercial_expression_red_flag: null
+  issues: []
+
+final_status: NOT_STARTED

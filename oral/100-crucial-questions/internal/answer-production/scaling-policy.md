@@ -1,156 +1,89 @@
 # Model-Answer Production — Scaling Policy
 
-Status: active production rule after Q12 pilot timing review.
+Status: active. Read together with `lean-workflow.md`.
 
-## Problem identified
+## Production reality
 
-The first contemporary Q12 research pass was intentionally exhaustive and took more than 15 minutes. That depth is useful for calibrating the pipeline, but repeating 100 independent literature-review-style searches would make production impractical and would duplicate the same source retrieval many times.
+There are 100 questions, and the learner-facing model answer for each is normally only about 1–2 pages. Production must therefore optimise for **marginal value to the final oral answer**, not research completeness.
 
-The production system must preserve source quality while reducing repeated work.
+## Core rule
 
-## Core scaling principle
+> **Map sources once, reuse them aggressively, and retrieve only information capable of changing what the candidate should actually say.**
 
-**Research deeply once per domain/source family; research incrementally per question.**
+## Domain reuse
 
-Question dossiers remain separate, but source retrieval should be reused whenever several questions depend on the same authoritative material.
+Questions sharing an Oxford chapter or authoritative current source should reuse the same chapter/source map.
 
-Do not perform 100 independent mini-systematic reviews.
+Examples:
 
-## 1. Domain evidence packets
+- Q11–19 psychosis/schizophrenia;
+- Q20–27 mood/perinatal;
+- Q45–58 neurocognitive/neuropsychiatry;
+- drug groups sharing one prescribing source/guideline.
 
-Create reusable contemporary evidence packets for coherent clusters of questions. A packet records authoritative sources, major current positions, stable claim IDs and update-sensitive issues shared by multiple questions.
+Do not run fresh chapter discovery for every question.
 
-Suggested clusters:
+## Per-question work after source mapping
 
-1. assessment / psychopathology / suicide / emergencies;
-2. schizophrenia spectrum and psychosis;
-3. depression / bipolar / perinatal psychiatry;
-4. anxiety / OCD / trauma / dissociation / somatic presentations;
-5. substance-use and addictive disorders;
-6. delirium / neurocognitive / old-age / neuropsychiatry / liaison;
-7. adult neurodevelopment / eating / sleep / personality / sexual psychiatry;
-8. antipsychotic and antidepressant psychopharmacology;
-9. mood stabilisers / ADHD medication / pregnancy / toxic syndromes / ECT;
-10. psychotherapies;
-11. neuroscience / evidence appraisal / ethics / forensic / systems.
+Routine question:
 
-Clusters may be split when source sets diverge substantially.
+1. identify relevant pages from the existing source map;
+2. extract 4–8 must-cover points;
+3. perform 0–6 targeted current checks;
+4. create the short answer brief;
+5. write and QA.
 
-## 2. Three research-intensity tiers
+No independent literature review is expected.
 
-### Tier A — full current verification
+## Research depth tiers
 
-Use for claims where error or staleness could materially affect safety, law or treatment:
+### Routine
 
-- psychopharmacology dose/monitoring/interactions/toxicity;
-- pregnancy/reproductive safety;
-- current treatment sequencing and treatment resistance;
-- emergencies;
-- law, consent, confidentiality and forensic rules;
-- new or rapidly changing interventions;
-- regulatory/licensing questions.
+Descriptive disorders, psychopathology, stable concepts.
 
-These questions may justify substantial dedicated research, but should still reuse domain sources already inspected.
+Oxford + a few targeted current checks, often none beyond classification.
 
-### Tier B — focused authoritative update
+### Enhanced
 
-Use for diagnosis, course, differential diagnosis and common clinical syndromes where current authority matters but the source set is relatively stable.
+Treatment, psychopharmacology, emergencies, pregnancy, law/regulation, recently changed classification.
 
-Typical method:
+Use the appropriate current authority for the few claims that will enter the answer.
 
-- reuse the domain packet;
-- inspect the relevant DSM/ICD/guideline section;
-- retrieve only question-specific supporting evidence;
-- stop once answer-coverage and board-fact requirements are resolved.
+### Exceptional
 
-Do not repeat broad searches already completed for adjacent questions.
+Deep research only when sources conflict materially, safety depends on clarification, or the evidence itself is part of the examination topic.
 
-### Tier C — stable foundational synthesis
+## Reuse rules
 
-Use for stable psychopathology, classic neuroanatomy, established psychotherapy concepts or other low-volatility foundational material.
+- Reuse verified bibliographic identity and page maps.
+- Reuse previously verified current claims when the new question needs the same claim.
+- Reopen a source only if the new question requires more precision/context.
+- Do not search the web again to reconfirm a stable point already securely verified.
+- Do not infer support from source title alone.
 
-Use authoritative textbooks/consensus sources already in the domain packet unless a specific claim is uncertain or contested. Web research is not mandatory merely for volume.
+## DSM / classification scaling
 
-## 3. Batch source retrieval, separate question outputs
+Do not repeatedly retrieve full DSM material across diagnosis questions.
 
-Research agents may receive a coherent batch of adjacent questions when the authoritative sources overlap heavily.
+Use:
 
-Example: Q11–Q19 schizophrenia/psychosis.
+- Oxford for exam-study structure;
+- WHO ICD-11 as the preferred current openly referenceable classification source where adequate;
+- DSM-5-TR selectively for a specific DSM distinction/threshold that actually matters to the answer or board facts.
 
-One retrieval pass may inspect:
+A question does not need a full DSM-vs-ICD comparison merely because both systems exist.
 
-- DSM-5-TR/APA schizophrenia-spectrum material;
-- WHO ICD-11 primary psychotic disorders;
-- current psychosis/schizophrenia guidelines;
-- negative-symptom and cognition consensus evidence;
-- FEP/course/TRS/clozapine sources where relevant.
+## Stop rule
 
-The agent should then write **separate question source packets**, each containing only the claims required for that question.
+Stop when:
 
-Batch retrieval must not produce one giant undifferentiated research document.
+- must-cover items are supported;
+- important current corrections are resolved;
+- board facts have a source;
+- further reading is unlikely to change the 1–2 page oral answer or its concise follow-ups.
 
-## 4. Local-textbook scaling
+## Practical benchmark
 
-The same principle applies to Claude/local sources.
+After the relevant source chapter/domain has been mapped, routine per-question retrieval should feel like **focused extraction and checking**, not a research project.
 
-When several questions occupy the same Oxford chapter:
-
-1. inspect the chapter/index thoroughly once;
-2. maintain a reusable internal chapter map of relevant sections/pages;
-3. extract separate Q-specific packets from that map;
-4. reopen sections only when the exact context needs checking;
-5. do not re-search/re-read the same chapter from scratch for every question.
-
-Oxford remains first in the local-source stream. Supplementary books remain targeted.
-
-## 5. Source cache / reuse rule
-
-If an authoritative source was already inspected for a domain packet or earlier question:
-
-- reuse its verified bibliographic/source identity;
-- reuse claims only when the cited section genuinely supports the new question;
-- reopen the relevant section if the new claim is more specific than the previously recorded extraction;
-- never infer support from source title alone.
-
-A reused source does not require a new general web search.
-
-## 6. Stop rule
-
-Research stops when:
-
-- every `must_cover` item has adequate authoritative support;
-- every assigned board-fact anchor has a verification route;
-- conflicts relevant to the final answer are identified;
-- no unresolved high-priority claim remains;
-- additional sources are adding detail rather than changing conclusions.
-
-Do not continue merely to maximise citation count.
-
-## 7. Pilot versus production depth
-
-The first five heterogeneous pilot questions may receive greater scrutiny because they are validating the workflow itself.
-
-After the pilot:
-
-- freeze the source hierarchy and dossier/writer format;
-- convert repeated source work into domain packets;
-- use question-specific delta research;
-- reserve exhaustive deep dives for Tier A/high-uncertainty claims.
-
-## 8. Quality must not be traded for speed
-
-Efficiency means avoiding duplicated retrieval, not weakening authority.
-
-Never speed up by:
-
-- relying on search snippets;
-- replacing DSM/ICD/guidelines with generic clinical websites;
-- copying old `Psych` answers as authority;
-- skipping current verification of psychopharmacology/law/regulation;
-- allowing the writer to fill research gaps from memory.
-
-## Practical target
-
-The production objective is that one substantial domain research pass should support multiple related questions. Per-question work should usually become targeted extraction/adjudication rather than a fresh literature review.
-
-No fixed wall-clock guarantee is imposed because question complexity and source accessibility vary; production is judged by avoiding redundant work while preserving the project's accuracy gates.
+The Q12 15+ minute deep contemporary pass is treated as pilot calibration and reusable domain research, not the expected cost of the remaining 99 questions.
