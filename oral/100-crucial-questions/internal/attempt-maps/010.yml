@@ -1,0 +1,170 @@
+schema_version: 3
+attempt: "010"
+source_file: oral/100-crucial-questions/attempts/010.md
+canonical_coverage: ../core-coverage.yml
+adult_board_scope: ../adult-board-scope.yml
+source_style_audit: ../../reviews/009-greek-oral-phrasing-adult-scope-audit.md
+
+purpose: >-
+  Maps Attempt 010 to the question-independent psychiatry coverage bank while applying the
+  Greek Adult Psychiatry board-scope overlay. Mapping denotes sampling, not exhaustive coverage.
+
+questions:
+  Q1: [assessment.comprehensive]
+  Q2: [psychopathology.thought_content]
+  Q3: [assessment.secondary_causes]
+  Q4: [risk.suicide_assessment]
+  Q5: [suicide.clinical_topic]
+  Q6: [risk.violence]
+  Q7: [emergency.agitation]
+  Q8: [legal.capacity_consent]
+  Q9: [legal.involuntary_greece]
+  Q10: [emergency.catatonia]
+
+  Q11: [psychosis.first_episode, cannabis.psychiatry]
+  Q12: [schizophrenia.syndrome_diagnosis]
+  Q13: [schizophrenia.differential]
+  Q14: [schizophrenia.aetiology_pathophysiology]
+  Q15: [schizophrenia.course_prognosis]
+  Q16: [schizophrenia.acute_treatment]
+  Q17: [schizophrenia.maintenance_rehabilitation, schizophrenia.negative_cognitive]
+  Q18: [schizophrenia.trs]
+  Q19: [psychopharm.clozapine, schizophrenia.trs]
+
+  Q20: [depression.mdd, depression.patterns_specifiers, reproductive.pmdd]
+  Q21: [depression.acute_treatment]
+  Q22: [depression.trd]
+  Q23: [bipolar.diagnosis]
+  Q24: [bipolar.mania]
+  Q25: [bipolar.depression]
+  Q26: [bipolar.maintenance]
+  Q27: [reproductive.perinatal]
+
+  Q28: [anxiety.panic_agoraphobia]
+  Q29: [anxiety.gad]
+  Q30: [anxiety.social]
+  Q31: [ocd.core, ocd.related]
+  Q32: [trauma.ptsd]
+  Q33: [trauma.acute_adjustment]
+  Q34: [dissociation.disorders]
+  Q35: [somatic.ssd_illness_anxiety]
+  Q36: [functional.fnd, deception.factitious_malingering]
+
+  Q37: [addiction.assessment, nicotine.tobacco]
+  Q38: [alcohol.withdrawal, alcohol.wernicke_korsakoff]
+  Q39: [alcohol.long_term]
+  Q40: [opioids.oud]
+  Q41: [cannabis.psychiatry]
+  Q42: [stimulants.disorders]
+  Q43: [sedatives.dependence]
+  Q44: [gambling.disorder]
+
+  Q45: [delirium.core]
+  Q46: [neurocognitive.assessment, old_age.principles]
+  Q47: [dementia.alzheimer]
+  Q48: [dementia.dlb_pdd, neuropsychiatry.parkinson]
+  Q49: [dementia.ftd]
+  Q50: [dementia.vascular]
+  Q51: [dementia.bpsd]
+  Q52: [old_age.self_neglect]
+  Q53: [neuropsychiatry.autoimmune_encephalitis]
+  Q54: [neuropsychiatry.epilepsy]
+  Q55: [neuropsychiatry.tbi]
+  Q56: [liaison.core, psychopharm.medical_comorbidity]
+  Q57: [depression.mdd, neuroscience.neuroanatomy]
+  Q58: [neuropsychiatry.charles_bonnet]
+
+  Q59: [developmental.adhd]
+  Q60: [developmental.autism]
+  Q61: [developmental.intellectual_disability]
+  Q62: [eating.anorexia, eating.bed_arfid]
+  Q63: [eating.anorexia_medical_risk]
+  Q64: [eating.bulimia, eating.bed_arfid]
+  Q65: [sleep.insomnia]
+  Q66: [sleep.hypersomnolence_narcolepsy, sleep.parasomnias_rbd]
+  Q67: [neuroscience.sleep_circadian_endocrine]
+  Q68: [personality.general, personality.other]
+  Q69: [personality.bpd, psychotherapy.bpd_structured]
+  Q70: [personality.aspd_psychopathy]
+  Q71: [sexual.dysfunction]
+  Q72: [sexual.paraphilic]
+  Q73: [gender.dysphoria_care]
+
+  Q74: [psychopharm.principles]
+  Q75: [psychopharm.principles]
+  Q76: [psychopharm.antipsychotic_selection]
+  Q77: [psychopharm.antipsychotic_eps]
+  Q78: [psychopharm.antipsychotic_metabolic_endocrine_cv]
+  Q79: [psychopharm.antidepressant_selection]
+  Q80: [psychopharm.antidepressant_safety]
+  Q81: [psychopharm.lithium]
+  Q82: [psychopharm.valproate]
+  Q83: [psychopharm.lamotrigine]
+  Q84: [psychopharm.benzodiazepines_hypnotics]
+  Q85: [psychopharm.adhd]
+  Q86: [psychopharm.pregnancy_lactation]
+  Q87: [emergency.nms_serotonin]
+  Q88: [toxicology.tca]
+  Q89: [biological.ect, biological.rtms_other]
+
+  Q90: [psychotherapy.cbt]
+  Q91: [psychotherapy.psychodynamic]
+  Q92: [psychotherapy.ipt]
+  Q93: [psychotherapy.supportive_family_mi]
+
+  Q94: [neuroscience.neuroanatomy]
+  Q95: [neuroscience.neurotransmitters]
+  Q96: [neuroscience.genetics]
+  Q97: [evidence.critical_appraisal, evidence.clinical_metrics]
+  Q98: [ethics.confidentiality_duties, ethics.boundaries]
+  Q99: [forensic.criminal_responsibility]
+  Q100: [systems.community_rehabilitation]
+
+adult_board_reallocation_from_009:
+  removed_dedicated_main_slots:
+    - child.assessment
+    - child.safeguarding
+    - developmental.tics_tourette
+    - child.disruptive_disorders
+    - child.mood_self_harm
+  added_adult_board_visible_topics:
+    - apathy-versus-depression discrimination
+    - neuropsychiatry.charles_bonnet
+    - sleep stages and EEG / neuroscience.sleep_circadian_endocrine
+    - clinically important psychotropic interactions
+    - psychoeducation
+  retained_as_internal_or_supporting:
+    - child/adolescent assessment principles where relevant to developmental history
+    - child safeguarding obligations when encountered in adult practice
+    - tics/Tourette as supporting neurodevelopmental knowledge
+    - ODD/conduct disorder as supporting child/adolescent knowledge
+    - adolescent depression/self-harm as supporting child/adolescent knowledge
+
+partial_or_distributed_coverage:
+  psychopathology.thought_form:
+    via: [Q1b, Q12]
+    status: VISIBLE_FOLLOW_UP_AND_ANSWER_COVERAGE
+  psychopathology.perception:
+    via: [Q1a, Q11, Q12, Q45, Q48, Q58]
+    status: DISTRIBUTED
+  psychopathology.mood_affect_psychomotor:
+    via: [Q1, Q20, Q24, Q45]
+    status: ANSWER_COVERAGE
+  psychopathology.cognition_insight:
+    via: [Q1, Q8, Q11, Q45, Q46]
+    status: ANSWER_COVERAGE
+  depression_apathy_differential:
+    via: [Q57]
+    status: ADULT_BOARD_SCOPE_VISIBLE
+  psychopharm.interactions:
+    via: [Q19, Q37a, Q74, Q75, Q80, Q81, Q86]
+    status: VISIBLE_AND_DISTRIBUTED
+  psychotherapy.psychodynamic:
+    via: [Q91, Q91a, Q91b]
+    internal_scope: [defence_mechanisms, psychodynamic_formulation]
+  neuroscience.neurotransmitters:
+    via: [Q14, Q19, Q47, Q74, Q79, Q84, Q95]
+    visible_scope: dopamine
+    distributed_scope: [serotonin, noradrenaline, glutamate, GABA, acetylcholine]
+
+main_question_count: 100
