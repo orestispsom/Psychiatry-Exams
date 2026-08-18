@@ -1,142 +1,136 @@
 # Model-Answer Production System
 
-Status: governing internal workflow for **The 100 Crucial Questions in Psychiatry**.
+Status: governing workflow for **The 100 Crucial Questions in Psychiatry**.
 
-## Governing rule
+## Objective
 
-Routine production now follows the lean workflow in `lean-workflow.md`.
+Produce 100 high-yield Greek **Adult Psychiatry** board-preparation packages that are accurate, memorable and genuinely usable in an oral examination.
 
-The project still separates source extraction, verification and writing, but it does **not** require a multi-agent literature review and multi-textbook triangulation for every question.
+The unit of production is **not a literature review**. It is a short oral answer package.
 
-> **One strong base source + targeted verification is the default. Escalate only when uncertainty, safety, law, treatment volatility or source conflict justifies it.**
+Default learner-facing target:
 
-The prescribed **Shorter Oxford Textbook of Psychiatry, 7th edition / 2017 exam edition** is the default base source for the private Greek Adult Psychiatry board-preparation master.
+- model oral answer: roughly **1–2 pages**, usually about **350–700 words**;
+- spoken duration: usually **2–4 minutes**, up to about 5 minutes for major topics;
+- compact recall spine;
+- compact board facts;
+- only genuine examiner follow-ups;
+- brief current-update/exam-current note only when needed.
 
-## Routine production path
+## Governing principle
 
-### 1. Oxford base extraction
+> **Do only enough research to make the short final answer accurate, current where necessary, and safe for the exam.**
 
-Retrieve only the relevant section/pages and produce a compact paraphrased source packet containing:
-- natural answer structure;
-- core clinical/exam points;
-- classic distinctions;
-- exact facts that need checking;
-- page provenance.
+More source retrieval is not automatically better.
 
-Do not routinely open supplementary textbooks.
+The detailed routine is in `lean-workflow.md` and supersedes the older maximal multi-agent workflow as the default.
 
-### 2. Targeted current verification
+## Default pipeline
 
-Verify only update-sensitive or exact claims needed for accuracy:
-- DSM-5-TR / ICD-11 for diagnosis/classification;
-- current guideline for treatment where Oxford may be outdated;
-- current prescribing/regulatory source for dose, monitoring, interactions, pregnancy, toxicity or licensing;
-- current official Greek source for law/forensic/confidentiality/service rules;
-- one strong current source for any consequential unstable fact.
+### 1. Tiny question brief
 
-A stable descriptive question may need only 2–5 current checks.
+Define:
 
-### 3. Compact answer brief
+- what is being asked;
+- 4–8 must-cover items;
+- board facts/follow-ups;
+- likely update-sensitive points.
 
-Use `answer-brief-schema.yml` to combine the Oxford base and verification delta.
+### 2. Oxford exam-base extraction
 
-The answer brief records:
-- recall spine;
-- must-cover content;
-- verified updates/corrections;
-- board facts;
-- genuine exam-vs-current differences;
-- follow-ups;
-- deliberate exclusions;
-- lightweight commercial provenance flags.
+The prescribed **Shorter Oxford Textbook of Psychiatry, 7th ed. / 2017 exam edition** is usually the starting study source.
 
-Use the older full `dossier-schema.yml` only when a question has substantial conflict or unusually high-risk/complex evidence.
+Extract only the relevant pages and answer skeleton. Do not summarise whole chapters when the final answer is 1–2 pages.
 
-### 4. Dedicated writer
+### 3. Targeted current verification
 
-The writer receives the approved answer brief and creates the learner-facing package in original wording.
+Check only claims that matter and may have changed.
 
-The writer does not independently research, invent exact facts or resolve source conflicts.
+Typical authorities:
 
-### 5. Coordinator QA
+- **WHO ICD-11** for current international diagnostic/classification framing when adequate;
+- **DSM-5-TR selectively**, when a DSM-specific distinction is genuinely useful for private exam study or a DSM/ICD comparison matters;
+- current major guideline for treatment;
+- current prescribing/regulatory authority for doses, monitoring, interactions, pregnancy, toxicity and licensing;
+- current official Greek authority for law, ethics, involuntary care, confidentiality, forensic rules and system-specific claims;
+- one strong current review/paper for a consequential uncertain scientific point.
 
-One integrated coordinator pass checks:
-- fidelity to the brief;
-- correctness of verified/update-sensitive claims;
-- oral usability and hierarchy;
-- missing board facts/follow-ups;
+DSM is **not** the universal organising baseline and its criterion text should not be reproduced in final learner-facing prose.
+
+### 4. Compact answer brief
+
+Use `answer-brief-schema.yml`.
+
+Combine the exam base + only the current corrections/additions needed for the final answer.
+
+The brief should contain only what the writer needs.
+
+### 5. Dedicated writer
+
+Writer receives only the approved brief.
+
+Writer produces an original, spoken, hierarchical answer. The writer does not browse or add new facts.
+
+### 6. One integrated coordinator QA
+
+Check:
+
+- oral length and usability;
+- must-cover completeness;
+- current/high-risk facts;
+- board facts/follow-ups;
 - exam/current distinction;
-- Greek applicability where relevant.
+- Greek applicability;
+- unsupported additions;
+- unnecessary detail.
 
-Separate source-QA and oral-red-team agents are optional escalation tools, not routine requirements.
+Separate QA agents are escalation tools, not mandatory for every question.
 
-## Final learner-facing package
+## Source-count rule
 
-Each answer may contain:
+For most stable questions, **Oxford + a few current checks is enough**.
 
-1. **Recall spine** — 4–7 retrieval concepts.
-2. **Model oral answer** — fractal spoken answer: strong opening, competent ~2-minute core, deeper material if allowed to continue.
-3. **Must-know board facts** — exact criteria/durations/classic facts/drug or monitoring anchors worth separate recall.
-4. **Examiner follow-ups** — only genuine approved pivots.
-5. **Exam answer vs current practice** — only when a meaningful discrepancy exists.
+A second local textbook is opened only when it will plausibly change what the candidate should say.
 
-## Source escalation
+For treatment/drug/legal questions, a more appropriate current authority may carry more weight than Oxford for the relevant claim.
 
-Open a supplementary local textbook only when:
-- Oxford cannot cover a required item;
-- Oxford is ambiguous;
-- a current-source conflict needs explanation;
-- the Greek oral bank signals a classic point Oxford does not adequately cover;
-- another text is clearly the appropriate specialist authority for the question.
+## DSM / ICD / commercialization rule
 
-Examples:
-- Maudsley for psychopharmacology practicalities;
-- Stahl for selected mechanisms;
-- New Oxford/Kaplan only when they materially resolve a gap.
+The personal study master may consult all appropriate sources, including DSM-5-TR.
 
-Source count is not a quality metric.
+However:
 
-## Efficiency and batching
+- do not design every answer around DSM criteria;
+- prefer syndrome-based original clinical explanation;
+- use WHO ICD-11 and other publicly referenceable authorities where they adequately support current classification;
+- use DSM selectively for exam-relevant distinctions/cross-checks;
+- do not reproduce DSM criterion wording in the commercial derivative;
+- retain internal provenance and create the commercial manuscript later as a separate original derivative.
 
-Questions sharing an Oxford chapter should use one chapter map rather than repeated fresh retrieval.
+See `commercialization-policy.md`.
 
-Examples:
-- Q11–19 schizophrenia/psychosis;
-- Q20–27 mood/perinatal;
-- Q45–58 neurocognitive/neuropsychiatry.
+## Escalation
 
-Current research should likewise reuse already inspected domain authorities and perform only question-specific delta checks.
+Use the older full dossier / multi-source workflow only when:
 
-## Enhanced verification triggers
+- sources materially conflict;
+- a high-risk drug/legal point remains unresolved;
+- the question itself concerns contested evidence;
+- routine QA finds a substantive problem.
 
-Use the more intensive/full dossier workflow only for:
-- psychopharmacology dose/monitoring/toxicity/interactions;
-- pregnancy/reproductive safety;
-- emergency treatment;
-- current treatment algorithms/resistance when materially changed since 2017;
-- Greek law/forensic/confidentiality;
-- rapidly changing interventions;
-- substantial Oxford-vs-current disagreement;
-- contested evidence central to the answer.
+## Scaling
 
-## Accuracy rule
+When several questions share a source chapter/domain:
 
-Efficiency means eliminating duplication, not weakening authority.
+- map the source once;
+- reuse the verified source map;
+- retrieve only the question-specific delta;
+- still write each answer separately.
 
-Never save time by:
-- using generic websites instead of DSM/ICD/guidelines/regulators where those authorities are required;
-- copying old `Psych` answers as factual authority;
-- guessing an exact criterion, dose, level, legal rule or monitoring schedule;
-- allowing the writer to fill unresolved gaps from memory.
+The project should scale through **source reuse and selective verification**, not through 100 independent deep-research jobs.
 
-## Commercialization
+## Final stop rule
 
-The private study master remains optimized for exam preparation and must not be slowed by commercial clearance.
+Stop retrieval when further reading is unlikely to change the 1–2 page oral answer, its board-fact block, or a genuine examiner follow-up.
 
-Retain source/page provenance and obvious source-expression flags during production. The eventual commercial manuscript will be a separate, originally written derivative subjected to a dedicated copyright/licensing/provenance pass.
-
-## Legacy workflow files
-
-The detailed `dossier-schema.yml`, multi-agent prompts and previous extensive workflow remain available for escalation and auditing. They are **not the default checklist for every question**.
-
-Current default: `lean-workflow.md` + `answer-brief-schema.yml`.
+That is the operational definition of “enough research” for this project.
