@@ -1,0 +1,492 @@
+schema_version: 1
+updated: 2026-08-18
+status: seeded_provisional
+
+purpose: >-
+  Protect high-yield exact recall, classic distinctions, criterion/timing facts and drug-specific
+  examination probes underneath the 100 coherent Adult Psychiatry questions. This layer exists
+  because a candidate may understand a topic well enough for a viva answer yet still miss a
+  short factual oral probe or MCQ. It is not a second curriculum and must not become encyclopaedic.
+
+relationship_to_other_layers:
+  core_coverage: core-coverage.yml defines what must be understood conceptually and clinically.
+  visible_questions: attempts/010.md provides the 100 coherent viva prompts.
+  answer_coverage: answer-coverage/010.yml defines must-not-miss clinical content.
+  board_facts: this file defines precise or classic facts that must be retrievable within those 100 packages.
+
+rules:
+  - An anchor is included only when exact recall would plausibly discriminate board performance or is directly supported by the curated Greek oral/MCQ material.
+  - Prefer prompts and expected scope over storing possibly outdated numerical answers at this stage.
+  - Exact diagnostic criteria must be verified from the designated exam classification source before finalisation.
+  - Exact doses, levels, interaction thresholds, monitoring schedules, pregnancy restrictions and licensing must be verified from current authoritative prescribing/regulatory sources before finalisation.
+  - Historical or legacy exam facts may remain, but final material must label them as exam-specific/historical when they differ from current practice.
+  - A fact anchor does not justify a new main question by itself.
+  - Every final anchor must be attached to at least one of the 100 answer packages.
+
+verification_states:
+  EXAM_SOURCE_REQUIRED: verify against the designated exam textbook/classification edition.
+  CURRENT_SOURCE_REQUIRED: verify against current authoritative clinical/prescribing/regulatory sources.
+  EXAM_CURRENT_SPLIT_REQUIRED: explicitly preserve exam-source answer and current-practice answer if they differ.
+  STABLE_SOURCE_CHECK: stable concept, but verify wording before publication.
+
+anchors:
+  # -------------------------------------------------------------------------
+  # PSYCHOSIS / SCHIZOPHRENIA
+  # -------------------------------------------------------------------------
+  - id: bf.psychosis.schneider_first_rank
+    kind: classic_distinction
+    prompt: Recall the Schneider first-rank symptoms and their modern diagnostic status.
+    maps_to_010: [Q12]
+    coverage_ids: [schizophrenia.syndrome_diagnosis]
+    source_evidence: [Psych/oral:1Aa2]
+    priority: A
+    verification: EXAM_CURRENT_SPLIT_REQUIRED
+
+  - id: bf.psychosis.schizophrenia_dsm_icd
+    kind: classification_timing
+    prompt: Recall the exam-relevant DSM versus ICD schizophrenia duration/criterion distinctions and which features are historical rather than current.
+    maps_to_010: [Q12]
+    coverage_ids: [schizophrenia.syndrome_diagnosis]
+    source_evidence: [Psych/oral:1Aa3, Psych/sos:schizophrenia_duration_dsm5_icd10]
+    priority: A
+    verification: EXAM_CURRENT_SPLIT_REQUIRED
+
+  - id: bf.psychosis.duration_boundaries
+    kind: classification_timing
+    prompt: Recall the key duration boundaries separating brief psychotic, schizophreniform-type and schizophrenia presentations in the designated exam framework.
+    maps_to_010: [Q11, Q12, Q13]
+    coverage_ids: [schizophrenia.differential]
+    source_evidence: [Psych/sos:brief_vs_schizophreniform_duration]
+    priority: A
+    verification: EXAM_SOURCE_REQUIRED
+
+  - id: bf.psychosis.schizoaffective_mood_independence
+    kind: diagnostic_criterion
+    prompt: Recall the exam-defining relationship between psychosis and mood episodes in schizoaffective disorder.
+    maps_to_010: [Q13]
+    coverage_ids: [schizophrenia.differential]
+    source_evidence: [Psych/sos:schizoaffective_psychosis_without_mood]
+    priority: A
+    verification: EXAM_CURRENT_SPLIT_REQUIRED
+
+  - id: bf.psychosis.fep_response_maintenance
+    kind: numerical_treatment_anchor
+    prompt: Know the exam-relevant expectations for early antipsychotic response and maintenance duration after first-episode psychosis, while distinguishing source-specific figures from current guidance.
+    maps_to_010: [Q11, Q17]
+    coverage_ids: [psychosis.first_episode, schizophrenia.maintenance_rehabilitation]
+    source_evidence: [Psych/oral:1Ab2]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.psychosis.sex_onset_patterns
+    kind: epidemiology_anchor
+    prompt: Recall the classic sex and age-of-onset differences in schizophrenia and their limitations.
+    maps_to_010: [Q15]
+    coverage_ids: [schizophrenia.course_prognosis]
+    source_evidence: [Psych/oral:1Ab5]
+    priority: B
+    verification: STABLE_SOURCE_CHECK
+
+  - id: bf.psychosis.cognitive_profile
+    kind: numerical_concept_anchor
+    prompt: Recall the major cognitive domains affected in schizophrenia, the broad magnitude of impairment, and the role/limits of standard cognitive batteries.
+    maps_to_010: [Q12, Q17]
+    coverage_ids: [schizophrenia.negative_cognitive]
+    source_evidence: [Psych/oral:1Ag1, Psych/oral:1Ag2, Psych/oral:1Ag3, Psych/oral:1Ag4]
+    priority: B
+    verification: STABLE_SOURCE_CHECK
+
+  - id: bf.psychosis.trs_adequate_trials
+    kind: treatment_definition
+    prompt: Recall what constitutes adequate prior antipsychotic trials before treatment-resistant schizophrenia is diagnosed and the principal causes of pseudoresistance.
+    maps_to_010: [Q18]
+    coverage_ids: [schizophrenia.trs]
+    source_evidence: [Psych/oral:1Ad1, Psych/oral:1Ad2]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.clozapine.monitoring_thresholds
+    kind: drug_safety
+    prompt: Recall the current clozapine haematological initiation/continuation/stop framework and recognise legacy thresholds that may appear in older exam material.
+    maps_to_010: [Q19]
+    coverage_ids: [psychopharm.clozapine]
+    source_evidence: [Psych/oral:1Ad4, Psych/sos:clozapine_start_thresholds_current_legacy, Psych/sos:clozapine_stop_thresholds_current_legacy]
+    priority: A
+    verification: EXAM_CURRENT_SPLIT_REQUIRED
+
+  - id: bf.clozapine.monitoring_schedule
+    kind: drug_safety
+    prompt: Recall the current clozapine blood-monitoring schedule and distinguish it from legacy schedules.
+    maps_to_010: [Q19]
+    coverage_ids: [psychopharm.clozapine]
+    source_evidence: [Psych/oral:1Ad4, Psych/sos:clozapine_blood_monitoring_schedule]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.clozapine.restart_interruption
+    kind: drug_safety
+    prompt: Know when an interruption requires clozapine re-titration and the safe restart principle.
+    maps_to_010: [Q19]
+    coverage_ids: [psychopharm.clozapine]
+    source_evidence: [Psych/oral:1Ad6, Psych/sos:clozapine_restart_after_interruption]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.clozapine.plasma_level_response
+    kind: therapeutic_drug_monitoring
+    prompt: Know how clozapine plasma levels, smoking, infection and treatment duration are used when judging non-response or toxicity.
+    maps_to_010: [Q19]
+    coverage_ids: [psychopharm.clozapine]
+    source_evidence: [Psych/oral:1Ad6, Psych/sos:clozapine_dose_and_level]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  # -------------------------------------------------------------------------
+  # MOOD / SUICIDE
+  # -------------------------------------------------------------------------
+  - id: bf.mood.mde_core_threshold
+    kind: diagnostic_criterion
+    prompt: Recall the core major depressive episode symptom-count/duration threshold in the designated exam framework.
+    maps_to_010: [Q20]
+    coverage_ids: [depression.mdd]
+    source_evidence: [Psych/sos:major_depression_min_duration_symptoms]
+    priority: A
+    verification: EXAM_SOURCE_REQUIRED
+
+  - id: bf.mood.persistent_depression_duration
+    kind: classification_timing
+    prompt: Recall the duration/classification logic for persistent depressive disorder/dysthymia and how the exam source frames it.
+    maps_to_010: [Q20]
+    coverage_ids: [depression.patterns_specifiers]
+    source_evidence: [Psych/oral:1Ca5]
+    priority: B
+    verification: EXAM_CURRENT_SPLIT_REQUIRED
+
+  - id: bf.bipolar.mania_hypomania_duration
+    kind: diagnostic_criterion
+    prompt: Recall the minimum-duration and severity/hospitalisation distinctions between mania and hypomania.
+    maps_to_010: [Q23, Q24]
+    coverage_ids: [bipolar.diagnosis, bipolar.mania]
+    source_evidence: [Psych/sos:mania_min_duration, Psych/sos:hypomania_min_duration]
+    priority: A
+    verification: EXAM_SOURCE_REQUIRED
+
+  - id: bf.bipolar.mixed_rapid_cycling
+    kind: classification_anchor
+    prompt: Recall the exam definition of rapid cycling and the core meaning/implications of mixed features.
+    maps_to_010: [Q23, Q26]
+    coverage_ids: [bipolar.diagnosis, bipolar.maintenance]
+    source_evidence: [Psych/oral:1Cg2]
+    priority: A
+    verification: EXAM_CURRENT_SPLIT_REQUIRED
+
+  - id: bf.suicide.sex_age_patterns
+    kind: epidemiology_anchor
+    prompt: Recall the robust sex/age patterns in suicide and attempts without turning them into deterministic individual prediction.
+    maps_to_010: [Q5]
+    coverage_ids: [suicide.clinical_topic]
+    source_evidence: [Psych/oral:1Cd3]
+    priority: B
+    verification: STABLE_SOURCE_CHECK
+
+  - id: bf.suicide.disorder_patterns
+    kind: epidemiology_anchor
+    prompt: Know the major disorder-related suicide patterns and particularly how risk is framed in depression, bipolar disorder and schizophrenia.
+    maps_to_010: [Q5, Q15, Q20, Q23]
+    coverage_ids: [suicide.clinical_topic]
+    source_evidence: [Psych/oral:1Cd1, Psych/oral:1Cd4]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  # -------------------------------------------------------------------------
+  # PSYCHOPHARMACOLOGY
+  # -------------------------------------------------------------------------
+  - id: bf.lithium.levels_trough
+    kind: therapeutic_drug_monitoring
+    prompt: Recall how lithium levels are timed/interpreted and the exam-relevant acute versus maintenance target logic.
+    maps_to_010: [Q81]
+    coverage_ids: [psychopharm.lithium]
+    source_evidence: [Psych/oral:2Aa1, Psych/sos:lithium_core_range, Psych/sos:lithium_acute_mania_range, Psych/sos:lithium_level_timing]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.lithium.toxicity_thresholds
+    kind: drug_safety
+    prompt: Know the relationship between serum lithium concentration and clinical toxicity, including why symptoms/clinical context can override a single number.
+    maps_to_010: [Q81]
+    coverage_ids: [psychopharm.lithium]
+    source_evidence: [Psych/oral:2Aa3, Psych/oral:2Aa4, Psych/sos:lithium_toxicity_threshold]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.lithium.monitoring
+    kind: drug_safety
+    prompt: Recall the current monitoring domains and broad frequency logic for stable lithium treatment and after dose/illness/interaction changes.
+    maps_to_010: [Q81]
+    coverage_ids: [psychopharm.lithium]
+    source_evidence: [Psych/oral:2Aa1, Psych/oral:2Aa5, Psych/sos:lithium_routine_monitoring]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.valproate.levels
+    kind: therapeutic_drug_monitoring
+    prompt: Recall the exam-relevant serum-level interpretation for valproate and when levels are clinically useful.
+    maps_to_010: [Q82]
+    coverage_ids: [psychopharm.valproate]
+    source_evidence: [Psych/oral:2Ab1, Psych/sos:valproate_therapeutic_range]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.valproate.reproductive_risk
+    kind: drug_regulatory_safety
+    prompt: Recall the magnitude/nature of valproate reproductive and neurodevelopmental risk and the current regulatory restrictions relevant to psychiatric prescribing.
+    maps_to_010: [Q82, Q86]
+    coverage_ids: [psychopharm.valproate, psychopharm.pregnancy_lactation]
+    source_evidence: [Psych/oral:2Ab2, Psych/sos:valproate_teratogenic_risk]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.ssri.differences
+    kind: drug_class_distinction
+    prompt: Recall the clinically useful distinguishing features of common SSRIs: half-life, interaction burden, discontinuation tendency, anticholinergic burden and QT issues.
+    maps_to_010: [Q79, Q80]
+    coverage_ids: [psychopharm.antidepressant_selection, psychopharm.antidepressant_safety]
+    source_evidence: [Psych/oral:2Ag1, Psych/oral:2Ag2]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.antidepressants.trazodone_priapism
+    kind: individual_drug_fact
+    prompt: Recall trazodone's SARI mechanism and the recognition/urgency of priapism.
+    maps_to_010: [Q79, Q80]
+    coverage_ids: [psychopharm.antidepressant_selection, psychopharm.antidepressant_safety]
+    source_evidence: [Psych/oral:2C1]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.antidepressants.hyponatraemia
+    kind: adverse_effect_fact
+    prompt: Recall the psychotropics/risk groups associated with hyponatraemia/SIADH and the clinical response to symptomatic hyponatraemia.
+    maps_to_010: [Q80]
+    coverage_ids: [psychopharm.antidepressant_safety]
+    source_evidence: [Psych/oral:2C2]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.lamotrigine.titration
+    kind: drug_safety
+    prompt: Recall the slow-titration principle for lamotrigine, how valproate changes titration/exposure, and the response to a concerning rash.
+    maps_to_010: [Q83]
+    coverage_ids: [psychopharm.lamotrigine]
+    source_evidence: [Psych/sos:lamotrigine_standard_titration, Psych/sos:lamotrigine_valproate_adjustment]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.carbamazepine.level_interactions
+    kind: individual_drug_fact
+    prompt: Recall carbamazepine's limited psychiatric role, therapeutic-drug-monitoring concept and major enzyme-induction/interactions.
+    maps_to_010: [Q75, Q82]
+    coverage_ids: [psychopharm.carbamazepine]
+    source_evidence: [Psych/sos:carbamazepine_therapeutic_range]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  # -------------------------------------------------------------------------
+  # ANXIETY / TRAUMA / ADDICTION
+  # -------------------------------------------------------------------------
+  - id: bf.trauma.asd_ptsd_timing
+    kind: diagnostic_timing
+    prompt: Recall the exam timing distinction between acute stress disorder and PTSD.
+    maps_to_010: [Q32, Q33]
+    coverage_ids: [trauma.ptsd, trauma.acute_adjustment]
+    source_evidence: [Psych/oral:3A4, Psych/sos:acute_stress_vs_ptsd_duration]
+    priority: A
+    verification: EXAM_SOURCE_REQUIRED
+
+  - id: bf.trauma.adjustment_timing
+    kind: diagnostic_timing
+    prompt: Recall the exam timing framework for adjustment disorder in relation to the stressor and persistence after it ends.
+    maps_to_010: [Q33]
+    coverage_ids: [trauma.acute_adjustment]
+    source_evidence: [Psych/oral:3A4, Psych/sos:adjustment_disorder_timing]
+    priority: A
+    verification: EXAM_CURRENT_SPLIT_REQUIRED
+
+  - id: bf.anxiety.performance_beta_blocker
+    kind: treatment_exception
+    prompt: Recall the limited context-specific role of beta-blockers in performance anxiety and distinguish it from treatment of generalized social anxiety disorder.
+    maps_to_010: [Q30]
+    coverage_ids: [anxiety.social, anxiety.specific_phobia]
+    source_evidence: [Psych/oral:3A8]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.alcohol.withdrawal_timeline
+    kind: emergency_timing
+    prompt: Recall the relative timing of uncomplicated alcohol withdrawal, withdrawal hallucinosis, seizures and delirium tremens.
+    maps_to_010: [Q38]
+    coverage_ids: [alcohol.withdrawal]
+    source_evidence: [Psych/oral:3B1]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.addiction.urine_detection_windows
+    kind: testing_fact
+    prompt: Know approximate urine detection windows only at board-relevant overview level and the major reasons these values vary.
+    maps_to_010: [Q37]
+    coverage_ids: [addiction.toxicology_testing]
+    source_evidence: [Psych/oral:3B7]
+    priority: C
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.stimulants.amphetamine_cocaine_mechanism
+    kind: mechanism_distinction
+    prompt: Recall the core mechanistic distinction between amphetamines and cocaine at monoamine transporters/release.
+    maps_to_010: [Q42, Q95]
+    coverage_ids: [stimulants.disorders, neuroscience.neurotransmitters]
+    source_evidence: [Psych/oral:3B8]
+    priority: B
+    verification: STABLE_SOURCE_CHECK
+
+  # -------------------------------------------------------------------------
+  # NEUROCOGNITIVE / SLEEP / BIOLOGICAL TREATMENTS
+  # -------------------------------------------------------------------------
+  - id: bf.dlb.one_year_rule
+    kind: diagnostic_distinction
+    prompt: Recall the conventional temporal rule distinguishing dementia with Lewy bodies from Parkinson disease dementia and understand its clinical limitations.
+    maps_to_010: [Q48]
+    coverage_ids: [dementia.dlb_pdd]
+    source_evidence: [Psych/oral:3C2]
+    priority: A
+    verification: STABLE_SOURCE_CHECK
+
+  - id: bf.dementia.ache_inhibitors
+    kind: drug_mechanism_indication
+    prompt: Recall the principal cholinesterase inhibitors, mechanism, main indications and important adverse effects/cautions.
+    maps_to_010: [Q47, Q48]
+    coverage_ids: [dementia.alzheimer, dementia.dlb_pdd]
+    source_evidence: [Psych/oral:3C4]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.dementia.memantine
+    kind: drug_mechanism_indication
+    prompt: Recall memantine's NMDA-related mechanism and its place in Alzheimer treatment.
+    maps_to_010: [Q47]
+    coverage_ids: [dementia.alzheimer]
+    source_evidence: [Psych/oral:3C5]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.ect.medication_management
+    kind: procedure_drug_safety
+    prompt: Recall the major medication classes that alter ECT seizure quality/cognitive risk and the principles for lithium, benzodiazepines and anticonvulsants around ECT.
+    maps_to_010: [Q89]
+    coverage_ids: [biological.ect]
+    source_evidence: [Psych/oral:4A2]
+    priority: A
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.chronotherapy.phototherapy
+    kind: mechanism_indication
+    prompt: Recall the circadian mechanism, principal indication and major safety issue of bright-light therapy.
+    maps_to_010: [Q20, Q67, Q89]
+    coverage_ids: [biological.rtms_other, neuroscience.sleep_circadian_endocrine]
+    source_evidence: [Psych/oral:4A3]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.chronotherapy.melatonin
+    kind: mechanism_indication
+    prompt: Recall melatonin's circadian/chronobiotic mechanism and the importance of timing in clinical use.
+    maps_to_010: [Q65, Q67]
+    coverage_ids: [neuroscience.sleep_circadian_endocrine]
+    source_evidence: [Psych/oral:4A4]
+    priority: B
+    verification: CURRENT_SOURCE_REQUIRED
+
+  - id: bf.sleep.stages_eeg
+    kind: physiology_fact
+    prompt: Recall N1, N2, N3 and REM with their characteristic EEG/physiological findings and their distribution across the night.
+    maps_to_010: [Q67]
+    coverage_ids: [neuroscience.sleep_circadian_endocrine]
+    source_evidence: [Psych/oral:4C1, Psych/oral:4C2]
+    priority: A
+    verification: STABLE_SOURCE_CHECK
+
+  - id: bf.sleep.depression_architecture
+    kind: physiology_fact
+    prompt: Recall the classic polysomnographic changes described in major depression and recognise that they are not diagnostic tests.
+    maps_to_010: [Q67, Q20]
+    coverage_ids: [neuroscience.sleep_circadian_endocrine, depression.mdd]
+    source_evidence: [Psych/oral:4C3]
+    priority: A
+    verification: STABLE_SOURCE_CHECK
+
+  # -------------------------------------------------------------------------
+  # ADULT NEURODEVELOPMENT / EATING
+  # -------------------------------------------------------------------------
+  - id: bf.adhd.thresholds_onset
+    kind: diagnostic_criterion
+    prompt: Recall the adult-versus-child symptom-threshold distinction and developmental-onset requirement for ADHD in the designated exam framework.
+    maps_to_010: [Q59]
+    coverage_ids: [developmental.adhd]
+    source_evidence: [Psych/sos:adhd_symptom_thresholds]
+    priority: A
+    verification: EXAM_SOURCE_REQUIRED
+
+  - id: bf.autism.classification_history
+    kind: classification_history
+    prompt: Recall the key DSM-IV to DSM-5 autism-spectrum classification changes as a historical exam fact, without letting them replace current diagnostic reasoning.
+    maps_to_010: [Q60]
+    coverage_ids: [developmental.autism]
+    source_evidence: [Psych/oral:4D1]
+    priority: B
+    verification: EXAM_CURRENT_SPLIT_REQUIRED
+
+  - id: bf.eating.bulimia_bed_frequency
+    kind: diagnostic_criterion
+    prompt: Recall the exam frequency/duration threshold for bulimia nervosa and binge-eating disorder in the designated classification source.
+    maps_to_010: [Q64]
+    coverage_ids: [eating.bulimia, eating.bed_arfid]
+    source_evidence: [Psych/sos:bulimia_binge_eating_frequency]
+    priority: B
+    verification: EXAM_SOURCE_REQUIRED
+
+  # -------------------------------------------------------------------------
+  # GENETICS / EVIDENCE
+  # -------------------------------------------------------------------------
+  - id: bf.genetics.schizophrenia_familial_risk
+    kind: numerical_epidemiology
+    prompt: Recall approximate schizophrenia risks by degree of biological relatedness, while emphasising that these are population estimates rather than deterministic predictions.
+    maps_to_010: [Q96]
+    coverage_ids: [neuroscience.genetics]
+    source_evidence: [Psych/oral:5A2]
+    priority: B
+    verification: STABLE_SOURCE_CHECK
+
+  - id: bf.evidence.nnt
+    kind: calculation
+    prompt: Recall the definition and calculation of NNT from absolute risk reduction and distinguish absolute from relative effects.
+    maps_to_010: [Q97]
+    coverage_ids: [evidence.clinical_metrics]
+    source_evidence: [Psych/oral:5A4]
+    priority: A
+    verification: STABLE_SOURCE_CHECK
+
+  - id: bf.evidence.diagnostic_metrics
+    kind: calculation
+    prompt: Recall sensitivity, specificity, positive/negative predictive value and likelihood-ratio concepts and how prevalence changes predictive value.
+    maps_to_010: [Q97]
+    coverage_ids: [evidence.clinical_metrics]
+    source_evidence: [Psych/MCQ-bank, core-coverage:evidence.clinical_metrics]
+    priority: A
+    verification: STABLE_SOURCE_CHECK
+
+seed_summary:
+  curated_oral_fact_items_mapped: 30
+  additional_sos_mcq_anchors_added: true
+  next_step: >-
+    Verify and fill final expected answers only when each associated 100-question answer package is drafted.
+    Current clinical/prescribing anchors must use authoritative up-to-date sources; classification anchors
+    must identify the designated exam source/edition and explicitly record any current-practice difference.
