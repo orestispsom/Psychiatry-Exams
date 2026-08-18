@@ -1,0 +1,89 @@
+schema_version: 2
+attempt: "011"
+visible_questions: ../../attempts/011.md
+inherits_answer_logic_from: 010.yml
+canonical_coverage: ../core-coverage.yml
+adult_board_scope: ../adult-board-scope.yml
+board_fact_anchors: ../board-fact-anchors.yml
+question_map: ../attempt-maps/011.yml
+status: provisional_board_sufficiency
+
+purpose: >-
+  Preserve the complete Adult Psychiatry answer logic of Attempt 010 while adding the suicide
+  material exposed by the 129-item Greek oral-bank mapping and formally attaching the board-fact
+  layer to the 100-question answer architecture.
+
+inheritance_rules:
+  - All Attempt 010 answer requirements remain active unless explicitly changed below.
+  - All main questions retain the same semantic scope and numbering.
+  - The new Q5a is a genuine visible examiner probe, not an answer-outline bullet.
+  - Board-fact anchors are additional recall requirements and do not replace clinical reasoning.
+
+changed_requirements:
+  Q5:
+    topic: Post-attempt suicide prevention and broader suicide clinical knowledge
+    additional_must_cover:
+      - major established historical and dynamic suicide risk factors
+      - previous suicidal behaviour as a particularly important risk marker
+      - psychiatric-disorder patterns, especially mood disorders, schizophrenia, substance-use disorders, personality pathology and other high-risk clinical contexts
+      - sex and age patterns at population level without using them as deterministic individual prediction
+      - protective factors and the limits of categorical risk prediction
+      - treatments/interventions with particular relevance to suicide reduction when evidence supports them
+    visible_follow_up:
+      id: Q5a
+      function: examiner_depth_and_disorder_pattern_probe
+      prompt_target: major suicide risk factors and differences across major psychiatric disorders
+      source_evidence:
+        - orestispsom/Psych/src/data/oral.js:1Cd1
+        - orestispsom/Psych/src/data/oral.js:1Cd3
+        - orestispsom/Psych/src/data/oral.js:1Cd4
+
+  Q57:
+    canonical_alignment_note: >-
+      Apathy is approved for promotion as `neuropsychiatry.apathy` in core-coverage-candidates.yml.
+      Until the next canonical-file merge, the full apathy-versus-depression requirements defined
+      in Attempt 010 remain mandatory and must not be reduced to depression alone.
+
+adult_safeguarding_overlay:
+  status: mandatory_answer_coverage_pending_canonical_merge
+  approved_candidate: risk.intimate_partner_violence
+  preserve_within:
+    Q1:
+      - ask about interpersonal safety/violence when clinically indicated
+    Q4:
+      - recognise intimate-partner violence as a contributor to acute and longer-term suicide risk
+    Q5:
+      - address ongoing interpersonal danger when planning recurrence prevention and continuity
+    Q6:
+      - distinguish victimisation risk from violence-perpetration risk and assess household safety
+    Q27:
+      - consider partner violence, infant/dependent safety and safeguarding in perinatal assessment
+    Q98:
+      - understand confidentiality, proportionate disclosure and safeguarding duties in the Greek context
+  note: >-
+    This overlay does not create a dedicated main question and must use current Greek legal/service
+    information when final answers are written.
+
+board_fact_integration:
+  rule: >-
+    Every anchor in ../board-fact-anchors.yml must ultimately point to a concrete section of at
+    least one final answer package. An anchor is not counted as mastered merely because the parent
+    question is semantically related.
+  verification_gate:
+    diagnosis_classification: designated exam source plus current classification when relevant
+    psychopharmacology: current authoritative prescribing/regulatory source
+    law_ethics: current Greek official source
+    stable_foundation: authoritative textbook/source check
+  output_design_target:
+    - oral_core
+    - must_not_miss_clinical_coverage
+    - board_fact_anchors
+    - genuine_examiner_pivots
+
+empirical_sufficiency_gate:
+  source_audit: ../../reviews/010-greek-oral-129-mapping-audit.md
+  before_claiming_final_coverage:
+    - every `COVERED_DIRECTLY` source item must have an explicit visible target
+    - every `COVERED_WITHIN_ANSWER` source item must be locatable in a final answer package
+    - every `FACT_ANCHOR` source item must be locatable in the verified board-fact layer
+    - no source item may be marked covered solely by semantic proximity
