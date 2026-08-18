@@ -1,0 +1,161 @@
+schema_version: 1
+status: template
+
+# Canonical authoring schema for one question. Replace placeholders when instantiating.
+question:
+  id: Q000
+  attempt: "011"
+  text: ""
+  visible_followups: []
+  coverage_ids: []
+  archetype: ""
+  oral_length_class: STANDARD   # COMPACT | STANDARD | MAJOR
+  target_seconds: null
+  adult_psychiatry_scope: true
+  greek_jurisdiction_sensitive: false
+
+board_role:
+  why_this_question_matters: ""
+  examiner_is_testing:
+    - ""
+  failure_modes:
+    - ""
+  adjacent_questions_candidate_should_survive:
+    - ""
+
+research_questions:
+  required:
+    - id: RQ01
+      question: ""
+      reason: ""
+  optional: []
+
+sources:
+  exam_source:
+    title: "Shorter Oxford Textbook of Psychiatry"
+    edition: "7th edition / 2017 prescribed exam edition"
+    status: NOT_REVIEWED
+    chapter_sections: []
+    page_ranges: []
+    extracted_points: []
+    classic_exam_points: []
+    possible_outdated_or_conflicting_points: []
+
+  contemporary_authoritative:
+    status: NOT_REVIEWED
+    references: []
+    findings: []
+
+  local_supplementary_textbooks:
+    status: NOT_REVIEWED
+    references: []
+    unresolved_questions_after_review: []
+
+  greek_official_sources:
+    status: NOT_APPLICABLE
+    references: []
+    findings: []
+
+claims:
+  # Every consequential proposition used by the writer should appear here.
+  # Suggested prefixes: C_DEF, C_DIAG, C_DIFF, C_RISK, C_INV, C_TX, C_MON,
+  # C_AE, C_PROG, C_MECH, C_EXAM, C_LAW, C_FACT.
+  - id: C_PLACEHOLDER_01
+    proposition: ""
+    domain: ""
+    importance: CORE   # CORE | IMPORTANT | SUPPORTING
+    truth_scope: BOTH  # EXAM | CURRENT | BOTH | HISTORICAL
+    source_refs: []
+    support_notes: ""
+    conflict_refs: []
+    adjudication: UNRESOLVED_BLOCK
+    destination: UNASSIGNED  # SPOKEN_CORE | MUST_COVER_EXTENSION | BOARD_FACT | FOLLOWUP | EXAM_CURRENT_NOTE | EXCLUDE
+    writer_note: ""
+
+conflicts:
+  # Never silently reconcile incompatible sources.
+  - id: X_PLACEHOLDER_01
+    topic: ""
+    exam_source_position: ""
+    current_source_position: ""
+    significance: ""
+    adjudication: UNRESOLVED_BLOCK
+    final_handling: ""
+
+adjudication:
+  status: NOT_STARTED   # NOT_STARTED | IN_REVIEW | APPROVED_FOR_WRITING | BLOCKED
+  governing_decisions: []
+  deliberate_exclusions: []
+  unresolved_blocks: []
+
+answer_design:
+  recall_spine:
+    - ""
+  opening_job: ""
+  paragraph_jobs:
+    - order: 1
+      function: ""
+      required_claim_ids: []
+  closing_job: ""
+  must_cover_claim_ids: []
+  board_fact_anchor_ids: []
+  examiner_followup_ids: []
+  exam_current_note_required: false
+  oral_style_constraints:
+    - answer immediately
+    - sound like a senior psychiatry resident, not a textbook
+    - prioritise clinical hierarchy over exhaustive enumeration
+    - keep the first 2-4 sentences useful if interrupted
+
+board_facts:
+  # Populated from ../board-fact-anchors.yml after verification.
+  - anchor_id: ""
+    verification_state: NOT_VERIFIED
+    verified_answer: ""
+    source_refs: []
+    exam_current_split: null
+
+followups:
+  - id: ""
+    prompt: ""
+    function: ""
+    required_claim_ids: []
+    target_seconds: null
+
+writer_handoff:
+  ready: false
+  allowed_claim_ids: []
+  forbidden_additions:
+    - unsupported facts
+    - unadjudicated source reconciliation
+    - new treatment recommendations
+    - new numerical claims
+    - new legal claims
+  special_instructions: []
+
+qa:
+  source_fidelity:
+    status: NOT_RUN
+    findings: []
+  current_accuracy:
+    status: NOT_RUN
+    findings: []
+  exam_fidelity:
+    status: NOT_RUN
+    findings: []
+  greek_applicability:
+    status: NOT_RUN
+    findings: []
+  oral_red_team:
+    status: NOT_RUN
+    findings: []
+  coverage_trace:
+    status: NOT_RUN
+    missing_claim_ids: []
+    missing_board_fact_ids: []
+
+final_status:
+  state: NOT_STARTED   # NOT_STARTED | DOSSIER_APPROVED | DRAFTED | QA_FAILED | ANSWER_VERIFIED | FROZEN
+  final_answer_file: null
+  approved_by: []
+  notes: ""
