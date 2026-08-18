@@ -8,9 +8,10 @@ This directory contains the control system behind the visible 100-question attem
 2. `adult-board-scope.yml` — exam-scope overlay for Greek Adult Psychiatry specialist certification. It determines which canonical topics deserve scarce visible main-question space without deleting broader psychiatry knowledge.
 3. `question-design.md` — rules for constructing main questions, genuine examiner follow-ups and hidden answer-coverage checklists.
 4. `attempt-maps/<attempt>.yml` — disposable maps showing how a specific visible attempt samples the canonical coverage and where coverage is partial or distributed.
-5. `answer-coverage/<attempt>.yml` — hidden authoring specifications defining the minimum territory an excellent answer to each visible question must cover.
-6. `source-register.md` — record of sources actually reviewed and the scope in which they were used.
-7. `core-coverage-candidates.yml` — staging area for possible additions to the canonical bank that require deliberate review before promotion.
+5. `answer-coverage/<attempt>.yml` — hidden authoring specifications defining the minimum clinical/conceptual territory an excellent answer to each visible question must cover.
+6. `board-fact-anchors.yml` — high-yield exact-recall, criterion/timing, classic-distinction and drug-specific board facts that must be retrievable within the 100 answer packages. These anchors do not create new main questions and require source verification before final answers are written.
+7. `source-register.md` — record of sources actually reviewed and the scope in which they were used.
+8. `core-coverage-candidates.yml` — staging area for possible additions to the canonical bank that require deliberate review before promotion.
 
 ## Core principle
 
@@ -20,6 +21,17 @@ The Adult Psychiatry scope overlay may demote broader psychiatry topics from vis
 
 Question numbers may change freely. Stable coverage IDs should change only when the underlying psychiatry concept itself needs to be reorganised.
 
+## Board-sufficiency architecture
+
+The intended final learning package for each of the 100 questions has four layers:
+
+1. **Oral core** — a coherent approximately 2–5 minute senior-resident answer.
+2. **Must-not-miss answer coverage** — differentials, red flags, treatment sequencing, monitoring, special situations and other clinically important content.
+3. **Board-fact anchors** — exact criteria/durations, classic distinctions, key calculations/numerical anchors and specific high-yield drug facts that can be tested in MCQs or short oral probes.
+4. **Examiner pivots** — only genuine follow-up questions that meaningfully change or deepen the task.
+
+The board-sufficiency target is not literal memorisation of 100 scripts. It is that a candidate who genuinely understands, can reproduce and can apply all four layers across the 100 questions should possess a preparation set plausibly sufficient for a general Greek Adult Psychiatry specialist-certification examination. No finite bank guarantees an exam outcome.
+
 ## Visible versus hidden coverage
 
 A clinically important topic does not require its own main question. It can be protected through:
@@ -27,9 +39,21 @@ A clinically important topic does not require its own main question. It can be p
 - a numbered main question;
 - a genuine examiner follow-up;
 - distributed hidden answer coverage across one or more questions;
+- a board-fact anchor;
 - or, for lower-priority material, canonical coverage without a visible prompt.
 
 Follow-ups must not be used merely as answer-outline bullets.
+
+## Board-fact rule
+
+`board-fact-anchors.yml` protects facts that are too precise or narrow to deserve main-question space but are still plausible board probes.
+
+- It should remain compact and high-yield.
+- It stores what must be recalled; potentially unstable exact answers are verified when final answer packages are produced.
+- Diagnostic/classification facts use the designated exam source and must be labelled when current classification differs.
+- Doses, serum levels, monitoring schedules, interactions, pregnancy restrictions and licensing require current authoritative prescribing/regulatory verification.
+- Historical/legacy facts may remain only when clearly labelled as exam-specific or historical.
+- A board fact never upgrades itself into a main question merely because it is easy to test.
 
 ## Answer-coverage inheritance
 
