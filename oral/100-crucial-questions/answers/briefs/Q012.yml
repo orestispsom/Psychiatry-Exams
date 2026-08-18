@@ -1,0 +1,231 @@
+schema_version: 2
+status: APPROVED_FOR_WRITING
+
+question:
+  id: Q012
+  text: "Describe the clinical picture and diagnosis of schizophrenia."
+  attempt: "011"
+  archetype: "disorder_description_and_diagnosis"
+  oral_target: "2-4 minutes"
+  model_answer_target_words: "350-700"
+
+question_brief:
+  examiner_is_asking: >-
+    Give a clinically organised description of the schizophrenia syndrome and show that diagnosis
+    is longitudinal, syndromic and exclusionary rather than based on one psychotic symptom. The
+    answer should sound like a viva response, not a recitation of competing classification manuals.
+  must_cover:
+    - positive symptoms: delusions and hallucinations, with passivity/thought-interference phenomena as classic examples
+    - negative symptoms: diminished emotional expression/blunting, alogia, avolition, anhedonia and asociality; distinguish negative-looking states caused by depression, medication effects, active psychosis or deprivation
+    - disorganisation: formal thought disorder/disorganised speech, inappropriate or disorganised behaviour, and affective incongruity where relevant
+    - cognition: common broad impairment affecting attention, working memory, learning/memory, executive function and social cognition; clinically important but not itself diagnostic
+    - affective and psychomotor/catatonic symptoms can occur and must be interpreted in the whole syndrome
+    - acute presentations often foreground positive/disorganised symptoms while chronic disability may be dominated by negative and cognitive symptoms; this is a useful clinical description, not a rigid subtype system
+    - diagnosis requires longitudinal course/duration, functional change where applicable, and exclusion of mood, substance/medication and medical/neurological causes
+    - a first episode of psychosis is not automatically schizophrenia
+    - classical Schneider first-rank symptoms are exam-relevant historical phenomenology but are not pathognomonic and do not have privileged status in current classification
+    - classical paranoid/hebephrenic/catatonic/residual subtype language is historical rather than current classification
+  update_sensitive_points:
+    - Oxford Shorter 2017 teaches ICD-10; current classification is ICD-11
+    - first-rank symptoms are less diagnostically privileged than Oxford's historical emphasis may suggest
+    - current negative-symptom consensus uses five principal domains, adding asociality to Oxford's four-A presentation
+    - current systems have abandoned classical schizophrenia subtypes in favour of dimensional/course description
+
+exam_base:
+  primary_source: "Shorter Oxford Textbook of Psychiatry, 7th ed. / 2017 exam edition"
+  sections_pages:
+    - "Clinical features, acute/chronic schizophrenia, first-rank symptoms, subtypes, cognition: printed pp. 253-259 (PDF 262-268)"
+    - "Diagnosis and classification, DSM-5/ICD-10, differential: printed pp. 259-267 (PDF 268-276)"
+    - "Signs and symptoms / thought disorder: printed p. 16 (PDF 25)"
+  answer_skeleton:
+    - syndrome organised by positive, negative, disorganised and cognitive domains
+    - clinical expression in acute versus chronic illness, without treating this as rigid staging
+    - diagnosis based on overall pattern, duration/course and exclusions
+    - classic first-rank/subtype material acknowledged but placed in historical context
+  core_exam_points:
+    - Oxford groups the syndrome into positive, negative, behavioural-disorganisation and cognitive symptoms
+    - auditory hallucinations, delusions, formal thought disorder and negative symptoms are central descriptive features
+    - cognitive deficits are common, often present from first episode and functionally important
+    - mood symptoms occur and may force reconsideration of schizoaffective or mood psychosis when prominent/sustained
+    - pattern and duration matter before schizophrenia is diagnosed
+    - differential diagnosis includes affective psychosis, substances/medications and organic causes
+  classic_exam_points:
+    - Schneider first-rank symptoms and the classic phenomenology of passivity/thought interference
+    - historical subtype names may still be recognised orally even though they are no longer current formal subtypes
+    - cognition is important to outcome despite not being a defining diagnostic criterion
+
+current_verification:
+  - id: V01
+    point: "Current symptom-domain framing"
+    authority: "Q012-contemporary.md; contemporary consensus evidence cited there"
+    decision: UPDATE
+    concise_result: >-
+      Keep Oxford's four-domain exam structure for a memorable viva answer, but use contemporary
+      negative-symptom language: blunted/diminished emotional expression, alogia, avolition,
+      anhedonia and asociality. Cognitive dysfunction remains clinically important but non-diagnostic.
+
+  - id: V02
+    point: "Schneider first-rank symptoms"
+    authority: "Q012-contemporary.md; Cochrane diagnostic-accuracy evidence cited there; Q012-local.md"
+    decision: EXAM_CURRENT_SPLIT
+    concise_result: >-
+      Preserve them as classic exam phenomenology, but do not call them pathognomonic or sufficient
+      for diagnosis. Their diagnostic specificity is limited and current systems no longer privilege them.
+
+  - id: V03
+    point: "Current classification and subtypes"
+    authority: "Q012-contemporary.md; Q012-local.md"
+    decision: UPDATE
+    concise_result: >-
+      Oxford's ICD-10 subtype framework is historical. Current DSM-5-TR and ICD-11 do not retain the
+      classical schizophrenia subtypes; current description is dimensional/course-based.
+
+  - id: V04
+    point: "Longitudinal diagnosis and exclusions"
+    authority: "Q012-contemporary.md; Oxford Shorter 2017; local DSM-5-TR verification in Q012-local.md"
+    decision: KEEP
+    concise_result: >-
+      Diagnosis is clinical and longitudinal. Establish persistence/course and functioning, and exclude
+      mood-related, substance/medication-induced and medical/neurological causes. First-episode psychosis
+      should not be equated prematurely with schizophrenia.
+
+  - id: V05
+    point: "DSM-5-TR diagnostic framework"
+    authority: "Local authorised DSM-5-TR extraction in Q012-local.md"
+    decision: ADD
+    concise_result: >-
+      Use only as a compact board-fact cross-check, not as the organising structure of the answer.
+      The private study master may retain the broad duration/functional framework, paraphrased rather
+      than reproducing proprietary criterion wording.
+
+  - id: V06
+    point: "ICD-11 current framework"
+    authority: "Q012-contemporary.md"
+    decision: UPDATE
+    concise_result: >-
+      Current ICD-11 differs materially from Oxford's ICD-10 discussion and uses current symptom/course
+      qualifiers rather than classical subtypes. Do not make exact ICD-11 criterion enumeration central
+      to this oral answer unless later primary-text verification is required for a board-fact box.
+
+classification_note:
+  icd11_used: true
+  dsm5tr_used: true
+  dsm_reason_if_used: >-
+    Selective private-study verification of duration/function and current subtype status only; DSM is not
+    the answer's intellectual backbone and no criterion text should be reproduced in the final prose.
+
+board_facts:
+  - anchor_id: bf.psychosis.schneider_first_rank
+    fact_or_recall_target: >-
+      Know the classic Oxford first-rank phenomena: thought echo/audible thoughts; third-person voices
+      commenting or discussing; thought insertion, withdrawal or broadcasting; somatic passivity;
+      delusional perception; and made/passivity experiences involving affect, impulse or action. Exact
+      historical lists vary, so learn the Oxford exam-source grouping rather than claiming universality.
+    source: "Oxford Shorter 2017, Boxes 11.2-11.3, printed p. 255; Q012-local.md"
+    status: EXAM_CURRENT_SPLIT
+
+  - anchor_id: bf.psychosis.schizophrenia_dsm_icd
+    fact_or_recall_target: >-
+      Know that the current systems differ in duration/functional architecture and that Oxford's detailed
+      ICD discussion is ICD-10-era. For the spoken answer, emphasise longitudinal diagnosis rather than
+      reciting both manuals.
+    source: "Q012-local.md; Q012-contemporary.md"
+    status: EXAM_CURRENT_SPLIT
+
+  - anchor_id: bf.psychosis.duration_boundaries
+    fact_or_recall_target: >-
+      For private board recall: DSM-5-TR schizophrenia requires a six-month overall disturbance with an
+      active-phase component; shorter psychotic syndromes occupy different categories. Keep exact wording
+      out of commercial prose and verify any published criterion summary at commercial-clearance stage.
+    source: "Local authorised DSM-5-TR extraction in Q012-local.md"
+    status: VERIFIED
+
+  - anchor_id: bf.psychosis.cognitive_profile
+    fact_or_recall_target: >-
+      Cognitive impairment is broad, clinically important and often present from first episode; Oxford and
+      the contemporary evidence converge on an average group-level deficit of roughly one standard deviation,
+      with substantial individual heterogeneity. It is not a diagnostic threshold.
+    source: "Oxford Shorter 2017 pp. 257-258; Q012-contemporary.md"
+    status: VERIFIED
+
+answer_design:
+  recall_spine:
+    - "Syndrome by domains"
+    - "Typical clinical expression"
+    - "Longitudinal diagnosis"
+    - "Exclude mimics"
+    - "Place classic signs/subtypes historically"
+  opening_job: >-
+    Define schizophrenia as a heterogeneous primary psychotic syndrome characterised by combinations of
+    positive, negative, disorganised and cognitive abnormalities, diagnosed from the longitudinal pattern
+    rather than from any single symptom.
+  paragraph_jobs:
+    - "Describe positive and disorganised psychopathology with a few high-yield examples."
+    - "Describe negative and cognitive dimensions, including functional importance and secondary mimics."
+    - "Briefly mention affective/catatonic phenomena and acute-versus-chronic clinical emphasis."
+    - "Explain diagnosis: longitudinal course, functioning, duration and exclusion of mood/substance/medical causes."
+    - "Close with first-rank symptoms/subtypes as classic exam knowledge but not current pathognomonic/classificatory rules."
+  followups: []
+  common_traps:
+    - "Do not call first-rank symptoms pathognomonic."
+    - "Do not diagnose schizophrenia from a single cross-sectional psychotic episode."
+    - "Do not present classical subtypes as current formal diagnoses."
+    - "Do not equate withdrawal/inactivity automatically with primary negative symptoms."
+    - "Do not turn cognition into a diagnostic criterion."
+    - "Do not let Q12 become the full schizophrenia-vs-schizoaffective-vs-mood-psychosis differential of Q13."
+  deliberate_exclusions:
+    - detailed neurobiology, prognosis and epidemiology
+    - acute and maintenance treatment
+    - TRS/clozapine
+    - exhaustive DSM/ICD criterion recitation
+    - detailed historical nosology and old research subclassifications such as Crow/Liddle
+    - exact prevalence/comorbidity figures unless later chosen for a separate rapid-review box
+    - prodromal/high-risk-state conversion statistics
+
+exam_current_differences:
+  - topic: "ICD classification"
+    exam_position: "Oxford Shorter 2017 teaches ICD-10 schizophrenia criteria and subtypes."
+    current_position: "ICD-11 has superseded ICD-10 and no longer uses the classical subtype scheme."
+    learner_handling: >-
+      For the viva, recognise the classical Oxford material if asked, but frame the main answer using the
+      current syndrome/dimensional approach rather than presenting ICD-10 subtype labels as current.
+
+  - topic: "Schneider first-rank symptoms"
+    exam_position: "Oxford gives them substantial classic diagnostic emphasis."
+    current_position: "They remain useful phenomenology but have limited specificity and no privileged current diagnostic status."
+    learner_handling: "Know the list; describe it as historical/classic rather than pathognomonic."
+
+source_provenance:
+  sources_actually_used:
+    - "oral/100-crucial-questions/answers/source-packets/Q012-local.md"
+    - "oral/100-crucial-questions/answers/source-packets/Q012-contemporary.md"
+  expression_risk_flags:
+    - "Oxford's four-domain sequence influenced the private-study answer structure; commercial derivative should reorganise independently if needed."
+    - "Do not copy Oxford boxes/lists verbatim into the commercial manuscript."
+    - "DSM-5-TR criterion text present only in the source packet; final prose must paraphrase and the commercial derivative must not reproduce it."
+  proprietary_text_present: false
+
+writer_handoff:
+  ready: true
+  instructions:
+    - "Use only this approved brief."
+    - "Write an original spoken synthesis, not a textbook summary."
+    - "Model oral answer target: approximately 450-600 words; hard ceiling 700 unless coordinator approves."
+    - "Lead with the multidimensional syndrome and longitudinal-diagnosis principle."
+    - "Use selected examples of psychopathology; do not enumerate every Oxford symptom."
+    - "Do not reproduce DSM criterion wording or Oxford boxes."
+    - "Keep classification-manual detail subordinate to clinical reasoning."
+    - "Board facts should remain separate from spoken prose when they overload fluency."
+
+qa:
+  coordinator_status: NOT_RUN
+  checks:
+    oral_length_ok: null
+    all_must_cover_present: null
+    verified_claims_correct: null
+    unsupported_writer_additions: null
+    exam_current_handling_ok: null
+    commercial_expression_red_flag: null
+  issues: []
+
+final_status: BRIEF_APPROVED
