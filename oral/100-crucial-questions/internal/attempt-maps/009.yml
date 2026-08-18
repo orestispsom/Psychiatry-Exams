@@ -1,0 +1,49 @@
+schema_version: 3
+attempt: "009"
+source_file: oral/100-crucial-questions/attempts/009.md
+inherits_coverage_map: 008.yml
+canonical_coverage: ../core-coverage.yml
+jurisdiction_audit: ../../reviews/008-greece-applicability-audit.md
+
+purpose: >-
+  Attempt 009 preserves Attempt 008's 100-question allocation and psychiatry coverage.
+  This delta records jurisdiction-sensitive wording changes only. All unchanged coverage
+  mappings and partial/distributed coverage declarations inherit from 008.yml.
+
+jurisdiction_changes:
+  Q8:
+    change: >-
+      Reworded from generic decision-making capacity terminology to ability to provide valid
+      informed consent for a specific treatment decision.
+    greek_anchor: Law 3418/2005 Article 12 and current applicable Greek law.
+
+  Q90a:
+    change: >-
+      Explicitly asks for Greek legal and ethical issues when urgent ECT is considered and the
+      patient appears unable to provide valid informed consent.
+    rule: Do not import UK Mental Health Act or US substitute-consent frameworks.
+
+  Q98:
+    change: >-
+      Confidentiality question explicitly governed by Greek law and medical ethics.
+    greek_anchor: Law 3418/2005 Article 13 and other current applicable Greek law.
+
+  Q98a:
+    change: >-
+      Removed Tarasoff-style identifiable-victim framing. The prompt now asks how to reason about
+      a serious imminent threat under Greek confidentiality law and professional duties.
+    rule: Do not state a US-style duty to warn/protect as the Greek rule unless current Greek law supports it.
+
+  Q99:
+    change: >-
+      Criminal-responsibility forensic assessment explicitly anchored to the Greek legal context.
+    greek_anchor: Current Greek Penal Code, including Article 34 where applicable.
+
+unchanged_but_greek_answer_required:
+  - Q9   # involuntary psychiatric assessment/admission
+  - Q58  # child abuse/neglect safeguarding
+  - Q58a # disclosure and reporting
+  - Q100 # service organisation if specific structures are discussed
+
+main_question_count: 100
+visible_follow_up_count: 33
