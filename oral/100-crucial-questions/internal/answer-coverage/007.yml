@@ -1,0 +1,738 @@
+schema_version: 1
+attempt: "007"
+visible_questions: ../../attempts/007.md
+canonical_coverage: ../core-coverage.yml
+question_map: ../attempt-maps/007.yml
+status: provisional
+
+purpose: >-
+  Hidden authoring specification for Attempt 007. It defines the minimum territory an excellent
+  answer to each visible question should cover. It is downstream of core-coverage.yml and must
+  never redefine the canonical psychiatry knowledge bank. It should remain concise: enough to
+  prevent important omissions, not an outline of every fact that may appear in the final answer.
+
+rules:
+  - Use only clinically or examination-relevant coverage.
+  - Do not turn these items into visible subquestions unless they pass the genuine-follow-up test.
+  - Exact doses, thresholds, monitoring intervals, current legal rules and licensing details must be verified when answers are written.
+  - Distributed coverage is intentional: an IMPORTANT canonical topic may be protected across several answers rather than given a separate main question.
+
+questions:
+  Q1:
+    must_cover:
+      - systematic history, collateral information, MSE, risk, formulation and initial plan
+      - thought form/content, perception, mood/affect, psychomotor state, cognition, insight and judgement within the MSE
+      - relevant physical/neurological assessment and functional/social context
+
+  Q2:
+    must_cover:
+      - delusion, overvalued idea, obsession and rumination
+      - conviction, insight, resistance, intrusiveness and relation to behaviour
+      - clinically important overlap and imperfect boundaries
+
+  Q3:
+    must_cover:
+      - red flags for medical, neurological, medication and substance causes
+      - physical/neurological examination and collateral timeline
+      - rational use of laboratory tests, toxicology, EEG, imaging and CSF when indicated
+
+  Q4:
+    must_cover:
+      - ideation, intent, plan, means, preparation, previous behaviour and current mental state
+      - dynamic, historical and protective factors
+      - formulation, immediate safety, supervision and disposition rather than categorical prediction
+
+  Q5:
+    must_cover:
+      - post-attempt reassessment and treatment of the underlying disorder
+      - safety planning, means-safety, continuity and rapid follow-up
+      - psychosocial interventions and treatments with evidence relevant to suicide reduction
+      - family/support involvement when appropriate
+
+  Q6:
+    must_cover:
+      - acute and longer-term violence-risk formulation
+      - historical, clinical, substance-related, personality, neurological and situational contributors
+      - structured tools as adjuncts rather than replacements for judgement
+      - immediate risk-management plan
+    candidate_coverage:
+      - intimate-partner/domestic violence recognition and safety implications
+
+  Q7:
+    must_cover:
+      - immediate environmental safety and verbal de-escalation
+      - indications and principles of rapid tranquillisation with monitoring
+      - restrictive interventions as last resort
+      - delirium, intoxication/withdrawal and medical/neurological causes that must not be missed
+
+  Q8:
+    must_cover:
+      - decision- and time-specific capacity assessment
+      - understanding, appreciation, reasoning and communication of choice
+      - distinction from diagnosis, insight, disagreement and legal competence
+      - implications of incapacity for consent/refusal and surrogate processes
+
+  Q9:
+    must_cover:
+      - current Greek legal criteria and process
+      - necessity, proportionality and least-restrictive care
+      - documentation, rights and safeguards
+    verification_required: current_official_Greek_law
+
+  Q10:
+    must_cover:
+      - syndromic recognition and principal signs of catatonia
+      - psychiatric, neurological, toxic and medical differential
+      - benzodiazepine treatment and ECT
+      - malignant catatonia and distinction from NMS
+
+  Q11:
+    must_cover:
+      - psychopathology, risk, collateral history and functional decline
+      - affective, substance-related and secondary medical/neurological differentials
+      - initial investigations and admission decisions
+      - initial antipsychotic, engagement and early psychosocial intervention
+
+  Q12:
+    must_cover:
+      - positive, negative, disorganised, cognitive and affective dimensions
+      - formal thought disorder and perceptual abnormalities relevant to schizophrenia
+      - diagnostic framework and longitudinal requirements
+      - contemporary significance and limitations of historical first-rank symptoms
+
+  Q13:
+    must_cover:
+      - temporal relationship between mood episodes and psychosis
+      - schizoaffective disorder versus schizophrenia versus psychotic mood disorder
+      - brief/delusional/substance-induced psychoses as necessary adjacent differentials
+
+  Q14:
+    must_cover:
+      - neurodevelopmental and genetic liability
+      - dopamine and glutamate hypotheses
+      - environmental risk and gene-environment interaction
+      - limits of current biomarkers, imaging and single-mechanism explanations
+
+  Q15:
+    must_cover:
+      - heterogeneous course and functional outcome
+      - duration of untreated psychosis
+      - negative/cognitive symptoms, substance use, social support and premorbid function
+      - suicide and excess physical-health mortality
+
+  Q16:
+    must_cover:
+      - antipsychotic selection and adequate trial principles
+      - agitation/risk and comorbidity management
+      - early psychosocial care and adherence
+      - recognition of non-response and adverse effects
+
+  Q17:
+    must_cover:
+      - maintenance antipsychotic treatment, adherence and LAIs
+      - relapse prevention and physical-health monitoring
+      - family intervention, psychoeducation, CBT for psychosis and rehabilitation
+      - primary versus secondary negative symptoms and cognitive-functional impairment
+
+  Q18:
+    must_cover:
+      - definition of adequate prior antipsychotic trials
+      - pseudo-resistance: adherence, substances, diagnosis and pharmacokinetic issues
+      - indication for clozapine
+      - approach to incomplete clozapine response
+
+  Q19:
+    must_cover:
+      - indications and expected benefits of clozapine
+      - initiation, interruption/re-titration and blood monitoring
+      - neutropenia, myocarditis, seizures, severe GI hypomotility and metabolic effects
+      - smoking/CYP1A2, infection and plasma-level implications
+      - hypersalivation and other clinically important tolerability problems
+
+  Q20:
+    must_cover:
+      - core depressive syndrome, severity and functional impairment
+      - bipolar, medical, neurological, medication and substance differentials
+      - melancholic, atypical, psychotic, catatonic, seasonal and persistent/recurrent patterns
+      - suicide risk
+
+  Q21:
+    must_cover:
+      - treatment selection by severity, psychosis, suicidality, prior response and preference
+      - psychotherapy, antidepressants and combined treatment
+      - indications for ECT or other specialist treatment
+      - continuation treatment and early monitoring
+
+  Q22:
+    must_cover:
+      - confirmation of diagnosis and exclusion of pseudo-resistance
+      - adequacy of dose, duration and adherence
+      - switching, combination and augmentation strategies
+      - lithium, atypical antipsychotics, ECT and ketamine/esketamine in appropriate contexts
+
+  Q23:
+    must_cover:
+      - bipolar I, bipolar II, hypomania and cyclothymic presentations
+      - bipolar versus unipolar depression
+      - distinction from ADHD, BPD, substances and secondary mania
+      - longitudinal course and episodicity
+
+  Q24:
+    must_cover:
+      - syndrome recognition and secondary causes
+      - risk, capacity and admission
+      - acute pharmacological management
+      - medical, substance and medication-induced mania
+
+  Q25:
+    must_cover:
+      - evidence-based acute treatment options
+      - role and limitations of antidepressants
+      - mixed features, switch risk and suicidality
+
+  Q26:
+    must_cover:
+      - maintenance treatment selection based on polarity and prior response
+      - lithium, valproate, lamotrigine and clinically relevant alternatives including carbamazepine
+      - rapid cycling/mixed features
+      - psychoeducation, adherence and physical-health monitoring
+
+  Q27:
+    must_cover:
+      - postpartum psychosis as a psychiatric emergency
+      - differential from postpartum depression and non-psychotic postpartum states
+      - maternal/infant risk and admission considerations
+      - continuity across pregnancy/postpartum and family/support involvement
+
+  Q28:
+    must_cover:
+      - panic-attack phenomenology and panic disorder/agoraphobia distinction
+      - medical and substance differential
+      - CBT/exposure and pharmacological treatment
+
+  Q29:
+    must_cover:
+      - pervasive worry and associated symptoms
+      - depression, OCD, trauma, substance and medical differentials
+      - psychological and pharmacological treatment
+
+  Q30:
+    must_cover:
+      - fear of scrutiny and functional impairment
+      - distinction from avoidant personality disorder, autism and ordinary shyness
+      - CBT and pharmacological treatment
+
+  Q31:
+    must_cover:
+      - obsessions, compulsions and insight variation
+      - distinction from delusions, worry, rumination and OCPD
+      - ERP and pharmacological treatment, including treatment resistance
+      - BDD, hoarding, trichotillomania and excoriation as related but distinct disorders
+
+  Q32:
+    must_cover:
+      - trauma exposure and core symptom clusters
+      - major differentials/comorbidity
+      - trauma-focused psychotherapy and EMDR
+      - pharmacotherapy where appropriate
+
+  Q33:
+    must_cover:
+      - temporal and phenomenological distinction between acute stress disorder and adjustment disorder
+      - relationship to PTSD
+      - normal bereavement/prolonged grief where relevant
+      - proportional, non-overmedicalised management
+
+  Q34:
+    must_cover:
+      - depersonalisation/derealisation and other dissociative phenomena
+      - history, trauma context and functional impact without assuming trauma causality
+      - differential from psychosis, epilepsy and neurological illness
+      - appropriate investigation and treatment principles
+
+  Q35:
+    must_cover:
+      - somatic symptom disorder versus illness anxiety disorder
+      - distinction from appropriate concern about genuine disease
+      - non-iatrogenic longitudinal management
+
+  Q36:
+    must_cover:
+      - positive diagnosis of FND rather than exclusion alone
+      - neurological differential and comorbidity
+      - clear explanation of diagnosis and multidisciplinary treatment
+      - factitious disorder versus malingering versus FND
+
+  Q37:
+    must_cover:
+      - pattern/quantity/route, intoxication, withdrawal and harms
+      - craving, impaired control and dependence concepts
+      - psychiatric/medical comorbidity
+      - motivational interviewing, harm reduction and relapse prevention
+      - tobacco/nicotine dependence and cessation as important general addiction knowledge
+
+  Q38:
+    must_cover:
+      - uncomplicated withdrawal, seizures and delirium tremens
+      - benzodiazepine-based treatment principles and monitoring
+      - thiamine and Wernicke prevention/treatment
+      - medical complications
+
+  Q39:
+    must_cover:
+      - relapse-prevention pharmacotherapy
+      - psychosocial treatment and recovery/harm-reduction goals
+      - medical and psychiatric comorbidity
+
+  Q40:
+    must_cover:
+      - intoxication/overdose and withdrawal
+      - agonist maintenance and antagonist approaches
+      - overdose prevention and harm reduction
+      - psychosocial care
+
+  Q41:
+    must_cover:
+      - cannabis use disorder and acute psychiatric effects
+      - cannabis-induced psychosis and other cannabis-related syndromes
+      - relationship with first-episode psychosis and diagnostic uncertainty
+      - motivational/relapse-prevention treatment
+
+  Q42:
+    must_cover:
+      - intoxication, withdrawal and stimulant-induced psychosis
+      - cardiovascular and behavioural risk
+      - acute and longer-term treatment principles
+
+  Q43:
+    must_cover:
+      - tolerance, dependence and withdrawal
+      - seizure risk and gradual tapering principles
+      - iatrogenic dependence and safer prescribing
+
+  Q44:
+    must_cover:
+      - diagnosis, harms and common comorbidity
+      - suicide risk
+      - psychological and service-based treatment
+
+  Q45:
+    must_cover:
+      - acute disturbance of attention/awareness and fluctuation
+      - predisposing and precipitating causes
+      - distinction from dementia, depression and psychosis
+      - causal/non-pharmacological management and cautious symptomatic medication
+
+  Q46:
+    must_cover:
+      - cognitive domains, function, collateral history and baseline
+      - potentially reversible contributors
+      - cognitive testing, laboratory assessment and neuroimaging
+      - old-age principles: frailty, sensory impairment, polypharmacy and atypical presentation
+
+  Q47:
+    must_cover:
+      - characteristic cognitive presentation and course
+      - diagnostic assessment and differential
+      - cholinesterase inhibitors and memantine
+      - psychosocial, caregiver and safety management
+
+  Q48:
+    must_cover:
+      - DLB versus Parkinson disease dementia distinction
+      - cognitive, perceptual, motor and autonomic features
+      - antipsychotic sensitivity and treatment principles
+      - broader Parkinson psychiatry: depression, anxiety, apathy, psychosis and medication-related behavioural syndromes
+
+  Q49:
+    must_cover:
+      - behavioural and language variants
+      - distinction from psychiatric illness and Alzheimer disease
+      - behavioural/caregiver management
+
+  Q50:
+    must_cover:
+      - temporal relationship to cerebrovascular disease and executive dysfunction
+      - mixed pathology
+      - vascular risk management and rehabilitation
+
+  Q51:
+    must_cover:
+      - search for pain, delirium, environmental causes and unmet needs
+      - non-pharmacological management first
+      - psychotropic risks/indications
+      - caregiver support and safeguarding
+
+  Q52:
+    must_cover:
+      - dementia, depression, psychosis, hoarding and substance differential
+      - capacity and autonomy
+      - environmental/safeguarding/social risks
+      - limitations of the Diogenes label
+
+  Q53:
+    must_cover:
+      - rapid/atypical psychiatric presentation with neurological red flags
+      - seizures, movement disorder, autonomic change and fluctuating consciousness
+      - neurological investigation and urgent multidisciplinary management
+
+  Q54:
+    must_cover:
+      - ictal, postictal and interictal psychiatric syndromes
+      - depression, psychosis and suicide risk
+      - psychiatric effects of antiseizure medicines
+      - seizure-threshold and interaction implications of psychotropics
+
+  Q55:
+    must_cover:
+      - cognitive impairment
+      - mood, behavioural and personality change
+      - aggression/psychosis where relevant
+      - rehabilitation and medication sensitivity
+
+  Q56:
+    must_cover:
+      - psychiatric assessment in medically ill patients
+      - delirium and capacity in treatment refusal
+      - medically caused psychiatric symptoms
+      - renal/hepatic/cardiovascular/neurological comorbidity, interactions and polypharmacy in psychotropic use
+
+  Q57:
+    must_cover:
+      - developmental formulation and age-appropriate psychopathology
+      - multiple informants, school and family context
+      - safeguarding and consent/assent
+      - learning/communication difficulties when relevant to differential diagnosis
+
+  Q58:
+    must_cover:
+      - physical, sexual and emotional abuse and neglect
+      - collateral information and multidisciplinary safeguarding
+      - immediate safety and applicable legal/professional duties
+      - trauma and attachment consequences without simplistic causal attribution
+    candidate_coverage:
+      - intimate-partner/domestic violence affecting parent or household and associated child-safety implications
+
+  Q59:
+    must_cover:
+      - developmental onset and cross-situational impairment
+      - adult presentation and collateral childhood evidence
+      - major differentials and comorbidities
+      - non-pharmacological treatment and transition-of-care principles
+
+  Q60:
+    must_cover:
+      - social-communication and restricted/repetitive domains
+      - differential diagnosis and common comorbidity
+      - masking/camouflaging and adult presentations
+      - support of associated difficulties without pathologising autism itself
+
+  Q61:
+    must_cover:
+      - baseline function and communication
+      - diagnostic overshadowing
+      - behavioural change as possible medical/environmental/psychiatric signal
+      - adapted assessment and treatment
+
+  Q62:
+    must_cover:
+      - motor/vocal tics and developmental course
+      - ADHD/OCD comorbidity
+      - behavioural and pharmacological treatment when impairment warrants
+
+  Q63:
+    must_cover:
+      - ODD versus conduct disorder
+      - developmental, family, neurodevelopmental and environmental formulation
+      - psychosocial treatment and safeguarding
+      - impulse-control disorders as adjacent differential where relevant
+
+  Q64:
+    must_cover:
+      - developmental presentation of depression
+      - family/school context
+      - self-harm/suicide assessment and safeguarding
+      - age-appropriate treatment and monitoring
+
+  Q65:
+    must_cover:
+      - anorexia nervosa diagnosis and differential
+      - restrictive versus binge/purge presentations
+      - psychiatric/physical complications and multidisciplinary treatment
+      - ARFID distinction: motivation for restriction and absence of weight/shape psychopathology
+
+  Q66:
+    must_cover:
+      - cardiovascular, metabolic and other acute complications
+      - indications for urgent medical/inpatient care
+      - refeeding syndrome and prevention
+      - psychiatric-medical coordination
+
+  Q67:
+    must_cover:
+      - binge eating with compensatory behaviour
+      - medical complications
+      - CBT-based and pharmacological treatment
+      - binge-eating disorder distinction as internal differential coverage
+
+  Q68:
+    must_cover:
+      - primary versus secondary insomnia
+      - behavioural/circadian contributors
+      - CBT-I
+      - cautious hypnotic use
+      - delayed sleep-wake phase and other circadian disorders as key differentials
+
+  Q69:
+    must_cover:
+      - insufficient sleep, medication, OSA and hypersomnolence differential
+      - narcolepsy features including cataplexy where present
+      - RBD and clinically important parasomnias
+      - neurodegenerative significance of RBD
+
+  Q70:
+    must_cover:
+      - enduring maladaptive patterns, impairment and cultural/developmental context
+      - categorical and dimensional models
+      - paranoid, schizoid, avoidant, dependent and obsessive-compulsive personality patterns
+      - broad treatment principles and limits of diagnosis in acute states
+
+  Q71:
+    must_cover:
+      - affective instability, interpersonal dysfunction, identity disturbance and impulsivity
+      - bipolar/ADHD/trauma differential
+      - chronic self-harm versus acute suicidal crisis
+      - DBT, MBT, schema therapy and TFP as structured treatment approaches
+      - crisis management and coherent treatment frame
+
+  Q72:
+    must_cover:
+      - ASPD diagnosis and developmental history
+      - distinction from psychopathy construct
+      - substance use, violence and forensic implications
+      - treatment limitations and risk management
+
+  Q73:
+    must_cover:
+      - psychiatric, medication, medical and relationship contributors
+      - respectful assessment
+      - treatment of contributing causes and specialist referral where appropriate
+
+  Q74:
+    must_cover:
+      - atypical sexual interest versus paraphilic disorder
+      - distress/impairment, consent and risk
+      - safeguarding and forensic relevance
+
+  Q75:
+    must_cover:
+      - gender identity versus psychiatric disorder
+      - dysphoria, comorbidity, distress and risk
+      - respectful, evidence-based and developmentally appropriate mental-health care
+      - avoidance of pathologising identity
+
+  Q76:
+    must_cover:
+      - half-life, steady state and therapeutic index/TDM
+      - CYP inhibition/induction, smoking and important interactions
+      - renal/hepatic impairment, age and polypharmacy
+      - carbamazepine as a clinically important enzyme inducer and limited psychiatric option
+
+  Q77:
+    must_cover:
+      - efficacy and previous response
+      - adverse-effect profile and comorbidity
+      - adherence, formulation/LAIs, preference and monitoring burden
+
+  Q78:
+    must_cover:
+      - dystonia, drug-induced parkinsonism, akathisia and tardive dyskinesia
+      - recognition, prevention and treatment principles
+      - akathisia versus psychiatric agitation
+
+  Q79:
+    must_cover:
+      - weight/metabolic syndrome
+      - hyperprolactinaemia
+      - QT/cardiovascular effects
+      - monitoring and switch/mitigation decisions
+
+  Q80:
+    must_cover:
+      - major antidepressant classes and clinically meaningful differences
+      - prior response, comorbidity, overdose risk and interactions
+      - matching treatment to depression, anxiety and OCD indications where relevant
+
+  Q81:
+    must_cover:
+      - sexual dysfunction and discontinuation syndromes
+      - hyponatraemia, bleeding and QT risk
+      - serotonin toxicity and MAOI interaction/washout principles
+      - switching strategies and antidepressant-induced mania
+
+  Q82:
+    must_cover:
+      - indications and anti-suicidal relevance
+      - initiation and serum-level interpretation
+      - renal, thyroid, calcium and other monitoring
+      - important interactions, acute/chronic toxicity and reproductive considerations
+
+  Q83:
+    must_cover:
+      - bipolar indications and limitations
+      - hepatic, haematological and metabolic monitoring
+      - major adverse effects/interactions
+      - reproductive and developmental risk
+
+  Q84:
+    must_cover:
+      - role in bipolar depression/maintenance
+      - slow titration
+      - serious rash risk
+      - important interactions
+
+  Q85:
+    must_cover:
+      - appropriate short-term indications and limitations
+      - tolerance, dependence and withdrawal
+      - respiratory, cognitive and falls risk
+      - tapering/deprescribing principles
+
+  Q86:
+    must_cover:
+      - stimulants and non-stimulants
+      - baseline assessment and contraindications
+      - cardiovascular, weight/growth and psychiatric monitoring as relevant
+      - misuse/diversion and psychosis/substance-use comorbidity
+
+  Q87:
+    must_cover:
+      - preconception planning
+      - untreated-illness risk versus medication exposure
+      - major drug-specific high-risk situations
+      - neonatal and breastfeeding considerations
+
+  Q88:
+    must_cover:
+      - characteristic patterns and time course of NMS versus serotonin syndrome
+      - key discriminating signs
+      - immediate discontinuation/supportive management
+      - malignant catatonia, infection and other important differentials
+
+  Q89:
+    must_cover:
+      - anticholinergic, neurological and cardiovascular TCA toxicity
+      - ECG abnormalities
+      - sodium bicarbonate treatment principle
+      - monitoring/supportive care
+      - recognition that lithium, antipsychotic and sedative overdoses are other high-risk psychotropic toxicology presentations
+
+  Q90:
+    must_cover:
+      - major ECT indications and efficacy
+      - consent/capacity and practical treatment process
+      - precautions, cognitive/medical adverse effects and medication management
+      - continuation/maintenance ECT
+      - rTMS indications, relative role, limitations and safety; other neuromodulation/chronotherapy only at appropriate overview level
+
+  Q91:
+    must_cover:
+      - cognitive-behavioural model and collaborative formulation
+      - behavioural and cognitive techniques
+      - major psychiatric indications
+      - adaptation to disorder and patient factors
+
+  Q92:
+    must_cover:
+      - transference and countertransference
+      - defence mechanisms
+      - psychodynamic formulation
+      - supportive versus exploratory work
+      - splitting/team dynamics and therapeutic boundaries
+
+  Q93:
+    must_cover:
+      - interpersonal problem areas and time-limited structure
+      - major evidence-based indications
+      - distinction from generic supportive psychotherapy
+      - relationship to broader supportive/family/psychoeducational interventions without turning the answer into an omnibus psychotherapy survey
+
+  Q94:
+    must_cover:
+      - frontal-subcortical circuits and executive/behavioural syndromes
+      - limbic, reward and fear circuits
+      - basal ganglia, thalamus, hippocampus, amygdala and hypothalamus where clinically relevant
+      - localisation as a clinical aid, not deterministic explanation of psychiatric illness
+
+  Q95:
+    must_cover:
+      - mesolimbic, mesocortical, nigrostriatal and tuberoinfundibular dopamine pathways
+      - relation to psychosis, antipsychotic efficacy and adverse effects
+      - limitations of simple dopamine-deficit/excess models
+      - acknowledge that serotonin, noradrenaline, glutamate, GABA and acetylcholine are covered distributively elsewhere
+
+  Q96:
+    must_cover:
+      - heritability and familial risk
+      - polygenic architecture and GWAS/PRS concepts
+      - gene-environment interaction
+      - non-deterministic interpretation and current clinical limitations
+
+  Q97:
+    must_cover:
+      - study design, bias, confounding and causation versus association
+      - confidence intervals, power and statistical versus clinical significance
+      - absolute/relative risk, NNT/NNH
+      - sensitivity, specificity, predictive values and likelihood ratios
+
+  Q98:
+    must_cover:
+      - confidentiality and justified limits
+      - autonomy, beneficence, non-maleficence and competing safety duties
+      - proportional disclosure and documentation
+      - professional boundaries/conflicts when relevant to confidentiality and therapeutic relationships
+    candidate_coverage:
+      - intimate-partner/domestic violence disclosure and safeguarding/confidentiality tensions
+
+  Q99:
+    must_cover:
+      - treating versus expert role
+      - criminal responsibility, legal competence/fitness concepts as jurisdictionally applicable
+      - risk assessment and evidentiary limits
+      - distinction from treatment decision-making capacity
+
+  Q100:
+    must_cover:
+      - multidisciplinary longitudinal community care
+      - functional rehabilitation and recovery
+      - housing, occupation, social support and continuity
+      - physical-health integration
+      - prevention, cultural factors, stigma and digital/telepsychiatry only where they materially affect modern community care
+
+balance_audit:
+  protected_without_new_main_slots:
+    - psychopathology.thought_form
+    - psychopathology.perception
+    - psychopathology.mood_affect_psychomotor
+    - psychopathology.cognition_insight
+    - schizophrenia.negative_cognitive
+    - depression.patterns_specifiers
+    - deception.factitious_malingering
+    - nicotine.tobacco
+    - old_age.principles
+    - neuropsychiatry.parkinson
+    - eating.bed_arfid
+    - sleep.parasomnias_rbd
+    - personality.other
+    - psychopharm.medical_comorbidity
+    - psychopharm.carbamazepine
+    - toxicology.other_psychotropics
+    - biological.rtms_other
+    - psychotherapy.bpd_structured
+    - psychotherapy.supportive_family_mi
+    - psychotherapy.psychodynamic
+    - neuroscience.sleep_circadian_endocrine
+    - evidence.clinical_metrics
+    - ethics.boundaries
+  remaining_candidate_for_canonical_promotion:
+    - risk.intimate_partner_violence
