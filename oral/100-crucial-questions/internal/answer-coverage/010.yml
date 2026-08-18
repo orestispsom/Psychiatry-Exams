@@ -1,0 +1,151 @@
+schema_version: 2
+attempt: "010"
+visible_questions: ../../attempts/010.md
+canonical_coverage: ../core-coverage.yml
+adult_board_scope: ../adult-board-scope.yml
+question_map: ../attempt-maps/010.yml
+inherits_answer_logic_from: 009.yml
+status: provisional
+
+purpose: >-
+  Adult-board answer-coverage specification for Attempt 010. Most established answer logic is
+  inherited semantically from Attempt 009, but question numbers after Q56 changed because five
+  child/adolescent-only main slots were replaced with adult-board topics. This file records the
+  migration explicitly and defines the new/changed answer requirements.
+
+inheritance_rules:
+  - Q1 through Q56 inherit the corresponding Q1 through Q56 answer logic from Attempt 009, with phrasing changes only.
+  - For renumbered questions, inherit by the migration map below, not by numerical identity.
+  - New adult-board questions have explicit must_cover blocks below.
+  - Removed child/adolescent main questions remain in core-coverage.yml and adult-board-scope.yml as internal/supporting knowledge; they are not deleted from psychiatry knowledge.
+
+migration_from_009:
+  Q59: Q59
+  Q60: Q60
+  Q61: Q61
+  Q62: Q65
+  Q63: Q66
+  Q64: Q67
+  Q65: Q68
+  Q66: Q69
+  Q68: Q70
+  Q69: Q71
+  Q70: Q72
+  Q71: Q73
+  Q72: Q74
+  Q73: Q75
+  Q74: Q76
+  Q76: Q77
+  Q77: Q78
+  Q78: Q79
+  Q79: Q80
+  Q80: Q81
+  Q81: Q82
+  Q82: Q83
+  Q83: Q84
+  Q84: Q85
+  Q85: Q86
+  Q86: Q87
+  Q87: Q88
+  Q88: Q89
+  Q89: Q90
+  Q90: Q91
+  Q91: Q92
+  Q92: Q93
+  Q94: Q94
+  Q95: Q95
+  Q96: Q96
+  Q97: Q97
+  Q98: Q98
+  Q99: Q99
+  Q100: Q100
+
+new_or_changed_questions:
+  Q57:
+    topic: Apathy versus depression
+    must_cover:
+      - apathy as reduced motivation/goal-directed behaviour rather than necessarily depressed mood
+      - anhedonia, psychomotor slowing and cognitive impairment as important areas of overlap
+      - neurological and neurodegenerative contexts, especially frontal-subcortical disease and Parkinsonian syndromes
+      - medication, delirium and negative symptoms as relevant differentials
+      - management directed at the underlying cause rather than reflexive antidepressant treatment
+
+  Q58:
+    topic: Charles Bonnet syndrome
+    must_cover:
+      - complex visual hallucinations in the context of visual impairment
+      - typically preserved or relatively preserved insight
+      - differential from delirium, primary psychosis, DLB/Parkinsonian syndromes and medication/substance causes
+      - visual assessment, reassurance and treatment of contributing visual impairment where possible
+
+  Q59:
+    adult_scope_override:
+      - diagnosis must be framed around adult ADHD while retaining developmental onset requirements
+      - obtain childhood/developmental evidence and collateral information where possible
+      - distinguish from mood, anxiety, substance, sleep, personality and neurodevelopmental conditions
+
+  Q60:
+    adult_scope_override:
+      - assessment must be framed around adult autism
+      - developmental history remains essential
+      - masking/camouflaging, psychiatric comorbidity and adult differential diagnosis must be covered
+
+  Q61:
+    adult_scope_override:
+      - focus on adult intellectual disability and diagnostic overshadowing
+      - establish baseline communication/function before interpreting behavioural change
+      - exclude pain, medical illness, medication effects, environmental change and delirium
+
+  Q67:
+    topic: Sleep stages and EEG
+    must_cover:
+      - N1, N2, N3 and REM sleep
+      - theta activity in N1, sleep spindles and K-complexes in N2, delta slow-wave activity in N3
+      - REM low-amplitude mixed-frequency EEG, rapid eye movements and muscle atonia
+      - distribution of N3 and REM across the night and clinically relevant age effects at overview level
+      - classic depression sleep findings: reduced REM latency, increased REM density and reduced slow-wave sleep
+
+  Q75:
+    topic: Clinically important psychotropic drug interactions
+    must_cover:
+      - CYP inhibition and induction, including smoking-related CYP1A2 effects
+      - serotonergic combinations and serotonin toxicity risk
+      - QT-prolonging combinations
+      - lithium interactions that raise toxicity risk
+      - MAOI interaction/washout principles
+      - clozapine interactions involving smoking, infection and inhibitors/inducers
+      - additive sedation, respiratory depression and anticholinergic burden where clinically important
+    verification_required: current_authoritative_prescribing_sources_when_answer_written
+
+  Q93:
+    topic: Psychoeducation
+    must_cover:
+      - structured collaborative education rather than simple information-giving
+      - diagnosis/course, treatment, adverse effects, adherence, early warning signs and crisis planning
+      - patient and family involvement where appropriate
+      - established role in severe mental illness, especially schizophrenia and bipolar disorder
+      - relationship to relapse prevention and shared decision-making
+
+removed_main_question_coverage_preservation:
+  child.assessment:
+    retained_in:
+      - developmental history within Q59 and Q60
+      - general collateral/developmental principles in internal coverage
+  child.safeguarding:
+    retained_as:
+      - professional safeguarding knowledge when adult patients have dependent children or when family/perinatal contexts raise risk
+    no_dedicated_main_question: true
+  developmental.tics_tourette:
+    retained_as: supporting neurodevelopmental knowledge
+    no_dedicated_main_question: true
+  child.disruptive_disorders:
+    retained_as: supporting child/adolescent knowledge
+    no_dedicated_main_question: true
+  child.mood_self_harm:
+    retained_as: supporting child/adolescent knowledge
+    no_dedicated_main_question: true
+
+adult_board_quality_gate:
+  - Do not let final answers drift back into Child and Adolescent Psychiatry unless the adult question requires developmental history or safeguarding.
+  - ADHD, autism and intellectual disability answers should emphasise adult presentation and management while retaining developmental diagnostic requirements.
+  - Greek legal/system-sensitive questions remain subject to the jurisdiction gate established in Attempt 009.
