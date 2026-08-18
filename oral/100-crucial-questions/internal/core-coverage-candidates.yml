@@ -1,0 +1,36 @@
+schema_version: 1
+updated: 2026-08-18
+status: living
+
+purpose: >-
+  Staging area for source-derived candidate additions or priority changes that may enrich
+  the canonical question-independent core-coverage.yml. Nothing in this file is canonical
+  until it is deliberately reviewed and promoted. This prevents each new textbook or audit
+  from automatically bloating the core coverage bank.
+
+promotion_rule: >-
+  Promote a candidate only when failure to know it would represent a meaningful gap in the
+  knowledge, reasoning or safe practice expected of a well-prepared senior psychiatry resident,
+  and when the concept is not already adequately represented by an existing canonical unit.
+
+candidates:
+  - id: risk.intimate_partner_violence
+    proposed_domain: risk
+    proposed_priority: IMPORTANT
+    label: Intimate-partner and domestic violence in psychiatric practice
+    status: REVIEW_BEFORE_PROMOTION
+    rationale: >-
+      Identified as the only plausible canonical-bank gap in the Attempt 005 local textbook
+      coverage audit. It is clinically consequential for risk, safeguarding, trauma, suicide
+      and family/child safety, but does not appear to require a dedicated main question.
+    candidate_essentials:
+      - recognition of intimate-partner violence, coercive control and associated psychiatric risk
+      - immediate safety assessment and proportionate safety planning
+      - trauma, suicide, substance use and child/safeguarding implications
+      - documentation, confidentiality and referral/support principles
+    proposed_visible_sampling: >-
+      No dedicated main question. If promoted, represent primarily as internal answer coverage
+      within comprehensive assessment, risk/safeguarding and ethics material.
+    provenance:
+      - oral/100-crucial-questions/reviews/005-textbook-coverage-audit.md
+      - Oxford New Textbook of Psychiatry, 3rd ed. (2020), textbook coverage signal as reported in that audit
