@@ -40,23 +40,23 @@ Role:
 Limitations:
 - undergraduate / junior-doctor orientation rather than specialist-board depth;
 - 2019 edition, so treatment, classification, law and prescribing details may be outdated;
-- UK-centred legal/service material does not define Greek current practice.
+- UK-centred legal/service material does not define Greek current practice;
+- child/adolescent chapters must not be allowed to inflate main-question allocation for an Adult Psychiatry certification examination.
 
 ### C. Attempt 005 local textbook coverage audit — broad specialist-level triangulation
 
 **Audit file:** `oral/100-crucial-questions/reviews/005-textbook-coverage-audit.md`
 
 **Sources actually inspected:**
-- Oxford Shorter Textbook of Psychiatry, 7th ed. (2017 copyright; 2018 printing) — full table of contents used as primary breadth/weighting reference;
-- Oxford New Textbook of Psychiatry, 3rd ed. (2020) — full table of contents plus targeted searches/page ranges for granular and contemporary domains;
-- Kaplan & Sadock's Synopsis of Psychiatry (2021) — full table of contents and subsection structure used as systematic cross-check;
-- DSM-5-TR (2022) — front-matter classification/diagnostic chapter structure used for diagnostic-domain completeness only.
+- Oxford Shorter Textbook of Psychiatry, 7th ed. (2017 copyright; 2018 printing);
+- Oxford New Textbook of Psychiatry, 3rd ed. (2020);
+- Kaplan & Sadock's Synopsis of Psychiatry (2021);
+- DSM-5-TR (2022) classification/diagnostic chapter structure.
 
 Method:
 - local-file, read-only audit performed by Claude;
 - TOC/front-matter extraction, targeted text search and selected page-range retrieval rather than linear reading;
-- compared an independently derived textbook domain map with `internal/core-coverage.yml` and Attempt 005;
-- specialist psychopharmacology texts were not opened because the identified discrepancies concerned coverage/weighting rather than exact prescribing details.
+- compared an independently derived textbook domain map with `internal/core-coverage.yml` and Attempt 005.
 
 Main findings accepted as coverage signals:
 - no missing CORE domain identified in the canonical coverage bank;
@@ -75,14 +75,7 @@ Limitations:
 
 **Audit file:** `oral/100-crucial-questions/reviews/008-greece-applicability-audit.md`
 
-**Sources checked:**
-- Greek Code of Medical Ethics, Law 3418/2005 — especially Article 12 (informed consent), Article 13 (medical confidentiality), and psychiatry-specific ethical provisions;
-- Law 2071/1992 — Articles 95–97 on involuntary psychiatric admission, as currently applicable;
-- later Greek reforms affecting involuntary-care procedure/transport, including Article 96A / 2022 reforms;
-- Law 5129/2024 — current organisation of Greek mental-health services into the National Network of Mental Health Services (EDYPSY) and regional networks, while retaining reference to the involuntary-care provisions of Law 2071/1992;
-- Greek Penal Code, Law 4619/2019 — Article 34 on inability to attribute criminal responsibility because of mental/intellectual disorder or disturbance of consciousness;
-- Greek child-protection framework including Law 4837/2021 as amended and current Mila / EKKA reporting infrastructure;
-- Ministry of Health material from the Committee for the Protection of the Rights of Persons with Mental Disorders.
+Sources checked included current Greek medical-ethics, involuntary-care, penal-law, child-protection and mental-health-service materials.
 
 Role:
 - prevent UK, US or other foreign legal/service frameworks from being silently imported into Greek specialist-board answers;
@@ -90,15 +83,45 @@ Role:
 - distinguish international clinical evidence from national law, regulation, licensing and service organisation.
 
 Main implications:
-- Q9 involuntary care must be answered from current Greek law;
-- Q8 informed consent should use Greek informed-consent law rather than treating a foreign capacity test as statute;
-- Q58 child safeguarding/reporting must use current Greek duties/pathways;
-- Q90a ECT without valid consent is legally sensitive and must not import UK Mental Health Act or US substitute-consent rules;
-- Q98 confidentiality must use Greek Code of Medical Ethics Article 13; Tarasoff-style duty-to-warn language is not assumed to be Greek law;
-- Q99 criminal responsibility must use Greek concepts including καταλογισμός and current Greek Penal Code rather than M'Naghten/US/UK tests;
-- Q100 may use universal recovery/community principles, but concrete service-organisation claims should describe the current Greek EDYPSY/regional-network system rather than defaulting to NHS or US models.
+- involuntary care must be answered from current Greek law;
+- informed consent should use Greek law rather than treating a foreign capacity test as statute;
+- safeguarding/reporting must use current Greek duties/pathways when relevant;
+- ECT without valid consent is legally sensitive and must not import UK Mental Health Act or US substitute-consent rules;
+- confidentiality must use the Greek Code of Medical Ethics; Tarasoff-style duty-to-warn language is not assumed to be Greek law;
+- criminal responsibility must use Greek concepts and current Greek Penal Code rather than foreign tests;
+- community-care answers may use universal recovery principles, but concrete service-organisation claims should describe the current Greek system rather than defaulting to NHS or US models.
 
-### E. Current major examination / curriculum frameworks — secondary completeness check
+### E. Greek oral-question phrasing and Adult Psychiatry scope audit
+
+**Audit file:** `oral/100-crucial-questions/reviews/009-greek-oral-phrasing-adult-scope-audit.md`
+
+**Sources inspected:**
+- `orestispsom/Psych/src/data/oral.js`
+- `orestispsom/Psych/src/data/oralCore.js`
+- `orestispsom/Psych/ORAL_QUALITY_AUDIT.md`
+
+Role:
+- calibrate visible question wording to the cadence of the Greek oral examination;
+- distinguish the curated Greek oral bank from broader simulator-generated coverage;
+- enforce that the target certification is **Adult Psychiatry**, not Child and Adolescent Psychiatry.
+
+Observed viva cadence:
+- short direct prompts such as `Ποια ...;`, `Πώς ...;`, `Τι είναι ...;`, `Τι ξέρετε για ...;`, `Περιγράψτε ...`;
+- brief vignettes followed by `Πώς θα τον/την προσεγγίσετε;`;
+- a broad but coherent anchor followed by short examiner probes rather than a written syllabus-style headline.
+
+Adult-scope findings:
+- the curated 129-question oral bank is overwhelmingly Adult Psychiatry;
+- autism has a dedicated curated oral block;
+- the broader `oralCore.js` simulator additionally includes ADHD, autism and Tourette, but simulator breadth is not by itself authority for Adult Psychiatry main-slot allocation;
+- dedicated main questions on general child/adolescent assessment, child-only disruptive disorders and adolescent depression were not supported strongly enough to justify scarce Adult Psychiatry slots.
+
+Reallocation accepted for Attempt 010:
+- remove dedicated main slots for general child assessment, child abuse/neglect as a child-psychiatry topic, Tourette/tics, ODD/conduct disorder and adolescent depression;
+- retain ADHD, autism and intellectual disability with explicit **adult** framing;
+- use the five freed slots for sleep stages/EEG, apathy versus depression, Charles Bonnet syndrome, psychoeducation and clinically important psychotropic interactions.
+
+### F. Current major examination / curriculum frameworks — secondary completeness check
 
 Role:
 - check for broad specialty domains that neither the Greek oral bank nor a single textbook may emphasize;
@@ -108,7 +131,7 @@ Use cautiously:
 - these frameworks do not determine the exact weighting of the Greek oral boards;
 - they should not force low-value curriculum headings into the 100 main questions.
 
-### F. Future source categories
+### G. Future source categories
 
 To add as reviewed in greater depth where needed:
 - DSM-5-TR / ICD-11 for diagnosis and classification;
@@ -131,10 +154,14 @@ Every source review should record:
 
 ## Current design implications already established
 
+- The target exam is Greek **Adult Psychiatry** specialist certification.
 - Clinical entities and presentations should dominate the 100.
+- Questions should sound like viva prompts, not polished written curriculum headings.
 - Suicide requires both acute risk-assessment competence and broader suicide knowledge.
-- Psychopharmacology requires substantial independent space, especially clozapine, lithium, valproate, antipsychotic adverse effects, major interaction/toxicity syndromes and ECT.
-- Child safeguarding / abuse, reproductive psychiatry, sleep, eating disorders, neurodevelopmental disorders, old-age psychiatry, liaison and forensic psychiatry must not disappear through over-compression.
+- Psychopharmacology requires substantial independent space, especially clozapine, lithium, valproate, antipsychotic adverse effects, clinically important interactions, major toxicity syndromes and ECT.
+- Adult neurodevelopmental psychiatry remains represented through adult ADHD, adult autism and adult intellectual-disability assessment.
+- Child/adolescent-only material remains in canonical/supporting coverage but should not displace stronger Adult Psychiatry topics without direct exam evidence.
+- Reproductive psychiatry, sleep, eating disorders, old-age psychiatry, liaison and forensic psychiatry must not disappear through over-compression.
 - Basic science and service topics should remain represented but should not displace higher-value clinical questions merely to mirror a curriculum table of contents.
 - Source-derived candidate gaps should be staged and reviewed against the canonical inclusion rule before being promoted into `core-coverage.yml`.
 - Law, consent, involuntary care, confidentiality, safeguarding and forensic rules are jurisdiction-specific and must use current Greek sources.
