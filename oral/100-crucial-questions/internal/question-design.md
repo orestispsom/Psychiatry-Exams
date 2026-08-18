@@ -2,16 +2,17 @@
 
 Status: living internal standard. This file governs future attempts of the 100-question guide. It is not learner-facing content.
 
-## 1. Four distinct layers
+## 1. Five distinct layers
 
-The project has four separate layers:
+The project has five separate layers:
 
 1. **Canonical psychiatry coverage** — `core-coverage.yml`; question-independent knowledge that a well-prepared senior psychiatry resident should possess.
 2. **Main question** — the visible oral-board question used to sample part of that coverage.
 3. **Examiner follow-up** — an optional visible probe that genuinely changes or deepens the task.
-4. **Internal answer-coverage checklist** — hidden authoring metadata ensuring that the eventual model answer to a particular question is complete.
+4. **Internal answer-coverage checklist** — hidden authoring metadata ensuring that the eventual model answer to a particular question is clinically/conceptually complete.
+5. **Board-fact anchors** — `board-fact-anchors.yml`; exact criteria, durations, classic distinctions, calculations, numerical anchors and drug-specific facts that may be tested directly but should not bloat the visible question or spoken answer.
 
-Do not use follow-ups as a substitute for an answer outline, and do not reshape the canonical coverage map merely to fit a particular question attempt.
+Do not use follow-ups as a substitute for an answer outline, do not use board facts as a second curriculum, and do not reshape the canonical coverage map merely to fit a particular question attempt.
 
 ## 2. Main-question rule
 
@@ -62,7 +63,7 @@ Ask:
 
 > If the candidate answered the main question perfectly, would this follow-up already have been answered?
 
-If **yes**, the follow-up should normally be deleted and its content moved to the internal answer-coverage checklist.
+If **yes**, the follow-up should normally be deleted and its content moved to the internal answer-coverage checklist or, if it is primarily exact recall, the board-fact layer.
 
 ## 4. Follow-up quantity
 
@@ -102,7 +103,32 @@ Typical checklist dimensions, used only when relevant:
 
 Do not mechanically apply every dimension to every topic.
 
-## 6. Scenario rule
+## 6. Board-fact anchor rule
+
+Board facts protect **precise retrieval**, not conceptual breadth.
+
+Appropriate anchor types include:
+
+- exact diagnostic duration/symptom thresholds;
+- classic historical distinctions with recurring exam value;
+- high-yield therapeutic-drug-monitoring facts;
+- major monitoring/timing anchors;
+- specific drug interactions or toxicology facts;
+- simple calculations such as NNT/NNH or diagnostic-test metrics;
+- robust epidemiological/familial-risk anchors when directly examinable.
+
+Do not add an anchor merely because a fact is easy to test.
+
+Every anchor must:
+
+- map to at least one of the 100 answer packages;
+- have explicit source provenance;
+- state whether it requires exam-source, current-source or exam/current-split verification;
+- remain outside the spoken core unless the exact fact is essential to the answer itself.
+
+Potentially unstable doses, levels, monitoring schedules, pregnancy restrictions, licensing and legal facts must be verified from current authoritative sources before final publication.
+
+## 7. Scenario rule
 
 A clinical vignette should create a decision or diagnostic problem. Do not add a vignette merely to decorate a descriptive question.
 
@@ -114,7 +140,7 @@ Weak:
 
 `A patient with schizophrenia presents. Describe schizophrenia.`
 
-## 7. Canonical coverage without question inflation
+## 8. Canonical coverage without question inflation
 
 `core-coverage.yml` is the authority for what psychiatry knowledge the project must preserve. It is intentionally independent of the 100 visible questions.
 
@@ -123,22 +149,24 @@ A canonical coverage unit can ultimately be represented in the guide as:
 - a **MAIN** question;
 - a genuine **FOLLOW-UP**;
 - required **ANSWER COVERAGE** within another question;
+- a verified **BOARD FACT** where the issue is precise retrieval rather than conceptual scope;
 - or, for lower-priority material, no visible prompt at all.
 
 The canonical bank therefore does not label topics as permanent MAIN/FOLLOW_UP items. Those are attempt-specific decisions.
 
 A topic is not automatically promoted to a main question merely because a textbook gives it a heading, and a topic is not removed from canonical coverage merely because the current 100-question attempt has no dedicated prompt for it.
 
-## 8. Source and exam discipline
+## 9. Source and exam discipline
 
 - The current `Psych` repository is the canonical live source for the Greek board-exam app and oral-question bank.
 - Actual / recalled Greek oral-exam material should strongly influence coverage and examiner-probe design.
 - Core textbooks and curricula are coverage checks, not automatic generators of main questions.
 - `source-register.md` records what sources have actually been audited and the scope in which they were used.
-- Current treatment, prescribing, regulation and law must be re-verified when answers are eventually written.
+- `answer-production/README.md` governs the production pipeline for final model answers.
+- Current treatment, prescribing, regulation and law must be re-verified when answers are written.
 - Exam-specific historical material must be distinguished from current clinical practice when they differ.
 
-## 9. Stable coverage IDs; disposable question numbers
+## 10. Stable coverage IDs; disposable question numbers
 
 Attempt question numbers (`004 Q19`, `005 Q22`, etc.) are temporary.
 
@@ -150,7 +178,7 @@ Attempt-specific relationships belong in:
 
 These maps may say that a question samples one or more canonical coverage IDs, or that a visible follow-up is redundant. They must not redefine the underlying psychiatry knowledge map.
 
-## 10. Growth discipline for the canonical coverage bank
+## 11. Growth discipline for the canonical coverage bank
 
 The canonical bank should become richer over time, but not progressively encyclopaedic.
 
@@ -171,18 +199,18 @@ Do **not** expand the bank merely to capture:
 - every rare syndrome;
 - every DSM/ICD specifier;
 - every possible adverse effect;
-- exact doses or numerical thresholds better handled during verified answer writing;
+- exact doses or numerical thresholds better handled by verified board-fact anchors;
 - historical or mechanistic trivia with little clinical or examination value.
 
 When in doubt, prefer a compact stable coverage unit with a few meaningful essentials over many tiny nodes.
 
-## 11. Board-sufficiency criterion
+## 12. Board-sufficiency criterion
 
 The final 100-question set is intended to function as a **high-yield sufficiency set for Adult Psychiatry specialist-board preparation in Greece**.
 
 The design target is stronger than simple curriculum representation:
 
-> If a candidate genuinely understood, could explain, discriminate, and clinically apply the material required by all 100 questions and their internal answer-coverage specifications, that knowledge should probably be sufficient to pass a general Adult Psychiatry specialist board examination, while recognising that no finite question bank can guarantee examination outcome.
+> If a candidate genuinely understood, could explain, discriminate, and clinically apply the material required by all 100 questions, their internal answer-coverage specifications and verified board-fact anchors, that knowledge should probably be sufficient to pass a general Adult Psychiatry specialist board examination, while recognising that no finite question bank can guarantee examination outcome.
 
 This requires the set collectively to provide:
 
@@ -196,19 +224,20 @@ This requires the set collectively to provide:
 - old-age, liaison, neuropsychiatric, substance-use, sleep, eating, personality and adult neurodevelopmental psychiatry at appropriate board depth;
 - core psychopathology, neuroscience and evidence-appraisal knowledge that commonly supports oral examination questions;
 - Greek law, ethics, forensic psychiatry and service-system knowledge where jurisdiction matters;
+- enough exact board knowledge to handle MCQs and short factual viva probes without turning the main answers into trivia lists;
 - enough cross-topic integration that the candidate can handle an unfamiliar vignette by reasoning from the mastered material rather than relying only on recognition of rehearsed wording.
 
 ### Sufficiency audit question
 
 Before locking an attempt, ask:
 
-> If the examiner deliberately avoided asking these exact 100 prompts but tested the same adult-psychiatry curriculum through adjacent cases, comparisons and follow-up questions, would mastery of our 100 answers still allow a strong candidate to reason their way to a passing response?
+> If the examiner deliberately avoided asking these exact 100 prompts but tested the same adult-psychiatry curriculum through adjacent cases, comparisons, factual probes and follow-up questions, would mastery of our 100 answer packages still allow a strong candidate to reason their way to a passing response?
 
 If **no**, the bank is not yet sufficient even if every major textbook chapter has nominal representation.
 
 The project therefore optimises for **transferable board competence**, not memorisation of 100 scripts.
 
-## 12. Final quality test for every visible prompt
+## 13. Final quality test for every visible prompt
 
 Before accepting a main question or follow-up, ask:
 
