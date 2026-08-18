@@ -42,7 +42,36 @@ Limitations:
 - 2019 edition, so treatment, classification, law and prescribing details may be outdated;
 - UK-centred legal/service material does not define Greek current practice.
 
-### C. Current major examination / curriculum frameworks — secondary completeness check
+### C. Attempt 005 local textbook coverage audit — broad specialist-level triangulation
+
+**Audit file:** `oral/100-crucial-questions/reviews/005-textbook-coverage-audit.md`
+
+**Sources actually inspected:**
+- Oxford Shorter Textbook of Psychiatry, 7th ed. (2017 copyright; 2018 printing) — full table of contents used as primary breadth/weighting reference;
+- Oxford New Textbook of Psychiatry, 3rd ed. (2020) — full table of contents plus targeted searches/page ranges for granular and contemporary domains;
+- Kaplan & Sadock's Synopsis of Psychiatry (2021) — full table of contents and subsection structure used as systematic cross-check;
+- DSM-5-TR (2022) — front-matter classification/diagnostic chapter structure used for diagnostic-domain completeness only.
+
+Method:
+- local-file, read-only audit performed by Claude;
+- TOC/front-matter extraction, targeted text search and selected page-range retrieval rather than linear reading;
+- compared an independently derived textbook domain map with `internal/core-coverage.yml` and Attempt 005;
+- specialist psychopharmacology texts were not opened because the identified discrepancies concerned coverage/weighting rather than exact prescribing details.
+
+Main findings accepted as coverage signals:
+- no missing CORE domain identified in the canonical coverage bank;
+- Attempt 005 broadly proportionate across major textbook domains;
+- carbamazepine likely over-weighted as a standalone main question;
+- gender dysphoria / gender-identity-related psychiatric care under-sampled in Attempt 005;
+- negative/cognitive schizophrenia symptoms, non-dementia Parkinson psychiatry, OCD-related disorders, other personality disorders and rTMS deserve deliberate sampling review;
+- intimate-partner/domestic violence identified as a candidate gap in the canonical bank.
+
+Limitations:
+- this was a coverage/weighting audit, not treatment-guideline verification;
+- textbook chapter prominence does not automatically determine Greek oral-exam weighting;
+- findings should influence the canonical bank only when they pass the project's independent inclusion rule.
+
+### D. Current major examination / curriculum frameworks — secondary completeness check
 
 Role:
 - check for broad specialty domains that neither the Greek oral bank nor a single textbook may emphasize;
@@ -52,11 +81,9 @@ Use cautiously:
 - these frameworks do not determine the exact weighting of the Greek oral boards;
 - they should not force low-value curriculum headings into the 100 main questions.
 
-### D. Future source categories
+### E. Future source categories
 
-To add as reviewed:
-- Oxford / Shorter Oxford designated exam edition(s);
-- New Oxford Textbook of Psychiatry where needed;
+To add as reviewed in greater depth where needed:
 - DSM-5-TR / ICD-11 for diagnosis and classification;
 - Maudsley Prescribing Guidelines 15th for psychopharmacology;
 - Stahl for mechanisms / psychopharmacology framing where appropriate;
@@ -82,3 +109,4 @@ Every source review should record:
 - Psychopharmacology requires substantial independent space, especially clozapine, lithium, valproate, antipsychotic adverse effects, major interaction/toxicity syndromes and ECT.
 - Child safeguarding / abuse, reproductive psychiatry, sleep, eating disorders, neurodevelopmental disorders, old-age psychiatry, liaison and forensic psychiatry must not disappear through over-compression.
 - Basic science and service topics should remain represented but should not displace higher-value clinical questions merely to mirror a curriculum table of contents.
+- Source-derived candidate gaps should be staged and reviewed against the canonical inclusion rule before being promoted into `core-coverage.yml`.
