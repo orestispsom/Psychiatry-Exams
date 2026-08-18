@@ -1,0 +1,87 @@
+schema_version: 1
+updated: 2026-08-18
+status: living
+
+purpose: >-
+  Scope and weighting overlay for The 100 Crucial Questions in Psychiatry when used for the
+  Greek Adult Psychiatry specialist-board oral examination. This file does not delete broader
+  psychiatry knowledge from core-coverage.yml; it determines what deserves scarce visible
+  main-question space in this adult-certification project.
+
+exam_scope:
+  specialty: Adult Psychiatry
+  jurisdiction: Greece
+  format_target: senior-resident / specialist-certification oral examination
+
+source_basis:
+  - repository: orestispsom/Psych
+    files:
+      - src/data/oral.js
+      - src/data/oralCore.js
+      - ORAL_QUALITY_AUDIT.md
+    interpretation: >-
+      oral.js and ORAL_QUALITY_AUDIT.md are stronger evidence for the current curated Greek oral
+      bank and its weighting; oralCore.js is useful for viva cadence and broader simulator coverage
+      but should not by itself expand adult-board main-question allocation.
+
+scope_rules:
+  - Adult psychiatric disorders, emergencies, psychopharmacology, neuropsychiatry, old-age psychiatry, psychotherapy, ethics/law and relevant foundational science dominate main-question allocation.
+  - Neurodevelopmental disorders remain examinable when they present in adult practice or have direct support from the Greek oral material.
+  - Child/adolescent-only assessment frameworks or disorders should not consume main-question slots unless direct Greek Adult Psychiatry exam evidence justifies them.
+  - Child safeguarding remains professional knowledge for an adult psychiatrist but is primarily internal answer coverage unless an adult-practice scenario makes it directly relevant.
+  - Do not infer Adult Psychiatry board weighting from general psychiatry textbooks that include child/adolescent psychiatry as a separate specialty domain.
+
+main_slot_priority_adjustments:
+  retain_or_promote:
+    developmental.adhd:
+      status: RETAIN_MAIN
+      framing: adult diagnosis and differential; childhood onset evidence remains necessary
+    developmental.autism:
+      status: RETAIN_MAIN
+      framing: adult assessment, developmental history, masking and psychiatric differential
+      evidence: curated oral.js contains a dedicated autism block
+    developmental.intellectual_disability:
+      status: RETAIN_MAIN
+      framing: adult psychiatric assessment and diagnostic overshadowing
+    neuroscience.sleep_circadian_endocrine:
+      status: PROMOTE_VISIBLE
+      framing: sleep stages, REM/NREM and EEG findings
+      evidence: curated oral.js has a dedicated sleep block labelled 55% examination frequency
+    depression_apathy_differential:
+      status: PROMOTE_VISIBLE
+      framing: apathy versus depression in adult/old-age/neuropsychiatric practice
+      evidence: curated oral bank contains a dedicated apathy-versus-depression item
+    neuropsychiatry.charles_bonnet:
+      status: PROMOTE_VISIBLE
+      framing: visual hallucinations with visual impairment; differential from psychosis/delirium/neurodegeneration
+      evidence: curated oral bank contains a dedicated Charles Bonnet item
+    psychotherapy.supportive_family_mi:
+      status: PROMOTE_PSYCHOEDUCATION_VISIBLE
+      framing: psychoeducation as a discrete adult psychiatric intervention
+      evidence: curated oral bank asks directly what psychoeducation is and when it is used
+    psychopharm.principles:
+      status: PROMOTE_INTERACTIONS_VISIBLE
+      framing: clinically important psychotropic interactions as a discrete viva topic
+      evidence: curated oral bank contains a dedicated high-yield interactions item
+
+  demote_from_main_slot:
+    child.assessment:
+      status: ANSWER_COVERAGE_ONLY
+      reason: child/adolescent-specialty framework rather than Adult Psychiatry board priority
+    child.safeguarding:
+      status: ANSWER_COVERAGE_ONLY
+      reason: important professional duty but not supported as a dedicated adult-board main topic in the current Greek oral bank
+    child.disruptive_disorders:
+      status: SUPPORTING_ONLY
+      reason: ODD/conduct disorders are primarily child/adolescent psychiatry
+    child.mood_self_harm:
+      status: SUPPORTING_ONLY
+      reason: adolescent-specific depression/self-harm treatment should not displace adult-board topics
+    developmental.tics_tourette:
+      status: SUPPORTING_OR_FOLLOW_UP
+      reason: present in the broader oral simulator but not in the curated 129-question oral bank; lower priority for Adult Psychiatry main-slot allocation
+
+preservation_rule: >-
+  Demotion from a visible main slot does not mean the topic is deleted from psychiatry knowledge.
+  It remains in core-coverage.yml and may be sampled as internal answer coverage, a genuine
+  follow-up, or later restored if direct Greek Adult Psychiatry exam evidence emerges.
