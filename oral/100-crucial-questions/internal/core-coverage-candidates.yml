@@ -18,19 +18,55 @@ candidates:
     proposed_domain: risk
     proposed_priority: IMPORTANT
     label: Intimate-partner and domestic violence in psychiatric practice
-    status: REVIEW_BEFORE_PROMOTION
+    status: APPROVED_FOR_PROMOTION
+    decision_date: 2026-08-18
     rationale: >-
       Identified as the only plausible canonical-bank gap in the Attempt 005 local textbook
-      coverage audit. It is clinically consequential for risk, safeguarding, trauma, suicide
-      and family/child safety, but does not appear to require a dedicated main question.
+      coverage audit and reconfirmed by the Attempt 010 board-sufficiency audit. Failure to
+      recognise coercive control/domestic violence and its implications for safety, suicide,
+      trauma, substance use, dependent children and confidentiality would represent a meaningful
+      Adult Psychiatry competence gap. It does not require a dedicated main question.
     candidate_essentials:
       - recognition of intimate-partner violence, coercive control and associated psychiatric risk
       - immediate safety assessment and proportionate safety planning
-      - trauma, suicide, substance use and child/safeguarding implications
+      - trauma, suicide, substance use and dependent-child/safeguarding implications
       - documentation, confidentiality and referral/support principles
     proposed_visible_sampling: >-
-      No dedicated main question. If promoted, represent primarily as internal answer coverage
-      within comprehensive assessment, risk/safeguarding and ethics material.
+      No dedicated main question. Represent primarily through answer coverage within Q1
+      comprehensive assessment, Q4/Q5 suicide, Q6 violence/risk, Q27 perinatal psychiatry and
+      Q98 confidentiality/duties.
     provenance:
       - oral/100-crucial-questions/reviews/005-textbook-coverage-audit.md
-      - Oxford New Textbook of Psychiatry, 3rd ed. (2020), textbook coverage signal as reported in that audit
+      - oral/100-crucial-questions/reviews/010-board-sufficiency-audit.md
+      - Oxford New Textbook of Psychiatry, 3rd ed. (2020), coverage signal as reported in the 005 audit
+
+  - id: neuropsychiatry.apathy
+    proposed_domain: neuropsychiatry
+    proposed_priority: IMPORTANT
+    label: Apathy and its psychiatric differential
+    status: APPROVED_FOR_PROMOTION
+    decision_date: 2026-08-18
+    rationale: >-
+      Attempt 010 promotes apathy versus depression to a visible Adult Psychiatry question on
+      direct Greek oral-bank evidence, but the canonical bank currently has no stable unit for
+      apathy. Mapping it indirectly to depression and neuroanatomy obscures the actual competence.
+    candidate_essentials:
+      - apathy as reduced motivation and goal-directed behaviour rather than necessarily depressed mood
+      - distinction from depression/anhedonia, primary negative symptoms, psychomotor slowing and medication effects
+      - frontal-subcortical and neurodegenerative contexts, including Parkinsonian syndromes
+      - management directed at the underlying cause rather than reflexive antidepressant treatment
+    proposed_visible_sampling: >-
+      Q57 in Attempt 010 and successors; may also be reinforced within Parkinson disease,
+      dementia and schizophrenia-negative-symptom answer coverage.
+    provenance:
+      - orestispsom/Psych/src/data/oral.js item 1Cg3
+      - oral/100-crucial-questions/reviews/010-board-sufficiency-audit.md
+
+promotion_queue:
+  - risk.intimate_partner_violence
+  - neuropsychiatry.apathy
+
+note: >-
+  These two candidates have passed the conceptual promotion test. They should be merged into
+  core-coverage.yml in the next safe canonical-file maintenance pass; until then this file is
+  the explicit decision record and they must already be preserved in answer design.
