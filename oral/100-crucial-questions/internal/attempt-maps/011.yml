@@ -1,0 +1,47 @@
+schema_version: 3
+attempt: "011"
+source_file: oral/100-crucial-questions/attempts/011.md
+canonical_coverage: ../core-coverage.yml
+adult_board_scope: ../adult-board-scope.yml
+board_fact_anchors: ../board-fact-anchors.yml
+inherits_main_question_mapping_from: 010.yml
+
+purpose: >-
+  Attempt 011 preserves all 100 main-question mappings from Attempt 010. It adds one visible
+  suicide follow-up after the complete 129-item curated Greek oral-bank mapping audit.
+
+main_question_mapping_unchanged: true
+main_question_count: 100
+
+visible_delta_from_010:
+  Q5a:
+    prompt_target: major suicide risk factors and disorder-specific suicide-risk patterns
+    maps_to:
+      - suicide.clinical_topic
+      - risk.suicide_assessment
+    source_evidence:
+      - orestispsom/Psych/src/data/oral.js:1Cd1
+      - orestispsom/Psych/src/data/oral.js:1Cd3
+      - orestispsom/Psych/src/data/oral.js:1Cd4
+    rationale: >-
+      The curated Greek oral bank asks these areas directly. They are too important to leave
+      only as implicit answer coverage, but they do not require another main-question slot.
+
+empirical_mapping_audit:
+  file: ../../reviews/010-greek-oral-129-mapping-audit.md
+  result:
+    total_curated_items: 129
+    covered_directly_in_010: 44
+    covered_within_answer_in_010: 55
+    fact_anchor_in_010: 30
+    lower_priority_not_forced: 0
+  implication: >-
+    No main-slot reallocation is required on the evidence of the current curated Greek oral bank.
+    Attempt 011 converts one high-value hidden suicide item into a visible examiner probe; the
+    remaining exact/narrow probes are protected through answer coverage and board-fact anchors.
+
+canonical_promotion_queue:
+  source: ../core-coverage-candidates.yml
+  approved_pending_canonical_merge:
+    - risk.intimate_partner_violence
+    - neuropsychiatry.apathy
