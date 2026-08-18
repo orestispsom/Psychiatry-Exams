@@ -71,7 +71,34 @@ Limitations:
 - textbook chapter prominence does not automatically determine Greek oral-exam weighting;
 - findings should influence the canonical bank only when they pass the project's independent inclusion rule.
 
-### D. Current major examination / curriculum frameworks — secondary completeness check
+### D. Current Greek legal, ethical and service-system applicability audit
+
+**Audit file:** `oral/100-crucial-questions/reviews/008-greece-applicability-audit.md`
+
+**Sources checked:**
+- Greek Code of Medical Ethics, Law 3418/2005 — especially Article 12 (informed consent), Article 13 (medical confidentiality), and psychiatry-specific ethical provisions;
+- Law 2071/1992 — Articles 95–97 on involuntary psychiatric admission, as currently applicable;
+- later Greek reforms affecting involuntary-care procedure/transport, including Article 96A / 2022 reforms;
+- Law 5129/2024 — current organisation of Greek mental-health services into the National Network of Mental Health Services (EDYPSY) and regional networks, while retaining reference to the involuntary-care provisions of Law 2071/1992;
+- Greek Penal Code, Law 4619/2019 — Article 34 on inability to attribute criminal responsibility because of mental/intellectual disorder or disturbance of consciousness;
+- Greek child-protection framework including Law 4837/2021 as amended and current Mila / EKKA reporting infrastructure;
+- Ministry of Health material from the Committee for the Protection of the Rights of Persons with Mental Disorders.
+
+Role:
+- prevent UK, US or other foreign legal/service frameworks from being silently imported into Greek specialist-board answers;
+- identify which clinically universal questions require Greek-law or Greek-system verification when answers are written;
+- distinguish international clinical evidence from national law, regulation, licensing and service organisation.
+
+Main implications:
+- Q9 involuntary care must be answered from current Greek law;
+- Q8 informed consent should use Greek informed-consent law rather than treating a foreign capacity test as statute;
+- Q58 child safeguarding/reporting must use current Greek duties/pathways;
+- Q90a ECT without valid consent is legally sensitive and must not import UK Mental Health Act or US substitute-consent rules;
+- Q98 confidentiality must use Greek Code of Medical Ethics Article 13; Tarasoff-style duty-to-warn language is not assumed to be Greek law;
+- Q99 criminal responsibility must use Greek concepts including καταλογισμός and current Greek Penal Code rather than M'Naghten/US/UK tests;
+- Q100 may use universal recovery/community principles, but concrete service-organisation claims should describe the current Greek EDYPSY/regional-network system rather than defaulting to NHS or US models.
+
+### E. Current major examination / curriculum frameworks — secondary completeness check
 
 Role:
 - check for broad specialty domains that neither the Greek oral bank nor a single textbook may emphasize;
@@ -81,14 +108,14 @@ Use cautiously:
 - these frameworks do not determine the exact weighting of the Greek oral boards;
 - they should not force low-value curriculum headings into the 100 main questions.
 
-### E. Future source categories
+### F. Future source categories
 
 To add as reviewed in greater depth where needed:
 - DSM-5-TR / ICD-11 for diagnosis and classification;
 - Maudsley Prescribing Guidelines 15th for psychopharmacology;
 - Stahl for mechanisms / psychopharmacology framing where appropriate;
 - current authoritative treatment guidelines;
-- current Greek legal / regulatory sources;
+- further current Greek legal / regulatory sources as answers are written;
 - recovered English–Greek psychiatry and neuroanatomy terminology guide.
 
 ## Coverage-review rule
@@ -110,3 +137,6 @@ Every source review should record:
 - Child safeguarding / abuse, reproductive psychiatry, sleep, eating disorders, neurodevelopmental disorders, old-age psychiatry, liaison and forensic psychiatry must not disappear through over-compression.
 - Basic science and service topics should remain represented but should not displace higher-value clinical questions merely to mirror a curriculum table of contents.
 - Source-derived candidate gaps should be staged and reviewed against the canonical inclusion rule before being promoted into `core-coverage.yml`.
+- Law, consent, involuntary care, confidentiality, safeguarding and forensic rules are jurisdiction-specific and must use current Greek sources.
+- International treatment evidence may be used, but Greek/EU licensing, regulation and actual service availability must be checked where relevant.
+- Foreign service structures or legal doctrines may be discussed only as explicitly labelled comparisons, never as the default Greek answer.
