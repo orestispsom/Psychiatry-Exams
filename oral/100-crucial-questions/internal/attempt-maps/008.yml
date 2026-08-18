@@ -1,0 +1,243 @@
+schema_version: 2
+attempt: "008"
+source_file: oral/100-crucial-questions/attempts/008.md
+canonical_coverage: ../core-coverage.yml
+coverage_candidates: ../core-coverage-candidates.yml
+
+purpose: >-
+  Maps visible Attempt 008 to the canonical question-independent psychiatry coverage bank.
+  The 100 main-question allocation is unchanged from Attempt 007. This revision increases visible
+  sampling of several IMPORTANT units through genuine examiner probes without turning the guide
+  into an omnibus curriculum.
+
+questions:
+  Q1: [assessment.comprehensive]
+  Q2: [psychopathology.thought_content]
+  Q3: [assessment.secondary_causes]
+  Q4: [risk.suicide_assessment]
+  Q5: [suicide.clinical_topic]
+  Q6: [risk.violence]
+  Q7: [emergency.agitation]
+  Q8: [legal.capacity_consent]
+  Q9: [legal.involuntary_greece]
+  Q10: [emergency.catatonia]
+
+  Q11: [psychosis.first_episode, cannabis.psychiatry]
+  Q12: [schizophrenia.syndrome_diagnosis]
+  Q13: [schizophrenia.differential]
+  Q14: [schizophrenia.aetiology_pathophysiology]
+  Q15: [schizophrenia.course_prognosis]
+  Q16: [schizophrenia.acute_treatment]
+  Q17: [schizophrenia.maintenance_rehabilitation, schizophrenia.negative_cognitive]
+  Q18: [schizophrenia.trs]
+  Q19: [psychopharm.clozapine, schizophrenia.trs]
+
+  Q20: [depression.mdd, reproductive.pmdd]
+  Q21: [depression.acute_treatment]
+  Q22: [depression.trd]
+  Q23: [bipolar.diagnosis]
+  Q24: [bipolar.mania]
+  Q25: [bipolar.depression]
+  Q26: [bipolar.maintenance]
+  Q27: [reproductive.perinatal]
+
+  Q28: [anxiety.panic_agoraphobia]
+  Q29: [anxiety.gad]
+  Q30: [anxiety.social]
+  Q31: [ocd.core, ocd.related]
+  Q32: [trauma.ptsd]
+  Q33: [trauma.acute_adjustment]
+  Q34: [dissociation.disorders]
+  Q35: [somatic.ssd_illness_anxiety]
+  Q36: [functional.fnd, deception.factitious_malingering]
+
+  Q37: [addiction.assessment, nicotine.tobacco]
+  Q38: [alcohol.withdrawal, alcohol.wernicke_korsakoff]
+  Q39: [alcohol.long_term]
+  Q40: [opioids.oud]
+  Q41: [cannabis.psychiatry]
+  Q42: [stimulants.disorders]
+  Q43: [sedatives.dependence]
+  Q44: [gambling.disorder]
+
+  Q45: [delirium.core]
+  Q46: [neurocognitive.assessment]
+  Q47: [dementia.alzheimer]
+  Q48: [dementia.dlb_pdd, neuropsychiatry.parkinson]
+  Q49: [dementia.ftd]
+  Q50: [dementia.vascular]
+  Q51: [dementia.bpsd]
+  Q52: [old_age.self_neglect]
+  Q53: [neuropsychiatry.autoimmune_encephalitis]
+  Q54: [neuropsychiatry.epilepsy]
+  Q55: [neuropsychiatry.tbi]
+  Q56: [liaison.core]
+
+  Q57: [child.assessment]
+  Q58: [child.safeguarding]
+  Q59: [developmental.adhd]
+  Q60: [developmental.autism]
+  Q61: [developmental.intellectual_disability]
+  Q62: [developmental.tics_tourette]
+  Q63: [child.disruptive_disorders]
+  Q64: [child.mood_self_harm]
+  Q65: [eating.anorexia, eating.bed_arfid]
+  Q66: [eating.anorexia_medical_risk]
+  Q67: [eating.bulimia]
+  Q68: [sleep.insomnia]
+  Q69: [sleep.hypersomnolence_narcolepsy, sleep.parasomnias_rbd]
+  Q70: [personality.general, personality.other]
+  Q71: [personality.bpd, psychotherapy.bpd_structured]
+  Q72: [personality.aspd_psychopathy]
+  Q73: [sexual.dysfunction]
+  Q74: [sexual.paraphilic]
+  Q75: [gender.dysphoria_care]
+
+  Q76: [psychopharm.principles]
+  Q77: [psychopharm.antipsychotic_selection]
+  Q78: [psychopharm.antipsychotic_eps]
+  Q79: [psychopharm.antipsychotic_metabolic_endocrine_cv]
+  Q80: [psychopharm.antidepressant_selection]
+  Q81: [psychopharm.antidepressant_safety]
+  Q82: [psychopharm.lithium]
+  Q83: [psychopharm.valproate]
+  Q84: [psychopharm.lamotrigine]
+  Q85: [psychopharm.benzodiazepines_hypnotics]
+  Q86: [psychopharm.adhd]
+  Q87: [psychopharm.pregnancy_lactation]
+  Q88: [emergency.nms_serotonin]
+  Q89: [toxicology.tca]
+  Q90: [biological.ect, biological.rtms_other]
+
+  Q91: [psychotherapy.cbt]
+  Q92: [psychotherapy.psychodynamic]
+  Q93: [psychotherapy.ipt]
+
+  Q94: [neuroscience.neuroanatomy]
+  Q95: [neuroscience.neurotransmitters]
+  Q96: [neuroscience.genetics]
+  Q97: [evidence.critical_appraisal, evidence.clinical_metrics]
+  Q98: [ethics.confidentiality_duties, ethics.boundaries]
+  Q99: [forensic.criminal_responsibility]
+  Q100: [systems.community_rehabilitation]
+
+partial_or_distributed_coverage:
+  psychopathology.thought_form:
+    via: [Q1b, Q12]
+    visible_scope: [tangentiality, circumstantiality, flight_of_ideas, loosening_of_associations, thought_blocking]
+    internal_scope: [thought_interference, passivity_phenomena, broader_formal_thought_disorder]
+
+  psychopathology.perception:
+    via: [Q1a, Q11, Q12, Q45, Q48]
+    visible_scope: [hallucination, illusion, organic_substance_sensory_differential]
+    internal_scope: [broader_perceptual_phenomenology]
+
+  psychopathology.mood_affect_psychomotor:
+    via: [Q1, Q20, Q24, Q45]
+    status: ANSWER_COVERAGE
+  psychopathology.cognition_insight:
+    via: [Q1, Q8, Q11, Q45, Q46]
+    status: ANSWER_COVERAGE
+
+  depression.patterns_specifiers:
+    via: [Q20]
+    status: ANSWER_COVERAGE
+
+  ocd.related:
+    via: [Q31a]
+    visible_scope: hoarding_disorder
+    internal_scope: [body_dysmorphic_disorder, trichotillomania, excoriation_disorder]
+
+  nicotine.tobacco:
+    via: [Q37a, Q19, Q76]
+    visible_scope: [dependence_treatment, smoking_cessation, psychotropic_metabolism_change]
+
+  old_age.principles:
+    via: [Q46, Q48, Q51, Q52, Q56]
+    status: DISTRIBUTED_ANSWER_COVERAGE
+
+  neuropsychiatry.parkinson:
+    via: [Q48a, Q48b]
+    visible_scope: [psychosis, motor_treatment_tradeoff, dopamine_agonist_impulse_control_disorders]
+    internal_scope: [depression, anxiety, apathy]
+
+  eating.bed_arfid:
+    via: [Q65a, Q67]
+    visible_scope: ARFID_vs_anorexia
+    internal_scope: [binge_eating_disorder]
+
+  sleep.parasomnias_rbd:
+    via: [Q69a]
+    visible_scope: REM_sleep_behaviour_disorder
+    internal_scope: [NREM_parasomnias]
+
+  personality.other:
+    via: [Q70a, Q70b]
+    visible_scope: [avoidant_personality_disorder, obsessive_compulsive_personality_disorder]
+    internal_scope: [paranoid, schizoid, dependent]
+
+  psychopharm.medical_comorbidity:
+    via: [Q54, Q56, Q76, Q82, Q87]
+    status: DISTRIBUTED_ANSWER_COVERAGE
+
+  psychopharm.carbamazepine:
+    via: [Q26, Q76]
+    status: ANSWER_COVERAGE
+
+  toxicology.other_psychotropics:
+    via: [Q82, Q88, Q89]
+    status: PARTIAL_ANSWER_COVERAGE
+    internal_scope: [antipsychotic_overdose, sedative_overdose]
+
+  biological.rtms_other:
+    via: [Q90b]
+    visible_scope: rTMS_in_treatment_resistant_depression_relative_to_ECT
+    internal_scope: [other_neuromodulation, light_therapy, chronotherapy]
+
+  psychotherapy.bpd_structured:
+    via: [Q71]
+    status: ANSWER_COVERAGE
+
+  psychotherapy.supportive_family_mi:
+    via: [Q17, Q37, Q39, Q71, Q92b]
+    status: DISTRIBUTED_ANSWER_COVERAGE
+
+  psychotherapy.psychodynamic:
+    via: [Q92, Q92a, Q92b]
+    visible_scope: [transference, countertransference, splitting_team_dynamics, supportive_vs_exploratory_stance]
+    internal_scope: [defence_mechanisms, full_psychodynamic_formulation]
+
+  neuroscience.sleep_circadian_endocrine:
+    via: [Q68a, Q69a]
+    visible_scope: [circadian_delay, REM_sleep_behaviour]
+    internal_scope: [NREM_REM_architecture, HPA_axis]
+
+  neuroscience.neuroanatomy:
+    via: [Q94]
+    visible_scope: frontal_subcortical_and_limbic_circuits
+    internal_scope: [broader_cortical_localisation, basal_ganglia, thalamus, hippocampus, amygdala, hypothalamus]
+
+  neuroscience.neurotransmitters:
+    via: [Q14, Q19, Q47, Q76, Q80, Q85, Q95]
+    visible_scope: dopamine_pathways
+    distributed_scope: [serotonin, noradrenaline, glutamate, GABA, acetylcholine]
+
+  ethics.boundaries:
+    via: [Q98b, Q71, Q92]
+    visible_scope: [personal_social_media_contact, social_relationship_request]
+    internal_scope: [dual_relationships, gifts, conflicts_of_interest]
+
+candidate_bank_items_not_yet_canonical:
+  - risk.intimate_partner_violence
+
+balance_changes_from_007:
+  - added focused perceptual-psychopathology probe to Q1
+  - added focused thought-form discrimination probe to Q1
+  - made tobacco/nicotine dependence visibly examinable without a new main slot
+  - broadened Parkinson psychiatry with a dopamine-agonist impulse-control scenario
+  - broadened other personality-disorder sampling with OCPD versus OCD
+  - added supportive-versus-exploratory psychodynamic decision-making
+  - made professional boundaries visibly examinable through a realistic scenario
+
+main_question_count: 100
+visible_follow_up_count: 33
