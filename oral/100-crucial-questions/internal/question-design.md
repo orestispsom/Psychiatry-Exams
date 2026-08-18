@@ -176,7 +176,39 @@ Do **not** expand the bank merely to capture:
 
 When in doubt, prefer a compact stable coverage unit with a few meaningful essentials over many tiny nodes.
 
-## 11. Final quality test for every visible prompt
+## 11. Board-sufficiency criterion
+
+The final 100-question set is intended to function as a **high-yield sufficiency set for Adult Psychiatry specialist-board preparation in Greece**.
+
+The design target is stronger than simple curriculum representation:
+
+> If a candidate genuinely understood, could explain, discriminate, and clinically apply the material required by all 100 questions and their internal answer-coverage specifications, that knowledge should probably be sufficient to pass a general Adult Psychiatry specialist board examination, while recognising that no finite question bank can guarantee examination outcome.
+
+This requires the set collectively to provide:
+
+- broad coverage of the major adult psychiatric disorders and presentations;
+- adequate depth in high-frequency and high-risk topics rather than superficial mention;
+- diagnostic criteria and clinically meaningful differentials;
+- emergency psychiatry, suicide, violence, catatonia, delirium and other dangerous presentations;
+- treatment sequencing, treatment resistance and next-step reasoning;
+- psychopharmacology sufficient for safe specialist practice, including monitoring, interactions, major adverse effects and toxic syndromes;
+- psychotherapy principles expected of a general adult psychiatrist;
+- old-age, liaison, neuropsychiatric, substance-use, sleep, eating, personality and adult neurodevelopmental psychiatry at appropriate board depth;
+- core psychopathology, neuroscience and evidence-appraisal knowledge that commonly supports oral examination questions;
+- Greek law, ethics, forensic psychiatry and service-system knowledge where jurisdiction matters;
+- enough cross-topic integration that the candidate can handle an unfamiliar vignette by reasoning from the mastered material rather than relying only on recognition of rehearsed wording.
+
+### Sufficiency audit question
+
+Before locking an attempt, ask:
+
+> If the examiner deliberately avoided asking these exact 100 prompts but tested the same adult-psychiatry curriculum through adjacent cases, comparisons and follow-up questions, would mastery of our 100 answers still allow a strong candidate to reason their way to a passing response?
+
+If **no**, the bank is not yet sufficient even if every major textbook chapter has nominal representation.
+
+The project therefore optimises for **transferable board competence**, not memorisation of 100 scripts.
+
+## 12. Final quality test for every visible prompt
 
 Before accepting a main question or follow-up, ask:
 
@@ -187,5 +219,6 @@ Before accepting a main question or follow-up, ask:
 - Is it duplicating what another question necessarily covers?
 - Is a supposed follow-up actually just part of the complete parent answer?
 - Would removing it create a meaningful knowledge gap in the canonical coverage map?
+- Does this prompt materially contribute to the board-sufficiency target, or is the slot better spent elsewhere?
 
 If the prompt fails these tests, rewrite, demote, merge or delete it.
