@@ -1,0 +1,134 @@
+schema_version: 2
+attempt: "008"
+visible_questions: ../../attempts/008.md
+canonical_coverage: ../core-coverage.yml
+question_map: ../attempt-maps/008.yml
+inherits: ./007.yml
+status: provisional
+
+purpose: >-
+  Hidden authoring specification for Attempt 008. All Q1-Q100 `must_cover` requirements are
+  inherited unchanged from Attempt 007 because the 100 main-question spine is unchanged.
+  This file records only the additional visible examiner probes introduced for balancing.
+  The inherited requirements remain authoritative unless explicitly overridden here.
+
+inheritance_rule: >-
+  Resolve each question first from answer-coverage/007.yml, then apply any additions or overrides
+  below. Absence of an override means the complete 007 requirement is retained unchanged.
+
+visibility_changes:
+  Q1:
+    newly_visible_followups:
+      - id: Q1a
+        samples:
+          - psychopathology.perception
+        focus:
+          - hallucination versus illusion and other perceptual phenomena
+          - organic, substance-related, sensory and primary-psychosis differential
+      - id: Q1b
+        samples:
+          - psychopathology.thought_form
+        focus:
+          - tangentiality
+          - circumstantiality
+          - flight of ideas
+          - loosening of associations
+          - thought blocking
+    answer_requirement_change: NONE
+    note: >-
+      These domains were already mandatory within Q1/Q12 answer coverage; Attempt 008 makes the
+      high-yield discriminations visibly examinable without creating new main questions.
+
+  Q37:
+    newly_visible_followups:
+      - id: Q37a
+        samples:
+          - nicotine.tobacco
+        focus:
+          - treatment of tobacco dependence
+          - smoking cessation in severe mental illness
+          - psychotropic pharmacokinetic consequences of smoking change
+    answer_requirement_change: NONE
+
+  Q48:
+    newly_visible_followups:
+      - id: Q48b
+        samples:
+          - neuropsychiatry.parkinson
+        focus:
+          - dopamine-agonist-associated impulse-control disorders
+          - compulsive gambling and hypersexual behaviour
+          - medication-related formulation and management
+    answer_requirement_change: NONE
+
+  Q70:
+    newly_visible_followups:
+      - id: Q70b
+        samples:
+          - personality.other
+          - ocd.core
+        focus:
+          - obsessive-compulsive personality disorder versus OCD
+          - ego-syntonic personality traits versus intrusive obsessions/compulsions
+    answer_requirement_change: NONE
+
+  Q92:
+    newly_visible_followups:
+      - id: Q92b
+        samples:
+          - psychotherapy.psychodynamic
+          - psychotherapy.supportive_family_mi
+        focus:
+          - supportive versus exploratory psychodynamic stance
+          - adapting technique to psychological fragility and level of functioning
+    answer_requirement_change: NONE
+
+  Q98:
+    newly_visible_followups:
+      - id: Q98b
+        samples:
+          - ethics.boundaries
+        focus:
+          - personal social-media contact
+          - request for social relationship
+          - maintenance of therapeutic boundaries
+    answer_requirement_change: NONE
+
+balance_summary:
+  newly_visible_important_units:
+    - psychopathology.perception
+    - psychopathology.thought_form
+    - nicotine.tobacco
+    - neuropsychiatry.parkinson
+    - personality.other
+    - psychotherapy.psychodynamic
+    - ethics.boundaries
+  main_question_slots_added: 0
+  main_question_slots_removed: 0
+  inherited_question_requirements_changed: 0
+  visible_follow_up_count: 33
+
+remaining_important_material_intentionally_internal_or_distributed:
+  - psychopathology.mood_affect_psychomotor
+  - psychopathology.cognition_insight
+  - depression.patterns_specifiers
+  - body_dysmorphic_disorder_trichotillomania_excoriation
+  - old_age.principles
+  - Parkinson_depression_anxiety_apathy
+  - binge_eating_disorder
+  - NREM_parasomnias
+  - paranoid_schizoid_dependent_personality_patterns
+  - psychopharm.medical_comorbidity
+  - psychopharm.carbamazepine
+  - non_TCA_psychotropic_overdose
+  - broader_neuromodulation_and_chronotherapy
+  - BPD_structured_psychotherapies
+  - family_psychoeducation_and_motivational_interviewing
+  - defence_mechanisms_and_full_psychodynamic_formulation
+  - NREM_REM_architecture_and_HPA_axis
+  - broader_neurotransmitter_systems_distributed_across_answers
+  - clinical_epidemiology_metrics
+  - broader_boundary_and_conflict_of_interest_topics
+
+candidate_bank_items_not_yet_canonical:
+  - risk.intimate_partner_violence
