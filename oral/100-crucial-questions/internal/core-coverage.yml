@@ -1,0 +1,1403 @@
+schema_version: 1
+updated: 2026-08-18
+status: living
+
+purpose: >-
+  Canonical question-independent coverage map for The 100 Crucial Questions in Psychiatry.
+  It defines the clinically and examination-relevant psychiatry knowledge that a well-prepared
+  senior psychiatry resident should possess. Visible question attempts must map to this file;
+  this file must not be shaped around any particular attempt or question numbering.
+
+inclusion_rule: >-
+  Include a coverage unit when failure to know it would represent a meaningful gap in the
+  knowledge, reasoning or safe practice expected of a well-prepared senior psychiatry resident.
+  Prefer clinically consequential, diagnostically discriminative, treatment-relevant and
+  recurrent examination material. Do not expand into exhaustive textbook detail.
+
+priority_levels:
+  CORE: Must be strongly represented in the final guide.
+  IMPORTANT: Should be represented somewhere, but may sit within another answer or a genuine follow-up.
+  SUPPORTING: Valuable senior-resident knowledge that should not displace CORE material.
+
+maintenance_rules:
+  - Coverage units use stable IDs and must not contain attempt question numbers.
+  - Enrich units when new sources expose a meaningful gap; do not add trivia merely because a source mentions it.
+  - Essentials are minimum knowledge expectations, not model-answer outlines.
+  - Exact doses, thresholds, monitoring intervals, legal rules and current guideline details belong in verified answer work, not here unless the concept itself is crucial.
+  - A single coverage unit may map to several questions, and one question may map to several coverage units.
+  - Question wording, follow-up design and attempt-specific decisions belong outside this file.
+
+coverage:
+  # ---------------------------------------------------------------------------
+  # ASSESSMENT, PSYCHOPATHOLOGY, RISK, LAW, EMERGENCIES
+  # ---------------------------------------------------------------------------
+  - id: assessment.comprehensive
+    domain: assessment
+    priority: CORE
+    label: Comprehensive psychiatric assessment and formulation
+    essentials:
+      - psychiatric history, collateral information and relevant physical/neurological assessment
+      - mental state examination
+      - risk assessment
+      - differential diagnosis and biopsychosocial formulation
+      - investigation and initial management planning
+
+  - id: psychopathology.thought_content
+    domain: psychopathology
+    priority: CORE
+    label: Abnormal beliefs and intrusive thoughts
+    essentials:
+      - delusion
+      - overvalued idea
+      - obsession and rumination
+      - clinically useful distinctions in conviction, insight, resistance and meaning
+
+  - id: psychopathology.thought_form
+    domain: psychopathology
+    priority: IMPORTANT
+    label: Thought form, stream and possession
+    essentials:
+      - disorganisation and formal thought disorder
+      - flight of ideas, circumstantiality, tangentiality and thought blocking
+      - thought interference and passivity phenomena
+
+  - id: psychopathology.perception
+    domain: psychopathology
+    priority: IMPORTANT
+    label: Perceptual abnormalities
+    essentials:
+      - hallucination versus illusion and other non-psychotic perceptual phenomena
+      - modality and phenomenology
+      - features suggesting neurological, toxic or delirious rather than primary psychotic causes
+
+  - id: psychopathology.mood_affect_psychomotor
+    domain: psychopathology
+    priority: IMPORTANT
+    label: Mood, affect and psychomotor abnormalities
+    essentials:
+      - subjective mood versus observed affect
+      - reactivity, congruence, range and lability
+      - psychomotor retardation, agitation and clinically important motor phenomena
+
+  - id: psychopathology.cognition_insight
+    domain: psychopathology
+    priority: IMPORTANT
+    label: Cognition, insight and judgement in psychiatric assessment
+    essentials:
+      - attention, orientation, memory and executive function at the bedside
+      - multidimensional nature of insight
+      - relevance to diagnosis, risk, adherence and capacity without conflating these constructs
+
+  - id: assessment.secondary_causes
+    domain: assessment
+    priority: CORE
+    label: Secondary medical, neurological, medication-related and substance-related psychiatric presentations
+    essentials:
+      - red flags for an organic or toxic cause
+      - appropriate physical and neurological examination
+      - rational use of laboratory tests, toxicology, EEG, neuroimaging and CSF studies
+      - avoidance of diagnostic overshadowing
+
+  - id: risk.suicide_assessment
+    domain: risk
+    priority: CORE
+    label: Suicide and self-harm risk assessment
+    essentials:
+      - ideation, intent, plan, means, preparation and previous behaviour
+      - dynamic, historical and protective factors
+      - formulation rather than simple categorical prediction
+      - immediate safety and disposition planning
+
+  - id: suicide.clinical_topic
+    domain: risk
+    priority: CORE
+    label: Suicide as a major psychiatric clinical topic
+    essentials:
+      - major epidemiological and disorder-related patterns
+      - established risk and protective factors
+      - prevention and means-safety principles
+      - post-attempt management and continuity of care
+      - treatments with particular relevance to suicide reduction where evidence supports this
+
+  - id: risk.violence
+    domain: risk
+    priority: CORE
+    label: Violence and serious aggression risk assessment
+    essentials:
+      - acute versus longer-term risk formulation
+      - historical, clinical and situational contributors
+      - substance use, psychosis, personality pathology and neurological causes
+      - structured tools as adjuncts rather than substitutes for clinical formulation
+
+  - id: emergency.agitation
+    domain: emergencies
+    priority: CORE
+    label: Acute agitation and behavioural emergency management
+    essentials:
+      - safety and verbal de-escalation
+      - rapid tranquillisation principles and monitoring
+      - restrictive interventions as last resort
+      - exclusion of medical, neurological, toxic and withdrawal causes
+
+  - id: emergency.catatonia
+    domain: emergencies
+    priority: CORE
+    label: Catatonia
+    essentials:
+      - characteristic clinical signs and syndromic recognition
+      - psychiatric and medical differential diagnosis
+      - benzodiazepine treatment and ECT
+      - malignant catatonia and distinction from NMS
+
+  - id: legal.capacity_consent
+    domain: legal_ethics
+    priority: CORE
+    label: Treatment decision-making capacity and consent
+    essentials:
+      - decision-specific and time-specific assessment
+      - relationship between understanding, appreciation, reasoning and communication of choice
+      - distinction from diagnosis, disagreement and legal competence
+      - implications for treatment refusal and surrogate processes
+
+  - id: legal.involuntary_greece
+    domain: legal_ethics
+    priority: CORE
+    label: Involuntary psychiatric assessment and treatment in Greece
+    essentials:
+      - current legal criteria and procedural safeguards
+      - clinical assessment of necessity and proportionality
+      - documentation, rights and least-restrictive practice
+    note: Current Greek law must be verified from official sources when model answers are written.
+
+  # ---------------------------------------------------------------------------
+  # PSYCHOTIC DISORDERS
+  # ---------------------------------------------------------------------------
+  - id: psychosis.first_episode
+    domain: psychosis
+    priority: CORE
+    label: First-episode psychosis
+    essentials:
+      - differential diagnosis including affective, substance-related and medical causes
+      - risk, collateral information, physical examination and investigations
+      - initial antipsychotic and psychosocial treatment
+      - admission decisions, engagement and early-intervention principles
+
+  - id: schizophrenia.syndrome_diagnosis
+    domain: psychosis
+    priority: CORE
+    label: Schizophrenia syndrome and diagnosis
+    essentials:
+      - positive, negative, disorganised, cognitive and affective dimensions
+      - diagnostic framework and longitudinal requirements
+      - characteristic phenomenology including historical first-rank symptoms without over-weighting them
+
+  - id: schizophrenia.differential
+    domain: psychosis
+    priority: CORE
+    label: Differential diagnosis of schizophrenia-spectrum psychosis
+    essentials:
+      - schizoaffective disorder
+      - mood disorders with psychotic features
+      - brief and delusional disorders
+      - substance-induced and secondary psychoses
+
+  - id: schizophrenia.aetiology_pathophysiology
+    domain: psychosis
+    priority: IMPORTANT
+    label: Aetiology and pathophysiology of schizophrenia
+    essentials:
+      - genetic and neurodevelopmental liability
+      - environmental risk and gene-environment interaction
+      - dopamine and glutamate models
+      - limits of neuroimaging and biomarker findings in individual diagnosis
+
+  - id: schizophrenia.course_prognosis
+    domain: psychosis
+    priority: IMPORTANT
+    label: Course and prognosis of schizophrenia
+    essentials:
+      - heterogeneous longitudinal course and functional outcome
+      - duration of untreated psychosis
+      - prognostic relevance of onset, sex, cognition, negative symptoms, substance use and support
+      - suicide and excess physical-health mortality
+
+  - id: schizophrenia.acute_treatment
+    domain: psychosis
+    priority: CORE
+    label: Acute treatment of schizophrenia
+    essentials:
+      - antipsychotic selection and adequate trial
+      - management of agitation, risk and comorbidity
+      - early psychosocial work and engagement
+      - recognition of non-response and adverse effects
+
+  - id: schizophrenia.maintenance_rehabilitation
+    domain: psychosis
+    priority: CORE
+    label: Maintenance treatment and rehabilitation in schizophrenia
+    essentials:
+      - relapse prevention and maintenance antipsychotic treatment
+      - adherence and long-acting injectable formulations
+      - family intervention, CBT for psychosis and psychoeducation where indicated
+      - social, occupational and physical-health rehabilitation
+
+  - id: schizophrenia.trs
+    domain: psychosis
+    priority: CORE
+    label: Treatment-resistant schizophrenia
+    essentials:
+      - adequate prior treatment trials
+      - pseudo-resistance including adherence and substance use
+      - indication for clozapine
+      - approach to incomplete clozapine response
+
+  - id: schizophrenia.negative_cognitive
+    domain: psychosis
+    priority: IMPORTANT
+    label: Negative symptoms and cognitive impairment in schizophrenia
+    essentials:
+      - primary versus secondary negative symptoms
+      - major cognitive domains and functional relevance
+      - treatment limitations and psychosocial rehabilitation
+
+  - id: psychosis.early_detection
+    domain: psychosis
+    priority: SUPPORTING
+    label: Clinical high-risk states and early intervention in psychosis
+    essentials:
+      - risk-state concepts and limitations of prediction
+      - avoiding premature labelling
+      - monitoring, psychosocial intervention and management of comorbidity
+
+  # ---------------------------------------------------------------------------
+  # MOOD AND REPRODUCTIVE PSYCHIATRY
+  # ---------------------------------------------------------------------------
+  - id: depression.mdd
+    domain: mood
+    priority: CORE
+    label: Major depressive disorder
+    essentials:
+      - characteristic syndrome and diagnostic framework
+      - severity, psychotic features and functional impairment
+      - bipolar, medical, neurological, medication and substance differentials
+      - suicide assessment
+
+  - id: depression.patterns_specifiers
+    domain: mood
+    priority: IMPORTANT
+    label: Clinically important depressive patterns and specifiers
+    essentials:
+      - melancholic and atypical presentations
+      - psychotic and catatonic depression
+      - seasonal pattern and persistent/recurrent illness
+
+  - id: depression.acute_treatment
+    domain: mood
+    priority: CORE
+    label: Acute treatment of major depression
+    essentials:
+      - treatment selection according to severity, risk, prior response and preference
+      - psychotherapy, antidepressants and combined treatment
+      - indications for ECT and other specialist interventions
+      - continuation treatment and early monitoring
+
+  - id: depression.trd
+    domain: mood
+    priority: CORE
+    label: Treatment-resistant depression
+    essentials:
+      - confirmation of diagnosis and pseudo-resistance
+      - adequate dose, duration and adherence
+      - switching, combination and augmentation strategies
+      - lithium, atypical antipsychotic augmentation, ECT and ketamine/esketamine in appropriate contexts
+
+  - id: bipolar.diagnosis
+    domain: mood
+    priority: CORE
+    label: Bipolar disorder diagnosis and differential
+    essentials:
+      - bipolar I, bipolar II and cyclothymic presentations
+      - mania versus hypomania
+      - bipolar versus unipolar depression
+      - distinction from ADHD, BPD, substances and secondary mania
+
+  - id: bipolar.mania
+    domain: mood
+    priority: CORE
+    label: Acute mania
+    essentials:
+      - syndrome recognition and differential diagnosis
+      - risk, capacity and admission
+      - acute pharmacological management
+      - secondary medical, medication and substance causes
+
+  - id: bipolar.depression
+    domain: mood
+    priority: CORE
+    label: Bipolar depression
+    essentials:
+      - evidence-based acute treatment choices
+      - role and limitations of antidepressants
+      - mixed features, switch risk and suicide risk
+
+  - id: bipolar.maintenance
+    domain: mood
+    priority: CORE
+    label: Bipolar maintenance treatment
+    essentials:
+      - relapse-prevention treatment selection
+      - polarity-specific previous response
+      - mixed features and rapid cycling
+      - psychoeducation, adherence and physical-health monitoring
+
+  - id: reproductive.perinatal
+    domain: reproductive
+    priority: CORE
+    label: Perinatal psychiatry
+    essentials:
+      - psychiatric illness during pregnancy
+      - postpartum depression and postpartum psychosis
+      - maternal and infant risk
+      - balancing untreated-illness risk against treatment risk
+      - breastfeeding and continuity of care
+
+  - id: reproductive.pmdd
+    domain: reproductive
+    priority: IMPORTANT
+    label: Premenstrual dysphoric disorder
+    essentials:
+      - cyclical symptom pattern and prospective confirmation
+      - differential from premenstrual exacerbation of another disorder
+      - principal treatment approaches
+
+  - id: reproductive.menopause
+    domain: reproductive
+    priority: SUPPORTING
+    label: Menopause-related psychiatric presentations
+    essentials:
+      - mood and sleep symptoms in context
+      - distinction between psychiatric disorder and menopausal symptoms
+      - interaction with medical treatment and risk factors
+
+  # ---------------------------------------------------------------------------
+  # ANXIETY, OCD, TRAUMA, DISSOCIATION, SOMATIC/FUNCTIONAL
+  # ---------------------------------------------------------------------------
+  - id: anxiety.panic_agoraphobia
+    domain: anxiety
+    priority: CORE
+    label: Panic disorder and agoraphobia
+    essentials:
+      - panic attack phenomenology and anticipatory anxiety
+      - medical and substance differential
+      - CBT and pharmacological treatment
+
+  - id: anxiety.gad
+    domain: anxiety
+    priority: CORE
+    label: Generalised anxiety disorder
+    essentials:
+      - pervasive worry and associated symptoms
+      - differential from depression, OCD, trauma, substances and medical causes
+      - psychological and pharmacological treatment
+
+  - id: anxiety.social
+    domain: anxiety
+    priority: IMPORTANT
+    label: Social anxiety disorder
+    essentials:
+      - fear of scrutiny and impairment
+      - distinction from avoidant personality, autism and ordinary shyness
+      - CBT and pharmacological treatment
+
+  - id: anxiety.specific_phobia
+    domain: anxiety
+    priority: SUPPORTING
+    label: Specific phobias and performance anxiety
+    essentials:
+      - diagnosis and differential
+      - exposure-based treatment
+      - limited context-specific pharmacological roles
+
+  - id: ocd.core
+    domain: ocd
+    priority: CORE
+    label: Obsessive-compulsive disorder
+    essentials:
+      - obsessions and compulsions with insight variation
+      - differential from delusions, worry, rumination and OCPD
+      - ERP and pharmacological treatment
+      - treatment-resistant OCD
+
+  - id: ocd.related
+    domain: ocd
+    priority: IMPORTANT
+    label: Obsessive-compulsive and related disorders
+    essentials:
+      - body dysmorphic disorder
+      - hoarding disorder
+      - trichotillomania and excoriation disorder
+      - clinically important distinctions from OCD
+
+  - id: trauma.ptsd
+    domain: trauma
+    priority: CORE
+    label: Post-traumatic stress disorder
+    essentials:
+      - trauma exposure and core symptom clusters
+      - differential diagnosis and comorbidity
+      - trauma-focused psychotherapy and EMDR
+      - pharmacological treatment where appropriate
+
+  - id: trauma.acute_adjustment
+    domain: trauma
+    priority: IMPORTANT
+    label: Acute stress disorder and adjustment disorder
+    essentials:
+      - temporal and phenomenological distinctions
+      - relation to PTSD
+      - proportional management and avoidance of over-medicalisation
+
+  - id: trauma.prolonged_grief
+    domain: trauma
+    priority: SUPPORTING
+    label: Prolonged grief disorder
+    essentials:
+      - distinction from normal bereavement, depression and PTSD
+      - functional impairment and treatment principles
+
+  - id: dissociation.disorders
+    domain: dissociation
+    priority: IMPORTANT
+    label: Dissociative disorders
+    essentials:
+      - depersonalisation/derealisation and dissociative amnesia/identity phenomena
+      - trauma association without assuming causality in every case
+      - differential from psychosis, epilepsy, neurological illness and feigned symptoms
+
+  - id: somatic.ssd_illness_anxiety
+    domain: somatic
+    priority: IMPORTANT
+    label: Somatic symptom disorder and illness anxiety disorder
+    essentials:
+      - excessive health-related thoughts, feelings and behaviours
+      - distinction from appropriate concern about genuine disease
+      - longitudinal, non-iatrogenic management
+
+  - id: functional.fnd
+    domain: somatic
+    priority: CORE
+    label: Functional neurological disorder
+    essentials:
+      - positive clinical diagnosis rather than diagnosis by exclusion alone
+      - neurological differential and comorbidity
+      - clear communication of diagnosis
+      - multidisciplinary treatment
+
+  - id: deception.factitious_malingering
+    domain: somatic
+    priority: IMPORTANT
+    label: Factitious disorder and malingering
+    essentials:
+      - internal versus external incentives
+      - distinction from FND and somatic symptom disorders
+      - safe, non-confrontational clinical management and forensic implications
+
+  # ---------------------------------------------------------------------------
+  # SUBSTANCE-RELATED AND ADDICTIVE DISORDERS
+  # ---------------------------------------------------------------------------
+  - id: addiction.assessment
+    domain: addiction
+    priority: CORE
+    label: Assessment and formulation of substance use disorders
+    essentials:
+      - pattern, quantity, route, intoxication, withdrawal and harms
+      - craving, impaired control and dependence concepts
+      - psychiatric and medical comorbidity
+      - motivational interviewing, harm reduction and relapse-prevention principles
+
+  - id: alcohol.withdrawal
+    domain: addiction
+    priority: CORE
+    label: Alcohol withdrawal
+    essentials:
+      - uncomplicated withdrawal, seizures and delirium tremens
+      - benzodiazepine-based treatment principles
+      - thiamine and medical monitoring
+      - recognition of complications
+
+  - id: alcohol.wernicke_korsakoff
+    domain: addiction
+    priority: IMPORTANT
+    label: Wernicke encephalopathy and Korsakoff syndrome
+    essentials:
+      - clinical suspicion and emergency thiamine treatment
+      - cognitive syndrome and differential diagnosis
+      - prevention in alcohol-related presentations
+
+  - id: alcohol.long_term
+    domain: addiction
+    priority: CORE
+    label: Long-term treatment of alcohol use disorder
+    essentials:
+      - relapse-prevention pharmacotherapy
+      - psychosocial treatment
+      - medical and psychiatric comorbidity
+      - harm reduction and recovery goals
+
+  - id: opioids.oud
+    domain: addiction
+    priority: CORE
+    label: Opioid use disorder
+    essentials:
+      - intoxication, overdose and withdrawal
+      - opioid agonist treatment and antagonist approaches
+      - overdose prevention
+      - psychosocial and harm-reduction care
+
+  - id: cannabis.psychiatry
+    domain: addiction
+    priority: CORE
+    label: Cannabis-related psychiatric syndromes
+    essentials:
+      - acute effects and cannabis use disorder
+      - relationship with psychosis and first-episode psychosis
+      - cannabis-induced versus primary psychotic disorder
+      - motivational and relapse-prevention treatment
+
+  - id: stimulants.disorders
+    domain: addiction
+    priority: IMPORTANT
+    label: Stimulant-related disorders
+    essentials:
+      - intoxication and withdrawal
+      - stimulant-induced psychosis
+      - cardiovascular and behavioural risk
+      - treatment principles
+
+  - id: sedatives.dependence
+    domain: addiction
+    priority: CORE
+    label: Benzodiazepine and sedative-hypnotic dependence
+    essentials:
+      - tolerance, dependence and withdrawal
+      - seizure risk and gradual tapering principles
+      - iatrogenic dependence and safer prescribing
+
+  - id: nicotine.tobacco
+    domain: addiction
+    priority: IMPORTANT
+    label: Tobacco and nicotine dependence
+    essentials:
+      - dependence and cessation treatment
+      - interaction of smoking with psychotropic metabolism
+      - high physical-health burden in severe mental illness
+
+  - id: addiction.other_substances
+    domain: addiction
+    priority: SUPPORTING
+    label: Other clinically important psychoactive substances
+    essentials:
+      - hallucinogens and dissociatives
+      - inhalants
+      - caffeine and other common agents where clinically relevant
+      - substance-induced psychiatric syndromes
+
+  - id: addiction.toxicology_testing
+    domain: addiction
+    priority: SUPPORTING
+    label: Toxicology testing in psychiatry
+    essentials:
+      - indications and limitations
+      - interpretation in relation to timing, false results and clinical context
+
+  - id: gambling.disorder
+    domain: addiction
+    priority: IMPORTANT
+    label: Gambling disorder
+    essentials:
+      - diagnosis and harms
+      - psychiatric comorbidity and suicide risk
+      - psychological and service-based treatment
+
+  # ---------------------------------------------------------------------------
+  # DELIRIUM, NEUROCOGNITIVE, OLD AGE, NEUROPSYCHIATRY, LIAISON
+  # ---------------------------------------------------------------------------
+  - id: delirium.core
+    domain: neurocognitive
+    priority: CORE
+    label: Delirium
+    essentials:
+      - acute disturbance of attention/awareness with fluctuation
+      - predisposing and precipitating causes
+      - distinction from dementia, depression and primary psychosis
+      - causal and non-pharmacological treatment, with cautious symptomatic medication only when needed
+
+  - id: neurocognitive.assessment
+    domain: neurocognitive
+    priority: CORE
+    label: Assessment of suspected major neurocognitive disorder
+    essentials:
+      - cognitive domains and functional decline
+      - collateral history and baseline function
+      - potentially reversible contributors
+      - cognitive testing, laboratory assessment and neuroimaging
+
+  - id: dementia.alzheimer
+    domain: neurocognitive
+    priority: CORE
+    label: Alzheimer's disease
+    essentials:
+      - characteristic cognitive presentation and course
+      - diagnostic assessment and differential
+      - cholinesterase inhibitors and memantine
+      - psychosocial, caregiver and safety management
+
+  - id: dementia.dlb_pdd
+    domain: neurocognitive
+    priority: CORE
+    label: Dementia with Lewy bodies and Parkinson's disease dementia
+    essentials:
+      - characteristic cognitive, perceptual, motor and autonomic features
+      - distinction between DLB and PDD
+      - REM sleep behaviour disorder
+      - antipsychotic sensitivity and treatment principles
+
+  - id: dementia.ftd
+    domain: neurocognitive
+    priority: IMPORTANT
+    label: Frontotemporal dementia
+    essentials:
+      - behavioural and language variants
+      - distinction from psychiatric illness and Alzheimer's disease
+      - behavioural management and caregiver issues
+
+  - id: dementia.vascular
+    domain: neurocognitive
+    priority: IMPORTANT
+    label: Vascular cognitive impairment and vascular dementia
+    essentials:
+      - temporal relationship with cerebrovascular disease and executive dysfunction
+      - mixed pathology
+      - vascular risk management and rehabilitation
+
+  - id: dementia.bpsd
+    domain: neurocognitive
+    priority: CORE
+    label: Behavioural and psychological symptoms of dementia
+    essentials:
+      - search for pain, delirium, environment and unmet needs
+      - non-pharmacological management first
+      - careful use and risk of psychotropics
+      - caregiver support and safeguarding
+
+  - id: old_age.principles
+    domain: old_age
+    priority: IMPORTANT
+    label: Core principles of old-age psychiatry
+    essentials:
+      - multimorbidity, frailty and polypharmacy
+      - altered pharmacokinetics and adverse-effect vulnerability
+      - capacity, safeguarding and social context
+      - sensory impairment and atypical presentations
+
+  - id: old_age.self_neglect
+    domain: old_age
+    priority: IMPORTANT
+    label: Severe self-neglect and Diogenes-type presentations
+    essentials:
+      - differential including dementia, depression, psychosis, hoarding and substance use
+      - capacity and autonomy
+      - environmental, safeguarding and social risks
+      - limitations of the Diogenes label
+
+  - id: neuropsychiatry.autoimmune_encephalitis
+    domain: neuropsychiatry
+    priority: IMPORTANT
+    label: Autoimmune encephalitis presenting psychiatrically
+    essentials:
+      - rapid or atypical psychiatric presentation with neurological red flags
+      - seizures, movement disorder, autonomic change and fluctuating consciousness
+      - appropriate neurological investigation and urgent multidisciplinary management
+
+  - id: neuropsychiatry.epilepsy
+    domain: neuropsychiatry
+    priority: IMPORTANT
+    label: Epilepsy and psychiatry
+    essentials:
+      - ictal, postictal and interictal psychiatric phenomena
+      - depression, psychosis and suicide risk
+      - psychiatric effects of antiseizure medication
+      - psychotropic effects on seizure threshold and interactions
+
+  - id: neuropsychiatry.tbi
+    domain: neuropsychiatry
+    priority: IMPORTANT
+    label: Traumatic brain injury and psychiatric sequelae
+    essentials:
+      - cognitive impairment
+      - mood and behavioural change
+      - personality change, aggression and psychosis
+      - rehabilitation and medication sensitivity
+
+  - id: neuropsychiatry.parkinson
+    domain: neuropsychiatry
+    priority: IMPORTANT
+    label: Parkinson's disease and psychiatry
+    essentials:
+      - depression, anxiety, apathy and cognitive impairment
+      - psychosis and medication-related behavioural syndromes
+      - treatment choices mindful of motor symptoms and cognition
+
+  - id: neuropsychiatry.other_neurological
+    domain: neuropsychiatry
+    priority: SUPPORTING
+    label: Psychiatric syndromes in other major neurological disorders
+    essentials:
+      - stroke
+      - Huntington's disease
+      - multiple sclerosis
+      - CNS infection and brain tumour
+
+  - id: neuropsychiatry.charles_bonnet
+    domain: neuropsychiatry
+    priority: SUPPORTING
+    label: Charles Bonnet syndrome and related visual perceptual syndromes
+    essentials:
+      - visual hallucinations in visual impairment
+      - preserved insight and differential from delirium, psychosis and neurodegenerative disease
+
+  - id: liaison.core
+    domain: liaison
+    priority: CORE
+    label: Consultation-liaison psychiatry
+    essentials:
+      - psychiatric assessment in medically ill patients
+      - delirium and capacity in treatment refusal
+      - medically caused psychiatric symptoms
+      - organ dysfunction, interactions and polypharmacy in psychotropic prescribing
+
+  # ---------------------------------------------------------------------------
+  # DEVELOPMENTAL, EATING, SLEEP, PERSONALITY, SEXUAL PSYCHIATRY
+  # ---------------------------------------------------------------------------
+  - id: child.assessment
+    domain: developmental
+    priority: IMPORTANT
+    label: Child and adolescent psychiatric assessment
+    essentials:
+      - developmental formulation and age-appropriate psychopathology
+      - multiple informants and school/family context
+      - safeguarding and consent/assent considerations
+
+  - id: child.safeguarding
+    domain: developmental
+    priority: CORE
+    label: Child abuse, neglect and safeguarding
+    essentials:
+      - physical, sexual and emotional abuse and neglect
+      - collateral information and multidisciplinary safeguarding
+      - immediate safety and mandatory/legal duties as applicable
+      - trauma and attachment-related consequences without over-attribution
+
+  - id: developmental.adhd
+    domain: developmental
+    priority: CORE
+    label: ADHD across the lifespan
+    essentials:
+      - developmental onset and cross-situational impairment
+      - major differential diagnoses and comorbidities
+      - pharmacological and non-pharmacological treatment
+      - adult presentation and transition of care
+
+  - id: developmental.autism
+    domain: developmental
+    priority: CORE
+    label: Autism spectrum disorder across the lifespan
+    essentials:
+      - social-communication and restricted/repetitive domains
+      - differential diagnosis and common comorbidity
+      - masking/camouflaging and variable adult presentations
+      - support and treatment of associated difficulties rather than autism itself as an illness
+
+  - id: developmental.intellectual_disability
+    domain: developmental
+    priority: IMPORTANT
+    label: Psychiatric assessment in intellectual developmental disorder
+    essentials:
+      - baseline function and communication
+      - diagnostic overshadowing
+      - behavioural change as possible medical, environmental or psychiatric signal
+      - adapted assessment and treatment
+
+  - id: developmental.tics_tourette
+    domain: developmental
+    priority: IMPORTANT
+    label: Tic disorders and Tourette syndrome
+    essentials:
+      - motor and vocal tics and developmental course
+      - ADHD/OCD comorbidity
+      - behavioural and pharmacological treatment when impairment warrants it
+
+  - id: child.disruptive_disorders
+    domain: developmental
+    priority: IMPORTANT
+    label: Oppositional defiant and conduct disorders
+    essentials:
+      - distinction between oppositionality and serious rule-violating/aggressive behaviour
+      - developmental, family, neurodevelopmental and environmental formulation
+      - psychosocial treatment and safeguarding
+
+  - id: child.mood_self_harm
+    domain: developmental
+    priority: IMPORTANT
+    label: Depression, self-harm and suicidality in children and adolescents
+    essentials:
+      - developmental presentation
+      - family and school context
+      - risk assessment and safeguarding
+      - age-appropriate treatment and monitoring
+
+  - id: developmental.learning_communication
+    domain: developmental
+    priority: SUPPORTING
+    label: Learning and communication disorders relevant to psychiatry
+    essentials:
+      - distinction from ADHD, autism and intellectual disability
+      - functional and educational consequences
+
+  - id: developmental.attachment
+    domain: developmental
+    priority: SUPPORTING
+    label: Attachment-related disorders and difficulties
+    essentials:
+      - clinically meaningful attachment disturbances
+      - relationship to neglect and trauma
+      - avoidance of simplistic causal formulations
+
+  - id: eating.anorexia
+    domain: eating
+    priority: CORE
+    label: Anorexia nervosa
+    essentials:
+      - diagnosis and differential diagnosis
+      - restrictive and binge/purge presentations
+      - psychiatric and physical complications
+      - psychological, nutritional and multidisciplinary treatment
+
+  - id: eating.anorexia_medical_risk
+    domain: eating
+    priority: CORE
+    label: Medical risk in anorexia nervosa
+    essentials:
+      - cardiovascular, metabolic and other acute complications
+      - indications for urgent medical or inpatient care
+      - refeeding syndrome and prevention
+      - coordination between psychiatric and medical teams
+
+  - id: eating.bulimia
+    domain: eating
+    priority: IMPORTANT
+    label: Bulimia nervosa
+    essentials:
+      - binge eating with compensatory behaviour
+      - medical complications
+      - CBT-based and pharmacological treatment
+
+  - id: eating.bed_arfid
+    domain: eating
+    priority: IMPORTANT
+    label: Binge-eating disorder and ARFID
+    essentials:
+      - distinction from bulimia nervosa and anorexia nervosa
+      - characteristic motivations and absence/presence of compensatory behaviour or weight/shape concerns
+      - treatment principles
+
+  - id: sleep.insomnia
+    domain: sleep
+    priority: CORE
+    label: Chronic insomnia
+    essentials:
+      - primary versus secondary insomnia
+      - behavioural and circadian contributors
+      - CBT-I
+      - cautious use of hypnotics
+
+  - id: sleep.hypersomnolence_narcolepsy
+    domain: sleep
+    priority: IMPORTANT
+    label: Excessive daytime sleepiness and narcolepsy
+    essentials:
+      - insufficient sleep, medication and sleep apnoea differential
+      - narcolepsy features including cataplexy where present
+      - referral and treatment principles
+
+  - id: sleep.parasomnias_rbd
+    domain: sleep
+    priority: IMPORTANT
+    label: Parasomnias and REM sleep behaviour disorder
+    essentials:
+      - NREM versus REM parasomnias
+      - REM sleep behaviour disorder and neurodegenerative association
+      - safety and differential diagnosis
+
+  - id: sleep.osa_rls
+    domain: sleep
+    priority: SUPPORTING
+    label: Sleep apnoea and restless legs syndrome in psychiatric practice
+    essentials:
+      - recognition of symptoms and medication effects
+      - relationship to mood, cognition and daytime functioning
+      - referral rather than psychiatric over-treatment
+
+  - id: personality.general
+    domain: personality
+    priority: IMPORTANT
+    label: Personality disorder concepts and classification
+    essentials:
+      - enduring maladaptive patterns and functional impairment
+      - categorical and dimensional approaches
+      - developmental and cultural context
+      - broad treatment principles and limits of diagnosis in acute states
+
+  - id: personality.bpd
+    domain: personality
+    priority: CORE
+    label: Borderline personality disorder
+    essentials:
+      - affective instability, interpersonal dysfunction, identity disturbance and impulsivity
+      - distinction from bipolar disorder, ADHD and trauma-related disorders
+      - chronic self-harm versus acute suicidal crisis
+      - structured psychotherapies and crisis management
+
+  - id: personality.aspd_psychopathy
+    domain: personality
+    priority: IMPORTANT
+    label: Antisocial personality disorder and psychopathy
+    essentials:
+      - persistent antisocial behaviour and developmental history
+      - distinction between ASPD diagnosis and psychopathy construct
+      - substance use, violence and forensic implications
+      - treatment limitations and risk management
+
+  - id: personality.other
+    domain: personality
+    priority: IMPORTANT
+    label: Other major personality disorders
+    essentials:
+      - paranoid, schizoid, avoidant, dependent and obsessive-compulsive patterns
+      - clinically important differential diagnoses
+      - treatment engagement and psychotherapy principles
+
+  - id: sexual.dysfunction
+    domain: sexual_psychiatry
+    priority: IMPORTANT
+    label: Sexual dysfunction
+    essentials:
+      - psychiatric, medication, medical and relationship contributors
+      - respectful assessment
+      - treatment of contributing causes and specialist referral where appropriate
+
+  - id: sexual.paraphilic
+    domain: sexual_psychiatry
+    priority: IMPORTANT
+    label: Paraphilic disorders
+    essentials:
+      - distinction between atypical interest and disorder
+      - consent, distress/impairment and risk
+      - safeguarding and forensic relevance
+
+  - id: gender.dysphoria_care
+    domain: sexual_psychiatry
+    priority: IMPORTANT
+    label: Gender dysphoria and mental-health care related to gender identity
+    essentials:
+      - distinguish identity from psychiatric disorder
+      - assess dysphoria, comorbidity, distress and risk without pathologising identity
+      - respectful, evidence-based and developmentally appropriate care
+
+  # ---------------------------------------------------------------------------
+  # PSYCHOPHARMACOLOGY AND BIOLOGICAL TREATMENTS
+  # ---------------------------------------------------------------------------
+  - id: psychopharm.principles
+    domain: psychopharmacology
+    priority: CORE
+    label: Core clinical pharmacokinetic and pharmacodynamic principles
+    essentials:
+      - half-life and steady state
+      - therapeutic index and therapeutic drug monitoring
+      - CYP inhibition/induction and smoking
+      - renal/hepatic impairment and age
+      - clinically important interaction and polypharmacy principles
+
+  - id: psychopharm.antipsychotic_selection
+    domain: psychopharmacology
+    priority: CORE
+    label: Antipsychotic selection
+    essentials:
+      - efficacy and previous response
+      - adverse-effect profile and comorbidity
+      - adherence, formulation and long-acting injectables
+      - patient preference and monitoring burden
+
+  - id: psychopharm.antipsychotic_eps
+    domain: psychopharmacology
+    priority: CORE
+    label: Antipsychotic-induced extrapyramidal syndromes
+    essentials:
+      - acute dystonia
+      - drug-induced parkinsonism
+      - akathisia
+      - tardive dyskinesia
+      - prevention and treatment principles
+
+  - id: psychopharm.antipsychotic_metabolic_endocrine_cv
+    domain: psychopharmacology
+    priority: CORE
+    label: Major non-neurological antipsychotic adverse effects
+    essentials:
+      - weight gain and metabolic syndrome
+      - hyperprolactinaemia
+      - QT/cardiovascular effects
+      - monitoring and drug-switch decisions
+
+  - id: psychopharm.clozapine
+    domain: psychopharmacology
+    priority: CORE
+    label: Clozapine
+    essentials:
+      - indications in treatment-resistant schizophrenia and suicide/aggression where relevant
+      - initiation, interruption and re-titration
+      - blood monitoring and neutropenia
+      - myocarditis, seizures and severe gastrointestinal hypomotility
+      - metabolic burden and hypersalivation
+      - smoking/CYP1A2, infection and plasma-level implications
+
+  - id: psychopharm.antidepressant_selection
+    domain: psychopharmacology
+    priority: CORE
+    label: Antidepressant selection
+    essentials:
+      - major classes and clinically meaningful differences
+      - prior response, comorbidity and overdose risk
+      - adverse-effect profile and interactions
+      - matching treatment to depressive and anxiety/OCD indications
+
+  - id: psychopharm.antidepressant_safety
+    domain: psychopharmacology
+    priority: CORE
+    label: Antidepressant adverse effects, interactions, switching and discontinuation
+    essentials:
+      - sexual dysfunction and discontinuation syndromes
+      - hyponatraemia, bleeding and QT risk where relevant
+      - serotonin toxicity and MAOI interaction/washout principles
+      - antidepressant-induced mania
+
+  - id: psychopharm.lithium
+    domain: psychopharmacology
+    priority: CORE
+    label: Lithium
+    essentials:
+      - indications and anti-suicidal relevance
+      - initiation and serum-level interpretation
+      - renal, thyroid, calcium and other monitoring
+      - clinically important interactions
+      - acute and chronic toxicity
+      - reproductive considerations
+
+  - id: psychopharm.valproate
+    domain: psychopharmacology
+    priority: CORE
+    label: Valproate
+    essentials:
+      - bipolar indications and limitations
+      - monitoring and important adverse effects
+      - hepatic, haematological and metabolic issues
+      - major reproductive and developmental risks
+
+  - id: psychopharm.lamotrigine
+    domain: psychopharmacology
+    priority: IMPORTANT
+    label: Lamotrigine
+    essentials:
+      - role in bipolar depression/maintenance
+      - slow titration
+      - serious rash risk
+      - important interactions
+
+  - id: psychopharm.carbamazepine
+    domain: psychopharmacology
+    priority: IMPORTANT
+    label: Carbamazepine
+    essentials:
+      - limited psychiatric indications
+      - enzyme induction and drug interactions
+      - haematological, hepatic and electrolyte monitoring
+
+  - id: psychopharm.benzodiazepines_hypnotics
+    domain: psychopharmacology
+    priority: CORE
+    label: Safe use of benzodiazepines and hypnotics
+    essentials:
+      - appropriate short-term indications
+      - dependence, tolerance and withdrawal
+      - respiratory, cognitive and falls risk
+      - deprescribing/tapering principles
+
+  - id: psychopharm.adhd
+    domain: psychopharmacology
+    priority: CORE
+    label: ADHD pharmacotherapy
+    essentials:
+      - stimulants and non-stimulants
+      - contraindications and baseline assessment
+      - cardiovascular, growth/weight and psychiatric monitoring as relevant
+      - misuse/diversion and comorbidity
+
+  - id: psychopharm.medical_comorbidity
+    domain: psychopharmacology
+    priority: IMPORTANT
+    label: Psychotropic prescribing in medical comorbidity
+    essentials:
+      - renal and hepatic impairment
+      - cardiovascular disease
+      - epilepsy and neurological disease
+      - older age, frailty and polypharmacy
+
+  - id: psychopharm.pregnancy_lactation
+    domain: psychopharmacology
+    priority: CORE
+    label: Psychopharmacology in pregnancy and breastfeeding
+    essentials:
+      - risk of untreated illness versus medication exposure
+      - preconception planning
+      - drug-specific high-risk situations
+      - neonatal and breastfeeding considerations
+
+  - id: emergency.nms_serotonin
+    domain: emergencies
+    priority: CORE
+    label: Neuroleptic malignant syndrome and serotonin syndrome
+    essentials:
+      - characteristic clinical patterns and time course
+      - key discriminating signs
+      - immediate discontinuation/supportive management
+      - differential including malignant catatonia and infection
+
+  - id: toxicology.tca
+    domain: emergencies
+    priority: CORE
+    label: Tricyclic antidepressant overdose
+    essentials:
+      - anticholinergic, neurological and cardiovascular toxicity
+      - ECG abnormalities
+      - sodium bicarbonate treatment principle
+      - intensive monitoring and supportive care
+
+  - id: toxicology.other_psychotropics
+    domain: emergencies
+    priority: IMPORTANT
+    label: Other important psychotropic poisonings
+    essentials:
+      - lithium
+      - antipsychotics
+      - benzodiazepines/sedatives
+      - recognition of high-risk features and need for medical toxicology support
+
+  - id: biological.ect
+    domain: biological_treatments
+    priority: CORE
+    label: Electroconvulsive therapy
+    essentials:
+      - major indications and evidence of efficacy
+      - consent and practical treatment process
+      - contraindications/precautions rather than simplistic absolute lists
+      - cognitive and medical adverse effects
+      - medication management around ECT and continuation/maintenance treatment
+
+  - id: biological.rtms_other
+    domain: biological_treatments
+    priority: IMPORTANT
+    label: rTMS and other neuromodulation/chronotherapeutic treatments
+    essentials:
+      - principal indications and place relative to established treatments
+      - major limitations and safety considerations
+      - light therapy/chronotherapy where clinically relevant
+
+  # ---------------------------------------------------------------------------
+  # PSYCHOTHERAPIES
+  # ---------------------------------------------------------------------------
+  - id: psychotherapy.cbt
+    domain: psychotherapy
+    priority: CORE
+    label: Cognitive behavioural therapy
+    essentials:
+      - cognitive-behavioural model and collaborative formulation
+      - behavioural and cognitive techniques
+      - major psychiatric indications
+      - adaptation to disorder and patient factors
+
+  - id: psychotherapy.psychodynamic
+    domain: psychotherapy
+    priority: IMPORTANT
+    label: Core psychodynamic concepts in psychiatric practice
+    essentials:
+      - transference and countertransference
+      - defence mechanisms
+      - psychodynamic formulation
+      - supportive versus exploratory work and therapeutic boundaries
+
+  - id: psychotherapy.ipt
+    domain: psychotherapy
+    priority: IMPORTANT
+    label: Interpersonal psychotherapy
+    essentials:
+      - interpersonal problem areas and time-limited structure
+      - major evidence-based indications
+      - distinction from generic supportive therapy
+
+  - id: psychotherapy.bpd_structured
+    domain: psychotherapy
+    priority: IMPORTANT
+    label: Structured psychotherapies for borderline personality disorder
+    essentials:
+      - DBT
+      - mentalisation-based treatment
+      - schema therapy and transference-focused psychotherapy as relevant
+      - importance of coherent treatment frame and team consistency
+
+  - id: psychotherapy.supportive_family_mi
+    domain: psychotherapy
+    priority: IMPORTANT
+    label: Supportive, family, psychoeducational and motivational interventions
+    essentials:
+      - supportive psychotherapy principles
+      - family intervention and psychoeducation
+      - motivational interviewing and relapse-prevention work
+
+  - id: psychotherapy.frame_selection
+    domain: psychotherapy
+    priority: SUPPORTING
+    label: Selecting psychotherapy and establishing a therapeutic frame
+    essentials:
+      - indication, motivation, cognitive capacity and risk
+      - boundaries, goals and treatment contract
+      - when combined or sequential treatments are appropriate
+
+  # ---------------------------------------------------------------------------
+  # FOUNDATIONAL SCIENCE, EVIDENCE, ETHICS, FORENSIC, SYSTEMS
+  # ---------------------------------------------------------------------------
+  - id: neuroscience.neuroanatomy
+    domain: neuroscience
+    priority: IMPORTANT
+    label: Clinically relevant neuroanatomy and circuits
+    essentials:
+      - frontal, temporal and other cortical functions relevant to psychiatry
+      - basal ganglia, thalamus, hippocampus, amygdala and hypothalamus
+      - frontostriatal, limbic, reward and fear circuits
+      - localisation as a clinical aid rather than a deterministic explanation of psychiatric disorders
+
+  - id: neuroscience.neurotransmitters
+    domain: neuroscience
+    priority: IMPORTANT
+    label: Major neurotransmitter systems relevant to psychiatry
+    essentials:
+      - dopamine
+      - serotonin and noradrenaline
+      - glutamate and GABA
+      - acetylcholine
+      - relation to psychotropic mechanisms without reducing disorders to single-neurotransmitter models
+
+  - id: neuroscience.sleep_circadian_endocrine
+    domain: neuroscience
+    priority: IMPORTANT
+    label: Sleep, circadian and neuroendocrine physiology relevant to psychiatry
+    essentials:
+      - NREM/REM architecture and circadian organisation
+      - clinically important sleep changes in psychiatric disorders
+      - HPA-axis and other neuroendocrine concepts with established psychiatric relevance
+
+  - id: neuroscience.genetics
+    domain: neuroscience
+    priority: IMPORTANT
+    label: Psychiatric genetics and gene-environment interaction
+    essentials:
+      - heritability and familial risk
+      - polygenic architecture
+      - GWAS/polygenic risk concepts and limitations
+      - gene-environment interaction without deterministic interpretation
+
+  - id: neuroscience.neuroimaging_biomarkers
+    domain: neuroscience
+    priority: SUPPORTING
+    label: Neuroimaging and biomarkers in psychiatry
+    essentials:
+      - structural and functional imaging as research and differential-diagnostic tools
+      - lack of routine diagnostic specificity for most primary psychiatric disorders
+
+  - id: evidence.critical_appraisal
+    domain: evidence
+    priority: IMPORTANT
+    label: Critical appraisal and evidence interpretation
+    essentials:
+      - study design, bias and confounding
+      - statistical versus clinical significance
+      - confidence intervals and power
+      - causation versus association
+
+  - id: evidence.clinical_metrics
+    domain: evidence
+    priority: IMPORTANT
+    label: Clinical epidemiology and diagnostic-test metrics
+    essentials:
+      - absolute versus relative risk
+      - NNT and NNH
+      - sensitivity, specificity and predictive values
+      - likelihood ratios
+
+  - id: ethics.confidentiality_duties
+    domain: legal_ethics
+    priority: CORE
+    label: Confidentiality, professional duties and competing safety obligations
+    essentials:
+      - confidentiality and justified limits
+      - autonomy, beneficence and non-maleficence
+      - safeguarding and duty-related conflicts
+      - documentation and proportional disclosure
+
+  - id: ethics.boundaries
+    domain: legal_ethics
+    priority: IMPORTANT
+    label: Professional boundaries and conflicts of interest
+    essentials:
+      - therapeutic boundaries and dual relationships
+      - gifts, social media/digital communication and conflicts
+      - managing boundary pressures transparently
+
+  - id: forensic.criminal_responsibility
+    domain: forensic
+    priority: IMPORTANT
+    label: Criminal responsibility and forensic psychiatric assessment
+    essentials:
+      - distinction between treating and expert roles
+      - legal competence, criminal responsibility and fitness concepts as jurisdictionally applicable
+      - risk assessment and evidentiary limits
+      - separation from treatment decision-making capacity
+
+  - id: systems.community_rehabilitation
+    domain: systems
+    priority: IMPORTANT
+    label: Community psychiatry, rehabilitation and recovery-oriented care
+    essentials:
+      - multidisciplinary and longitudinal care
+      - rehabilitation and functional recovery
+      - continuity, housing, occupation and social support
+      - physical-health integration
+
+  - id: systems.public_cultural_digital
+    domain: systems
+    priority: SUPPORTING
+    label: Public, cultural and digital psychiatry
+    essentials:
+      - prevention and social determinants
+      - stigma and cultural formulation
+      - safe telepsychiatry and digital mental-health use
+      - service quality and equitable access
