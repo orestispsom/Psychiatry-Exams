@@ -1,0 +1,114 @@
+schema_version: 2
+attempt: "009"
+visible_questions: ../../attempts/009.md
+inherits_answer_coverage: 008.yml
+jurisdiction_audit: ../../reviews/008-greece-applicability-audit.md
+status: provisional
+
+purpose: >-
+  Attempt 009 inherits the full hidden answer-coverage specification of Attempt 008/007.
+  This file adds jurisdiction rules so future model answers cannot silently import foreign
+  legal, regulatory or service-system assumptions into Greek specialist-board preparation.
+
+global_jurisdiction_rules:
+  - Diagnosis may use DSM-5-TR and ICD-11 as designated diagnostic authorities.
+  - International clinical evidence/guidelines may inform treatment, but licensing, availability and regulatory restrictions must be checked for Greece/EU when relevant.
+  - Law, consent, involuntary care, confidentiality, safeguarding and forensic rules must be current Greek law.
+  - Service organisation must describe current Greek structures when making system-specific claims; NHS/US/other models may appear only as explicitly labelled comparisons.
+  - Foreign legal doctrines must never be presented as the Greek exam answer without verification.
+
+question_overrides:
+  Q8:
+    must_cover_additions:
+      - valid informed consent under current Greek law and medical ethics
+      - ability to understand relevant information and implications of the specific decision
+      - voluntariness and communication/expression of a decision
+      - distinction between clinical ability to consent, insight, disagreement and broader legal-status concepts
+    verification_required:
+      - Greek Code of Medical Ethics Law 3418/2005 Article 12
+      - any later applicable Greek law/case law relevant at answer-writing time
+
+  Q9:
+    verification_required:
+      - current Greek involuntary-care framework including Law 2071/1992 Articles 95-97 as amended/applicable
+      - current transport/procedural provisions including Article 96A where applicable
+      - current service-organisation implications under Law 5129/2024
+
+  Q58:
+    verification_required:
+      - current Greek child-protection and abuse-reporting framework
+      - current professional reporting duties and referral pathways
+    do_not_import:
+      - UK-specific safeguarding pathways or terminology as if they were Greek procedure
+
+  Q58a:
+    must_cover_additions:
+      - limits of confidentiality when safeguarding a minor under Greek law
+      - explanation to the young person of what information must be shared and why, where clinically appropriate
+    verification_required:
+      - current Greek child-protection/reporting law and professional duties
+
+  Q90a:
+    must_cover_additions:
+      - clinical urgency and alternatives
+      - ability to provide valid informed consent
+      - Greek legal authority/process for ECT when valid consent cannot be obtained
+      - documentation, proportionality and rights safeguards
+    verification_required:
+      - current Greek law and professional/regulatory framework governing consent and ECT
+    do_not_import:
+      - UK Mental Health Act ECT consent categories
+      - US substitute-consent rules
+
+  Q98:
+    must_cover_additions:
+      - Greek statutory/professional basis for confidentiality and exceptions
+      - minimum necessary/proportionate disclosure and documentation
+    verification_required:
+      - Greek Code of Medical Ethics Law 3418/2005 Article 13
+      - any other current applicable Greek confidentiality/data-protection law
+
+  Q98a:
+    must_cover_additions:
+      - seriousness, credibility and imminence of the threat
+      - whether disclosure is justified/required under Greek law and can protect a substantial interest that cannot otherwise be protected
+      - proportionality and minimum necessary disclosure
+    do_not_import:
+      - an automatic Tarasoff duty-to-warn/duty-to-protect rule
+
+  Q98b:
+    must_cover_additions:
+      - Greek professional ethics on therapeutic boundaries and exploitation of the therapeutic relationship
+    verification_required:
+      - current Greek Code of Medical Ethics / professional standards where a legal or disciplinary claim is made
+
+  Q99:
+    must_cover_additions:
+      - Greek concept of criminal responsibility / καταλογισμός
+      - treating versus forensic-expert role
+      - relationship between psychiatric findings and the legal question defined by Greek law
+    verification_required:
+      - current Greek Penal Code including Article 34 and related provisions as applicable
+    do_not_import:
+      - M'Naghten rules
+      - US insanity-defence standards
+      - UK fitness/competence rules as if they were Greek law
+
+  Q100:
+    must_cover_additions:
+      - current Greek mental-health service organisation when concrete service structures are described
+    verification_required:
+      - current implementation of Law 5129/2024 / EDYPSY and regional-network structure if system organisation is discussed
+    do_not_import:
+      - NHS CMHT structure
+      - US ACT/managed-care structures as default Greek service models
+
+other_local_verification_flags:
+  Q7: Greek/EU availability and current emergency psychopharmacology practice if exact regimen is stated
+  Q19: current Greek/EU clozapine licensing and monitoring requirements
+  Q27: do not assume availability of foreign perinatal service structures
+  Q37: current Greek/EU tobacco-cessation pharmacotherapy availability/licensing
+  Q66: do not assume foreign eating-disorder service pathways
+  Q75: any legal/service pathway beyond psychiatric assessment must be Greek/current
+  Q82-Q87: current EMA/Greek regulatory restrictions where relevant
+  Q90b: current availability/licensing/service access if Greece-specific claims are made
