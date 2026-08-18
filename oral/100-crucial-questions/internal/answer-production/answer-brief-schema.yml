@@ -1,0 +1,66 @@
+schema_version: 1
+status: template
+purpose: >-
+  Lean default specification for one model answer. Use this instead of the full dossier
+  unless the question has substantial source conflict, high-risk prescribing/legal content,
+  or unusual complexity.
+
+question:
+  id: Q000
+  text: ""
+  attempt: "011"
+  archetype: ""
+  oral_length_class: STANDARD
+
+base_source:
+  source: "Shorter Oxford Textbook of Psychiatry, 7th ed. / 2017 exam edition"
+  sections_pages: []
+  answer_structure: []
+  core_points: []
+  classic_exam_points: []
+
+must_cover:
+  - ""
+
+verification_delta:
+  # Only update-sensitive, exact or otherwise consequential points.
+  - id: V01
+    claim_or_question: ""
+    authority: ""
+    result: ""
+    status: VERIFIED   # VERIFIED | EXAM_CURRENT_SPLIT | UNRESOLVED
+
+board_facts:
+  - anchor_id: ""
+    fact: ""
+    source: ""
+    status: VERIFIED
+
+exam_current_differences: []
+
+answer_design:
+  recall_spine: []
+  opening_job: ""
+  paragraph_jobs: []
+  followups: []
+  deliberate_exclusions: []
+
+provenance_flags:
+  # Non-blocking for study master. Used later for commercial clearance.
+  - item: ""
+    source: ""
+    risk: ORIGINAL_SYNTHESIS  # ORIGINAL_SYNTHESIS | SOURCE_STRUCTURE_INFLUENCE | CLOSE_PARAPHRASE_RISK | DIRECT_QUOTATION | PROPRIETARY_OR_LICENSED_TEXT
+
+writer_handoff:
+  ready: false
+  instructions:
+    - Use only this approved brief.
+    - Write in original wording and organisation where possible.
+    - Do not add unverified exact facts or treatment recommendations.
+    - Keep board facts separate when they would overload spoken prose.
+
+qa:
+  coordinator_status: NOT_RUN  # NOT_RUN | PASS | NEEDS_REVISION | ESCALATE
+  issues: []
+
+final_status: NOT_STARTED
