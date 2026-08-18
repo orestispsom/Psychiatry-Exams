@@ -1,0 +1,197 @@
+schema_version: 2
+attempt: "006"
+source_file: oral/100-crucial-questions/attempts/006.md
+canonical_coverage: ../core-coverage.yml
+coverage_candidates: ../core-coverage-candidates.yml
+source_audit: ../../reviews/005-textbook-coverage-audit.md
+
+purpose: >-
+  Maps visible Attempt 006 to the canonical question-independent psychiatry coverage bank.
+  This file records sampling, not authority. A topic remains canonical even when it has no
+  dedicated visible question, and a mapping must not imply that every essential in a broad
+  canonical unit is necessarily visible in the question text.
+
+questions:
+  Q1: [assessment.comprehensive]
+  Q2: [psychopathology.thought_content]
+  Q3: [assessment.secondary_causes]
+  Q4: [risk.suicide_assessment]
+  Q5: [suicide.clinical_topic]
+  Q6: [risk.violence]
+  Q7: [emergency.agitation]
+  Q8: [legal.capacity_consent]
+  Q9: [legal.involuntary_greece]
+  Q10: [emergency.catatonia, emergency.nms_serotonin]
+
+  Q11: [psychosis.first_episode, cannabis.psychiatry]
+  Q12: [schizophrenia.syndrome_diagnosis, psychopathology.thought_form, psychopathology.perception]
+  Q13: [schizophrenia.differential]
+  Q14: [schizophrenia.aetiology_pathophysiology]
+  Q15: [schizophrenia.course_prognosis]
+  Q16: [schizophrenia.acute_treatment]
+  Q17: [schizophrenia.maintenance_rehabilitation, schizophrenia.negative_cognitive]
+  Q18: [schizophrenia.trs]
+  Q19: [psychopharm.clozapine, schizophrenia.trs]
+
+  Q20: [depression.mdd, reproductive.pmdd]
+  Q21: [depression.acute_treatment]
+  Q22: [depression.trd]
+  Q23: [bipolar.diagnosis]
+  Q24: [bipolar.mania]
+  Q25: [bipolar.depression]
+  Q26: [bipolar.maintenance]
+  Q27: [reproductive.perinatal]
+
+  Q28: [anxiety.panic_agoraphobia]
+  Q29: [anxiety.gad]
+  Q30: [anxiety.social]
+  Q31: [ocd.core, ocd.related]
+  Q32: [trauma.ptsd]
+  Q33: [trauma.acute_adjustment]
+  Q34: [dissociation.disorders]
+  Q35: [somatic.ssd_illness_anxiety]
+  Q36: [functional.fnd]
+
+  Q37: [addiction.assessment]
+  Q38: [alcohol.withdrawal, alcohol.wernicke_korsakoff]
+  Q39: [alcohol.long_term]
+  Q40: [opioids.oud]
+  Q41: [cannabis.psychiatry]
+  Q42: [stimulants.disorders]
+  Q43: [sedatives.dependence]
+  Q44: [gambling.disorder]
+
+  Q45: [delirium.core]
+  Q46: [neurocognitive.assessment]
+  Q47: [dementia.alzheimer]
+  Q48: [dementia.dlb_pdd, neuropsychiatry.parkinson, sleep.parasomnias_rbd]
+  Q49: [dementia.ftd]
+  Q50: [dementia.vascular]
+  Q51: [dementia.bpsd]
+  Q52: [old_age.self_neglect]
+  Q53: [neuropsychiatry.autoimmune_encephalitis]
+  Q54: [neuropsychiatry.epilepsy]
+  Q55: [neuropsychiatry.tbi]
+  Q56: [liaison.core, psychopharm.medical_comorbidity]
+
+  Q57: [child.assessment]
+  Q58: [child.safeguarding]
+  Q59: [developmental.adhd]
+  Q60: [developmental.autism]
+  Q61: [developmental.intellectual_disability]
+  Q62: [developmental.tics_tourette]
+  Q63: [child.disruptive_disorders]
+  Q64: [child.mood_self_harm]
+  Q65: [eating.anorexia]
+  Q66: [eating.anorexia_medical_risk]
+  Q67: [eating.bulimia, eating.bed_arfid]
+  Q68: [sleep.insomnia]
+  Q69: [sleep.hypersomnolence_narcolepsy]
+  Q70: [personality.general, personality.other]
+  Q71: [personality.bpd, psychotherapy.bpd_structured]
+  Q72: [personality.aspd_psychopathy]
+  Q73: [sexual.dysfunction]
+  Q74: [sexual.paraphilic]
+  Q75: [gender.dysphoria_care]
+
+  Q76: [psychopharm.principles, psychopharm.medical_comorbidity]
+  Q77: [psychopharm.antipsychotic_selection]
+  Q78: [psychopharm.antipsychotic_eps]
+  Q79: [psychopharm.antipsychotic_metabolic_endocrine_cv]
+  Q80: [psychopharm.antidepressant_selection]
+  Q81: [psychopharm.antidepressant_safety]
+  Q82: [psychopharm.lithium, toxicology.other_psychotropics]
+  Q83: [psychopharm.valproate]
+  Q84: [psychopharm.lamotrigine]
+  Q85: [psychopharm.benzodiazepines_hypnotics]
+  Q86: [psychopharm.adhd]
+  Q87: [psychopharm.pregnancy_lactation]
+  Q88: [emergency.nms_serotonin]
+  Q89: [toxicology.tca]
+  Q90: [biological.ect, biological.rtms_other, legal.capacity_consent]
+
+  Q91: [psychotherapy.cbt]
+  Q92: [psychotherapy.psychodynamic]
+  Q93: [psychotherapy.ipt]
+
+  Q94: [neuroscience.neuroanatomy]
+  Q95: [neuroscience.neurotransmitters]
+  Q96: [neuroscience.genetics]
+  Q97: [evidence.critical_appraisal, evidence.clinical_metrics]
+  Q98: [ethics.confidentiality_duties]
+  Q99: [forensic.criminal_responsibility]
+  Q100: [systems.community_rehabilitation]
+
+partial_coverage:
+  ocd.related:
+    via: [Q31a]
+    visible_scope: hoarding disorder as a discrimination from OCD
+    not_implied_by_visible_prompt: [body_dysmorphic_disorder, trichotillomania, excoriation_disorder]
+
+  neuropsychiatry.parkinson:
+    via: [Q48a]
+    visible_scope: Parkinson-related psychosis and treatment trade-offs with motor symptoms
+    not_implied_by_visible_prompt: [depression, anxiety, apathy, dopamine_agonist_impulse_control_disorders]
+
+  eating.bed_arfid:
+    via: [Q67a]
+    visible_scope: binge-eating disorder as a differential from bulimia nervosa
+    not_implied_by_visible_prompt: [ARFID]
+
+  personality.other:
+    via: [Q70a]
+    visible_scope: avoidant personality disorder versus social anxiety disorder
+    not_implied_by_visible_prompt: [paranoid, schizoid, dependent, obsessive_compulsive_personality]
+
+  neuroscience.sleep_circadian_endocrine:
+    via: [Q68a]
+    visible_scope: clinically relevant circadian delay as a differential from chronic insomnia
+    not_implied_by_visible_prompt: [NREM_REM_architecture, HPA_axis]
+
+  psychotherapy.psychodynamic:
+    via: [Q92, Q92a]
+    visible_scope: transference, countertransference, splitting and team dynamics
+    not_implied_by_visible_prompt: [full_psychodynamic_formulation, supportive_vs_exploratory_work]
+
+  neuroscience.neuroanatomy:
+    via: [Q94]
+    visible_scope: frontal-subcortical and limbic circuits
+    not_implied_by_visible_prompt: [comprehensive_cortical_localisation]
+
+  neuroscience.neurotransmitters:
+    via: [Q95]
+    visible_scope: dopamine pathways
+    note: >-
+      Serotonin, noradrenaline, glutamate, GABA and acetylcholine are expected to be sampled
+      distributively through antidepressant, schizophrenia, benzodiazepine and dementia material
+      rather than forced into a single omnibus visible question.
+
+important_units_without_dedicated_006_main_question:
+  - psychopathology.thought_form
+  - psychopathology.perception
+  - psychopathology.mood_affect_psychomotor
+  - psychopathology.cognition_insight
+  - depression.patterns_specifiers
+  - ocd.related
+  - alcohol.wernicke_korsakoff
+  - nicotine.tobacco
+  - old_age.principles
+  - neuropsychiatry.parkinson
+  - eating.bed_arfid
+  - sleep.parasomnias_rbd
+  - personality.other
+  - psychopharm.medical_comorbidity
+  - psychopharm.carbamazepine
+  - toxicology.other_psychotropics
+  - biological.rtms_other
+  - psychotherapy.bpd_structured
+  - psychotherapy.supportive_family_mi
+  - neuroscience.sleep_circadian_endocrine
+  - evidence.clinical_metrics
+  - ethics.boundaries
+
+candidate_bank_items_not_yet_canonical:
+  - risk.intimate_partner_violence
+
+main_question_count: 100
+visible_follow_up_count: 24
