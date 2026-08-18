@@ -1,0 +1,280 @@
+schema_version: 1
+attempt: "004"
+source_file: oral/100-crucial-questions/attempts/004.md
+canonical_coverage: ../core-coverage.yml
+purpose: >-
+  Attempt-specific map from visible 004 questions to stable core-coverage units.
+  This file may be replaced for later attempts; it must not redefine the canonical coverage bank.
+
+action_legend:
+  KEEP: Main target is sound; wording may still be polished.
+  REWRITE: Preserve the underlying coverage but reform the main prompt.
+  NARROW: Current main prompt contains too much independent material.
+  MERGE_CANDIDATE: Coverage is important but may not deserve its own main question.
+  REMOVE_EXTRA_FOLLOWUPS: Main is sound; current subquestions mostly duplicate the complete parent answer.
+
+questions:
+  Q1: {coverage: [assessment.comprehensive], action: KEEP}
+  Q2:
+    coverage: [psychopathology.thought_content, psychopathology.thought_form, psychopathology.perception, psychopathology.cognition_insight]
+    action: NARROW
+    note: Replace the whole-psychopathology umbrella with a bounded discriminative question; retain other psychopathology in canonical coverage.
+  Q3: {coverage: [assessment.secondary_causes], action: KEEP}
+  Q4: {coverage: [risk.suicide_assessment], action: KEEP}
+  Q5:
+    coverage: [suicide.clinical_topic]
+    action: REWRITE
+    note: Keep clearly distinct from Q4 by centring prevention, post-attempt care and disorder-specific suicide reduction rather than bedside risk assessment.
+  Q6: {coverage: [risk.violence], action: KEEP}
+  Q7:
+    coverage: [emergency.agitation]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: De-escalation, rapid tranquillisation and medical exclusion are required components of a complete answer, not separate follow-ups.
+  Q8: {coverage: [legal.capacity_consent], action: KEEP}
+  Q9: {coverage: [legal.involuntary_greece], action: KEEP}
+  Q10:
+    coverage: [emergency.catatonia, emergency.nms_serotonin]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Signs, differential and benzodiazepine/ECT treatment belong in the parent answer; malignant catatonia versus NMS may remain a true depth probe.
+
+  Q11:
+    coverage: [psychosis.first_episode]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Differential, secondary causes and admission logic are intrinsic to a complete FEP answer.
+  Q12:
+    coverage: [schizophrenia.syndrome_diagnosis, psychopathology.thought_content, psychopathology.thought_form, psychopathology.perception]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q13:
+    coverage: [schizophrenia.differential]
+    action: REWRITE
+    note: Preserve the differential domain but consider a sharper discrimination problem rather than listing many diagnoses in the headline.
+  Q14: {coverage: [schizophrenia.aetiology_pathophysiology], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q15: {coverage: [schizophrenia.course_prognosis], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q16: {coverage: [schizophrenia.acute_treatment], action: KEEP}
+  Q17:
+    coverage: [schizophrenia.maintenance_rehabilitation]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q18: {coverage: [schizophrenia.trs], action: KEEP}
+  Q19:
+    coverage: [psychopharm.clozapine, schizophrenia.trs]
+    action: REWRITE
+    note: Shorten the main prompt; retain a genuine scenario follow-up such as pneumonia plus abrupt smoking cessation.
+
+  Q20:
+    coverage: [depression.mdd, depression.patterns_specifiers]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q21: {coverage: [depression.acute_treatment], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q22: {coverage: [depression.trd], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q23: {coverage: [bipolar.diagnosis], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q24: {coverage: [bipolar.mania], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q25: {coverage: [bipolar.depression], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q26: {coverage: [bipolar.maintenance], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q27:
+    coverage: [reproductive.perinatal, reproductive.pmdd, reproductive.menopause]
+    action: NARROW
+    note: Keep the main question perinatal. PMDD and menopause are independent coverage units and should not be appended as a catch-all subquestion.
+
+  Q28: {coverage: [anxiety.panic_agoraphobia], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q29: {coverage: [anxiety.gad], action: KEEP}
+  Q30: {coverage: [anxiety.social], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q31:
+    coverage: [ocd.core, ocd.related]
+    action: NARROW
+    note: Keep OCD as the main target; related disorders belong in internal coverage or a genuinely justified separate probe, not an enumeration subquestion.
+  Q32: {coverage: [trauma.ptsd], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q33:
+    coverage: [trauma.acute_adjustment, trauma.prolonged_grief]
+    action: REWRITE
+    note: Acute stress versus adjustment is a defensible comparison. Prolonged grief should not be bolted on solely for coverage.
+  Q34: {coverage: [dissociation.disorders], action: KEEP}
+  Q35: {coverage: [somatic.ssd_illness_anxiety], action: KEEP}
+  Q36:
+    coverage: [functional.fnd, deception.factitious_malingering]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Communication of an FND diagnosis may remain a genuine examiner follow-up; routine signs and differential belong in the parent answer.
+
+  Q37: {coverage: [addiction.assessment], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q38:
+    coverage: [alcohol.withdrawal, alcohol.wernicke_korsakoff]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Wernicke encephalopathy can remain as a complication pivot; withdrawal timing and thiamine are intrinsic to the answer.
+  Q39: {coverage: [alcohol.long_term], action: KEEP}
+  Q40: {coverage: [opioids.oud], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q41:
+    coverage: [cannabis.psychiatry]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Cannabis use in FEP can remain a clinical application probe if desired.
+  Q42: {coverage: [stimulants.disorders], action: KEEP}
+  Q43: {coverage: [sedatives.dependence], action: KEEP}
+  Q44:
+    coverage: [gambling.disorder]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Do not use the follow-up as a dumping ground for every behavioural addiction.
+
+  Q45: {coverage: [delirium.core], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q46: {coverage: [neurocognitive.assessment], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q47: {coverage: [dementia.alzheimer], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q48:
+    coverage: [dementia.dlb_pdd, sleep.parasomnias_rbd]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: REM sleep behaviour disorder is a defensible depth probe; diagnostic features and antipsychotic sensitivity belong in the main answer.
+  Q49: {coverage: [dementia.ftd], action: KEEP}
+  Q50: {coverage: [dementia.vascular], action: KEEP}
+  Q51: {coverage: [dementia.bpsd], action: KEEP}
+  Q52:
+    coverage: [old_age.self_neglect]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q53:
+    coverage: [neuropsychiatry.autoimmune_encephalitis]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q54:
+    coverage: [neuropsychiatry.epilepsy]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q55:
+    coverage: [neuropsychiatry.tbi]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q56:
+    coverage: [liaison.core, neuropsychiatry.other_neurological]
+    action: NARROW
+    note: Keep liaison psychiatry as the main target. Stroke/Huntington/MS/infection/tumour should remain canonical coverage, not an unrelated follow-up list.
+
+  Q57: {coverage: [child.assessment], action: KEEP}
+  Q58:
+    coverage: [child.safeguarding, developmental.attachment]
+    action: NARROW
+    note: Safeguarding is the main target; attachment disorders should not be appended merely for completeness.
+  Q59: {coverage: [developmental.adhd], action: KEEP}
+  Q60:
+    coverage: [developmental.autism]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Adult/women/masking presentation may remain a special-presentation probe if it adds discrimination beyond the parent answer.
+  Q61: {coverage: [developmental.intellectual_disability], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q62: {coverage: [developmental.tics_tourette], action: KEEP}
+  Q63:
+    coverage: [child.disruptive_disorders]
+    action: NARROW
+    note: ODD versus conduct disorder is coherent; do not append unrelated impulse-control disorders simply to preserve coverage.
+  Q64:
+    coverage: [child.mood_self_harm]
+    action: REWRITE
+    note: Prefer a single centre of gravity such as adolescent depression, with self-harm/suicide integrated as essential risk rather than three equal headline topics.
+  Q65:
+    coverage: [eating.anorexia, eating.bed_arfid]
+    action: NARROW
+    note: Anorexia is the main target. ARFID should not appear as an unrelated coverage-preservation follow-up.
+  Q66: {coverage: [eating.anorexia_medical_risk], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q67:
+    coverage: [eating.bulimia, eating.bed_arfid]
+    action: KEEP
+    note: BED versus bulimia is a defensible discriminator if retained as a follow-up.
+  Q68: {coverage: [sleep.insomnia], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q69:
+    coverage: [sleep.hypersomnolence_narcolepsy, sleep.osa_rls, sleep.parasomnias_rbd]
+    action: NARROW
+    note: Excessive daytime sleepiness is coherent; parasomnias are a different problem and should not be appended to the same prompt.
+  Q70: {coverage: [personality.general], action: KEEP}
+  Q71:
+    coverage: [personality.bpd, psychotherapy.bpd_structured]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: If a follow-up remains, prefer one sharp discriminator such as BPD affective instability versus bipolar mood episodes.
+  Q72:
+    coverage: [personality.aspd_psychopathy, personality.other]
+    action: NARROW
+    note: Keep ASPD/psychopathy focused. Other personality disorders should not be an omnibus subquestion.
+  Q73:
+    coverage: [sexual.dysfunction, gender.dysphoria_care]
+    action: NARROW
+    note: Gender-related mental-health care is independent coverage and should not be nested under sexual dysfunction.
+  Q74: {coverage: [sexual.paraphilic], action: REMOVE_EXTRA_FOLLOWUPS}
+
+  Q75: {coverage: [psychopharm.principles], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q76: {coverage: [psychopharm.antipsychotic_selection], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q77:
+    coverage: [psychopharm.antipsychotic_eps]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Dystonia, parkinsonism, akathisia and tardive dyskinesia are answer components, not four follow-ups.
+  Q78:
+    coverage: [psychopharm.antipsychotic_metabolic_endocrine_cv]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q79:
+    coverage: [psychopharm.antidepressant_selection]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: The antidepressant class list is internal answer coverage.
+  Q80:
+    coverage: [psychopharm.antidepressant_safety, emergency.nms_serotonin]
+    action: REMOVE_EXTRA_FOLLOWUPS
+  Q81:
+    coverage: [psychopharm.lithium, toxicology.other_psychotropics]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: Baseline testing and interactions are intrinsic; an unexpected toxicity scenario would be a stronger follow-up than checklist questions.
+  Q82: {coverage: [psychopharm.valproate], action: KEEP}
+  Q83: {coverage: [psychopharm.lamotrigine], action: KEEP}
+  Q84: {coverage: [psychopharm.carbamazepine], action: KEEP}
+  Q85: {coverage: [psychopharm.benzodiazepines_hypnotics], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q86: {coverage: [psychopharm.adhd], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q87: {coverage: [psychopharm.pregnancy_lactation], action: REMOVE_EXTRA_FOLLOWUPS}
+  Q88: {coverage: [emergency.nms_serotonin], action: KEEP}
+  Q89:
+    coverage: [toxicology.tca, toxicology.other_psychotropics]
+    action: NARROW
+    note: Keep TCA overdose focused. Other poisonings remain separate canonical coverage rather than a catch-all follow-up.
+  Q90:
+    coverage: [biological.ect, biological.rtms_other]
+    action: NARROW
+    note: ECT is the main target. rTMS/other biological treatments should not be appended solely for coverage.
+
+  Q91: {coverage: [psychotherapy.cbt], action: KEEP}
+  Q92:
+    coverage: [psychotherapy.psychodynamic]
+    action: NARROW
+    note: Replace the umbrella with a bounded oral target, likely transference/countertransference and their clinical use. Defence mechanisms and formulation remain canonical coverage.
+  Q93:
+    coverage: [psychotherapy.ipt, psychotherapy.supportive_family_mi]
+    action: NARROW
+    note: Keep IPT focused. Supportive/family/psychoeducation/MI should not be a miscellaneous follow-up list.
+
+  Q94:
+    coverage: [neuroscience.neuroanatomy]
+    action: NARROW
+    note: Replace the syllabus-style neuroanatomy umbrella with a bounded clinically discriminative neuroanatomy/circuit question. The canonical bank preserves broader anatomy coverage.
+  Q95:
+    coverage: [neuroscience.neurotransmitters, neuroscience.sleep_circadian_endocrine]
+    action: NARROW
+    note: Do not enumerate every transmitter plus sleep/endocrine physiology beneath one headline. Prefer a bounded mechanistic target; broader coverage remains canonical.
+  Q96: {coverage: [neuroscience.genetics], action: KEEP}
+  Q97:
+    coverage: [evidence.critical_appraisal, evidence.clinical_metrics]
+    action: REMOVE_EXTRA_FOLLOWUPS
+    note: The statistical headings are answer coverage rather than examiner follow-ups.
+  Q98:
+    coverage: [ethics.confidentiality_duties, ethics.boundaries]
+    action: NARROW
+    note: Consider a bounded confidentiality/professional-duty question; avoid a general ethics umbrella plus a list of unrelated duties.
+  Q99: {coverage: [forensic.criminal_responsibility], action: KEEP}
+  Q100:
+    coverage: [systems.community_rehabilitation, systems.public_cultural_digital]
+    action: NARROW
+    note: Keep community/rehabilitation/recovery coherent. Public health, culture and digital psychiatry should not be appended as a catch-all subquestion.
+
+structural_summary:
+  principle: >-
+    Attempt 004 has substantially better clinical allocation than earlier attempts, but many visible subquestions are actually answer-outline bullets.
+    Attempt 005 should preserve the canonical coverage while sharply reducing visible follow-ups and eliminating miscellaneous coverage-dump prompts.
+  highest_priority_rewrites:
+    - Q2 psychopathology umbrella
+    - Q13 schizophrenia differential headline
+    - Q27 perinatal plus reproductive catch-all
+    - Q31 OCD-related disorder catch-all
+    - Q56 liaison plus neurological catch-all
+    - Q63 disruptive plus impulse-control catch-all
+    - Q69 daytime sleepiness plus parasomnia catch-all
+    - Q72 ASPD plus all other personality disorders
+    - Q73 sexual dysfunction plus gender-related care
+    - Q89 TCA overdose plus all other poisonings
+    - Q90 ECT plus all other biological treatments
+    - Q92 psychodynamic umbrella
+    - Q93 IPT plus miscellaneous psychotherapies
+    - Q94 neuroanatomy umbrella
+    - Q95 neurotransmitter plus sleep/endocrine umbrella
+    - Q98 ethics umbrella
+    - Q100 systems catch-all
