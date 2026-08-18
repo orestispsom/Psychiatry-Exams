@@ -2,94 +2,88 @@
 
 Status: active. Read together with `lean-workflow.md`.
 
-## Core principle
+## Production reality
 
-**Do not perform 100 independent research projects. Do not triangulate multiple textbooks by default.**
+There are 100 questions, and the learner-facing model answer for each is normally only about 1–2 pages. Production must therefore optimise for **marginal value to the final oral answer**, not research completeness.
 
-Routine production should be:
+## Core rule
 
-`Oxford base extract → targeted current verification → compact answer brief → writer → coordinator QA`
+> **Map sources once, reuse them aggressively, and retrieve only information capable of changing what the candidate should actually say.**
 
-## 1. One primary source by default
+## Domain reuse
 
-For most Adult Psychiatry board questions, **Shorter Oxford Textbook of Psychiatry, 7th ed. / 2017 exam edition** is the base source.
-
-The base source should normally provide most of the answer structure and stable clinical content.
-
-Open another textbook only if Oxford is insufficient, ambiguous, materially outdated for the question, or another source is clearly the appropriate specialist authority.
-
-## 2. Targeted verification, not independent reconstruction
-
-Current research should verify only claims that are plausibly stale, exact, safety-sensitive or classification-sensitive.
-
-Typical verification targets:
-- DSM-5-TR / ICD-11 criteria;
-- current treatment sequencing;
-- psychopharmacology dose/monitoring/interactions/toxicity/pregnancy;
-- Greek law and forensic rules;
-- rapidly changing interventions;
-- important epidemiological or factual anchors where exactness matters.
-
-A stable descriptive question may need only 2–5 checks.
-
-## 3. Batch local extraction by chapter
-
-When multiple questions share one Oxford chapter:
-- map the chapter once;
-- retain section/page locations locally;
-- produce question-specific extracts from that map;
-- do not repeat full search/retrieval for each question.
+Questions sharing an Oxford chapter or authoritative current source should reuse the same chapter/source map.
 
 Examples:
+
 - Q11–19 psychosis/schizophrenia;
 - Q20–27 mood/perinatal;
-- Q45–58 neurocognitive/neuropsychiatry.
+- Q45–58 neurocognitive/neuropsychiatry;
+- drug groups sharing one prescribing source/guideline.
 
-## 4. Batch current sources by domain
+Do not run fresh chapter discovery for every question.
 
-Keep authoritative sources already inspected for the domain and reuse them when they genuinely support adjacent questions.
+## Per-question work after source mapping
 
-Do not rerun broad web searches for the same DSM/ICD/guideline material.
+Routine question:
 
-## 5. Agent economy
+1. identify relevant pages from the existing source map;
+2. extract 4–8 must-cover points;
+3. perform 0–6 targeted current checks;
+4. create the short answer brief;
+5. write and QA.
 
-### Claude/local agent
-Use for targeted local source retrieval only. Give a compact work order, not the entire project architecture. Default to Oxford only; add a second source only when explicitly required.
+No independent literature review is expected.
 
-### Research GPT
-Use for the current-authoritative delta, not a full literature review. Deep research is an escalation path.
+## Research depth tiers
 
-### Writer
-Use one dedicated writer from approved answer briefs.
+### Routine
 
-### QA
-Coordinator performs routine QA. Separate QA agents are reserved for high-risk or failed cases.
+Descriptive disorders, psychopathology, stable concepts.
 
-### Codex
-Do not spend scarce coding-agent tokens on psychiatric research/prose. Use later for deterministic automation if useful.
+Oxford + a few targeted current checks, often none beyond classification.
 
-## 6. Stop rule
+### Enhanced
 
-Stop source work when:
-- the Oxford base adequately covers the stable answer;
-- required update-sensitive claims are verified;
-- board facts have authoritative support;
-- any material conflict is identified;
-- additional sources would add detail rather than change the answer.
+Treatment, psychopharmacology, emergencies, pregnancy, law/regulation, recently changed classification.
 
-## 7. Escalation triggers
+Use the appropriate current authority for the few claims that will enter the answer.
 
-Use the heavier workflow only for:
-- prescribing/monitoring/toxicity;
-- pregnancy;
-- emergencies;
-- Greek law/forensic/confidentiality;
-- rapidly changing treatment;
-- genuine exam-current conflict;
-- contested evidence central to the question.
+### Exceptional
 
-## Practical target
+Deep research only when sources conflict materially, safety depends on clarification, or the evidence itself is part of the examination topic.
 
-After source reuse is established, routine question preparation should be a **short targeted production task**, not a 15–30 minute independent deep-research exercise.
+## Reuse rules
 
-Quality comes from choosing the right authority and verifying the vulnerable claims, not from maximizing the number of books, papers or agents consulted.
+- Reuse verified bibliographic identity and page maps.
+- Reuse previously verified current claims when the new question needs the same claim.
+- Reopen a source only if the new question requires more precision/context.
+- Do not search the web again to reconfirm a stable point already securely verified.
+- Do not infer support from source title alone.
+
+## DSM / classification scaling
+
+Do not repeatedly retrieve full DSM material across diagnosis questions.
+
+Use:
+
+- Oxford for exam-study structure;
+- WHO ICD-11 as the preferred current openly referenceable classification source where adequate;
+- DSM-5-TR selectively for a specific DSM distinction/threshold that actually matters to the answer or board facts.
+
+A question does not need a full DSM-vs-ICD comparison merely because both systems exist.
+
+## Stop rule
+
+Stop when:
+
+- must-cover items are supported;
+- important current corrections are resolved;
+- board facts have a source;
+- further reading is unlikely to change the 1–2 page oral answer or its concise follow-ups.
+
+## Practical benchmark
+
+After the relevant source chapter/domain has been mapped, routine per-question retrieval should feel like **focused extraction and checking**, not a research project.
+
+The Q12 15+ minute deep contemporary pass is treated as pilot calibration and reusable domain research, not the expected cost of the remaining 99 questions.
