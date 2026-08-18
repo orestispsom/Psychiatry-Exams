@@ -2,200 +2,282 @@
 
 Status: **CURRENT DEFAULT** as of 2026-08-18.
 
-This supersedes the earlier multi-agent, multi-textbook workflow as the routine production method. The earlier files remain useful as reference/escalation procedures, but they are not required for every question.
+This is the governing routine for producing the 100 model answers. The project is building an oral-exam study resource, not 100 literature reviews.
 
-## Core idea
+## Governing constraint
 
-A high-quality answer usually does **not** need independent reconstruction from five books plus a literature review.
+The learner-facing **model oral answer should normally fit about 1–2 pages** and sound like something a strong senior Adult Psychiatry resident could actually say in a viva.
 
-For the private Greek Adult Psychiatry board-preparation master:
+Typical spoken target:
 
-> **Start from one strong exam source, then verify only the claims most likely to be wrong, outdated, unsafe or exam-sensitive.**
+- most questions: roughly 2–4 minutes;
+- major questions: up to about 5 minutes when genuinely needed;
+- follow-ups: usually 20–60 seconds.
 
-The prescribed **Shorter Oxford Textbook of Psychiatry, 7th edition / 2017 exam edition** is the default content backbone unless a question clearly requires a more appropriate primary authority.
+The exact word count is secondary, but the model answer should usually remain roughly **350–700 words**, with exceptional major topics allowed somewhat more if oral usability is preserved.
 
-## The four-step routine
+The rest of the package — recall spine, board facts, examiner follow-ups, traps/current-update note — is compact and separate.
 
-### Step 1 — Base source extraction
+**Research depth must be proportional to this output.**
 
-Default source: **Oxford Shorter 2017**.
+If a research detail is unlikely to enter the oral answer, board-fact block, examiner follow-up, or a clinically important current-update note, it normally does not deserve dedicated retrieval.
 
-Extract only what is needed for the question:
-- the natural answer structure;
-- core clinical facts;
-- classic examination points;
-- any exact facts or wording that appear especially exam-relevant;
-- source pages/sections.
+---
 
-Target output: a compact source packet, usually about 500–1200 words.
+## Core source philosophy
 
-Do **not** routinely open New Oxford, Kaplan, Comprehensive, Maudsley or Stahl at this stage.
+### 1. Oxford Shorter 2017 is the exam-study backbone
 
-### Step 2 — Targeted verification delta
+For most questions, start with the prescribed **Shorter Oxford Textbook of Psychiatry, 7th edition / 2017 exam edition**.
 
-Perform only the verification needed to put the Oxford-based answer in good standing.
+Use it to establish:
 
-Typical checks:
+- the natural oral-answer structure;
+- the core clinical material;
+- classic exam distinctions;
+- the level of depth expected.
 
-- **diagnosis/classification:** DSM-5-TR and/or ICD-11 for exact current criteria or changed classification;
-- **treatment:** current major guideline only where Oxford 2017 may be outdated;
-- **psychopharmacology:** current prescribing/regulatory source for dose, monitoring, interactions, pregnancy, toxicity or licensing;
-- **law/forensic/confidentiality:** current official Greek source;
-- **unstable factual claim:** one strong current source if the number/fact matters;
-- **historical exam fact:** retain as exam-specific if useful, but label it.
+The goal is a compact extraction, not a chapter summary.
 
-For a stable descriptive question, this may be only 2–5 checks.
+### 2. Current sources are a correction/verification layer
 
-Do not perform a broad literature review unless the question genuinely needs one.
+After the base is known, check only what is likely to have changed, be safety-critical, legally sensitive, or worth correcting.
+
+Current verification is **not a second full reconstruction of the topic**.
+
+### 3. DSM-5-TR is not the universal baseline
+
+DSM-5-TR may be used for private study and targeted diagnostic verification when its distinctions matter, but it is **not the default organising source for every answer** and should not drive the structure of the commercial derivative.
+
+For diagnosis/classification:
+
+- use Oxford for exam framing;
+- use **ICD-11 / WHO material preferentially as the current openly usable international classification reference where it adequately answers the question**;
+- use DSM-5-TR selectively when a DSM-specific distinction is exam-relevant, clinically important, or needed to explain a DSM/ICD difference;
+- avoid reproducing DSM criterion wording in learner-facing material.
+
+The final answer should normally describe the clinical syndrome and diagnostic logic in original language rather than recite a proprietary criterion set.
+
+### 4. One good source is often enough for stable material
+
+Do not triangulate stable facts across several textbooks merely to increase confidence cosmetically.
+
+Open another textbook only when there is a real unanswered question.
+
+---
+
+## The routine five-step production loop
+
+### Step 0 — Tiny question brief
+
+Before retrieval, define only:
+
+- what the examiner is asking;
+- 4–8 things the answer must cover;
+- assigned board facts/follow-ups;
+- what is plausibly update-sensitive.
+
+Target: **100–250 words**.
+
+No research essay and no final prose.
+
+### Step 1 — Oxford base extraction
+
+Local agent retrieves the directly relevant Oxford section/pages and returns:
+
+1. answer skeleton;
+2. core points;
+3. classic exam facts;
+4. any obviously dated or uncertain point;
+5. exact pages/sections.
+
+Target: **300–700 words per question**, often less after chapter reuse.
+
+Default: **Oxford only.**
+
+When several questions share a chapter, map the chapter once and reuse it rather than repeating extraction.
+
+### Step 2 — Targeted current verification
+
+Research GPT receives the question brief + Oxford extract and checks only the vulnerable points.
+
+Typical routine question: **2–6 checks**.
+
+Examples:
+
+- changed classification → WHO ICD-11; DSM only if a material DSM distinction matters;
+- treatment → one current major guideline;
+- drug dose/monitoring/interactions/pregnancy → current prescribing/regulatory authority;
+- Greek law/forensic/confidentiality → current official Greek source;
+- a consequential epidemiological/mechanistic claim → one strong current source if necessary.
+
+Output should be a **verification memo**, not a research packet:
+
+- `KEEP` — Oxford/base is still suitable;
+- `UPDATE` — replace/modify this point;
+- `ADD` — one important current omission;
+- `EXAM_CURRENT_SPLIT` — preserve an exam-specific distinction separately;
+- `UNRESOLVED` — rare, requires escalation.
+
+Target: **250–700 words**, preferably under 500 for routine questions.
+
+Do not browse broadly once the vulnerable claims are resolved.
 
 ### Step 3 — Compact answer brief
 
-The coordinator combines the base-source packet and verification delta into one short `answer brief` using `answer-brief-schema.yml`.
+Coordinator combines Oxford + verification delta into `answer-brief-schema.yml`.
 
-The brief decides:
-- answer spine;
-- must-cover material;
-- verified corrections/updates to Oxford;
-- exact board facts;
-- any genuine exam-vs-current difference;
-- exclusions;
-- provenance/copyright flags where needed.
+The brief contains only what the writer needs:
 
-The brief should normally be 1–3 pages, not a claim-level evidence database.
+- recall spine;
+- 5–10 must-cover points;
+- verified updates/corrections;
+- board facts;
+- follow-ups;
+- deliberate exclusions;
+- source/provenance notes.
 
-Use the full `dossier-schema.yml` only for questions with substantial conflict, high-risk prescribing/legal content, or unusually complex evidence.
+Target: **roughly 500–1000 words total**, often less.
 
-### Step 4 — Write + final check
+The full claim-level dossier is an **escalation format only** for genuinely complex/high-risk disputes.
 
-A dedicated writer receives the approved answer brief and writes the learner-facing package.
+### Step 4 — Dedicated writer
 
-Then the coordinator performs one integrated final check for:
-- fidelity to the brief;
-- factual accuracy of the verified/update-sensitive claims;
-- oral usability;
-- missing board facts/follow-ups;
-- exam/current separation;
-- Greek applicability where relevant.
+Writer receives **only the approved answer brief**.
 
-A separate Source-QA agent and Oral-Red-Team agent are **optional escalation tools**, not mandatory stages for every question.
+Produces:
 
-## Source hierarchy by question type
+1. recall spine;
+2. model oral answer;
+3. must-know board facts;
+4. approved examiner follow-ups;
+5. a very short exam-vs-current note only if genuinely necessary.
 
-### Stable disorder / psychopathology / descriptive question
+The model answer must sound spoken, hierarchical and memorable. It is not required to demonstrate all research performed.
 
-1. Oxford Shorter 2017 — base
-2. DSM-5-TR / ICD-11 — targeted current classification check
-3. One additional authoritative source only if a material gap remains
+### Step 5 — One integrated QA pass
+
+Coordinator checks:
+
+- Does the answer actually answer the question?
+- Is it orally plausible in 2–5 minutes?
+- Are all must-cover items represented?
+- Are exact/current/high-risk claims verified?
+- Did the writer add unsupported facts?
+- Is any exam/current discrepancy mishandled?
+- Is Greek jurisdiction correct where relevant?
+- Is anything included that does not earn its cognitive burden?
+
+Separate source-QA or oral-red-team agents are used only when this pass finds a reason to escalate.
+
+---
+
+## Source selection by question type
+
+### Descriptive disorder / psychopathology
+
+Default:
+
+1. Oxford Shorter 2017
+2. 0–3 current checks, typically ICD-11/WHO or another authoritative current source
+3. DSM only if a DSM-specific distinction materially matters
+
+No routine second textbook.
 
 ### Treatment question
 
-1. Oxford Shorter 2017 — exam framing/base
-2. Current major guideline — treatment delta
-3. Prescribing/regulatory source only for exact drug safety details that enter the answer
+Default:
+
+1. Oxford for exam framing
+2. one current major guideline for the treatment delta
+3. prescribing source only for exact drug details that will actually enter the answer
 
 ### Drug question
 
-1. Oxford Shorter 2017 — exam framing
-2. Current Maudsley/prescribing/regulatory source — authoritative practical details
-3. Stahl only if mechanism/exam differentiation genuinely adds value
+Default:
 
-### Law / ethics / forensic / service question
+1. Oxford for exam framing if useful
+2. one current practical prescribing authority as the main current source
+3. regulator/product information for a specific safety/licensing issue if needed
 
-1. Oxford only for general psychiatric framing where useful
-2. Current official Greek law/authority — actual answer authority
+Stahl/Maudsley/other texts are not automatically stacked together.
 
-### Foundational stable question
+### Law / ethics / forensic
 
-1. One authoritative textbook/source may be sufficient
-2. Verify only disputed or exam-specific facts
+Current official Greek authority is primary for the actual rule. Oxford is optional background only.
 
-## Supplementary-textbook escalation rule
+### Stable foundational / psychotherapy concept
 
-Open another local textbook **only** when at least one of these is true:
+One authoritative source may be enough. Verify only disputed or source-sensitive claims.
 
-- Oxford is genuinely insufficient for a must-cover item;
-- Oxford is ambiguous;
-- a current-source conflict needs explanation;
-- the Greek oral bank signals a classic point Oxford does not adequately cover;
-- the question is a specialist drug/therapy topic for which another local source is clearly superior.
+---
 
-Do not open another textbook merely to confirm material already adequately supported.
+## Supplementary textbook rule
 
-## Research-GPT rule
+**Do not routinely consult New Oxford, Kaplan, Comprehensive, Maudsley and Stahl after Oxford.**
 
-The Research GPT is no longer asked to independently rebuild every question from scratch.
+A second local book is opened only if:
 
-Default request:
+- Oxford does not answer a must-cover point;
+- a specific current/exam conflict needs interpretation;
+- the question is intrinsically better served by another specialist source;
+- a known Greek oral-exam point is absent or unclear.
 
-> Given the Oxford-derived base packet, perform only the current-authoritative verification delta needed for this question. Verify the listed update-sensitive claims and identify any important current correction or omission. Do not broaden the topic.
+If the second source resolves the issue, stop.
 
-Deep research is reserved for:
-- genuinely contested questions;
-- rapidly changing treatment;
-- high-risk psychopharmacology;
-- major guideline changes;
-- law/regulation;
-- places where Oxford and current authority materially conflict.
+---
 
-## Claude/local-agent rule
+## Research intensity
 
-Claude should be used primarily as a **targeted local source retriever**, not as a broad textbook synthesis agent.
+### Routine
 
-Default local task:
-- locate the Oxford section;
-- read the relevant pages;
-- produce a compact paraphrased extraction with page references;
-- stop.
+Stable/descriptive material. Oxford + a few targeted checks.
 
-If exact DSM/local-source verification is required, add only that second source.
+### Enhanced
 
-Do not make Claude read the entire project architecture. Each task should receive a compact work order containing only:
-- question;
-- 5–10 must-cover bullets;
-- board facts needing local verification;
-- source(s) allowed;
-- output path/format.
+Treatment, psychopharmacology, emergencies, pregnancy, law, regulatory issues, genuinely changed classification.
 
-### Batch efficiency
+Even here, research is claim-targeted rather than a mini-systematic review.
 
-When several questions share one Oxford chapter, extract the chapter **once** and create a chapter map. Then produce small question-specific extracts from that map.
+### Exceptional deep dive
 
-For example, Q11–Q19 should not cause nine fresh searches of the same schizophrenia chapter.
+Only when:
 
-## QA tiers
+- authoritative sources materially disagree;
+- a safety-critical point is unclear;
+- the evidence itself is the subject of the question;
+- the coordinator explicitly requests it.
 
-### Routine QA
-Performed by coordinator in one pass.
+The Q12 pilot-level 15+ minute independent literature review is **not** the routine template.
 
-### Enhanced QA
-Use a separate verifier only for:
-- current prescribing/monitoring/toxicity;
-- pregnancy;
-- emergency treatment;
-- Greek law/forensic questions;
-- major exam-current conflict;
-- answers that fail the first integrated QA pass.
+---
 
-## Commercial provenance
+## Commercial-readiness principle
 
-Commercialization does not change the study workflow.
+The study master remains exam-first, but the research architecture should make later commercialization easy.
 
-Retain:
-- source/page provenance;
-- flags for close paraphrase/direct quotation/proprietary text.
+Therefore:
 
-The later commercial manuscript will be rewritten and cleared separately.
+- base the final prose on **original clinical synthesis**, not reproduction of Oxford or DSM structure/text;
+- retain source/page provenance internally;
+- prefer publicly referenceable/current sources such as WHO ICD-11, guidelines, official regulators and papers where they adequately support current claims;
+- use DSM selectively for diagnostic cross-checking, not as the sole conceptual backbone;
+- do not reproduce DSM criteria verbatim;
+- commercial clearance remains a later separate pass and does not slow study production.
 
-## Practical production target
+---
 
-Routine question:
+## Hard stop rule
 
-`Oxford extract → 2–5 targeted current checks → compact answer brief → writer → coordinator QA`
+Stop researching once all four are true:
 
-The expected intellectual work should be measured in **minutes per question after source reuse**, not a 15–30 minute independent research project for each of 100 questions.
+1. the 4–8 must-cover items are adequately supported;
+2. the few update-sensitive claims have been checked;
+3. board facts have a verification route;
+4. further retrieval is unlikely to change a 1–2 page oral answer.
 
-## Escalation principle
+This fourth rule is decisive.
 
-If the lean process reveals uncertainty, escalate that claim or question. Do not pre-emptively apply the maximal process to everything.
+> **If another source is unlikely to change what the candidate should actually say, do not open it.**
 
-**Accuracy is maintained by targeted verification, not by source-count.**
+Accuracy comes from using the right source for the right claim, not from maximizing source count.
