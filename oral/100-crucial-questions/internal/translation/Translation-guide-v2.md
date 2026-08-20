@@ -302,3 +302,11 @@ Jamais vu|Jamais vu||
 
 ## Ιατροδικαστική / δικαστική ψυχιατρική
 Ποινικός καταλογισμός|Criminal responsibility|Ικανότητα προς καταλογισμό|Not determined by diagnosis alone.
+
+## Σημασία / Salience και κυριαρχία συμπτωμάτων
+Απόδοση σημασίας / σημασιοδότηση|Salience||Context-dependent; never translate mechanically as προεξοχή.
+Συναισθηματική σημασιοδότηση|Affective / emotional salience|Απόδοση συναισθηματικής σημασίας|Neuroscience/limbic context.
+Παθολογική απόδοση σημασίας|Aberrant salience||Preferred schizophrenia/psychosis formulation.
+Κινητροδοτική σημασία|Incentive salience|Κινητροδοτική αξία ερεθίσματος|Reward/addiction context.
+Προεξάρχουσα παρουσία / κυριαρχία|Prominence / salience of symptoms||Clinical-description context; choose according to sentence.
+
