@@ -46,6 +46,7 @@ jobs:
             pdfinfo output/The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf > output/pdfinfo.txt
             pdffonts output/The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf > output/pdffonts.txt
           fi
+          tar -czf output/greek_sources_frozen.tgz -C source oral/100-crucial-questions/answers/revision-v2-el
           cp build.log output/build.log || true
 
       - name: Upload Greek publication artifact
@@ -61,3 +62,4 @@ jobs:
             output/pdfinfo.txt
             output/pdffonts.txt
             output/build.log
+            output/greek_sources_frozen.tgz
