@@ -1,4 +1,4 @@
-name: Temporary Greek publication build
+name: Temporary Greek v3 publication build
 
 on:
   pull_request:
@@ -16,50 +16,64 @@ jobs:
         with:
           path: tooling
 
-      - name: Checkout frozen Greek source snapshot
+      - name: Checkout frozen Greek v3 source snapshot
         uses: actions/checkout@v4
         with:
-          ref: ab617961440309f7f32677c56122b3f525215c03
+          ref: 63a844d881072d13fd6e33423b9e01fb8f91f0d9
           path: source
 
       - name: Install publication dependencies
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-noto-core fonts-noto-extra poppler-utils ghostscript
-          python -m pip install --quiet reportlab pymupdf
-          gzip -dc tooling/.tmp/greek_publication_build.py.gz > /tmp/greek_publication_build.py
+          python -m pip install --quiet reportlab pymupdf pypdf
+          gzip -dc tooling/.tmp/greek_publication_build.py.gz > /tmp/Greek_publication_master_v3.py
 
-      - name: Build Greek A4 book
-        id: build
-        continue-on-error: true
+      - name: Verify frozen corpus
+        run: |
+          test "$(find source/oral/100-crucial-questions/answers/revision-v3-el -maxdepth 1 -type f -name 'Q???.md' | wc -l)" -eq 100
+          python - <<'PY'
+          from pathlib import Path
+          root=Path('source/oral/100-crucial-questions/answers/revision-v3-el')
+          names=sorted(p.name for p in root.glob('Q???.md'))
+          expected=[f'Q{i:03d}.md' for i in range(1,101)]
+          assert names==expected, (names[:5], names[-5:])
+          print('CORPUS_OK 100/100')
+          PY
+
+      - name: Build Greek v3 A4 book
         working-directory: source
         env:
-          GREEK_SRC: oral/100-crucial-questions/answers/revision-v2-el
+          GREEK_SRC: oral/100-crucial-questions/answers/revision-v3-el
           GREEK_OUT: ../output
-          SOURCE_COMMIT: ab617961440309f7f32677c56122b3f525215c03
-        run: python /tmp/greek_publication_build.py | tee ../build.log
+          SOURCE_COMMIT: 63a844d881072d13fd6e33423b9e01fb8f91f0d9
+        run: python /tmp/Greek_publication_master_v3.py | tee ../build.log
 
-      - name: Technical PDF checks
-        if: always()
+      - name: Normalize release names and technical checks
         run: |
-          if [ -f output/The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf ]; then
-            pdfinfo output/The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf > output/pdfinfo.txt
-            pdffonts output/The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf > output/pdffonts.txt
-          fi
-          tar -czf output/greek_sources_frozen.tgz -C source oral/100-crucial-questions/answers/revision-v2-el
-          cp build.log output/build.log || true
+          set -e
+          PDF=$(find output -maxdepth 1 -type f -name '*GREEK_COMPLETE_A4.pdf' | head -n 1)
+          test -n "$PDF"
+          cp "$PDF" output/The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf
+          cp /tmp/Greek_publication_master_v3.py output/Greek_publication_master_v3.py
+          pdfinfo output/The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf > output/pdfinfo.txt
+          pdffonts output/The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf > output/pdffonts.txt
+          tar -czf output/greek_v3_sources_frozen.tgz -C source oral/100-crucial-questions/answers/revision-v3-el
+          git -C source ls-tree -r 63a844d881072d13fd6e33423b9e01fb8f91f0d9 -- oral/100-crucial-questions/answers/revision-v3-el > output/source_tree.txt
+          cp build.log output/build.log
 
-      - name: Upload Greek publication artifact
-        if: always()
+      - name: Upload Greek v3 publication artifact
         uses: actions/upload-artifact@v4
         with:
-          name: greek-publication-candidate
+          name: greek-v3-publication-candidate
           if-no-files-found: error
           path: |
-            output/The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf
+            output/The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf
+            output/Greek_publication_master_v3.py
             output/GREEK_COMPLETE_book_manifest.json
             output/GREEK_COMPLETE_QA_report.json
             output/pdfinfo.txt
             output/pdffonts.txt
             output/build.log
-            output/greek_sources_frozen.tgz
+            output/greek_v3_sources_frozen.tgz
+            output/source_tree.txt
