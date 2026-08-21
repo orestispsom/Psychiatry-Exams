@@ -48,3 +48,39 @@ Purpose: production ledger for `revision-v4-el`. It records the principal source
 ### Unresolved source conflicts
 - Routine Greek national availability/protocol status of alternative parenteral agents for acute behavioural disturbance remains unresolved in the verified packet; no national availability claim was added.
 - No other Batch 01 source conflict blocks the manuscript.
+
+---
+
+## Batch 02 — Q011–Q019: psychosis and schizophrenia
+
+### Principal exam/base layer
+- `board-fact-anchors.yml` for Schneiderian phenomenology, schizophrenia duration distinctions, TRS and clozapine board anchors.
+- `question-design.md` and `answer-archetypes.md` for disorder, treatment, differential and drug-question structure.
+- Existing v3 Greek answers used as draft wording only.
+
+### Current diagnostic / treatment / regulatory layer
+- `Q001-Q100-board-depth-current-verification.md`, Q011–Q019 decisions.
+- DSM-5-TR and ICD-11 schizophrenia/schizoaffective architecture as represented in the verified source layer; ICD-11 operational domains additionally checked against current WHO-linked comparative material.
+- NICE CG178 for FEP/acute/maintenance treatment principles and the clozapine pathway.
+- TRRIP consensus for treatment-response/resistance definitions.
+- EMA/PRAC 2025 clozapine neutropenia-monitoring update and current SmPC rules as captured in the verified packet.
+
+### Editorial status by question
+- **Q011:** structurally rewritten; mandatory board-fact block added; FEP kept diagnostically open; fixed response-rate/half-dose claims excluded.
+- **Q012:** structurally replaced in part; DSM-5-TR 2/5 criteria and ICD-11 2/7 domains made visible; historical Schneider/subtype material retained only as historical exam content.
+- **Q013:** structurally rewritten as a discrimination answer; DSM-5-TR versus ICD-11 schizoaffective logic shown in a compact comparison table.
+- **Q014:** structurally rewritten; established striatal dopamine evidence separated from heuristic cortical-dopamine and NMDA models; group imaging explicitly non-diagnostic.
+- **Q015:** structurally rewritten; outcome-thirds and fixed suicide/prognosis percentages excluded; broad mortality gap retained only as context.
+- **Q016:** structurally rewritten; 4–6-week adequate trial retained; early non-improvement kept prognostic rather than an automatic switch rule; CBTp expanded locally.
+- **Q017:** structurally rewritten; maintenance duration individualized; NICE 1–2-year relapse-risk and 2-year post-discontinuation monitoring anchors retained; LAI expanded locally.
+- **Q018:** structurally replaced in part; TRRIP operational requirements made visible and separated from the distinct NICE non-clozapine-SGA requirement before clozapine.
+- **Q019:** structurally rewritten; ANC/BEN/TDM expanded locally; 2025 European monitoring schedule retained; severe-neutropenia rechallenge language softened to match the verified specialist-exception nuance.
+
+### Source upgrades that changed v3 content
+- Q012: operational DSM/ICD denominators are now visible rather than implied by prose.
+- Q013: system-specific schizoaffective rules are structurally separated to prevent hybrid criteria.
+- Q018: removed the false attribution that TRRIP itself requires one SGA trial.
+- Q019: current 2025 European ANC schedule and restart rule remain explicit, while the rechallenge statement is no longer an unqualified universal “never”.
+
+### Unresolved source conflicts
+- No Batch 02 source conflict blocks the manuscript. Product-specific clozapine safety decisions remain governed by current SmPC/regulatory context rather than a single manuscript-wide rule.
