@@ -84,3 +84,40 @@ Purpose: production ledger for `revision-v4-el`. It records the principal source
 
 ### Unresolved source conflicts
 - No Batch 02 source conflict blocks the manuscript. Product-specific clozapine safety decisions remain governed by current SmPC/regulatory context rather than a single manuscript-wide rule.
+
+---
+
+## Batch 03 — Q020–Q027: depression, bipolar disorder and perinatal psychiatry
+
+### Principal exam/base layer
+- Approved source-locked Writer brief `answers/briefs/Q020-Q027-batch.md`, which reconciles the Oxford/base map with the targeted current-verification delta.
+- Existing v3 answers used only for broad Greek phrasing/continuity; the approved brief controlled factual content and omissions.
+
+### Current diagnostic / treatment / regulatory layer
+- ICD-11 current depressive-episode architecture as specified in the approved brief.
+- Current depression and bipolar treatment guidance as adjudicated into the approved brief, including NICE and CANMAT/ISBD distinctions.
+- Current EU product/licensing distinctions for esketamine, cariprazine, lurasidone and zuranolone as explicitly assigned in the brief.
+- Current EU/Greek valproate reproductive restrictions, including paternal-exposure precautions, as assigned in the brief.
+
+### Editorial status by question
+- **Q020:** structurally replaced in part; the ICD-11 ≥5/10 denominator now shows all 10 counted symptoms; DSM terminology and current ICD-11 longitudinal labels are separated; PMDD versus premenstrual exacerbation retained as a focused follow-up.
+- **Q021:** structurally rewritten; removed the rigid mild/moderate/severe treatment ladder; 4-week reassessment and ≥6-month continuation anchors are explicit; ECT is positioned according to urgency rather than as an automatic last resort.
+- **Q022:** structurally rewritten; conventional TRD is separated from pseudoresistance and difficult-to-treat depression; switch versus augmentation logic is explicit; rTMS and esketamine are placed with their appropriate evidence/licensing caveats.
+- **Q023:** structurally rewritten as a longitudinal discrimination answer; mania/hypomania, bipolar I/II, ADHD, borderline affective instability, psychosis and antidepressant-emergent episodes are separated without mixing DSM and ICD duration wording.
+- **Q024:** structurally rewritten; guideline sequencing differences are made explicit rather than averaged; severe-mania combination treatment is visible; full current valproate reproductive restrictions are attached to use.
+- **Q025:** structurally rewritten; bipolar depression is separated from unipolar treatment logic; antidepressant monotherapy in bipolar I is excluded; international cariprazine/lurasidone evidence is distinguished from current EU licensing.
+- **Q026:** structurally rewritten around polarity, prior response and relapse prevention; lithium remains central; lamotrigine phase specificity and current valproate reproductive restrictions are explicit.
+- **Q027:** structurally rewritten as an emergency answer; first-2-weeks timing, bipolar-spectrum relationship, mother/infant safety, MBU preference and early ECT are visible; breastfeeding remains drug-specific; postpartum-depression follow-up includes the current EU zuranolone update without claiming Greek availability.
+
+### Source upgrades that changed v3 content
+- Q020: current ICD-11 5/10 architecture replaces older ICD-10-style core-symptom framing as current diagnostic truth.
+- Q021: current treatment selection is no longer represented as a categorical severity ladder.
+- Q022: rTMS is treated as established rather than experimental; esketamine licensing is separated from recommendation/access.
+- Q023: ICD-11 bipolar I/II architecture and the antidepressant-emergent persistence rule are made explicit.
+- Q024/Q026: current valproate reproductive restrictions in women and men are mandatory and visible.
+- Q025: international bipolar-depression evidence for cariprazine/lurasidone is not converted into a false EU bipolar indication.
+- Q027: postpartum psychosis is framed as a bipolar-spectrum emergency; 2025 EU zuranolone authorisation is kept as a bounded current-practice update.
+
+### Unresolved source conflicts
+- Greek commercial availability/reimbursement of esketamine and zuranolone was not verified in the approved brief; no availability claim was made.
+- No other Batch 03 source conflict blocks the manuscript.
