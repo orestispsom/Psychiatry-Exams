@@ -49,6 +49,7 @@ jobs:
           PY
           python tooling/.tmp/patch_v4_table.py /tmp/Greek_publication_master_v4.py
           python tooling/.tmp/patch_v4_bookmark.py /tmp/Greek_publication_master_v4.py
+          python tooling/.tmp/patch_v4_determinism.py /tmp/Greek_publication_master_v4.py
           python -m py_compile /tmp/Greek_publication_master_v4.py
           sha256sum /tmp/Greek_publication_master_v4.py
 
