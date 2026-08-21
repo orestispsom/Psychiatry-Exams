@@ -1,0 +1,732 @@
+{
+  "source_commit": "63a844d881072d13fd6e33423b9e01fb8f91f0d9",
+  "source_directory": "oral/100-crucial-questions/answers/revision-v3-el",
+  "sources": {
+    "1": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q001.md",
+      "git_blob_sha": "7d1d12a41d85be06cbfcd0e3792441eea07fed51",
+      "bytes": 13746
+    },
+    "2": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q002.md",
+      "git_blob_sha": "d2020d49a33ca10b016bc21cc0400d803262aad2",
+      "bytes": 6954
+    },
+    "3": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q003.md",
+      "git_blob_sha": "f47bd49bfebcb6ae2c3c8fa5dd48aa73ba01c2d8",
+      "bytes": 7432
+    },
+    "4": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q004.md",
+      "git_blob_sha": "bc835bdf147261b39463d9317a0c2e6f4b579f8b",
+      "bytes": 8760
+    },
+    "5": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q005.md",
+      "git_blob_sha": "fe74a42bd17b7d0c9559c6e63c7abda5e2c4314a",
+      "bytes": 9410
+    },
+    "6": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q006.md",
+      "git_blob_sha": "f6bf9580ce2dbb225dddb316d3ba795cd7910b35",
+      "bytes": 7089
+    },
+    "7": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q007.md",
+      "git_blob_sha": "7daa382073d789d374e7a400d86c78832aa196d9",
+      "bytes": 7628
+    },
+    "8": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q008.md",
+      "git_blob_sha": "93453da1072284a4759ce767d020f862ec182685",
+      "bytes": 7985
+    },
+    "9": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q009.md",
+      "git_blob_sha": "1453fb13d9281ccb8516a23fa3c47dcd038c3dbe",
+      "bytes": 10425
+    },
+    "10": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q010.md",
+      "git_blob_sha": "82284977166666fb572f355ccf59daa7ab7ea5be",
+      "bytes": 10315
+    },
+    "11": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q011.md",
+      "git_blob_sha": "c9dfa8800a6b086ca34f0bfe40689e1c4bb78224",
+      "bytes": 9887
+    },
+    "12": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q012.md",
+      "git_blob_sha": "95755df90bd00df6f7e3f5ac389f6b6f888c1f7b",
+      "bytes": 12073
+    },
+    "13": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q013.md",
+      "git_blob_sha": "dc29ac86e12c04a11f500775f7ef2ba7c37257b0",
+      "bytes": 9032
+    },
+    "14": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q014.md",
+      "git_blob_sha": "cd933be358d30dffdd1b051035fc9c51ccbc21e4",
+      "bytes": 10699
+    },
+    "15": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q015.md",
+      "git_blob_sha": "109f556b417a745367414370d4f219983f37be27",
+      "bytes": 11349
+    },
+    "16": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q016.md",
+      "git_blob_sha": "230caff44cbd048a35add01ec0ec03edffa121b5",
+      "bytes": 8150
+    },
+    "17": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q017.md",
+      "git_blob_sha": "0ed18dee9ed299734e3a7f1fbe39d31f0c4e6dc7",
+      "bytes": 9508
+    },
+    "18": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q018.md",
+      "git_blob_sha": "07708086a93e1529725fae577f6c34583b202696",
+      "bytes": 7880
+    },
+    "19": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q019.md",
+      "git_blob_sha": "2cbf7015418b6c75e50a544c167cc5aaf7a81e32",
+      "bytes": 13177
+    },
+    "20": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q020.md",
+      "git_blob_sha": "fe47130991400db47b99dfbee30dc28351a8d4fe",
+      "bytes": 12662
+    },
+    "21": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q021.md",
+      "git_blob_sha": "ba13b6057dfce7b561d17e1f583dd484d62651e3",
+      "bytes": 11231
+    },
+    "22": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q022.md",
+      "git_blob_sha": "27b3d88d2d9e60e496ff458d6da8de2f53d447d4",
+      "bytes": 9964
+    },
+    "23": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q023.md",
+      "git_blob_sha": "109a00ebe87dd07a6ca650739f0744b2deb61308",
+      "bytes": 11011
+    },
+    "24": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q024.md",
+      "git_blob_sha": "7b93aa32b07c010a7fe039ef59718a05c6c6a726",
+      "bytes": 11208
+    },
+    "25": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q025.md",
+      "git_blob_sha": "c97b5758a7159e1b5fd4f607e74200187df24bdc",
+      "bytes": 10197
+    },
+    "26": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q026.md",
+      "git_blob_sha": "9e7fad11f962c8a5138c5d0f0321bf4418d4713c",
+      "bytes": 11552
+    },
+    "27": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q027.md",
+      "git_blob_sha": "a7f5a540ec448f2da9e04dde8fcd8992b2e71777",
+      "bytes": 13635
+    },
+    "28": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q028.md",
+      "git_blob_sha": "9891031af19ca5974a71a848df30100f6678956b",
+      "bytes": 9374
+    },
+    "29": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q029.md",
+      "git_blob_sha": "3927a35f775040521d6511b3c1c9d60da54ee070",
+      "bytes": 9156
+    },
+    "30": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q030.md",
+      "git_blob_sha": "205084090204587c14693f0cccc3846e9c5a1441",
+      "bytes": 9709
+    },
+    "31": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q031.md",
+      "git_blob_sha": "818c7a9bae18965e37ce92532c95a52f9237177b",
+      "bytes": 11720
+    },
+    "32": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q032.md",
+      "git_blob_sha": "05d2d5189676b899acb40e153c387be186fc0af8",
+      "bytes": 8740
+    },
+    "33": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q033.md",
+      "git_blob_sha": "0da03cf5d2bdb44ca2b088baaf98e7ac508ea81f",
+      "bytes": 7476
+    },
+    "34": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q034.md",
+      "git_blob_sha": "2342544188716020489066d522caf8e3a3ee6010",
+      "bytes": 9961
+    },
+    "35": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q035.md",
+      "git_blob_sha": "1e46f035c7cac56c9ea47ad13f9e6e379d616dee",
+      "bytes": 8294
+    },
+    "36": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q036.md",
+      "git_blob_sha": "360726a6493b74b8edcaa4312e12bd2dab5f2b60",
+      "bytes": 13295
+    },
+    "37": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q037.md",
+      "git_blob_sha": "a83466609110d6d29bb90a7e5d0bfd4f48103076",
+      "bytes": 12178
+    },
+    "38": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q038.md",
+      "git_blob_sha": "2788f49aba319c78ec20e8ba8ae5de9c201df9e9",
+      "bytes": 11367
+    },
+    "39": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q039.md",
+      "git_blob_sha": "8165c793aadd950856a4442c3d87c9fcdc7a3609",
+      "bytes": 11628
+    },
+    "40": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q040.md",
+      "git_blob_sha": "95f332cef1e208b17f38d9448230fc71d9c20cdb",
+      "bytes": 12594
+    },
+    "41": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q041.md",
+      "git_blob_sha": "b42321c8fe2c908a24f044d599b4828709c37d42",
+      "bytes": 9632
+    },
+    "42": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q042.md",
+      "git_blob_sha": "25f7e0ba93bd3faba30853365ee6367409e192d8",
+      "bytes": 8518
+    },
+    "43": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q043.md",
+      "git_blob_sha": "22358e1501c096d68f20ab100c0bb3f8198ff228",
+      "bytes": 8497
+    },
+    "44": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q044.md",
+      "git_blob_sha": "24f2694994080df52c170301b0b25efd3a07ce03",
+      "bytes": 7945
+    },
+    "45": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q045.md",
+      "git_blob_sha": "dc2cb91ca865e0595f1e055763a46adedca6f52d",
+      "bytes": 9776
+    },
+    "46": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q046.md",
+      "git_blob_sha": "02536c6c4d04172007e82bd76338d14680aed39b",
+      "bytes": 9584
+    },
+    "47": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q047.md",
+      "git_blob_sha": "5d4e25869d90259f71ee98ce654832b18c594ac5",
+      "bytes": 10817
+    },
+    "48": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q048.md",
+      "git_blob_sha": "8c5f178d4f43975b5f1652fe67e3ab2daaca8dd5",
+      "bytes": 12140
+    },
+    "49": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q049.md",
+      "git_blob_sha": "523261acdf447a107be1a551a37a4c35011689fc",
+      "bytes": 8271
+    },
+    "50": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q050.md",
+      "git_blob_sha": "c70fda29c326861fe1acbbf3694adf3b7280c104",
+      "bytes": 8370
+    },
+    "51": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q051.md",
+      "git_blob_sha": "58063e7c5c933a8295f66fee2e4d645f9352f011",
+      "bytes": 9011
+    },
+    "52": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q052.md",
+      "git_blob_sha": "eba890605d026fcf90ab6ab3425e56094deb54d5",
+      "bytes": 9255
+    },
+    "53": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q053.md",
+      "git_blob_sha": "7632e44165154e9cd571a225008f0bc9e3a8068f",
+      "bytes": 8940
+    },
+    "54": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q054.md",
+      "git_blob_sha": "86d1534a30cf6001b845dd6a132f99bad6ded54b",
+      "bytes": 8599
+    },
+    "55": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q055.md",
+      "git_blob_sha": "8fae42fc49a6531d8835a041dc4f6bfe7dd0f8d1",
+      "bytes": 9210
+    },
+    "56": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q056.md",
+      "git_blob_sha": "e4cd1cb87bb673f326498fe64fb1ad735b94bc70",
+      "bytes": 9055
+    },
+    "57": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q057.md",
+      "git_blob_sha": "dc329021cb4a073f50c5fbaf099c8ed51617da95",
+      "bytes": 7437
+    },
+    "58": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q058.md",
+      "git_blob_sha": "6959d2a3077ef69d599d65fffa187fefc07f80c9",
+      "bytes": 7365
+    },
+    "59": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q059.md",
+      "git_blob_sha": "adf4c9da98465929afb52468d7d661cedb49e61e",
+      "bytes": 10074
+    },
+    "60": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q060.md",
+      "git_blob_sha": "0d78cd2dad10e3a90e5aca31c5768d902c5da045",
+      "bytes": 8295
+    },
+    "61": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q061.md",
+      "git_blob_sha": "f88e83d97cd6ac5eecee8f0e159e9f9f4f7dfb00",
+      "bytes": 10926
+    },
+    "62": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q062.md",
+      "git_blob_sha": "406799c4111b10fbc81e327bdaef9ed8f43e4138",
+      "bytes": 10204
+    },
+    "63": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q063.md",
+      "git_blob_sha": "d0e2f3917e765c5933341be8a2b5a9c75f6d126c",
+      "bytes": 9518
+    },
+    "64": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q064.md",
+      "git_blob_sha": "7e8889177daa7f39c103e877e5dc4de6b4e4f9cc",
+      "bytes": 8840
+    },
+    "65": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q065.md",
+      "git_blob_sha": "029c0c35f1c327e192c527f8ecca77147910e772",
+      "bytes": 10814
+    },
+    "66": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q066.md",
+      "git_blob_sha": "8ab72792d274122bcc55d81bd90d8c33f632ff0c",
+      "bytes": 9637
+    },
+    "67": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q067.md",
+      "git_blob_sha": "172b29f68d0ab09b7557cd614e7eb025ac25d892",
+      "bytes": 8578
+    },
+    "68": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q068.md",
+      "git_blob_sha": "2601a1c22fc244f23c08d024d7e3ae0543a0b7d5",
+      "bytes": 11732
+    },
+    "69": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q069.md",
+      "git_blob_sha": "263a6a07b5fbff7087cc245a554562f2519ee97b",
+      "bytes": 11421
+    },
+    "70": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q070.md",
+      "git_blob_sha": "3f67071e82505b9b5dc343bd0a6403c86bd68800",
+      "bytes": 8150
+    },
+    "71": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q071.md",
+      "git_blob_sha": "3ff4d675415e72d6af1b57b652451c0289d62e2a",
+      "bytes": 9940
+    },
+    "72": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q072.md",
+      "git_blob_sha": "d9099a65a7026f324f9347ea13ec5ca296abe612",
+      "bytes": 10016
+    },
+    "73": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q073.md",
+      "git_blob_sha": "97f77a66c0a7274956c543e482005c3dbc3ef4b4",
+      "bytes": 10137
+    },
+    "74": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q074.md",
+      "git_blob_sha": "794e61c6dc464fef86dbdad2c4991c8917dec653",
+      "bytes": 10437
+    },
+    "75": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q075.md",
+      "git_blob_sha": "4764bf116c37e74e733b7a6f2d0ba8d8d5ac836d",
+      "bytes": 11257
+    },
+    "76": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q076.md",
+      "git_blob_sha": "6e2ea1b74b77b5748b554fae013b47b474b9113d",
+      "bytes": 9492
+    },
+    "77": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q077.md",
+      "git_blob_sha": "41f9baaf82568ce47ad6c405589f8c9044395f30",
+      "bytes": 10665
+    },
+    "78": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q078.md",
+      "git_blob_sha": "fe7c08fddc3888507912b6bab2fb0ec8786e739b",
+      "bytes": 9011
+    },
+    "79": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q079.md",
+      "git_blob_sha": "9031f23988e53153e9fac2ebb23c426a394da9dc",
+      "bytes": 10646
+    },
+    "80": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q080.md",
+      "git_blob_sha": "4dfe188072e8bc27c63c12be494128cc99739962",
+      "bytes": 8371
+    },
+    "81": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q081.md",
+      "git_blob_sha": "a9eb9babaaa19e3e140a416770fd39ffeb8f962e",
+      "bytes": 10558
+    },
+    "82": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q082.md",
+      "git_blob_sha": "c676f598231d06b4b1a6170d13939d8a7c94cffb",
+      "bytes": 9692
+    },
+    "83": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q083.md",
+      "git_blob_sha": "c4476463885dcb43cfedc99be6820e79d58de19a",
+      "bytes": 8801
+    },
+    "84": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q084.md",
+      "git_blob_sha": "0960cbacf48dbac806e35f6fd0c558cd7eb1e8b1",
+      "bytes": 8297
+    },
+    "85": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q085.md",
+      "git_blob_sha": "0e0b4df338a181dcf8ee3388551468d8a65bb73f",
+      "bytes": 10746
+    },
+    "86": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q086.md",
+      "git_blob_sha": "d95ff87e9f415cedf69af65fb65876a01734ce6e",
+      "bytes": 9755
+    },
+    "87": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q087.md",
+      "git_blob_sha": "7541923026efad6605f4ac578cdedaceac7d32df",
+      "bytes": 8162
+    },
+    "88": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q088.md",
+      "git_blob_sha": "f10b884795ad48c5b27c7fe385c8c24a720413ee",
+      "bytes": 8766
+    },
+    "89": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q089.md",
+      "git_blob_sha": "097ed50cbad9a5eaa2b28687fec35b6bb65e1408",
+      "bytes": 12829
+    },
+    "90": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q090.md",
+      "git_blob_sha": "2e321a954c98bd1547f16143eadcbeaf3619444c",
+      "bytes": 9131
+    },
+    "91": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q091.md",
+      "git_blob_sha": "dbe0a19ecec0b4bcbc7012fdcd69baccd0bf286d",
+      "bytes": 11809
+    },
+    "92": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q092.md",
+      "git_blob_sha": "372d7f734d84d96f0e3a1f5dbe99f1e06ec9032b",
+      "bytes": 7521
+    },
+    "93": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q093.md",
+      "git_blob_sha": "6628fb9026732374676fd7df3ab443b8bbcbfcd0",
+      "bytes": 9064
+    },
+    "94": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q094.md",
+      "git_blob_sha": "46a533df73b97b0367fbfeab0db070c2699b4422",
+      "bytes": 7870
+    },
+    "95": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q095.md",
+      "git_blob_sha": "114de3f7c5466762f4657d47d93be3fe4e2ffe94",
+      "bytes": 7906
+    },
+    "96": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q096.md",
+      "git_blob_sha": "89b765fbcd29a59645af78c5fb4f173aec271951",
+      "bytes": 8629
+    },
+    "97": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q097.md",
+      "git_blob_sha": "7b940498642721047862adda1d953659ac76ff4c",
+      "bytes": 8886
+    },
+    "98": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q098.md",
+      "git_blob_sha": "f72d7681212772518d0657742ecf9dbeb8721fc2",
+      "bytes": 14284
+    },
+    "99": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q099.md",
+      "git_blob_sha": "5cabd87ac37582cf1b6ad9c983eec084efce7e83",
+      "bytes": 9489
+    },
+    "100": {
+      "path": "oral/100-crucial-questions/answers/revision-v3-el/Q100.md",
+      "git_blob_sha": "cab2355d5af15f221c0a2731057224ce511ac920",
+      "bytes": 11605
+    }
+  },
+  "pdf": "The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf",
+  "pdf_sha256": "61a6c947b3f8e2e66305d9a29d41566655a4c3a527caeb03ebd00b21d8837ac2",
+  "body_page_starts": {
+    "1": 1,
+    "2": 4,
+    "3": 6,
+    "4": 8,
+    "5": 10,
+    "6": 12,
+    "7": 14,
+    "8": 16,
+    "9": 18,
+    "10": 21,
+    "11": 24,
+    "12": 27,
+    "13": 30,
+    "14": 32,
+    "15": 35,
+    "16": 38,
+    "17": 40,
+    "18": 43,
+    "19": 45,
+    "20": 48,
+    "21": 51,
+    "22": 54,
+    "23": 57,
+    "24": 60,
+    "25": 63,
+    "26": 66,
+    "27": 69,
+    "28": 72,
+    "29": 74,
+    "30": 76,
+    "31": 79,
+    "32": 82,
+    "33": 85,
+    "34": 87,
+    "35": 90,
+    "36": 92,
+    "37": 95,
+    "38": 98,
+    "39": 101,
+    "40": 104,
+    "41": 107,
+    "42": 110,
+    "43": 112,
+    "44": 114,
+    "45": 116,
+    "46": 119,
+    "47": 122,
+    "48": 125,
+    "49": 128,
+    "50": 130,
+    "51": 132,
+    "52": 135,
+    "53": 138,
+    "54": 141,
+    "55": 144,
+    "56": 147,
+    "57": 150,
+    "58": 152,
+    "59": 154,
+    "60": 157,
+    "61": 159,
+    "62": 162,
+    "63": 165,
+    "64": 168,
+    "65": 170,
+    "66": 173,
+    "67": 176,
+    "68": 178,
+    "69": 181,
+    "70": 184,
+    "71": 186,
+    "72": 189,
+    "73": 192,
+    "74": 195,
+    "75": 198,
+    "76": 201,
+    "77": 203,
+    "78": 206,
+    "79": 208,
+    "80": 211,
+    "81": 213,
+    "82": 216,
+    "83": 219,
+    "84": 221,
+    "85": 223,
+    "86": 226,
+    "87": 229,
+    "88": 231,
+    "89": 233,
+    "90": 236,
+    "91": 238,
+    "92": 241,
+    "93": 243,
+    "94": 245,
+    "95": 247,
+    "96": 249,
+    "97": 251,
+    "98": 253,
+    "99": 257,
+    "100": 260
+  },
+  "followups": [
+    {
+      "key": "Q01a",
+      "body_page": 3,
+      "label": "Q01a. Ο ασθενής αναφέρει ότι ακούει μια φωνή ενώ είναι πλήρως ξύπνιος. Πώς διακρίνετε μια πραγματική ψευδαίσθηση από παραίσθηση, οργανικό/ουσιοεπαγόμενο φαινόμενο ή φαινόμενο αισθητηριακής στέρησης;"
+    },
+    {
+      "key": "Q01b",
+      "body_page": 3,
+      "label": "Q01b. Τι εννοείτε με τον όρο διαταραχή της μορφής της σκέψης και πώς διαφέρουν οι βασικές διαταραχές;"
+    },
+    {
+      "key": "Q05a",
+      "body_page": 11,
+      "label": "Q05a. Ποιοι είναι οι σημαντικότεροι παράγοντες κινδύνου αυτοκτονίας και πώς διαφέρει ο κίνδυνος μεταξύ ψυχιατρικών διαταραχών;"
+    },
+    {
+      "key": "Q10a",
+      "body_page": 22,
+      "label": "Q10a. Τι αλλάζει αν ο ασθενής έχει επίσης πυρετό, αστάθεια του αυτόνομου νευρικού συστήματος και δυσκαμψία;"
+    },
+    {
+      "key": "Q11a",
+      "body_page": 25,
+      "label": "Q11a. Υπάρχει βαριά χρήση κάνναβης. Πότε θα μιλούσατε για ψύχωση επαγόμενη από ουσία και πότε για πρωτοπαθή ψυχωσική διαταραχή;"
+    },
+    {
+      "key": "Q17a",
+      "body_page": 41,
+      "label": "Q17a. Ο ασθενής παραμένει κοινωνικά αποσυρμένος και αδρανής παρότι η ψύχωση έχει βελτιωθεί. Τι εξετάζετε;"
+    },
+    {
+      "key": "Q19a",
+      "body_page": 47,
+      "label": "Q19a. Ο ασθενής εμφανίζει πνευμονία και διακόπτει απότομα το κάπνισμα. Τι συμβαίνει με την κλοζαπίνη;"
+    },
+    {
+      "key": "Q20a",
+      "body_page": 50,
+      "label": "Q20a. Πώς διακρίνετε την PMDD από την προεμμηνορρυσιακή επιδείνωση μιας άλλης διαταραχής;"
+    },
+    {
+      "key": "Q36a",
+      "body_page": 93,
+      "label": "Q36a. Πώς εξηγείτε τη διάγνωση στον ασθενή;"
+    },
+    {
+      "key": "Q36b",
+      "body_page": 94,
+      "label": "Q36b. Πώς διακρίνετε factitious disorder, malingering και FND;"
+    },
+    {
+      "key": "Q36c",
+      "body_page": 94,
+      "label": "Q36c. Τι λένε τα σύγχρονα νευροβιολογικά μοντέλα για την FND;"
+    },
+    {
+      "key": "Q48a",
+      "body_page": 126,
+      "label": "Q48a. Πώς προσεγγίζετε τις οπτικές ψευδαισθήσεις στη νόσο Parkinson;"
+    },
+    {
+      "key": "Q48b",
+      "body_page": 127,
+      "label": "Q48b. Τι πρέπει να γνωρίζετε για τις διαταραχές ελέγχου παρορμήσεων από αγωνιστές ντοπαμίνης;"
+    },
+    {
+      "key": "Q61a",
+      "body_page": 160,
+      "label": "Q61a. Πώς θα προσεγγίζατε έναν ενήλικα με ελάχιστη λεκτική επικοινωνία που εμφανίζει νέα επιθετικότητα και αϋπνία;"
+    },
+    {
+      "key": "Q61b",
+      "body_page": 160,
+      "label": "Q61b. Ποια είναι η σημασία του συνδρόμου Down για τον κίνδυνο άνοιας;"
+    },
+    {
+      "key": "Q68a",
+      "body_page": 179,
+      "label": "Q68a. Πώς διαφοροδιαγιγνώσκετε την αποφευκτική διαταραχή προσωπικότητας από τη διαταραχή κοινωνικού άγχους;"
+    },
+    {
+      "key": "Q68b",
+      "body_page": 179,
+      "label": "Q68b. Πώς διακρίνετε την ιδεοψυχαναγκαστική διαταραχή προσωπικότητας από την ΙΨΔ;"
+    },
+    {
+      "key": "Q89a",
+      "body_page": 234,
+      "label": "Q89a. Τι ισχύει για τη συναίνεση, την έλλειψη ικανότητας λήψης απόφασης και την ακούσια θεραπεία στην Ελλάδα;"
+    },
+    {
+      "key": "Q89b",
+      "body_page": 235,
+      "label": "Q89b. Πώς συγκρίνεται το rTMS με την ECT;"
+    },
+    {
+      "key": "Q91a",
+      "body_page": 239,
+      "label": "Q91a. Τι κάνετε αν ένας ασθενής εξιδανικεύει ορισμένα μέλη του προσωπικού και απαξιώνει άλλα και η ομάδα πολώνεται;"
+    },
+    {
+      "key": "Q91b",
+      "body_page": 239,
+      "label": "Q91b. Πώς διαφέρουν η υποστηρικτική και η διερευνητική ψυχοθεραπεία;"
+    },
+    {
+      "key": "Q98a",
+      "body_page": 254,
+      "label": "Q98a. Τι κάνετε αν ένας ασθενής διατυπώνει αξιόπιστη και άμεσα επικείμενη απειλή βίας κατά αναγνωρίσιμου προσώπου;"
+    },
+    {
+      "key": "Q98b",
+      "body_page": 255,
+      "label": "Q98b. Πώς πρέπει να χειρίζεται ο ψυχίατρος τα μέσα κοινωνικής δικτύωσης;"
+    },
+    {
+      "key": "Q98c",
+      "body_page": 255,
+      "label": "Q98c. Τι ισχύει για την υποχρεωτική αναφορά ενδοοικογενειακής βίας σε βάρος ανηλίκων;"
+    }
+  ]
+}
