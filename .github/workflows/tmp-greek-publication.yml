@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-greek-publication:
@@ -41,14 +41,9 @@ jobs:
           s=s.replace("SYMBOLS=re.compile(r'([→≥≤≠])')", "SYMBOLS=re.compile(r'([→≥≤≠−])')", 1)
           s=s.replace("def plain_md(s):\n    s=re.sub(r'\\*\\*|\\*','',s)\n    return s.strip()", "def plain_md(s):\n    s=re.sub(r'\\*\\*(.+?)\\*\\*',r'\\1',s)\n    s=re.sub(r'(?<!\\w)\\*([^*]+?)\\*(?!\\w)',r'\\1',s)\n    return s.strip()", 1)
           s=s.replace("final=OUT/'The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf'", "final=OUT/'The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf'", 1)
-
           insert='''\ndef remove_unused_base14_f1(path):\n    \"\"\"Remove ReportLab's unused /F1 Helvetica resource only when no page content stream references /F1.\"\"\"\n    reader=PdfReader(str(path))\n    for page in reader.pages:\n        c=page.get_contents()\n        if c and b'/F1' in c.get_data():\n            raise RuntimeError('Refusing Helvetica cleanup: /F1 is referenced by visible page content')\n    writer=PdfWriter(clone_from=reader)\n    removed=0\n    for page in writer.pages:\n        res=page.get('/Resources')\n        fonts=res.get('/Font') if res else None\n        if fonts and '/F1' in fonts:\n            del fonts['/F1']; removed+=1\n    tmp=Path(str(path)+'.clean.tmp')\n    with tmp.open('wb') as fh:\n        writer.write(fh)\n    tmp.replace(path)\n    return removed\n\n'''
-          marker='def norm(s):\n'
-          assert marker in s
-          s=s.replace(marker,insert+marker,1)
-
-          start=s.index('def source_chunks(q):')
-          end=s.index("if __name__=='__main__':")
+          marker='def norm(s):\n'; assert marker in s; s=s.replace(marker,insert+marker,1)
+          start=s.index('def source_chunks(q):'); end=s.index("if __name__=='__main__':")
           qa_block='''def source_lines(q):\n    txt=Path(q['path']).read_text(encoding='utf-8')\n    out=[]\n    for line in txt.splitlines():\n        z=line.strip()\n        if not z or z.startswith('## '):\n            continue\n        if z.startswith('# '):\n            z=re.sub(r'^#\\s+Q\\d+\\.\\s*','',z)\n        elif z.startswith('### '):\n            z=z[4:]\n            z=re.sub(r'^Q\\d+[a-z]?\\.\\s*','',z,flags=re.I)\n        z=re.sub(r'^\\d+\\.\\s*','',z)\n        z=re.sub(r'^[-•]\\s*','',z)\n        z=plain_md(z)\n        if len(z)>=2:\n            out.append(z)\n    return out\n\ndef question_pdf_text(pdf,q,start_body,end_body,body_offset):\n    parts=[]\n    for bp in range(start_body,end_body+1):\n        p=pdf[body_offset+bp-1]\n        for line in p.get_text('text').splitlines():\n            z=line.strip()\n            if not z or z==BOOK_TITLE or re.fullmatch(r'Q\\d+',z) or re.fullmatch(r'\\d+',z):\n                continue\n            parts.append(z)\n    return norm(' '.join(parts))\n\ndef qa(final,qs,starts,body_offset):\n    pdf=fitz.open(final)\n    missing=[]; total=0\n    for q in qs:\n        st=starts[q['q']]\n        e=starts.get(q['q']+1, pdf.page_count-body_offset+1)-1\n        actual=question_pdf_text(pdf,q['q'],st,e,body_offset)\n        for src in source_lines(q):\n            total+=1\n            if norm(src) not in actual:\n                missing.append({'q':q['q'],'line':src[:260]})\n    oob=[]; repl=[]\n    for pi,page in enumerate(pdf,1):\n        for b in page.get_text('dict').get('blocks',[]):\n            for l in b.get('lines',[]):\n                for sp in l.get('spans',[]):\n                    x0,y0,x1,y1=sp['bbox']; txt=sp.get('text','')\n                    if x0 < -1 or y0 < -1 or x1 > PAGE_W+1 or y1 > PAGE_H+1:\n                        oob.append((pi,txt[:60],sp['bbox']))\n                    if '\\ufffd' in txt:\n                        repl.append((pi,txt))\n    start_errors=[]\n    for q in qs:\n        phys=body_offset+starts[q['q']]-1\n        t=pdf[phys].get_text('text')\n        if f'ΕΡΩΤΗΣΗ {q[\"q\"]}' not in t or q['title'][:25] not in t:\n            start_errors.append(q['q'])\n    fonts={}\n    for page in pdf:\n        for f in page.get_fonts(full=True): fonts[f[3]]=f\n    report={'source_commit':SOURCE_COMMIT,'questions':len(qs),'physical_pages':pdf.page_count,'body_pages':pdf.page_count-body_offset,\n      'body_offset_physical_pages':body_offset,'question_start_pages_body':starts,'source_lines_total':total,'source_lines_missing':len(missing),'missing_examples':missing[:25],\n      'out_of_bounds':len(oob),'replacement_glyphs':len(repl),'question_start_errors':start_errors,'fonts':sorted(fonts.keys()),'base14_fonts':[n for n in sorted(fonts.keys()) if n in {'Helvetica','Times-Roman','Courier','Symbol','ZapfDingbats'}]}\n    return report\n\n'''
           s=s[:start]+qa_block+s[end:]
           s=s.replace("    report=qa(final,QUESTIONS,starts,body_offset)\n", "    removed_f1_resources=remove_unused_base14_f1(final)\n    report=qa(final,QUESTIONS,starts,body_offset)\n    report['unused_f1_resources_removed']=removed_f1_resources\n", 1)
@@ -64,8 +59,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           root=Path('source/oral/100-crucial-questions/answers/revision-v3-el')
-          names=sorted(p.name for p in root.glob('Q???.md'))
-          assert names==[f'Q{i:03d}.md' for i in range(1,101)]
+          assert sorted(p.name for p in root.glob('Q???.md'))==[f'Q{i:03d}.md' for i in range(1,101)]
           print('CORPUS_OK 100/100')
           PY
 
@@ -86,8 +80,6 @@ jobs:
           pdfinfo "$PDF" > output/pdfinfo.txt
           pdffonts "$PDF" > output/pdffonts.txt
           ! grep -E 'Helvetica|Times-Roman|Courier|ZapfDingbats' output/pdffonts.txt
-          tar -czf output/greek_v3_sources_frozen.tgz -C source oral/100-crucial-questions/answers/revision-v3-el
-          git -C source ls-tree -r 63a844d881072d13fd6e33423b9e01fb8f91f0d9 -- oral/100-crucial-questions/answers/revision-v3-el > output/source_tree.txt
           cp build.log output/build.log
           sha256sum "$PDF" output/Greek_publication_master_v3.py
 
@@ -104,5 +96,22 @@ jobs:
             output/pdfinfo.txt
             output/pdffonts.txt
             output/build.log
-            output/greek_v3_sources_frozen.tgz
-            output/source_tree.txt
+
+      - name: Publish binary/master outputs to main
+        run: |
+          set -e
+          git clone --depth 1 --branch main https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git publish
+          DEST=publish/oral/100-crucial-questions/publication/final-greek-v3
+          mkdir -p "$DEST"
+          cp output/The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf "$DEST/"
+          cp output/Greek_publication_master_v3.py "$DEST/"
+          cp output/GREEK_COMPLETE_QA_report.json "$DEST/GREEK_V3_COMPLETE_QA_report.json"
+          cp output/GREEK_COMPLETE_book_manifest.json "$DEST/GREEK_V3_COMPLETE_book_manifest.json"
+          cd publish
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add oral/100-crucial-questions/publication/final-greek-v3
+          git commit -m 'publication: manufacture final Greek revision v3'
+          git push origin main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
