@@ -11,6 +11,11 @@ jobs:
   build-v4:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout tooling branch
+        uses: actions/checkout@v4
+        with:
+          path: tooling
+
       - name: Checkout current publication system
         uses: actions/checkout@v4
         with:
@@ -41,9 +46,10 @@ jobs:
           s=s.replace("SYMBOLS=re.compile(r'([→≥≤≠−])')", "SYMBOLS=re.compile(r'([→≥≤≠−↑↓↔])')")
           s=s.replace("The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf", "The_100_Crucial_Questions_in_Psychiatry_v4_GREEK_COMPLETE_A4.pdf")
           p.write_text(s,'utf-8')
-          print('MASTER_SHA256',__import__('hashlib').sha256(p.read_bytes()).hexdigest())
           PY
+          python tooling/.tmp/patch_v4_table.py /tmp/Greek_publication_master_v4.py
           python -m py_compile /tmp/Greek_publication_master_v4.py
+          sha256sum /tmp/Greek_publication_master_v4.py
 
       - name: Verify source lock
         run: |
@@ -56,6 +62,8 @@ jobs:
           assert sorted(p.name for p in root.glob('Q???.md')) == [f'Q{i:03d}.md' for i in range(1,101)]
           print('CORPUS_OK 100/100 ORDER_OK')
           PY
+          grep -R '^### Q' "$ROOT" > /tmp/followups_source.txt || true
+          grep -R '^|' "$ROOT" > /tmp/tables_source.txt || true
 
       - name: Build publication candidate
         working-directory: source
@@ -73,6 +81,8 @@ jobs:
           cp /tmp/Greek_publication_master_v4.py output/Greek_publication_master_v4.py
           cp output/GREEK_COMPLETE_QA_report.json output/GREEK_V4_COMPLETE_QA_report.json
           cp output/GREEK_COMPLETE_book_manifest.json output/GREEK_V4_COMPLETE_book_manifest.json
+          cp /tmp/followups_source.txt output/followups_source.txt
+          cp /tmp/tables_source.txt output/tables_source.txt
           pdfinfo "$PDF" > output/pdfinfo.txt
           pdffonts "$PDF" > output/pdffonts.txt
           ! grep -E 'Helvetica|Times-Roman|Courier|ZapfDingbats' output/pdffonts.txt
@@ -94,4 +104,6 @@ jobs:
             output/pdffonts.txt
             output/build.log
             output/source_tree.txt
+            output/followups_source.txt
+            output/tables_source.txt
             output/SHA256SUMS.txt
