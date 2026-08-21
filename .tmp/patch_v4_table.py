@@ -3,6 +3,7 @@ from pathlib import Path
 p=Path(sys.argv[1])
 s=p.read_text('utf-8')
 
+# 1) Parse consecutive Markdown table rows as one reusable table block.
 a=s.index('def blocks(lines):')
 b=s.index('def section_kind(h):')
 new_blocks=r'''def blocks(lines):
@@ -28,6 +29,7 @@ new_blocks=r'''def blocks(lines):
 '''
 s=s[:a]+new_blocks+s[b:]
 
+# 2) Typeset the source table inside the established publication vocabulary.
 marker='def historical_box(blks):\n'
 table_fn=r'''def markdown_table(raw_rows):
     rows=[]
@@ -48,18 +50,66 @@ table_fn=r'''def markdown_table(raw_rows):
     if n==2: widths=[35*mm,BODY_W-35*mm]
     else: widths=[BODY_W/n]*n
     tab=Table(data,colWidths=widths,hAlign='LEFT',repeatRows=1,splitByRow=1)
-    tab.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('GRID',(0,0),(-1,-1),0.35,RULE),('BACKGROUND',(0,0),(-1,0),LIGHT),('LEFTPADDING',(0,0),(-1,-1),5),('RIGHTPADDING',(0,0),(-1,-1),5),('TOPPADDING',(0,0),(-1,-1),5),('BOTTOMPADDING',(0,0),(-1,-1),5)]))
+    tab.setStyle(TableStyle([
+        ('VALIGN',(0,0),(-1,-1),'TOP'),
+        ('GRID',(0,0),(-1,-1),0.35,RULE),
+        ('BACKGROUND',(0,0),(-1,0),LIGHT),
+        ('LEFTPADDING',(0,0),(-1,-1),5),
+        ('RIGHTPADDING',(0,0),(-1,-1),5),
+        ('TOPPADDING',(0,0),(-1,-1),5),
+        ('BOTTOMPADDING',(0,0),(-1,-1),5),
+    ]))
     return tab
 
 '''
 assert marker in s
 s=s.replace(marker,table_fn+marker,1)
 
-old2="""                elif typ=='h3': story.append(Paragraph(rich(txt),styles['followq']))"""
-new2="""                elif typ=='h3': story.append(Paragraph(rich(txt),styles['followq']))\n                elif typ=='table': story.append(markdown_table(txt)); story.append(Spacer(1,2*mm))"""
-assert old2 in s
-s=s.replace(old2,new2,1)
+# 3) Add table rendering to generic sections.
+old_h3="""                elif typ=='h3': story.append(Paragraph(rich(txt),styles['followq']))"""
+new_h3="""                elif typ=='h3': story.append(Paragraph(rich(txt),styles['followq']))\n                elif typ=='table': story.append(markdown_table(txt)); story.append(Spacer(1,2*mm))"""
+assert old_h3 in s
+s=s.replace(old_h3,new_h3,1)
 
+# 4) Any learner-facing H3 whose title begins Qxx[a]. is an examiner follow-up,
+# regardless of the enclosing section. Preserve the established label/question styling,
+# tag it for PDF navigation, and keep the first answer paragraph with it when possible.
+old_generic="""            for typ,txt in blks:
+                if typ=='p': story.append(Paragraph(rich(txt),styles['body']))
+                elif typ in ('bullet','num'): story.append(Paragraph('• '+rich(txt),styles['bullet']))
+                elif typ=='h3': story.append(Paragraph(rich(txt),styles['followq']))
+                elif typ=='table': story.append(markdown_table(txt)); story.append(Spacer(1,2*mm))
+"""
+new_generic="""            i=0
+            while i<len(blks):
+                typ,txt=blks[i]
+                if typ=='p':
+                    story.append(Paragraph(rich(txt),styles['body']))
+                elif typ in ('bullet','num'):
+                    story.append(Paragraph('• '+rich(txt),styles['bullet']))
+                elif typ=='h3':
+                    m=re.match(r'(Q\\d+[a-z]?)\\.\\s*(.*)',txt,re.I)
+                    if m:
+                        key=m.group(1); qtxt=m.group(2)
+                        first=[]
+                        if i+1<len(blks) and blks[i+1][0]=='p':
+                            first=[Paragraph(rich(blks[i+1][1]),styles['body'])]
+                            i+=1
+                        story.append(KeepTogether([
+                            Paragraph('ΕΡΩΤΗΣΗ ΕΞΕΤΑΣΤΗ',styles['section']),
+                            TaggedParagraph(key+'. '+rich(qtxt),styles['followq'],f'FOLLOW:{key}'),
+                            *first
+                        ]))
+                    else:
+                        story.append(Paragraph(rich(txt),styles['followq']))
+                elif typ=='table':
+                    story.append(markdown_table(txt)); story.append(Spacer(1,2*mm))
+                i+=1
+"""
+assert old_generic in s
+s=s.replace(old_generic,new_generic,1)
+
+# 5) Source-fidelity comparison treats Markdown table cells as content, not pipe syntax.
 a=s.index('def source_lines(q):')
 b=s.index('def question_pdf_text(')
 source_fn=r'''def source_lines(q):
