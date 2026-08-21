@@ -1,158 +1,158 @@
 # Greek v4 source-use ledger
 
-Purpose: production ledger for `revision-v4-el`. It records the principal source layer actually used for each domain batch, whether v3 was retained/reworked, and any source conflict that affected learner-facing text. It is not learner-facing content.
+Purpose: internal production ledger for `answers/revision-v4-el`. It records the source layer actually used, major structural/content changes from v3, and unresolved conflicts. It is not learner-facing material.
 
-## General source policy actually used
+## Global source policy
 
-- `revision-v3-el` is used only as the Greek draft and a record of previous adjudication.
-- `Q001-Q100-board-depth-current-verification.md` controls previously adjudicated consequential current-practice claims.
-- `board-fact-anchors.yml`, `question-design.md` and `answer-archetypes.md` control exam emphasis, retrieval structure and answer architecture.
-- Direct current authoritative guidance/regulatory/statutory sources are used where a consequential operational claim needs clarification beyond the verified packet.
-- Proprietary sources are not claimed as directly consulted when they are not available in the Writer runtime; in those cases the existing verified repository layer is used.
+- `revision-v3-el` was used only as a Greek draft and record of prior adjudication, never as semantic authority.
+- `internal/revision/Q001-Q100-board-depth-current-verification.md` controlled previously adjudicated consequential current-practice claims.
+- Approved source-locked Writer briefs under `answers/briefs/` controlled their batches once available; source packets were not reopened and unsupported facts were not added from memory.
+- `board-fact-anchors.yml`, `question-design.md` and `answer-archetypes.md` controlled exam emphasis, retrieval structure and answer architecture.
+- DSM-5-TR and ICD-11 requirements were kept system-specific rather than blended.
+- Current regulatory/SmPC positions controlled licensing, monitoring and reproductive restrictions as represented in the verified repository layer.
+- Greek legal/service questions used the verified current Greek statutory layer and did not import UK/US law.
 
 ---
 
 ## Batch 01 — Q001–Q010: assessment, risk, emergencies, consent and involuntary care
 
-### Principal exam/base layer
-- `board-fact-anchors.yml` for classic psychopathology and board emphasis.
-- `question-design.md` and `answer-archetypes.md` for assessment/emergency/law answer architecture.
-- Existing v3 Greek answers as draft wording only.
+**Principal exam/base layer:** board-fact anchors, question-design/answer-archetypes, existing v3 draft.
 
-### Current diagnostic / treatment / legal layer
-- `Q001-Q100-board-depth-current-verification.md`, Q001–Q010 decisions.
-- NICE NG225 principles for self-harm/risk formulation as already adjudicated in the repository.
-- NICE NG10 for violence/aggression and rapid tranquillisation; direct NICE wording also checked for BVC/DASA-IV naming and role.
-- BAP 2023 catatonia/NMS recommendations as adjudicated in the repository.
-- Law 3418/2005 Arts 11–12 for information/consent.
-- Law 2071/1992 for involuntary admission; Law 4931/2022 Art 59 / Art 96A for transport; current procedural jurisdiction as recorded in the verified legal packet.
+**Current layer:** repository current-verification decisions; NICE NG225/NG10 where adjudicated; BAP catatonia guidance; Greek Law 3418/2005 Arts 11–12; Law 2071/1992; Law 4931/2022 Art 59 / Art 96A.
 
-### Editorial status by question
-- **Q001:** structurally rewritten; v3 clinical content retained, closing repetition reduced, board facts tightened.
-- **Q002:** structurally replaced in part; mandatory board-fact block added; Jaspers/Wernicke material clearly labelled historical.
-- **Q003:** structurally rewritten; mandatory board-fact block added; causal reasoning updated to match adjudicated formulation rather than a rigid resolution rule.
-- **Q004:** structurally rewritten; suicide-risk tools kept explicitly non-predictive for individual disposition; no unsupported PPV number.
-- **Q005:** structurally rewritten; NICE timing/intervention anchors retained; no fixed lifetime-risk/multiplier claims.
-- **Q006:** structurally rewritten; local acronym expansion added: Brøset Violence Checklist (BVC), Dynamic Appraisal of Situational Aggression – Inpatient Version (DASA-IV).
-- **Q007:** structurally rewritten; NICE regimen choices retained while exact milligram doses are deliberately not attributed to NICE; monitoring intervals remain visible.
-- **Q008:** structurally rewritten; Law 3418/2005 Arts 11–12 made visible; UK Mental Capacity Act test explicitly separated from Greek law.
-- **Q009:** structurally rewritten; two legal routes made visible as a compact checklist; Law 4931/2022 Art 59 / Art 96A retained; wrong Law 4999/2022 attribution excluded.
-- **Q010:** structurally replaced in part; the ≥3-sign threshold now shows the 12 signs being counted; Bush–Francis Catatonia Rating Scale expanded locally; malignant-catatonia 48–72 h rule explicitly scoped to malignant disease.
+**Editorial status:** structurally rewritten. Q006 locally expands Brøset Violence Checklist and Dynamic Appraisal of Situational Aggression – Inpatient Version; Q008 separates clinical decision-making assessment from Greek statutory consent; Q009 exposes both Greek involuntary-admission routes; Q010 makes the ≥3-sign catatonia denominator visible and locally expands the Bush–Francis Catatonia Rating Scale.
 
-### Source upgrades that changed v3 content
-- Q006: tool names expanded from acronyms and their inpatient monitoring role clarified.
-- Q008: statutory Articles 11–12 exposed in the learner-facing board-fact layer.
-- Q009: transport statute and Art 96A made explicit in the main package.
-- Q010: diagnostic denominator made visible; BFCRS item counts and BAP malignant-catatonia regimen moved into explicit board facts.
+**Changes from v3:** unsupported fixed risk statistics removed; legal article anchors exposed; catatonia/emergency recommendations scoped to verified authority.
 
-### Unresolved source conflicts
-- Routine Greek national availability/protocol status of alternative parenteral agents for acute behavioural disturbance remains unresolved in the verified packet; no national availability claim was added.
-- No other Batch 01 source conflict blocks the manuscript.
+**Unresolved:** routine Greek national availability/protocol status of alternative parenteral agents for acute behavioural disturbance remains unresolved; no national availability claim was added.
 
 ---
 
 ## Batch 02 — Q011–Q019: psychosis and schizophrenia
 
-### Principal exam/base layer
-- `board-fact-anchors.yml` for Schneiderian phenomenology, schizophrenia duration distinctions, TRS and clozapine board anchors.
-- `question-design.md` and `answer-archetypes.md` for disorder, treatment, differential and drug-question structure.
-- Existing v3 Greek answers used as draft wording only.
+**Principal exam/base layer:** board-fact anchors for Schneiderian phenomenology, schizophrenia duration, TRS/clozapine; approved Q011–Q019 brief; v3 as draft wording.
 
-### Current diagnostic / treatment / regulatory layer
-- `Q001-Q100-board-depth-current-verification.md`, Q011–Q019 decisions.
-- DSM-5-TR and ICD-11 schizophrenia/schizoaffective architecture as represented in the verified source layer; ICD-11 operational domains additionally checked against current WHO-linked comparative material.
-- NICE CG178 for FEP/acute/maintenance treatment principles and the clozapine pathway.
-- TRRIP consensus for treatment-response/resistance definitions.
-- EMA/PRAC 2025 clozapine neutropenia-monitoring update and current SmPC rules as captured in the verified packet.
+**Current layer:** DSM-5-TR/ICD-11 architecture as adjudicated; NICE CG178; TRRIP consensus; EMA/PRAC 2025 clozapine monitoring update and current SmPC rules represented in the verified packet.
 
-### Editorial status by question
-- **Q011:** structurally rewritten; mandatory board-fact block added; FEP kept diagnostically open; fixed response-rate/half-dose claims excluded.
-- **Q012:** structurally replaced in part; DSM-5-TR 2/5 criteria and ICD-11 2/7 domains made visible; historical Schneider/subtype material retained only as historical exam content.
-- **Q013:** structurally rewritten as a discrimination answer; DSM-5-TR versus ICD-11 schizoaffective logic shown in a compact comparison table.
-- **Q014:** structurally rewritten; established striatal dopamine evidence separated from heuristic cortical-dopamine and NMDA models; group imaging explicitly non-diagnostic.
-- **Q015:** structurally rewritten; outcome-thirds and fixed suicide/prognosis percentages excluded; broad mortality gap retained only as context.
-- **Q016:** structurally rewritten; 4–6-week adequate trial retained; early non-improvement kept prognostic rather than an automatic switch rule; CBTp expanded locally.
-- **Q017:** structurally rewritten; maintenance duration individualized; NICE 1–2-year relapse-risk and 2-year post-discontinuation monitoring anchors retained; LAI expanded locally.
-- **Q018:** structurally replaced in part; TRRIP operational requirements made visible and separated from the distinct NICE non-clozapine-SGA requirement before clozapine.
-- **Q019:** structurally rewritten; ANC/BEN/TDM expanded locally; 2025 European monitoring schedule retained; severe-neutropenia rechallenge language softened to match the verified specialist-exception nuance.
+**Editorial status:** structurally rewritten. Q012 exposes DSM-5-TR 2/5 and ICD-11 2/7 sets separately; Q013 separates DSM/ICD schizoaffective logic; Q018 separates TRRIP operational resistance from NICE clozapine sequencing; Q019 expands ANC/BEN/TDM locally and retains the 2025 European ANC update.
 
-### Source upgrades that changed v3 content
-- Q012: operational DSM/ICD denominators are now visible rather than implied by prose.
-- Q013: system-specific schizoaffective rules are structurally separated to prevent hybrid criteria.
-- Q018: removed the false attribution that TRRIP itself requires one SGA trial.
-- Q019: current 2025 European ANC schedule and restart rule remain explicit, while the rechallenge statement is no longer an unqualified universal “never”.
+**Changes from v3:** hybrid diagnostic wording removed; false TRRIP one-SGA attribution removed; severe-neutropenia rechallenge language softened to the verified specialist-exception position.
 
-### Unresolved source conflicts
-- No Batch 02 source conflict blocks the manuscript. Product-specific clozapine safety decisions remain governed by current SmPC/regulatory context rather than a single manuscript-wide rule.
+**Unresolved:** no blocking conflict; product-specific clozapine safety remains governed by current SmPC/regulatory context.
 
 ---
 
 ## Batch 03 — Q020–Q027: depression, bipolar disorder and perinatal psychiatry
 
-### Principal exam/base layer
-- Approved source-locked Writer brief `answers/briefs/Q020-Q027-batch.md`, which reconciles the Oxford/base map with the targeted current-verification delta.
-- Existing v3 answers used only for broad Greek phrasing/continuity; the approved brief controlled factual content and omissions.
+**Principal factual authority:** `answers/briefs/Q020-Q027-batch.md`.
 
-### Current diagnostic / treatment / regulatory layer
-- ICD-11 current depressive-episode architecture as specified in the approved brief.
-- Current depression and bipolar treatment guidance as adjudicated into the approved brief, including NICE and CANMAT/ISBD distinctions.
-- Current EU product/licensing distinctions for esketamine, cariprazine, lurasidone and zuranolone as explicitly assigned in the brief.
-- Current EU/Greek valproate reproductive restrictions, including paternal-exposure precautions, as assigned in the brief.
+**Current layer represented in brief:** ICD-11 depressive/bipolar architecture; current depression/bipolar guidance; EU product/regulatory distinctions; current valproate reproductive precautions; perinatal guidance.
 
-### Editorial status by question
-- **Q020:** structurally replaced in part; the ICD-11 ≥5/10 denominator now shows all 10 counted symptoms; DSM terminology and current ICD-11 longitudinal labels are separated; PMDD versus premenstrual exacerbation retained as a focused follow-up.
-- **Q021:** structurally rewritten; removed the rigid mild/moderate/severe treatment ladder; 4-week reassessment and ≥6-month continuation anchors are explicit; ECT is positioned according to urgency rather than as an automatic last resort.
-- **Q022:** structurally rewritten; conventional TRD is separated from pseudoresistance and difficult-to-treat depression; switch versus augmentation logic is explicit; rTMS and esketamine are placed with their appropriate evidence/licensing caveats.
-- **Q023:** structurally rewritten as a longitudinal discrimination answer; mania/hypomania, bipolar I/II, ADHD, borderline affective instability, psychosis and antidepressant-emergent episodes are separated without mixing DSM and ICD duration wording.
-- **Q024:** structurally rewritten; guideline sequencing differences are made explicit rather than averaged; severe-mania combination treatment is visible; full current valproate reproductive restrictions are attached to use.
-- **Q025:** structurally rewritten; bipolar depression is separated from unipolar treatment logic; antidepressant monotherapy in bipolar I is excluded; international cariprazine/lurasidone evidence is distinguished from current EU licensing.
-- **Q026:** structurally rewritten around polarity, prior response and relapse prevention; lithium remains central; lamotrigine phase specificity and current valproate reproductive restrictions are explicit.
-- **Q027:** structurally rewritten as an emergency answer; first-2-weeks timing, bipolar-spectrum relationship, mother/infant safety, MBU preference and early ECT are visible; breastfeeding remains drug-specific; postpartum-depression follow-up includes the current EU zuranolone update without claiming Greek availability.
+**Editorial status:** Q020 exposes the full ICD-11 ≥5/10 depressive denominator; Q021 removes a rigid severity ladder; Q022 distinguishes TRD from pseudoresistance/DTD; Q023 emphasises longitudinal bipolar diagnosis; Q024/Q026 attach current valproate restrictions; Q025 separates international evidence from EU licensing; Q027 treats postpartum psychosis as an emergency and retains the bounded EU zuranolone update.
 
-### Source upgrades that changed v3 content
-- Q020: current ICD-11 5/10 architecture replaces older ICD-10-style core-symptom framing as current diagnostic truth.
-- Q021: current treatment selection is no longer represented as a categorical severity ladder.
-- Q022: rTMS is treated as established rather than experimental; esketamine licensing is separated from recommendation/access.
-- Q023: ICD-11 bipolar I/II architecture and the antidepressant-emergent persistence rule are made explicit.
-- Q024/Q026: current valproate reproductive restrictions in women and men are mandatory and visible.
-- Q025: international bipolar-depression evidence for cariprazine/lurasidone is not converted into a false EU bipolar indication.
-- Q027: postpartum psychosis is framed as a bipolar-spectrum emergency; 2025 EU zuranolone authorisation is kept as a bounded current-practice update.
+**Changes from v3:** older severity ladders, fixed outcome statistics and outdated valproate assumptions removed/qualified; cariprazine/lurasidone not presented as EU bipolar-depression indications.
 
-### Unresolved source conflicts
-- Greek commercial availability/reimbursement of esketamine and zuranolone was not verified in the approved brief; no availability claim was made.
-- No other Batch 03 source conflict blocks the manuscript.
+**Unresolved:** Greek routine access/reimbursement for esketamine and zuranolone not verified; no availability claim made.
 
 ---
 
 ## Batch 04 — Q028–Q036: anxiety, OCD, trauma, dissociation and FND
 
-### Principal exam/base layer
-- Approved source-locked Writer brief `answers/briefs/Q028-Q036-batch.md`; it controlled factual content, classification distinctions and assigned follow-ups.
-- Existing v3 Greek answers used only as draft-language continuity, not as authority.
+**Principal factual authority:** `answers/briefs/Q028-Q036-batch.md`.
 
-### Current diagnostic / treatment layer
-- Current ICD-11/DSM-5-TR architecture as reconciled in the approved brief.
-- Current guideline treatment principles for panic/agoraphobia, GAD, social anxiety, OCD and PTSD as specified in that brief.
-- Current FND rule-in model and dissociative/somatic classification distinctions as specified in that brief.
+**Editorial status:** Q028 separates panic disorder from agoraphobia; Q029 separates DSM 6-month GAD from ICD-11 “several months”; Q031 preserves ERP + SSRI and up-to-12-week trial logic without automatic supra-licensed dosing; Q032 exposes ICD-11 PTSD/CPTSD architecture; Q033 separates DSM ASD from ICD-11 Acute Stress Reaction; Q034/Q036 retain DSM/ICD FND-placement differences; Q035 removes the obsolete “medically unexplained” requirement; Q036 uses positive rule-in FND and distinguishes factitious disorder/malingering by intentionality.
 
-### Editorial status by question
-- **Q028:** structurally rewritten; panic attacks are explicitly transdiagnostic; panic disorder and agoraphobia are separated as current ICD-11 diagnoses; exposure-based CBT and SSRI/SNRI remain central.
-- **Q029:** structurally rewritten; DSM 6-month duration is separated from ICD-11 “several months”; pregabalin is positioned as an intolerance alternative rather than routine co-first-line treatment.
-- **Q030:** structurally rewritten around fear of negative evaluation, impairment and differential with avoidant personality disorder/autism; beta-blockers are excluded as a standard treatment pillar.
-- **Q031:** structurally rewritten; obsessions/compulsions and insight are clarified; ERP locally expanded; SSRI trial duration up to 12 weeks and licensed-range dose optimisation are explicit; hoarding retained as a separate follow-up disorder.
-- **Q032:** structurally rewritten using the compact ICD-11 three-domain PTSD architecture; CPTSD disturbances in self-organisation are visible; trauma-focused CBT/EMDR are prioritised and routine debriefing excluded.
-- **Q033:** structurally replaced in part; DSM Acute Stress Disorder and ICD-11 Acute Stress Reaction are explicitly separated; the 3-day–1-month DSM window and adjustment-disorder architecture are visible.
-- **Q034:** structurally rewritten; depersonalisation/derealisation, amnesia/fugue and identity disturbance are organised phenomenologically; ICD versus DSM placement of functional neurological symptoms is explicit.
-- **Q035:** structurally rewritten; “medically unexplained” is explicitly rejected as a requirement; DSM SSD/IAD are separated from ICD-11 bodily distress disorder/hypochondriasis.
-- **Q036:** structurally replaced in part; FND is presented as positive/involuntary rule-in diagnosis with phenotype-specific signs; trauma is not required; diagnostic explanation and factitious/malingering discrimination are retained as assigned follow-ups.
+**Changes from v3:** legacy panic-with-agoraphobia architecture, universal GAD 6-month wording, preventive debriefing, medically-unexplained requirements and diagnosis-of-exclusion FND framing removed.
 
-### Source upgrades that changed v3 content
-- Q028: obsolete “panic disorder with/without agoraphobia” architecture is labelled historical.
-- Q029/Q033: DSM-specific duration rules are no longer presented as universal ICD rules.
-- Q031: OCD remains outside the anxiety-disorder grouping; high-dose SSRI language is constrained to licensed/SmPC optimisation.
-- Q032: ICD-11 PTSD/CPTSD architecture replaces broad checklist-style teaching in the main answer.
-- Q035: negative investigations are no longer treated as a diagnostic requirement for somatic symptom/bodily distress disorders.
-- Q036: FND is no longer framed as diagnosis of exclusion or trauma-dependent disorder.
+**Unresolved:** none blocking.
 
-### Unresolved source conflicts
-- No Batch 04 source conflict blocks the manuscript.
+---
+
+## Batch 05 — Q037–Q044: substance use and behavioural addictions
+
+**Principal factual authority:** `answers/briefs/Q037-Q044-batch.md`.
+
+**Editorial status:** Q037 uses current ICD-11 substance architecture and tobacco-smoke CYP1A2 logic; Q038 retains CIWA-Ar as adjunct and current parenteral Wernicke treatment; Q040 centres OAT and the July 2025 Greek naloxone update; Q041 keeps cannabis–psychosis language associative; Q042 removes the absolute cocaine/beta-blocker prohibition; Q043 uses symptom-responsive benzodiazepine tapering; Q044 uses ICD-11 addictive-behaviour classification and specialist second-line naltrexone.
+
+**Changes from v3:** nicotine is not identified as the CYP1A2 inducer; Wernicke does not require the full triad; OUD is not detox-centred; fixed Ashton schedules are not universal current standards.
+
+**QA:** learner-facing Greek normalized in `49e9b34eb6e40fc4b0c28b6f23d5dea5190289ea` without changing approved factual content.
+
+**Unresolved:** none blocking.
+
+---
+
+## Batch 06 — Q045–Q058: delirium, dementia, neuropsychiatry and liaison
+
+**Principal factual authorities:** `answers/briefs/Q045-Q051-batch.md` and `answers/briefs/Q052-Q058-batch.md`.
+
+**Editorial status:** Q045 uses 4AT in general hospital/long-term care and CAM-ICU/ICDSC in critical care; Q046 keeps biomarkers adjunctive; Q047 includes restricted EU anti-amyloid treatment/ARIA safety; Q048 makes RBD a DLB core feature and the one-year rule operational; Q049 rejects routine AChEI/memantine for FTD; Q050 uses the VCI spectrum; Q051 searches reversible drivers before BPSD medication; Q052/Q056 use Greek capacity law; Q053 uses the autoimmune-encephalitis red-flag/CSF/EEG/MRI/immunotherapy pathway; Q054 uses modern functional/dissociative seizure terminology; Q055 is rehabilitation-centred; Q057 separates apathy from depression; Q058 keeps insight characteristic but not absolutely mandatory in Charles Bonnet syndrome.
+
+**Changes from v3:** outdated CAM-centred, “no disease-modifying AD treatment”, old DLB triad, generic dementia-drug and UK-capacity assumptions replaced.
+
+**QA:** learner-facing Greek normalized in `e613f5bc649b1015f1cee278f608cd738d17aba4`.
+
+**Unresolved:** routine Greek access/reimbursement for lecanemab/donanemab and European/Greek availability of pimavanserin for Parkinson psychosis were not verified; no routine-access claim made.
+
+---
+
+## Batch 07 — Q059–Q073: neurodevelopmental, eating, sleep, personality and sexual/gender topics
+
+**Principal factual authority:** `answers/briefs/Q059-Q073-batch.md`.
+
+**Editorial status:** Q059 uses symptoms-before-12 and does not require childhood paperwork; Q060 treats masking/camouflaging as possible obscuring behaviour, not proof; Q061 centres adaptive functioning and diagnostic overshadowing; Q062 removes fixed BMI/amenorrhoea AN criteria and distinguishes ARFID; Q063 uses MEED multidomain risk and monitored refeeding; Q064 retains fluoxetine 60 mg/day only as adjunct in adult BN; Q065 keeps CBT-I first-line and adds daridorexant as a selected EU option; Q066 differentiates narcolepsy types and includes RBD/synucleinopathy; Q067 gives concise N1/N2/N3/REM retrieval; Q068 uses ICD-11 severity + five trait domains; Q069 makes structured psychotherapy primary for BPD; Q070 separates ASPD from psychopathy; Q071–Q073 use current ICD-11 sexual-health/non-pathologising architecture.
+
+**Changes from v3:** age-7 ADHD, old IQ severity bins, amenorrhoea/BMI 17.5 AN criteria, MARSIPAN, universal slow refeeding, categorical ICD-10 personality architecture and pathologising sexual/gender framing removed.
+
+**QA:** first Greek-prose normalization in `a243e6d090ed5b21ae2eb5e9de9c703b9eb42dc9`; final local acronym/instrument expansion and Greek-prose pass in `b3c6bf7bf36b077b22aef4cc92835b8bae03f08c`.
+
+**Unresolved:** no specific Greek gender-health service pathway verified; none invented. Routine Greek availability of daridorexant not asserted.
+
+---
+
+## Batch 08 — Q074–Q083: core psychopharmacology through lamotrigine
+
+**Principal factual authority:** `answers/briefs/Q074-Q089-batch.md` for Q074–Q083.
+
+**Editorial status:** Q074/Q075 organise PK/PD/interactions clinically; Q076 individualises antipsychotic choice and preserves clozapine after two adequate failures; Q077 covers EPS and Jan 2026 EU deutetrabenazine authorisation; Q078 preserves risk-dependent ECG/QT and clozapine-myocarditis nuance; Q080 preserves MAOI switching facts; Q081 exposes current lithium targets/monitoring; Q082 preserves valproate restrictions for women and men; Q083 retains slow titration and valproate/contraception/pregnancy interactions.
+
+**Consequential anchors retained:** fluoxetine→irreversible MAOI ≥5 weeks; irreversible MAOI→fluoxetine ≥2 weeks; lithium 0.6–0.8 mmol/L with selected 0.8–1.0 mmol/L and ~12 h sampling; lithium monitoring intervals as assigned; valproate male precautions for 3 months after stopping; estrogen-containing contraception can approximately double lamotrigine clearance.
+
+**QA:** initial source-faithful batch had excessive mixed-language prose; normalized in `0af1437ed4dc7754a5f23b51abd0cdcec4279f8c` without altering prescribing facts.
+
+**Unresolved:** routine Greek availability/reimbursement of deutetrabenazine not verified.
+
+---
+
+## Batch 09 — Q084–Q089: benzodiazepines/hypnotics, ADHD medication, reproductive psychopharmacology, emergencies and ECT
+
+**Principal factual authority:** `answers/briefs/Q074-Q089-batch.md` for Q084–Q089.
+
+**Editorial status:** Q084 uses individualized benzodiazepine tapering; Q085 preserves adult ADHD sequence and risk-dependent ECG; Q086 frames pregnancy as maternal-illness risk versus drug-specific fetal/neonatal risk; Q087 uses clonus/hyperreflexia to discriminate serotonin syndrome from NMS; Q088 exposes QRS >100 ms and IV sodium bicarbonate indications in TCA overdose; Q089 presents ECT as a high-efficacy urgent option where appropriate and separates Greek consent principles from the unresolved ECT-specific authorization pathway.
+
+**Unresolved:** **material legal gap** — current official Greek ECT-specific authorization procedure when the patient lacks decision-making capacity or urgent non-consensual ECT is contemplated was not verified. No UK rule or invented court/prosecutor/second-opinion mechanism was added.
+
+---
+
+## Batch 10 — Q090–Q100: psychotherapies, neuroscience/genetics, evidence appraisal and Greek law/services
+
+**Principal factual authority:** `answers/briefs/Q090-Q100-batch.md`.
+
+**Editorial status:** Q090–Q093 present CBT, transference/countertransference, IPT and psychoeducation as viva answers; Q094–Q096 avoid deterministic circuit/genetic claims; Q097 emphasises design, bias, effect size/CI, absolute risk, clinical significance, preregistration and totality of evidence; Q098 uses Greek confidentiality law (Law 3418/2005 Art 13, Penal Code 371, verified Art 232 threat nuance) without importing Tarasoff; Q099 uses Penal Code Arts 34/36; Q100 uses Law 5129/2024 and the current Ε.Δ.Υ.Ψ.Υ./seven Πε.Δ.Υ.Ψ.Υ. architecture.
+
+**Changes from v3:** foreign legal formulations and outdated Greek service architecture replaced; heritability/polygenic risk explicitly separated from individual determinism; PRS not presented as routine standalone clinical test.
+
+**Unresolved:** 2026 mental-health service reform remains in active implementation; the manuscript states the verified statutory top-level architecture without claiming every legacy local term or operational arrangement has disappeared.
+
+---
+
+## Corpus-wide unresolved source conflicts
+
+No unresolved conflict required a fabricated learner-facing answer. Remaining uncertainties were handled by narrowing claims:
+
+1. Greek routine availability of several newer medicines/interventions was not inferred from EU licensing.
+2. Greek national availability/protocol status of some alternative parenteral agents for behavioural emergencies remains unresolved.
+3. The ECT-specific Greek authorization procedure for incapacity/urgent non-consensual treatment remains unresolved and is explicitly flagged in Q089.
+4. The ongoing 2026 Greek community-service reorganization is described at the verified statutory top level without overclaiming local completion.
+
+These points should be checked at final adjudication before publication, but none justified inventing law, licensing or service facts.
