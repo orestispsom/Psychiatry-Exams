@@ -1,11 +1,11 @@
-name: Temporary Greek v3 publication build
+name: Temporary Greek v4 publication build
 
 on:
   pull_request:
     branches: [main]
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build-greek-publication:
@@ -16,10 +16,10 @@ jobs:
         with:
           path: tooling
 
-      - name: Checkout frozen Greek v3 source snapshot
+      - name: Checkout locked Greek v4 source snapshot
         uses: actions/checkout@v4
         with:
-          ref: 63a844d881072d13fd6e33423b9e01fb8f91f0d9
+          ref: 2292f01056d4b4f545d5efadf47e4243a1b3b2c0
           path: source
 
       - name: Install publication dependencies
@@ -27,20 +27,20 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-noto-core fonts-noto-extra poppler-utils ghostscript
           python -m pip install --quiet reportlab pymupdf pypdf
-          gzip -dc tooling/.tmp/greek_publication_build.py.gz > /tmp/Greek_publication_master_v3.py
+          gzip -dc tooling/.tmp/greek_publication_build.py.gz > /tmp/Greek_publication_master_v4.py
 
-      - name: Apply final v3 production-only fixes to established master
+      - name: Adapt established Greek publication master to locked v4 corpus
         run: |
           python - <<'PY'
           from pathlib import Path
-          p=Path('/tmp/Greek_publication_master_v3.py')
+          p=Path('/tmp/Greek_publication_master_v4.py')
           s=p.read_text('utf-8')
           s=s.replace('import fitz\n', 'import fitz\nfrom pypdf import PdfReader, PdfWriter\n', 1)
-          s=s.replace("SRC = Path(os.environ.get('GREEK_SRC','oral/100-crucial-questions/answers/revision-v2-el'))", "SRC = Path(os.environ.get('GREEK_SRC','oral/100-crucial-questions/answers/revision-v3-el'))", 1)
-          s=s.replace("SOURCE_COMMIT=os.environ.get('SOURCE_COMMIT','ab617961440309f7f32677c56122b3f525215c03')", "SOURCE_COMMIT=os.environ.get('SOURCE_COMMIT','63a844d881072d13fd6e33423b9e01fb8f91f0d9')", 1)
+          s=s.replace("SRC = Path(os.environ.get('GREEK_SRC','oral/100-crucial-questions/answers/revision-v2-el'))", "SRC = Path(os.environ.get('GREEK_SRC','oral/100-crucial-questions/answers/final-v4-el'))", 1)
+          s=s.replace("SOURCE_COMMIT=os.environ.get('SOURCE_COMMIT','ab617961440309f7f32677c56122b3f525215c03')", "SOURCE_COMMIT=os.environ.get('SOURCE_COMMIT','2292f01056d4b4f545d5efadf47e4243a1b3b2c0')", 1)
           s=s.replace("SYMBOLS=re.compile(r'([→≥≤≠])')", "SYMBOLS=re.compile(r'([→≥≤≠−])')", 1)
           s=s.replace("def plain_md(s):\n    s=re.sub(r'\\*\\*|\\*','',s)\n    return s.strip()", "def plain_md(s):\n    s=re.sub(r'\\*\\*(.+?)\\*\\*',r'\\1',s)\n    s=re.sub(r'(?<!\\w)\\*([^*]+?)\\*(?!\\w)',r'\\1',s)\n    return s.strip()", 1)
-          s=s.replace("final=OUT/'The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf'", "final=OUT/'The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf'", 1)
+          s=s.replace("final=OUT/'The_100_Crucial_Questions_in_Psychiatry_v2_GREEK_COMPLETE_A4.pdf'", "final=OUT/'The_100_Crucial_Questions_in_Psychiatry_v4_GREEK_COMPLETE_A4.pdf'", 1)
           insert='''\ndef remove_unused_base14_f1(path):\n    \"\"\"Remove ReportLab's unused /F1 Helvetica resource only when no page content stream references /F1.\"\"\"\n    reader=PdfReader(str(path))\n    for page in reader.pages:\n        c=page.get_contents()\n        if c and b'/F1' in c.get_data():\n            raise RuntimeError('Refusing Helvetica cleanup: /F1 is referenced by visible page content')\n    writer=PdfWriter(clone_from=reader)\n    removed=0\n    for page in writer.pages:\n        res=page.get('/Resources')\n        fonts=res.get('/Font') if res else None\n        if fonts and '/F1' in fonts:\n            del fonts['/F1']; removed+=1\n    tmp=Path(str(path)+'.clean.tmp')\n    with tmp.open('wb') as fh:\n        writer.write(fh)\n    tmp.replace(path)\n    return removed\n\n'''
           marker='def norm(s):\n'; assert marker in s; s=s.replace(marker,insert+marker,1)
           start=s.index('def source_chunks(q):'); end=s.index("if __name__=='__main__':")
@@ -51,67 +51,58 @@ jobs:
           p.write_text(s,'utf-8')
           print('MASTER_SHA256',__import__('hashlib').sha256(p.read_bytes()).hexdigest())
           PY
-          python -m py_compile /tmp/Greek_publication_master_v3.py
+          python -m py_compile /tmp/Greek_publication_master_v4.py
 
-      - name: Verify frozen corpus
+      - name: Verify locked corpus and ordering
         run: |
-          test "$(find source/oral/100-crucial-questions/answers/revision-v3-el -maxdepth 1 -type f -name 'Q???.md' | wc -l)" -eq 100
+          set -e
+          test "$(find source/oral/100-crucial-questions/answers/final-v4-el -maxdepth 1 -type f -name 'Q???.md' | wc -l)" -eq 100
           python - <<'PY'
           from pathlib import Path
-          root=Path('source/oral/100-crucial-questions/answers/revision-v3-el')
-          assert sorted(p.name for p in root.glob('Q???.md'))==[f'Q{i:03d}.md' for i in range(1,101)]
-          print('CORPUS_OK 100/100')
+          root=Path('source/oral/100-crucial-questions/answers/final-v4-el')
+          names=sorted(p.name for p in root.glob('Q???.md'))
+          assert names==[f'Q{i:03d}.md' for i in range(1,101)], names
+          required=['## Άξονας ανάκλησης','## Πρότυπη προφορική απάντηση','## Βασικά σημεία για τις εξετάσεις','## Συχνές παγίδες / παγίδες εξεταστή']
+          for p in sorted(root.glob('Q???.md')):
+              txt=p.read_text('utf-8')
+              assert txt.startswith('# Q'), p
+              for h in required: assert h in txt, (p,h)
+          print('CORPUS_OK 100/100 ORDER_OK STRUCTURE_OK')
           PY
 
-      - name: Build Greek v3 A4 book
+      - name: Build Greek v4 A4 book
         working-directory: source
         env:
-          GREEK_SRC: oral/100-crucial-questions/answers/revision-v3-el
+          GREEK_SRC: oral/100-crucial-questions/answers/final-v4-el
           GREEK_OUT: ../output
-          SOURCE_COMMIT: 63a844d881072d13fd6e33423b9e01fb8f91f0d9
-        run: python /tmp/Greek_publication_master_v3.py | tee ../build.log
+          SOURCE_COMMIT: 2292f01056d4b4f545d5efadf47e4243a1b3b2c0
+        run: python /tmp/Greek_publication_master_v4.py | tee ../build.log
 
       - name: Technical PDF checks
         run: |
           set -e
-          PDF=output/The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf
+          PDF=output/The_100_Crucial_Questions_in_Psychiatry_v4_GREEK_COMPLETE_A4.pdf
           test -f "$PDF"
-          cp /tmp/Greek_publication_master_v3.py output/Greek_publication_master_v3.py
+          cp /tmp/Greek_publication_master_v4.py output/Greek_publication_master_v4.py
           pdfinfo "$PDF" > output/pdfinfo.txt
           pdffonts "$PDF" > output/pdffonts.txt
           ! grep -E 'Helvetica|Times-Roman|Courier|ZapfDingbats' output/pdffonts.txt
+          git -C source ls-tree -r 2292f01056d4b4f545d5efadf47e4243a1b3b2c0 -- oral/100-crucial-questions/answers/final-v4-el > output/source_tree.txt
           cp build.log output/build.log
-          sha256sum "$PDF" output/Greek_publication_master_v3.py
+          sha256sum "$PDF" output/Greek_publication_master_v4.py > output/SHA256SUMS.txt
 
-      - name: Upload Greek v3 publication artifact
+      - name: Upload Greek v4 publication artifact
         uses: actions/upload-artifact@v4
         with:
-          name: greek-v3-publication-candidate
+          name: greek-v4-publication-candidate
           if-no-files-found: error
           path: |
-            output/The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf
-            output/Greek_publication_master_v3.py
+            output/The_100_Crucial_Questions_in_Psychiatry_v4_GREEK_COMPLETE_A4.pdf
+            output/Greek_publication_master_v4.py
             output/GREEK_COMPLETE_book_manifest.json
             output/GREEK_COMPLETE_QA_report.json
             output/pdfinfo.txt
             output/pdffonts.txt
             output/build.log
-
-      - name: Publish binary/master outputs to main
-        run: |
-          set -e
-          git clone --depth 1 --branch main https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git publish
-          DEST=publish/oral/100-crucial-questions/publication/final-greek-v3
-          mkdir -p "$DEST"
-          cp output/The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf "$DEST/"
-          cp output/Greek_publication_master_v3.py "$DEST/"
-          cp output/GREEK_COMPLETE_QA_report.json "$DEST/GREEK_V3_COMPLETE_QA_report.json"
-          cp output/GREEK_COMPLETE_book_manifest.json "$DEST/GREEK_V3_COMPLETE_book_manifest.json"
-          cd publish
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add oral/100-crucial-questions/publication/final-greek-v3
-          git commit -m 'publication: manufacture final Greek revision v3'
-          git push origin main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            output/source_tree.txt
+            output/SHA256SUMS.txt
