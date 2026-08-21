@@ -121,3 +121,38 @@ Purpose: production ledger for `revision-v4-el`. It records the principal source
 ### Unresolved source conflicts
 - Greek commercial availability/reimbursement of esketamine and zuranolone was not verified in the approved brief; no availability claim was made.
 - No other Batch 03 source conflict blocks the manuscript.
+
+---
+
+## Batch 04 — Q028–Q036: anxiety, OCD, trauma, dissociation and FND
+
+### Principal exam/base layer
+- Approved source-locked Writer brief `answers/briefs/Q028-Q036-batch.md`; it controlled factual content, classification distinctions and assigned follow-ups.
+- Existing v3 Greek answers used only as draft-language continuity, not as authority.
+
+### Current diagnostic / treatment layer
+- Current ICD-11/DSM-5-TR architecture as reconciled in the approved brief.
+- Current guideline treatment principles for panic/agoraphobia, GAD, social anxiety, OCD and PTSD as specified in that brief.
+- Current FND rule-in model and dissociative/somatic classification distinctions as specified in that brief.
+
+### Editorial status by question
+- **Q028:** structurally rewritten; panic attacks are explicitly transdiagnostic; panic disorder and agoraphobia are separated as current ICD-11 diagnoses; exposure-based CBT and SSRI/SNRI remain central.
+- **Q029:** structurally rewritten; DSM 6-month duration is separated from ICD-11 “several months”; pregabalin is positioned as an intolerance alternative rather than routine co-first-line treatment.
+- **Q030:** structurally rewritten around fear of negative evaluation, impairment and differential with avoidant personality disorder/autism; beta-blockers are excluded as a standard treatment pillar.
+- **Q031:** structurally rewritten; obsessions/compulsions and insight are clarified; ERP locally expanded; SSRI trial duration up to 12 weeks and licensed-range dose optimisation are explicit; hoarding retained as a separate follow-up disorder.
+- **Q032:** structurally rewritten using the compact ICD-11 three-domain PTSD architecture; CPTSD disturbances in self-organisation are visible; trauma-focused CBT/EMDR are prioritised and routine debriefing excluded.
+- **Q033:** structurally replaced in part; DSM Acute Stress Disorder and ICD-11 Acute Stress Reaction are explicitly separated; the 3-day–1-month DSM window and adjustment-disorder architecture are visible.
+- **Q034:** structurally rewritten; depersonalisation/derealisation, amnesia/fugue and identity disturbance are organised phenomenologically; ICD versus DSM placement of functional neurological symptoms is explicit.
+- **Q035:** structurally rewritten; “medically unexplained” is explicitly rejected as a requirement; DSM SSD/IAD are separated from ICD-11 bodily distress disorder/hypochondriasis.
+- **Q036:** structurally replaced in part; FND is presented as positive/involuntary rule-in diagnosis with phenotype-specific signs; trauma is not required; diagnostic explanation and factitious/malingering discrimination are retained as assigned follow-ups.
+
+### Source upgrades that changed v3 content
+- Q028: obsolete “panic disorder with/without agoraphobia” architecture is labelled historical.
+- Q029/Q033: DSM-specific duration rules are no longer presented as universal ICD rules.
+- Q031: OCD remains outside the anxiety-disorder grouping; high-dose SSRI language is constrained to licensed/SmPC optimisation.
+- Q032: ICD-11 PTSD/CPTSD architecture replaces broad checklist-style teaching in the main answer.
+- Q035: negative investigations are no longer treated as a diagnostic requirement for somatic symptom/bodily distress disorders.
+- Q036: FND is no longer framed as diagnosis of exclusion or trauma-dependent disorder.
+
+### Unresolved source conflicts
+- No Batch 04 source conflict blocks the manuscript.
