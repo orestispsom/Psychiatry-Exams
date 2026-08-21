@@ -60,7 +60,7 @@
     "high_resolution_stress_pages_physical": [1, 2, 4, 5, 22, 49, 169, 237, 255, 256, 264, 265, 266],
     "grayscale_stress_status": "PASS",
     "independent_ghostscript_renderer_status": "PASS",
-    "remote_publication_build_pixel_parity_vs_manually_reviewed_build": {
+    "pushed_main_pdf_pixel_parity_vs_manually_reviewed_build": {
       "pages_compared": 266,
       "dpi": 100,
       "changed_pages": 0
@@ -73,8 +73,10 @@
     "xfa": false,
     "page_size": "A4"
   },
-  "pdf_sha256": "795cb6eb42d36919f4c5cc85dfe6729f6e1842fcc81f579b06123b47426de996",
+  "pdf_sha256": "61a6c947b3f8e2e66305d9a29d41566655a4c3a527caeb03ebd00b21d8837ac2",
+  "pdf_git_blob_sha": "7c9b21b33197c706cd780971c5c58615bd71095f",
   "editable_master_sha256": "8af4213a6cc9487ecfb0808dcf3b6c0bb5adf9e96d6849714c63c3d66ed2f45c",
+  "editable_master_git_blob_sha": "66e47f662d67ecd5354f365bcdbf8231f647cf1a",
   "production_issues_unresolved": [],
   "content_locked_note": "Q089 source limitation retained unchanged; not a production defect or manufacture blocker."
 }
