@@ -1,5 +1,9 @@
 # Greek v5 pilot — Independent adjudication
 
+> **STATUS NOTE — SUPERSEDED FOR STYLISTIC CALIBRATION**
+>
+> This document records the pre-founder independent adjudication and remains useful as an audit trail for factual/source checks. Its numerical scores and stylistic conclusions are **not the final v5 scale-up standard**. Subsequent sentence-level founder review materially restructured several answers, especially Q038 and Q045, despite their high scores here. For current scale-up doctrine use `Greek-v5-scale-doctrine.md` and the current `Greek-v5-pilot-scoring-rubric.md`. Founder-approved pilot files are the controlling stylistic examples.
+
 Date: 2026-08-22
 Branch: `greek-v5-pilot`
 Scope: Q001, Q012, Q019, Q020, Q038, Q045, Q090, Q098 only.
