@@ -1,5 +1,5 @@
 {
-  "status": "PASS_PENDING_MANUAL_VISUAL_REVIEW",
+  "status": "PASS",
   "source_commit": "2e4feabfe56df22411a8b7704b50058bcaf421b2",
   "corpus": {
     "expected": 100,
@@ -87,10 +87,27 @@
       174,
       175
     ],
-    "manual_contact_sheet_review_status": "PENDING",
-    "manual_high_resolution_stress_review_status": "PENDING",
+    "manual_contact_sheet_review_status": "PASS",
+    "manual_high_resolution_stress_review_status": "PASS",
     "unexpected_blank_rendered_pages": [],
-    "independent_ghostscript_renderer_status": "PASS"
+    "independent_ghostscript_renderer_status": "PASS",
+    "manual_contact_sheets_reviewed": 8,
+    "manual_contact_sheet_page_coverage": "175/175",
+    "extra_high_resolution_limitation_pages_physical": [
+      50,
+      160
+    ],
+    "extra_high_resolution_limitation_review_status": "PASS",
+    "full_document_visual_review_status": "PASS",
+    "manual_review_findings": {
+      "clipping": "none detected",
+      "overlap": "none detected",
+      "broken_or_missing_glyphs": "none detected",
+      "unexpected_blank_pages": "none detected",
+      "hierarchy_or_component_drift": "none detected",
+      "Q027_qualified_limitation": "intact, legible, unchanged",
+      "Q089_qualified_limitation": "intact, legible, unchanged"
+    }
   },
   "preflight": {
     "openable": true,
@@ -99,7 +116,9 @@
     "xfa": false,
     "page_size": "A4",
     "qpdf_check": "PASS",
-    "pdfinfo_check": "PASS"
+    "pdfinfo_check": "PASS",
+    "pdf_skill_pdf_inspect": "PASS",
+    "pdf_skill_pdf_preflight": "PASS"
   },
   "pdf_sha256": "64b05316a3ae341dcf660e341b4bb1e2cb103140d7b2ca9e750dcee5afba66b4",
   "pdf_git_blob_sha": "3456a0f8df6fe7281269ddc95108cf4aa03a8162",
@@ -109,5 +128,22 @@
   "content_locked_notes": [
     "Q027 qualified Greek zuranolone availability/reimbursement statement retained unchanged by source lock.",
     "Q089 qualified unresolved exact Greek ECT authorization mechanism statement retained unchanged by source lock."
+  ],
+  "repository_artifact_verification": {
+    "status": "PASS",
+    "reviewed_build_workflow_run_id": 32790954658,
+    "reviewed_build_artifact_id": 9543111249,
+    "publication_artifact_commit": "f9251ef338e1e2d23b2f941f96b73628ce3a587e",
+    "reviewed_pdf_sha256": "64b05316a3ae341dcf660e341b4bb1e2cb103140d7b2ca9e750dcee5afba66b4",
+    "reviewed_pdf_git_blob_sha": "3456a0f8df6fe7281269ddc95108cf4aa03a8162",
+    "repository_pdf_git_blob_sha": "3456a0f8df6fe7281269ddc95108cf4aa03a8162",
+    "repository_pdf_size_bytes": 649420,
+    "byte_identity_by_git_blob_sha": true,
+    "repository_pdf_exactly_reviewed_artifact": true
+  },
+  "qa_completion_notes": [
+    "All 175 pages rendered and visually reviewed through eight contact sheets; representative and stress pages were also inspected at 220 dpi.",
+    "The repository PDF blob SHA matches the manually reviewed workflow artifact exactly.",
+    "No learner-facing manuscript content was edited during manufacture or QA."
   ]
 }
