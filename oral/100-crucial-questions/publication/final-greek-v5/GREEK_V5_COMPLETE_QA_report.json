@@ -133,7 +133,7 @@
     "status": "PASS",
     "reviewed_build_workflow_run_id": 32790954658,
     "reviewed_build_artifact_id": 9543111249,
-    "publication_artifact_commit": "f9251ef338e1e2d23b2f941f96b73628ce3a587e",
+    "publication_artifact_commit": "6be116bf13a912ccee8349892837c3903275b028",
     "reviewed_pdf_sha256": "64b05316a3ae341dcf660e341b4bb1e2cb103140d7b2ca9e750dcee5afba66b4",
     "reviewed_pdf_git_blob_sha": "3456a0f8df6fe7281269ddc95108cf4aa03a8162",
     "repository_pdf_git_blob_sha": "3456a0f8df6fe7281269ddc95108cf4aa03a8162",
