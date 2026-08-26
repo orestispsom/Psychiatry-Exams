@@ -14,3 +14,4 @@
 12. For consequential or uncertain claims, verification beats memory. A qualified “not verified” is preferable to a confident approximation.
 13. `orestispsom/Psych` is the canonical continuously updated exam-prep app and production dataset. Use its current files when app/exam-bank state matters; do not let this library silently fork canonical production data.
 14. Priority when rules conflict: accuracy → source fidelity → safety → exam/current distinction → understanding → exam utility → brevity.
+15. For the commercial/product role of `oral/100-crucial-questions`, consult `oral/100-crucial-questions/internal/2026-08-26-hustling-portfolio-context.md` only when the task concerns publication prioritization, product strategy, reuse/licensing, or cross-project sequencing. That context must never override manuscript/source locks, psychiatric editorial decisions, audit findings, or publication QA.
