@@ -1,0 +1,112 @@
+name: Temporary Greek v4 final publication build
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-v4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tooling branch
+        uses: actions/checkout@v4
+        with:
+          path: tooling
+
+      - name: Checkout current publication system
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: layout
+
+      - name: Checkout locked Greek v4 manuscript
+        uses: actions/checkout@v4
+        with:
+          ref: 2292f01056d4b4f545d5efadf47e4243a1b3b2c0
+          path: source
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-core fonts-noto-extra poppler-utils ghostscript
+          python -m pip install --quiet reportlab pymupdf pypdf
+
+      - name: Freeze v4 production master from approved Greek system
+        run: |
+          cp layout/oral/100-crucial-questions/publication/final-greek-v3/Greek_publication_master_v3.py /tmp/Greek_publication_master_v4.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('/tmp/Greek_publication_master_v4.py')
+          s=p.read_text('utf-8')
+          s=s.replace("oral/100-crucial-questions/answers/revision-v3-el", "oral/100-crucial-questions/answers/final-v4-el")
+          s=s.replace("63a844d881072d13fd6e33423b9e01fb8f91f0d9", "2292f01056d4b4f545d5efadf47e4243a1b3b2c0")
+          s=s.replace("SYMBOLS=re.compile(r'([→≥≤≠−])')", "SYMBOLS=re.compile(r'([→≥≤≠−↑↓↔])')")
+          s=s.replace("The_100_Crucial_Questions_in_Psychiatry_v3_GREEK_COMPLETE_A4.pdf", "The_100_Crucial_Questions_in_Psychiatry_v4_GREEK_COMPLETE_A4.pdf")
+          p.write_text(s,'utf-8')
+          PY
+          python tooling/.tmp/patch_v4_table.py /tmp/Greek_publication_master_v4.py
+          python tooling/.tmp/patch_v4_bookmark.py /tmp/Greek_publication_master_v4.py
+          python tooling/.tmp/patch_v4_determinism.py /tmp/Greek_publication_master_v4.py
+          python tooling/.tmp/patch_v4_pdf_id.py /tmp/Greek_publication_master_v4.py
+          python -m py_compile /tmp/Greek_publication_master_v4.py
+          sha256sum /tmp/Greek_publication_master_v4.py
+
+      - name: Verify source lock
+        run: |
+          set -e
+          ROOT=source/oral/100-crucial-questions/answers/final-v4-el
+          test "$(find "$ROOT" -maxdepth 1 -type f -name 'Q???.md' | wc -l)" -eq 100
+          python - <<'PY'
+          from pathlib import Path
+          root=Path('source/oral/100-crucial-questions/answers/final-v4-el')
+          assert sorted(p.name for p in root.glob('Q???.md')) == [f'Q{i:03d}.md' for i in range(1,101)]
+          print('CORPUS_OK 100/100 ORDER_OK')
+          PY
+          grep -R '^### Q' "$ROOT" > /tmp/followups_source.txt || true
+          grep -R '^|' "$ROOT" > /tmp/tables_source.txt || true
+
+      - name: Build publication candidate
+        working-directory: source
+        env:
+          GREEK_SRC: oral/100-crucial-questions/answers/final-v4-el
+          GREEK_OUT: ../output
+          SOURCE_COMMIT: 2292f01056d4b4f545d5efadf47e4243a1b3b2c0
+        run: python /tmp/Greek_publication_master_v4.py | tee ../build.log
+
+      - name: Package deterministic production outputs
+        run: |
+          set -e
+          PDF=output/The_100_Crucial_Questions_in_Psychiatry_v4_GREEK_COMPLETE_A4.pdf
+          test -f "$PDF"
+          cp /tmp/Greek_publication_master_v4.py output/Greek_publication_master_v4.py
+          cp output/GREEK_COMPLETE_QA_report.json output/GREEK_V4_COMPLETE_QA_report.json
+          cp output/GREEK_COMPLETE_book_manifest.json output/GREEK_V4_COMPLETE_book_manifest.json
+          cp /tmp/followups_source.txt output/followups_source.txt
+          cp /tmp/tables_source.txt output/tables_source.txt
+          pdfinfo "$PDF" > output/pdfinfo.txt
+          pdffonts "$PDF" > output/pdffonts.txt
+          ! grep -E 'Helvetica|Times-Roman|Courier|ZapfDingbats' output/pdffonts.txt
+          git -C source ls-tree -r 2292f01056d4b4f545d5efadf47e4243a1b3b2c0 -- oral/100-crucial-questions/answers/final-v4-el > output/source_tree.txt
+          cp build.log output/build.log
+          sha256sum "$PDF" output/Greek_publication_master_v4.py > output/SHA256SUMS.txt
+
+      - name: Upload candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: greek-v4-final-publication-candidate
+          if-no-files-found: error
+          path: |
+            output/The_100_Crucial_Questions_in_Psychiatry_v4_GREEK_COMPLETE_A4.pdf
+            output/Greek_publication_master_v4.py
+            output/GREEK_V4_COMPLETE_QA_report.json
+            output/GREEK_V4_COMPLETE_book_manifest.json
+            output/pdfinfo.txt
+            output/pdffonts.txt
+            output/build.log
+            output/source_tree.txt
+            output/followups_source.txt
+            output/tables_source.txt
+            output/SHA256SUMS.txt
