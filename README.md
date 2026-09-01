@@ -1,18 +1,36 @@
 # Psychiatry Study Library
 
-High-reliability psychiatry study and source library for board-exam preparation and broader psychiatric learning.
+A structured psychiatry study and knowledge-production repository focused on specialist-exam preparation, evidence-backed synthesis, and reusable clinical learning materials.
 
-## Repository roles
+---
 
-- **Psychiatry-Exams**: knowledge workshop/library — gathered material, oral-exam material, notes, source-backed syntheses, terminology, cases, and material under review.
-- **[Psych](https://github.com/orestispsom/Psych)**: canonical, continuously updated exam-prep application and its production datasets. Do not duplicate or fork production app datasets here without a specific reason.
+## What's Here
 
-## Priority
+* **Oral Examination Preparation:** Structured oral-exam questions, examiner follow-ups, and clinical reasoning anchors.
+* **The 100 Crucial Questions in Psychiatry:** Long-form, source-backed model answers developed for psychiatric specialist examinations.
+* **Evidence Verification & Synthesis:** Clinical reference materials, evidence reviews, and explicit distinction between standard exam conventions and current clinical practice.
+* **Psychopharmacology & High-Yield Tables:** Summaries covering dosing, titration protocols, drug interactions, monitoring guidelines, and differential diagnosis tables.
+* **Bilingual Terminology (EN ↔ EL):** Mappings between standard English and Greek psychiatric nomenclature, diagnostic criteria, and psychopathology terms.
+* **Clinical Cases & Vignettes:** Case formulations, emergency psychiatry workflows, and differential diagnostic exercises.
+* **Document & Publication Tooling:** Programmatic publication pipelines (Python/JSON manifests) for compiling and formatting structured learning documents.
 
-1. Oral board-exam material
-2. High-yield study notes and differential tables
-3. Psychopharmacology
-4. Neuroanatomy and English↔Greek terminology
-5. Clinical cases and other reusable study material
+---
 
-All factual material is governed by `AGENTS.md`: source certainty and provenance take priority over fluency.
+## How It Relates to Psych
+
+* **Psychiatry-Exams (This Repository):** Knowledge workshop, study library, and source-production repository.
+* **[Psych](https://github.com/orestispsom/Psych):** The deployed exam-preparation web application and its active production datasets.
+
+---
+
+## Evidence & Quality
+
+Factual material in this repository is governed by [`AGENTS.md`](AGENTS.md). Source certainty, provenance, and explicit verification take priority over fluent, unsupported claims. High-risk statements (pharmacology, legislation, emergency protocols) require verification against primary literature and authoritative guidelines.
+
+---
+
+## For Reviewers
+
+* **Psychiatric Evidence Synthesis & Medical Writing:** Formulating clear, clinically accurate explanations and long-form oral answers from primary psychiatric sources.
+* **Structured Clinical Knowledge & Terminology:** Curating domain-specific clinical concepts, diagnostic criteria, and bilingual psychiatric glossaries.
+* **Reproducible Content Workflows:** Building automated document-generation and verification pipelines for structured medical education materials.
