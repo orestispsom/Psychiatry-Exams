@@ -15,3 +15,23 @@
 13. `orestispsom/Psych` is the canonical continuously updated exam-prep app and production dataset. Use its current files when app/exam-bank state matters; do not let this library silently fork canonical production data.
 14. Priority when rules conflict: accuracy → source fidelity → safety → exam/current distinction → understanding → exam utility → brevity.
 15. For the commercial/product role of `oral/100-crucial-questions`, consult `oral/100-crucial-questions/internal/2026-08-26-hustling-portfolio-context.md` only when the task concerns publication prioritization, product strategy, reuse/licensing, or cross-project sequencing. That context must never override manuscript/source locks, psychiatric editorial decisions, audit findings, or publication QA.
+
+## Reusable knowledge asset detection
+
+While completing the primary study/exam task, actively notice **unusually reusable original synthesis**: strong differential frameworks, decision/monitoring algorithms, comparison tables, memorable synthetic cases, difficult concepts explained unusually clearly, common-clinician traps, patient/family explanations, clinician teaching material, clinical-AI test cases, or clinician-workflow insights.
+
+When one is genuinely high-value, surface it briefly at a natural pause:
+
+> **REUSE CANDIDATE — [topic]**  
+> Potential uses: **[2–4 concrete destinations, e.g. professional education, clinician resource/product, article/website, patient/family handoff, clinical-AI evaluation, software workflow]**.  
+> Why: [one sentence].  
+> **Capture now, note for later, or ignore?**
+
+Rules:
+
+- Do not derail the board-study objective. During exam preparation, default to **note for later** unless a 1–5 minute capture also improves learning/retrieval.
+- Do not create a full derivative product/article/course unless the user explicitly opts in or it is already in scope.
+- Avoid suggestion spam: normally no more than 1–2 proactive reuse callouts in a substantive session.
+- Do not flag routine facts, generic summaries, or cosmetic reuse.
+- Preserve provenance/IP: never commercialize copied textbook/guideline wording, proprietary scales/tables, or source-locked material. Reuse must be original synthesis or appropriately licensed/verified material.
+- A useful study insight is not automatically publication-ready; derivative use may require fresh verification, sourcing, permissions, or scope review.
