@@ -1,0 +1,141 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PsychiatricDrugDossier",
+  "description": "Canonical schema for clinical psychopharmacology reference monographs and board exam dossiers.",
+  "type": "object",
+  "required": [
+    "id",
+    "generic_name",
+    "class",
+    "mechanism_summary",
+    "receptor_profile",
+    "pharmacokinetics",
+    "dosing_and_titration",
+    "monitoring",
+    "adverse_effects",
+    "patient_psychoeducation",
+    "board_exam_pearls",
+    "international_brands"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "generic_name": { "type": "string" },
+    "class": { "type": "string" },
+    "generation_or_subclass": { "type": "string" },
+    "chemical_structure_type": { "type": "string" },
+    "mechanism_summary": { "type": "string" },
+    "receptor_profile": {
+      "type": "object",
+      "properties": {
+        "D2": { "type": "string", "enum": ["none", "very_low", "low", "moderate", "high", "very_high", "partial_agonist"] },
+        "5HT2A": { "type": "string", "enum": ["none", "low", "moderate", "high", "very_high", "inverse_agonist"] },
+        "5HT1A": { "type": "string", "enum": ["none", "low", "moderate", "high", "partial_agonist"] },
+        "H1": { "type": "string", "enum": ["none", "low", "moderate", "high", "very_high"] },
+        "M1": { "type": "string", "enum": ["none", "low", "moderate", "high", "very_high", "agonist"] },
+        "Alpha1": { "type": "string", "enum": ["none", "low", "moderate", "high", "very_high"] },
+        "other_targets": { "type": "string" },
+        "occupancy_thresholds": { "type": "string" }
+      },
+      "required": ["D2", "5HT2A", "H1", "M1", "Alpha1"]
+    },
+    "pharmacokinetics": {
+      "type": "object",
+      "properties": {
+        "half_life_parent": { "type": "string" },
+        "half_life_active_metabolites": { "type": "string" },
+        "time_to_peak_tmax": { "type": "string" },
+        "bioavailability": { "type": "string" },
+        "protein_binding": { "type": "string" },
+        "volume_of_distribution": { "type": "string" },
+        "cyp_metabolism": { "type": "string" },
+        "active_metabolites": { "type": "string" },
+        "smoking_interaction": { "type": "string" }
+      },
+      "required": ["half_life_parent", "time_to_peak_tmax", "cyp_metabolism"]
+    },
+    "clinical_indications": {
+      "type": "object",
+      "properties": {
+        "fda_approved": { "type": "array", "items": { "type": "string" } },
+        "ema_approved": { "type": "array", "items": { "type": "string" } },
+        "off_label_evidence_based": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "dosing_and_titration": {
+      "type": "object",
+      "properties": {
+        "starting_dose": { "type": "string" },
+        "titration_increment": { "type": "string" },
+        "standard_maintenance_target": { "type": "string" },
+        "maximum_recommended_dose": { "type": "string" },
+        "food_requirement": { "type": "string" },
+        "renal_dose_adjustment": { "type": "string" },
+        "hepatic_dose_adjustment": { "type": "string" }
+      },
+      "required": ["starting_dose", "standard_maintenance_target", "maximum_recommended_dose"]
+    },
+    "monitoring": {
+      "type": "object",
+      "properties": {
+        "baseline_workup": { "type": "array", "items": { "type": "string" } },
+        "routine_followup_labs": { "type": "array", "items": { "type": "string" } },
+        "therapeutic_drug_monitoring_range": { "type": "string" },
+        "special_registry_protocols": { "type": "string" }
+      },
+      "required": ["baseline_workup", "routine_followup_labs"]
+    },
+    "adverse_effects": {
+      "type": "object",
+      "properties": {
+        "sedation_risk": { "type": "string", "enum": ["very_low", "low", "moderate", "high", "very_high"] },
+        "weight_gain_metabolic_risk": { "type": "string", "enum": ["very_low", "low", "moderate", "high", "very_high"] },
+        "eps_motor_risk": { "type": "string", "enum": ["very_low", "low", "moderate", "high", "very_high"] },
+        "prolactin_elevation_risk": { "type": "string", "enum": ["sparing", "low", "moderate", "high", "marked"] },
+        "qtc_prolongation_risk": { "type": "string", "enum": ["minimal", "low", "moderate", "high", "boxed_warning"] },
+        "anticholinergic_burden": { "type": "string", "enum": ["none", "low", "moderate", "high"] },
+        "black_box_warnings": { "type": "array", "items": { "type": "string" } },
+        "rare_and_critical_hazards": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "sedation_risk",
+        "weight_gain_metabolic_risk",
+        "eps_motor_risk",
+        "prolactin_elevation_risk",
+        "qtc_prolongation_risk",
+        "black_box_warnings"
+      ]
+    },
+    "patient_psychoeducation": {
+      "type": "object",
+      "properties": {
+        "layman_mechanism": { "type": "string" },
+        "time_to_benefit": { "type": "string" },
+        "common_transient_side_effects": { "type": "string" },
+        "red_flag_symptoms_to_report": { "type": "string" },
+        "practical_tips": { "type": "string" }
+      },
+      "required": ["layman_mechanism", "time_to_benefit", "red_flag_symptoms_to_report"]
+    },
+    "board_exam_pearls": {
+      "type": "object",
+      "properties": {
+        "classic_vignette_presentation": { "type": "string" },
+        "high_yield_traps": { "type": "array", "items": { "type": "string" } },
+        "key_buzzwords": { "type": "array", "items": { "type": "string" } },
+        "viva_oral_exam_talking_point": { "type": "string" }
+      },
+      "required": ["classic_vignette_presentation", "high_yield_traps", "viva_oral_exam_talking_point"]
+    },
+    "international_brands": {
+      "type": "object",
+      "properties": {
+        "united_states": { "type": "array", "items": { "type": "string" } },
+        "united_kingdom": { "type": "array", "items": { "type": "string" } },
+        "greece": { "type": "array", "items": { "type": "string" } },
+        "european_union": { "type": "array", "items": { "type": "string" } },
+        "australia": { "type": "array", "items": { "type": "string" } },
+        "canada": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

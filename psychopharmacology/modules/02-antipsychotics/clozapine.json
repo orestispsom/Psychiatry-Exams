@@ -1,0 +1,125 @@
+{
+  "id": "clozapine",
+  "generic_name": "Clozapine",
+  "class": "Antipsychotic",
+  "generation_or_subclass": "Second-Generation (SGA) / Dibenzodiazepine",
+  "chemical_structure_type": "Dibenzodiazepine derivative",
+  "mechanism_summary": "Weak and transient antagonist at D2 and D1 receptors (rapid dissociation 'hit-and-run' kinetics), potent antagonist at 5-HT2A, 5-HT2C, 5-HT6, 5-HT7, alpha1/alpha2 adrenergic, H1, and muscarinic M1-M5 receptors (partial agonist at M4). Increases cortical dopamine and acetylcholine release.",
+  "receptor_profile": {
+    "D2": "low",
+    "5HT2A": "very_high",
+    "5HT1A": "partial_agonist",
+    "H1": "very_high",
+    "M1": "high",
+    "Alpha1": "very_high",
+    "other_targets": "Potent 5-HT2C, 5-HT7, alpha-2C antagonist; partial agonist at muscarinic M4 receptor.",
+    "occupancy_thresholds": "Clinical efficacy achieved at only 30-60% striatal D2 occupancy (below the 65-70% required for typical neuroleptics and below the 78% EPS threshold)."
+  },
+  "pharmacokinetics": {
+    "half_life_parent": "12 hours (ranges 8-16 hours at steady state)",
+    "half_life_active_metabolites": "Norclozapine (N-desmethylclozapine): ~17-20 hours",
+    "time_to_peak_tmax": "1.5 - 2.5 hours",
+    "bioavailability": "50-60% (due to first-pass hepatic metabolism)",
+    "protein_binding": "95-97%",
+    "volume_of_distribution": "1.6 - 7.0 L/kg",
+    "cyp_metabolism": "Primary: CYP1A2 (~70%). Secondary: CYP2D6, CYP3A4, CYP2C19.",
+    "active_metabolites": "Norclozapine (possesses pro-cognitive muscarinic M1 agonist activity, high affinity for 5-HT2C, contributes to metabolic and hematologic actions).",
+    "smoking_interaction": "Cigarette smoke contains polycyclic aromatic hydrocarbons (PAHs) which strongly INDUCE CYP1A2. Smokers require up to 50% higher doses. If a patient abruptly stops smoking (e.g. inpatient admission), clozapine plasma levels can double within 2-4 days, precipitating severe toxicity (seizures, stupor, cardiac collapse) unless the dose is promptly reduced by 30-50%."
+  },
+  "clinical_indications": {
+    "fda_approved": [
+      "Treatment-resistant schizophrenia (TRS) after failure of >= 2 adequate antipsychotic trials",
+      "Reduction in risk of recurrent suicidal behavior in schizophrenia or schizoaffective disorder"
+    ],
+    "ema_approved": [
+      "Treatment-resistant schizophrenia",
+      "Psychotic disorders in Parkinson's disease where standard management has failed"
+    ],
+    "off_label_evidence_based": [
+      "Treatment-resistant bipolar mania and psychosis",
+      "Severe refractory aggression or violence in schizophrenia / personality disorders",
+      "Severe refractory tardive dyskinesia"
+    ]
+  },
+  "dosing_and_titration": {
+    "starting_dose": "12.5 mg once or twice daily on Day 1",
+    "titration_increment": "Increase by 25-50 mg/day every 2-3 days as tolerated, targeting 300-450 mg/day by Week 2-3 in divided doses (larger portion at bedtime).",
+    "standard_maintenance_target": "300 - 450 mg/day (titrated to plasma trough level of 350-600 ng/mL)",
+    "maximum_recommended_dose": "900 mg/day (requires seizure prophylaxis with valproate or lamotrigine if >600 mg/day or plasma level >600 ng/mL)",
+    "food_requirement": "Can be taken with or without food (food does not alter bioavailability).",
+    "renal_dose_adjustment": "Use with caution in severe renal impairment; dose reduction recommended.",
+    "hepatic_dose_adjustment": "Contraindicated in severe active liver disease; reduce dose and monitor LFTs in mild-to-moderate impairment."
+  },
+  "monitoring": {
+    "baseline_workup": [
+      "Absolute Neutrophil Count (ANC) >= 1500/microL (or >= 1000/microL for Benign Ethnic Neutropenia)",
+      "CBC with differential",
+      "Baseline 12-lead ECG, troponin, and C-reactive protein (CRP) to screen for occult myocarditis",
+      "Fasting plasma glucose / HbA1c, lipid panel",
+      "Weight, BMI, waist circumference, baseline vital signs (BP, pulse lying and standing)",
+      "Renal panel (electrolytes, creatinine/eGFR), LFTs"
+    ],
+    "routine_followup_labs": [
+      "ANC Schedule: Weekly for first 6 months (Weeks 1-26) -> Every 2 weeks for second 6 months (Weeks 27-52) -> Every 4 weeks thereafter indefinitely",
+      "Weekly CRP and Troponin for the first 4-6 weeks to detect early myocarditis",
+      "Metabolic panel at 3 months, then annually",
+      "Bowel habit monitoring at EVERY encounter (prevent lethal gastrointestinal hypomotility/ileus)"
+    ],
+    "therapeutic_drug_monitoring_range": "Target plasma trough concentration: 350 - 600 ng/mL (0.35 - 0.60 mg/L). Levels > 600 ng/mL increase seizure risk without added clinical benefit; levels > 1000 ng/mL indicate imminent toxicity.",
+    "special_registry_protocols": "Mandatory national Clozapine REMS / registry enrollment. If treatment is interrupted for > 48 hours, drug MUST be re-titrated from 12.5 mg/day to prevent severe orthostasis, syncope, and seizures."
+  },
+  "adverse_effects": {
+    "sedation_risk": "very_high",
+    "weight_gain_metabolic_risk": "very_high",
+    "eps_motor_risk": "very_low",
+    "prolactin_elevation_risk": "sparing",
+    "qtc_prolongation_risk": "moderate",
+    "anticholinergic_burden": "high",
+    "black_box_warnings": [
+      "Severe neutropenia / Agranulocytosis (ANC < 500/microL) - mandatory monitoring",
+      "Orthostatic hypotension, bradycardia, and syncope (mitigated by slow titration)",
+      "Seizures (dose-dependent: ~1% at <300mg, 3% at 300-600mg, 5% at >600mg)",
+      "Myocarditis and cardiomyopathy (highest risk in first 4-8 weeks; presents as fever, chest pain, tachycardia)",
+      "Increased mortality in elderly patients with dementia-related psychosis"
+    ],
+    "rare_and_critical_hazards": [
+      "Gastrointestinal hypomotility / Paralytic ileus (constipation causes MORE deaths than agranulocytosis!)",
+      "Nocturnal sialorrhea / drooling (M4 receptor partial agonism + impaired swallowing reflex)",
+      "Metabolic ketoacidosis without previous history of diabetes",
+      "Pulmonary embolism and DVT"
+    ]
+  },
+  "patient_psychoeducation": {
+    "layman_mechanism": "Clozapine is the most effective medication available for restoring quiet and clarity when other treatments have not worked. It acts like a master regulator on multiple chemical switches in the brain, reducing troubling thoughts and voices while protecting your muscle movements.",
+    "time_to_benefit": "Sedation and calming occur in the first few days. Significant relief from delusions and hallucinations builds over 8 to 12 weeks, with continued cognitive and emotional recovery observed for up to 6 to 12 months.",
+    "common_transient_side_effects": "Heavy morning grogginess, increased saliva on your pillow at night, dizziness when standing quickly, weight gain, and constipation.",
+    "red_flag_symptoms_to_report": "IMMEDIATE EMERGENCY: Any sudden fever, sore throat, mouth ulcers, persistent chest pain, shortness of breath, or going more than 2 days without a bowel movement.",
+    "practical_tips": "Drink plenty of water and eat high-fiber meals to prevent bowel backup; use a soft towel over your pillow for night-time drooling; never stop taking it without doctor guidance because stopping for just 2 days requires starting over from the lowest baby dose."
+  },
+  "board_exam_pearls": {
+    "classic_vignette_presentation": "A 28-year-old man with schizophrenia refractory to haloperidol and risperidone is started on clozapine. Four weeks later, he presents with fever (38.5 C), resting tachycardia (115 bpm), and elevated CRP/troponin. Diagnosis: Clozapine-induced acute myocarditis. Immediate action: Discontinue clozapine permanently.",
+    "high_yield_traps": [
+      "Trap: Treating clozapine-induced resting tachycardia with a beta-blocker before ruling out myocarditis.",
+      "Trap: Assuming high fever and throat pain is just a viral pharyngitis; an urgent CBC/ANC is mandatory to rule out agranulocytosis.",
+      "Trap: Overlooking constipation; clozapine slows colonic transit by 300%, leading to fatal fecal impaction and stercoral peritonitis.",
+      "Trap: Forgetting that Benign Ethnic Neutropenia (BEN) allows clozapine initiation at ANC >= 1000/microL rather than the standard 1500/microL."
+    ],
+    "key_buzzwords": [
+      "Treatment-Resistant Schizophrenia (TRS)",
+      "Anti-suicidal efficacy",
+      "Zero extrapyramidal symptoms",
+      "Nocturnal sialorrhea (M4 agonist)",
+      "CYP1A2 smoking interaction",
+      "ANC monitoring cadence (weekly -> biweekly -> monthly)"
+    ],
+    "viva_oral_exam_talking_point": "Clozapine is the only antipsychotic with proven efficacy in treatment-resistant schizophrenia and the only one with an FDA indication for reducing suicide risk in psychotic disorders. Despite its efficacy, it remains underutilized due to monitoring burdens and fear of agranulocytosis (0.8% incidence). However, clozapine-induced gastrointestinal hypomotility carries a higher case fatality rate (~15-20%) than agranulocytosis, necessitating proactive laxative prophylaxis from day one."
+  },
+  "international_brands": {
+    "united_states": ["Clozaril", "Fazaclo (ODT)", "Versacloz (suspension)"],
+    "united_kingdom": ["Clozaril", "Denzapine", "Zaponex"],
+    "greece": ["Leponex"],
+    "european_union": ["Leponex", "Fazaclo"],
+    "australia": ["Clozaril", "Clopine"],
+    "canada": ["Clozaril"]
+  }
+}
