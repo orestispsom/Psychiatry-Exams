@@ -35,3 +35,8 @@ Rules:
 - Do not flag routine facts, generic summaries, or cosmetic reuse.
 - Preserve provenance/IP: never commercialize copied textbook/guideline wording, proprietary scales/tables, or source-locked material. Reuse must be original synthesis or appropriately licensed/verified material.
 - A useful study insight is not automatically publication-ready; derivative use may require fresh verification, sourcing, permissions, or scope review.
+
+
+## Canonical shared clinical knowledge
+
+`mental-health-core` (https://github.com/orestispsom/mental-health-core) is the canonical layer for clinical concepts shared across this ecosystem. Before defining a shared psychiatric or psychotherapy term here, check whether the core already defines it, and reference the concept ID rather than re-deriving it. Exam framing, board conventions, source packets and this repository's own study material stay here. See `MENTAL_HEALTH_CORE.md`.
