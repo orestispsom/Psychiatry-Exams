@@ -6,7 +6,7 @@
 
 ## What this repository consumes
 
-Concept identity and definitions, safety-critical distinctions, English↔Greek terminology, and the epistemic and provenance vocabulary.
+Concept identity and definitions, safety-critical distinctions, and the epistemic and provenance vocabulary. **Not** terminology — this repository is the terminology authority, see below.
 
 ## What stays here
 
@@ -18,17 +18,29 @@ Exam convention in particular stays local by design — it is tied to a board, a
 
 The audit found this repository to be the richest source of clinical distinctions in the ecosystem. Three core concepts came from material here, including [`MHC-C-012`](https://github.com/orestispsom/mental-health-core/blob/main/concepts/obsession.md) — the rule that poor insight does not by itself convert an obsession into a delusion. That rule was written down in exactly one place and needed in at least three.
 
-## An issue this repository should know about
+## This repository owns the Greek language authority
 
-`oral/100-crucial-questions/internal/translation/Translation-guide-v3.md` is **damaged**. It is 15,009 bytes, valid UTF-8 for only its first 7,501, and binary garbage thereafter. It was committed already corrupt in `75df5d9` on 2026-08-20 and no intact revision exists in this repository's history. `Psych` holds an identical damaged copy.
+`Translation-guide-v4.md` is the current declared house language authority for Greek psychiatric terminology. The core **defers to it** and claims no authority over terminology.
 
-Roughly half the bilingual terminology authority is unrecoverable — thought content, perception, mood and affect, insight, psychopharmacology and neuroanatomy are all in the lost portion.
+`mental-health-core/terminology/en-el.yaml` mirrors 56 rows — only the terms core concepts name — copied verbatim from v4, with v4 attributed on every row. If the mirror and v4 ever disagree, v4 wins and the mirror is wrong.
 
-The 65 salvageable rows are preserved in the core at [`terminology/en-el.yaml`](https://github.com/orestispsom/mental-health-core/blob/main/terminology/en-el.yaml), every one flagged as recovered from a damaged source. **Nothing was reconstructed.**
+The ecosystem's terminology layering, as it actually stands:
 
-The file has been left exactly as it is. Whether to mark it as damaged in place, and whether an intact original exists outside git, are founder decisions — see [`OPEN_QUESTIONS.md` Q1](https://github.com/orestispsom/mental-health-core/blob/main/docs/OPEN_QUESTIONS.md).
+| File | Size | State | Location |
+|---|---|---|---|
+| `Translation-guide-v2.md` | 21,725 B | intact — 265 rows, 21 sections | `main` |
+| `Translation-guide-v3.md` | 15,009 B | corrupt beyond byte 7,501 | `main` (and a copy in `Psych`) |
+| `Translation-guide-v4.md` | 57,942 B | intact — current authority | branch `greek-v5-scale` |
 
-Note also that `glossary/` is currently a README with no entries. The core's terminology file is the nearest thing to the controlled glossary that README describes.
+### Two things worth a decision
+
+**1. v4 is not on `main`.** An agent working from `main` finds v2 (valid but superseded) and v3 (corrupt), with no indication that v4 exists. `Greek-v5-scale-doctrine.md` is in the same position. Merging, cherry-picking the guide onto `main`, or adding a pointer on `main` would all fix it.
+
+**2. The damaged v3 files still look like normal documents.** v4 §13 already records that v3 is "historical; encoding-corrupted in repository representation", but that note lives in a file most readers reach later, if at all. A one-line header on each damaged file would stop the next reader from being misled.
+
+Both are recorded as [`OPEN_QUESTIONS.md` Q1](https://github.com/orestispsom/mental-health-core/blob/main/docs/OPEN_QUESTIONS.md).
+
+> **Note on the first version of this document.** It stated that roughly half the bilingual terminology had been destroyed and listed six lost sections. That was wrong — `Translation-guide-v2.md` was intact in the same directory the whole time, and v4 supersedes both. The corrected reasoning is in [`AUDIT-2026-09-06.md` §3](https://github.com/orestispsom/mental-health-core/blob/main/docs/AUDIT-2026-09-06.md).
 
 ## How to use it
 

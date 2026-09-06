@@ -39,4 +39,6 @@ Rules:
 
 ## Canonical shared clinical knowledge
 
-`mental-health-core` (https://github.com/orestispsom/mental-health-core) is the canonical layer for clinical concepts shared across this ecosystem. Before defining a shared psychiatric or psychotherapy term here, check whether the core already defines it, and reference the concept ID rather than re-deriving it. Exam framing, board conventions, source packets and this repository's own study material stay here. See `MENTAL_HEALTH_CORE.md`.
+`mental-health-core` (https://github.com/orestispsom/mental-health-core) is the canonical layer for clinical concepts shared across this ecosystem. Before defining a shared psychiatric or psychotherapy term here, check whether the core already defines it, and reference the concept ID rather than re-deriving it. Exam framing, board conventions, source packets and this repository's own study material stay here.
+
+This repository remains the **Greek language authority**: `Translation-guide-v4.md` governs house terminology, and the core mirrors a subset of it without claiming ownership. Note that v4 currently lives on branch `greek-v5-scale`, not `main`. See `MENTAL_HEALTH_CORE.md`.
