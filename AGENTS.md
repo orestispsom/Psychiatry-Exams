@@ -22,20 +22,12 @@ For multi-agent and cross-repository coordination, follow `orestispsom/mental-he
 
 ## Reusable knowledge asset detection
 
-While completing the primary study/exam task, actively notice **unusually reusable original synthesis**: strong differential frameworks, decision/monitoring algorithms, comparison tables, memorable synthetic cases, difficult concepts explained unusually clearly, common-clinician traps, patient/family explanations, clinician teaching material, clinical-AI test cases, or clinician-workflow insights.
+The protocol is canonical in [`mental-health-core/docs/REUSE_CANDIDATE_PROTOCOL.md`](https://github.com/orestispsom/mental-health-core/blob/main/docs/REUSE_CANDIDATE_PROTOCOL.md). Follow it there — the callout format and all eight rules live in one place, so they stop drifting between repositories.
 
-When one is genuinely high-value, surface it briefly at a natural pause:
+Only the local specifics are recorded here.
 
-> **REUSE CANDIDATE — [topic]**  
-> Potential uses: **[2–4 concrete destinations, e.g. professional education, clinician resource/product, article/website, patient/family handoff, clinical-AI evaluation, software workflow]**.  
-> Why: [one sentence].  
-> **Capture now, note for later, or ignore?**
+**What counts as a candidate in this repository:** strong differential frameworks, decision or monitoring algorithms, comparison tables, memorable synthetic cases, difficult concepts explained unusually clearly, common-clinician traps, patient or family explanations, clinician teaching material, clinical-AI test cases, and clinician-workflow insights.
 
-Rules:
+**Where a candidate could go:** professional education · clinician resource or product · article or website · patient/family handoff · clinical-AI evaluation · software workflow.
 
-- Do not derail the board-study objective. During exam preparation, default to **note for later** unless a 1–5 minute capture also improves learning/retrieval.
-- Do not create a full derivative product/article/course unless the user explicitly opts in or it is already in scope.
-- Avoid suggestion spam: normally no more than 1–2 proactive reuse callouts in a substantive session.
-- Do not flag routine facts, generic summaries, or cosmetic reuse.
-- Preserve provenance/IP: never commercialize copied textbook/guideline wording, proprietary scales/tables, or source-locked material. Reuse must be original synthesis or appropriately licensed/verified material.
-- A useful study insight is not automatically publication-ready; derivative use may require fresh verification, sourcing, permissions, or scope review.
+**Local emphasis:** During board preparation the default is **note for later** unless a one-to-five-minute capture also improves learning and retrieval.
