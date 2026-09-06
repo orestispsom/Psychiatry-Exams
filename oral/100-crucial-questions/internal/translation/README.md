@@ -2,27 +2,13 @@
 
 Read this before using any file in this directory.
 
-## Current layering
+| File | State | Role |
+|---|---|---|
+| `Translation-guide-v4.md` | intact, 57,942 B | **Current house language authority.** Start here. |
+| `Translation-guide-v2.md` | intact, 21,725 B | Underlying terminology index — 265 rows, 21 sections. Still valid except where v4 supersedes it. |
+| `Translation-guide-v3.md` | **corrupt** | Historical only. Do not use. |
 
-| File | State | Where | Role |
-|---|---|---|---|
-| `Translation-guide-v4.md` | intact, 57,942 B | **branch `greek-v5-scale`** | **Current house language authority.** Start here. |
-| `Translation-guide-v2.md` | intact, 21,725 B | `main` | Underlying terminology index — 265 rows, 21 sections. Still valid except where v4 supersedes it. |
-| `Translation-guide-v3.md` | **corrupt** | `main` | Historical only. Do not use. |
-
-`Greek-v5-scale-doctrine.md` (in `../editorial/`, also on `greek-v5-scale`) carries the founder-approved v5 scale doctrine that v4 draws on.
-
-## v4 is not on `main`
-
-The current authority lives on the unmerged branch `greek-v5-scale`, which is 228 commits ahead of `main`. This file exists so that anyone working from `main` can find out that v4 exists rather than defaulting to v2 or, worse, to the corrupt v3.
-
-To read it without checking out the branch:
-
-```bash
-git show origin/greek-v5-scale:oral/100-crucial-questions/internal/translation/Translation-guide-v4.md
-```
-
-Whether v4 should be merged or copied onto `main` is an open decision. This pointer is deliberately the smallest possible fix: it avoids a second copy of an authority that is still evolving on its branch.
+`Greek-v5-scale-doctrine.md` in `../editorial/` carries the founder-approved v5 scale doctrine that v4 draws on.
 
 ## `Translation-guide-v3.md` is corrupt
 
@@ -34,11 +20,17 @@ It was committed already corrupt in `75df5d9` on 2026-08-20. No intact revision 
 
 The file is retained as provenance. It should not be used, and its apparent completeness is misleading — a repository audit in September 2026 read the corrupt file, did not check its siblings, and wrongly concluded that half the bilingual terminology had been destroyed.
 
+Whether to mark the file in place or remove it is still open.
+
 ## Using the guides
 
 v4 is a **language authority, not a clinical-content authority**. It governs how an already verified English or semantic claim is rendered in Greek. It must never be used to change diagnostic criteria, duration thresholds, doses, monitoring schedules, treatment sequencing, recommendation strength, causal claims, licensing status, Greek law or article numbers, or source-specific uncertainty.
 
-v4 §1 sets out the supersession hierarchy for language decisions; §10 is the regression watchlist of forms that must not reappear; §11 is the REVIEW_ONLY queue of terms that must not be promoted to house forms without adjudication.
+- §1 — supersession hierarchy for language decisions
+- §3 — frozen core psychopathology terminology
+- §4 — founder-locked natural clinical Greek
+- §10 — regression watchlist: forms that must not reappear
+- §11 — REVIEW_ONLY queue: terms that must not be promoted without adjudication
 
 ## Related
 
