@@ -1,5 +1,9 @@
 # Psychiatry Study — Agent Rules
 
+## Ecosystem process governance
+
+For multi-agent and cross-repository coordination, follow `orestispsom/mental-health-core/docs/ECOSYSTEM_GOVERNANCE.md`. It governs sync, task claims, explicit supersession, semantic merge preflight, and version-bound validation; this file remains authoritative for psychiatry-study and exam-specific rules.
+
 1. Accuracy over fluency. Never invent psychiatric facts, criteria, doses, statistics, citations, quotations, page numbers, or guideline recommendations. If uncertain, verify or state uncertainty.
 2. Separate exam truth from current clinical truth. Exam questions prioritize designated exam sources/editions; current clinical questions prioritize current authoritative guidance. If they conflict, label **Exam answer** vs **Current practice**.
 3. Source hierarchy depends on the claim: diagnosis → DSM-5-TR/ICD-11; treatment → current major guidelines → prescribing/regulatory sources → systematic reviews/meta-analyses → major trials → authoritative textbooks; law/regulation → current official sources, prioritizing Greek authorities where relevant.
